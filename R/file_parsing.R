@@ -38,10 +38,6 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
             end_line_indices <- 1
         else
             end_line_indices <- grep(end_pattern, R_code_lines)
-        if (! keep_tagged_lines) {
-            begin_line_indices <- begin_line_indices + 1
-            end_line_indices <- end_line_indices - 1
-        }
         if (from_first_line)
             if (begin_line_indices[1] > end_line_indices[1])
                 begin_line_indices  <- c(1, begin_line_indices)
@@ -49,13 +45,10 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
             if (end_line_indices[1] < begin_line_indices[1])
                 end_line_indices  <- c(end_line_indices, length(R_code_lines))
     } else {
-        ## no tagged lines found
         if (from_first_line && to_last_line) {
             begin_line_indices <- 1
             end_line_indices <- length(R_code_lines)
         } else {
-            ## file contains neither end_pattern nor begin_pattern and should
-            ## not be used from first to last line.
             return(NULL)
         }
     }
@@ -69,5 +62,10 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
                                         end_line_indices, sep = ":"),
                         collapse = ","), ")]")
     selected_lines <- eval(parse(text = t))
+        if (! keep_tagged_lines) {
+            pattern_lines <- grep(paste0(begin_pattern, "|", end_pattern), 
+                                  selected_lines)
+            selected_lines <- selected_lines[- pattern_lines]
+        }
     return(selected_lines)
 }

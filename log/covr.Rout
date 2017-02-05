@@ -1,41 +1,31 @@
-            filename                       functions line value
-37      R/document.R                    fake_package   34     0
-41      R/document.R                    fake_package   35     0
-147     R/document.R                        document   92     0
-149     R/document.R                        document   93     0
-160     R/document.R                        document  104     0
-206     R/document.R                  write_the_docs  149     0
-209     R/document.R                  write_the_docs  152     0
-63  R/file_parsing.R          get_lines_between_tags   42     0
-66  R/file_parsing.R          get_lines_between_tags   43     0
-95  R/file_parsing.R          get_lines_between_tags   53     0
-99  R/file_parsing.R          get_lines_between_tags   54     0
-102 R/file_parsing.R          get_lines_between_tags   55     0
-106 R/file_parsing.R          get_lines_between_tags   56     0
-109 R/file_parsing.R          get_lines_between_tags   57     0
-112 R/file_parsing.R          get_lines_between_tags   58     0
-115 R/file_parsing.R          get_lines_between_tags   59     0
-117 R/file_parsing.R          get_lines_between_tags   60     0
-43           R/man.R                             man   35     0
-52           R/man.R                             man   38     0
-55           R/man.R                             man   39     0
-88           R/man.R                             man   51     0
-92           R/man.R                             man   52     0
-179          R/man.R                      is_Rd_file  120     0
-1          R/utils.R               remove_package_Rd   12     0
-2          R/utils.R               remove_package_Rd   13     0
-3          R/utils.R               remove_package_Rd   14     0
-4          R/utils.R               remove_package_Rd   15     0
-131        R/utils.R add_dependencies_to_description   76     0
-132        R/utils.R add_dependencies_to_description   77     0
-133        R/utils.R add_dependencies_to_description   78     0
-134        R/utils.R add_dependencies_to_description   79     0
-135        R/utils.R add_dependencies_to_description   80     0
-136        R/utils.R add_dependencies_to_description   81     0
-137        R/utils.R add_dependencies_to_description   82     0
-138        R/utils.R add_dependencies_to_description   83     0
-document Coverage: 84.91%
+        filename                       functions line value
+37  R/document.R                    fake_package   34     0
+41  R/document.R                    fake_package   35     0
+145 R/document.R                        document   92     0
+147 R/document.R                        document   93     0
+158 R/document.R                        document  104     0
+204 R/document.R                  write_the_docs  149     0
+207 R/document.R                  write_the_docs  152     0
+43       R/man.R                             man   35     0
+52       R/man.R                             man   38     0
+55       R/man.R                             man   39     0
+88       R/man.R                             man   51     0
+92       R/man.R                             man   52     0
+177      R/man.R                      is_Rd_file  120     0
+1      R/utils.R               remove_package_Rd   12     0
+2      R/utils.R               remove_package_Rd   13     0
+3      R/utils.R               remove_package_Rd   14     0
+4      R/utils.R               remove_package_Rd   15     0
+129    R/utils.R add_dependencies_to_description   76     0
+130    R/utils.R add_dependencies_to_description   77     0
+131    R/utils.R add_dependencies_to_description   78     0
+132    R/utils.R add_dependencies_to_description   79     0
+133    R/utils.R add_dependencies_to_description   80     0
+134    R/utils.R add_dependencies_to_description   81     0
+135    R/utils.R add_dependencies_to_description   82     0
+136    R/utils.R add_dependencies_to_description   83     0
+document Coverage: 89.13%
 R/utils.R: 65.71%
-R/file_parsing.R: 80.00%
 R/man.R: 88.89%
 R/document.R: 92.47%
+R/file_parsing.R: 100.00%

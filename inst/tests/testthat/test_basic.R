@@ -43,3 +43,67 @@ testthat::test_that("from topic", {
           testthat::expect_equal(current, reference)
 }
 )
+
+testthat::context("file parsing")
+
+testthat::test_that("simple", {
+                    path <- system.file("tests", "files", "simple.R", package = "document")
+                    current <- document:::get_lines_between_tags(path, keep_tagged_lines = TRUE)
+                    reference <- readLines(system.file("tests", "expected_files", "simple.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("foobar", {
+                    path <- system.file("tests", "files", "foobar.R", package = "document")
+                    current <- document:::get_lines_between_tags(path)
+                    reference <- readLines(system.file("tests", "expected_files", "foobar.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("foobar no tagged lines", {
+                    path <- system.file("tests", "files", "foobar.R", package = "document")
+                    current <- document:::get_lines_between_tags(path, keep_tagged_lines = FALSE)
+                    reference <- readLines(system.file("tests", "expected_files", "foobar_nl.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("foo", {
+                    path <- system.file("tests", "files", "foo.R", package = "document")
+                    current <- document:::get_lines_between_tags(path)
+                    reference <- readLines(system.file("tests", "expected_files", "foo.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("foo no tagged lines", {
+                    path <- system.file("tests", "files", "foo.R", package = "document")
+                    current <- document:::get_lines_between_tags(path, keep_tagged_lines = FALSE)
+                    reference <- readLines(system.file("tests", "expected_files", "foo_nl.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("bar", {
+                    path <- system.file("tests", "files", "bar.R", package = "document")
+                    current <- document:::get_lines_between_tags(path)
+                    reference <- readLines(system.file("tests", "expected_files", "bar.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("bar no tagged lines", {
+                    path <- system.file("tests", "files", "bar.R", package = "document")
+                    current <- document:::get_lines_between_tags(path, keep_tagged_lines = FALSE)
+                    reference <- readLines(system.file("tests", "expected_files", "bar_nl.R", package = "document"))
+                    testthat::expect_equal(current, reference)
+}
+)
+testthat::test_that("no tagged lines", {
+                    path <- system.file("tests", "files", "minimal.R", package = "document")
+                    current <- document:::get_lines_between_tags(path, keep_tagged_lines = FALSE)
+                    testthat::expect_equal(current, character(0))
+}
+)
+testthat::test_that("no tagged lines, not_from", {
+                    path <- system.file("tests", "files", "minimal.R", package = "document")
+                    current <- document:::get_lines_between_tags(path, from_first_line = FALSE)
+                    testthat::expect_equal(current, NULL)
+}
+)
