@@ -4,7 +4,7 @@ test_txt <- function() {
     output_directory <- file.path(tempdir(), "document_runit_txt")
     unlink(output_directory, recursive = TRUE)
     dir.create(output_directory)
-    file_name  <- file.path(system.file("tests", "expected_files", 
+    file_name  <- file.path(system.file("tests", "expected_files",
                                         package = "document"), "simple.txt")
     input <- file.path(system.file("tests", "files", package = "document"),
                        sub("\\.txt", ".R", basename(file_name)))

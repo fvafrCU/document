@@ -63,7 +63,7 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
                         collapse = ","), ")]")
     selected_lines <- eval(parse(text = t))
         if (! keep_tagged_lines) {
-            pattern_lines <- grep(paste0(begin_pattern, "|", end_pattern), 
+            pattern_lines <- grep(paste0(begin_pattern, "|", end_pattern),
                                   selected_lines)
             selected_lines <- selected_lines[- pattern_lines]
         }
