@@ -1,0 +1,12 @@
+devtools::use_git()
+devtools::use_news_md()
+devtools::use_build_ignore()
+devtools::use_readme_rmd()
+devtools::use_package("roxygen2")
+devtools::use_package("callr")
+devtools::use_vignette()
+devtools::use_cran_comments()
+devtools::use_test("test-basic.R")
+devtools::use_travis()
+devtools::use_coverage(type = c("codecov"))
+

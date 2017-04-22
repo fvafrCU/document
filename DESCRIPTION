@@ -7,3 +7,10 @@ Depends: R (>= 3.5.0)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports: roxygen2,
+    callr
+Suggests: knitr,
+    rmarkdown,
+    testthat,
+    covr
+VignetteBuilder: knitr
