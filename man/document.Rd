@@ -13,11 +13,12 @@ document(file_name, output_directory = ".", clean = FALSE,
 
 \item{output_directory}{The directory to put the documentation into.}
 
-\item{clean}{Delete the working direcotry?}
+\item{clean}{Delete the working directory?}
 
 \item{check_package}{Run R CMD check on the sources?}
 
-\item{working_directory}{A working directory. Defaults to tempdir().
+\item{working_directory}{A working directory. Defaults to
+\code{\link{tempdir()}}.
 \bold{Warning} the working_directory will be recursively
 \code{\link{unlink}}ed. You can erase your disk if you change the default!}
 
@@ -27,18 +28,15 @@ on.}
 \item{...}{Arguments passed to \code{\link{get_lines_between_tags}}.}
 }
 \value{
-TRUE if pdf creation is successfull, FALSE otherwise.
+XXX
 }
 \description{
 roxygenize an R code file, output the documentation to pdf.
-}
-\section{Version}{
- $Id: 9bbb752b06d887f2115e37c3e9dadd89e40c49c7 $
 }
 \examples{
 document(file_name = system.file("tests", "files", "simple.R", package = "document"))
 }
 \author{
-Dominik Cullmann, <dominik.cullmann@forst.bwl.de>
+Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
 

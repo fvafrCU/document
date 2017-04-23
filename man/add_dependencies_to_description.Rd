@@ -19,10 +19,7 @@ if the functions in the temporary package depend on other functions (from,
 for example, the checkmate package), you can add the whole package as a
 dependency.
 }
-\section{Version}{
- $Id: 3d72fa8d41ea4e2e7b29ffdfefc45e58fe5274b5 $
-}
 \author{
-Dominik Cullmann, <dominik.cullmann@forst.bwl.de>
+Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
 

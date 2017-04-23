@@ -1,32 +1,31 @@
 #' get all lines between tagged lines
 #'
-#' @author Dominik Cullmann, <dominik.cullmann@@forst.bwl.de>
-#' @section Version: $Id: 830c4c8efdcff05e197e15cfe6f1104a95e34e0b $
+#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be parsed.
 #' @param keep_tagged_lines keep tagged lines output?
 #' @param end_pattern  A pattern that marks the line ending the roxygen part.
 #' @param begin_pattern  A pattern that marks the line beginning the roxygen
 #' part.
-#' @param from_firstline use first line as tagged line if first tag found 
+#' @param from_first_line use first line as tagged line if first tag found 
 #' matches the end_pattern.
-#' @param to_lastline use last line as tagged line if last tag found matches
+#' @param to_last_line use last line as tagged line if last tag found matches
 #' the begin_pattern.
 #' @note If you know the file to contain valid roxygen code only, you do not
-#' need to tag any lines if you keep from_firstline and to_lastline both TRUE:
+#' need to tag any lines if you keep from_first_line and to_last_line both TRUE:
 #' in this case the whole file will be returned.
 #' @return a character vector of matching lines.
 get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
                          begin_pattern = "ROXYGEN_START", 
                          end_pattern = "ROXYGEN_STOP",
-                         from_firstline = TRUE, 
-                         to_lastline = TRUE
+                         from_first_line = TRUE, 
+                         to_last_line = TRUE
                          ) {
     checkmate::assertFile(file_name, access = "r")
     checkmate::qassert(begin_pattern, "S1")
     checkmate::qassert(end_pattern, "S1")
     checkmate::qassert(keep_tagged_lines, "B1")
-    checkmate::qassert(from_firstline, "B1")
-    checkmate::qassert(to_lastline, "B1")
+    checkmate::qassert(from_first_line, "B1")
+    checkmate::qassert(to_last_line, "B1")
 
     R_code_lines <- readLines(file_name)
     found_begin_tag <- any(grepl(begin_pattern, R_code_lines))
@@ -47,19 +46,19 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
             begin_line_indices <- begin_line_indices + 1 
             end_line_indices <- end_line_indices - 1
         }
-        if (from_firstline) {
+        if (from_first_line) {
             if (begin_line_indices[1] > end_line_indices[1]) {
                 begin_line_indices  <- c(1, begin_line_indices)
             }
         }
-        if (to_lastline) {
+        if (to_last_line) {
             if (end_line_indices[1] < begin_line_indices[1]) {
                 end_line_indices  <- c(end_line_indices, length(R_code_lines))
             }
         }
     } else {
         ## no tagged lines found
-        if (from_firstline && to_lastline) {
+        if (from_first_line && to_last_line) {
             begin_line_indices <- 1
             end_line_indices <- length(R_code_lines)
         } else {

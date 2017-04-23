@@ -6,7 +6,7 @@
 \usage{
 get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
   begin_pattern = "ROXYGEN_START", end_pattern = "ROXYGEN_STOP",
-  from_firstline = TRUE, to_lastline = TRUE)
+  from_first_line = TRUE, to_last_line = TRUE)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be parsed.}
@@ -18,10 +18,10 @@ part.}
 
 \item{end_pattern}{A pattern that marks the line ending the roxygen part.}
 
-\item{from_firstline}{use first line as tagged line if first tag found 
+\item{from_first_line}{use first line as tagged line if first tag found 
 matches the end_pattern.}
 
-\item{to_lastline}{use last line as tagged line if last tag found matches
+\item{to_last_line}{use last line as tagged line if last tag found matches
 the begin_pattern.}
 }
 \value{
@@ -32,13 +32,10 @@ get all lines between tagged lines
 }
 \note{
 If you know the file to contain valid roxygen code only, you do not
-need to tag any lines if you keep from_firstline and to_lastline both TRUE:
+need to tag any lines if you keep from_first_line and to_last_line both TRUE:
 in this case the whole file will be returned.
 }
-\section{Version}{
- $Id: 830c4c8efdcff05e197e15cfe6f1104a95e34e0b $
-}
 \author{
-Dominik Cullmann, <dominik.cullmann@forst.bwl.de>
+Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
 

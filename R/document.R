@@ -1,18 +1,18 @@
 #' roxygenize an R code file, output the documentation to pdf.
 #'
-#' @author Dominik Cullmann, <dominik.cullmann@@forst.bwl.de>
-#' @section Version: $Id: 9bbb752b06d887f2115e37c3e9dadd89e40c49c7 $
+#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be documented.
 #' @param output_directory The directory to put the documentation into.
-#' @param clean Delete the working direcotry?
+#' @param clean Delete the working directory?
 #' @param check_package Run R CMD check on the sources?
 #' @param dependencies a character vector of package names the functions depend
 #' on.
-#' @param working_directory A working directory. Defaults to tempdir().
+#' @param working_directory A working directory. Defaults to
+#' \code{\link{tempdir()}}.
 #' \bold{Warning} the working_directory will be recursively
 #' \code{\link{unlink}}ed. You can erase your disk if you change the default!
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
-#' @return TRUE if pdf creation is successfull, FALSE otherwise.
+#' @return FIXME
 #' @export
 #' @examples
 #' document(file_name = system.file("tests", "files", "simple.R", package = "document"))

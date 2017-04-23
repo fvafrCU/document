@@ -13,13 +13,10 @@ fix_package_documentation(package_directory)
 invisibly NULL.
 }
 \description{
-This is just a conviniece wrapper to \code{\link{remove_package_Rd}} and
+This is just a convenience wrapper to \code{\link{remove_package_Rd}} and
 \code{\link{clean_description}}.
 }
-\section{Version}{
- $Id: 3d72fa8d41ea4e2e7b29ffdfefc45e58fe5274b5 $
-}
 \author{
-Dominik Cullmann, <dominik.cullmann@forst.bwl.de>
+Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
 
