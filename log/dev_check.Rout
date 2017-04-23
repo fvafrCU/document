@@ -1,0 +1,173 @@
+Updating document documentation
+Loading document
+Setting env vars ---------------------------------------------------------------
+CFLAGS  : -Wall -pedantic
+CXXFLAGS: -Wall -pedantic
+Building document --------------------------------------------------------------
+  --no-resave-data --no-manual 
+
+* preparing ‘document’:
+* checking DESCRIPTION meta-information ... OK
+* installing the package to build vignettes
+* creating vignettes ... OK
+* checking for LF line-endings in source and make files
+* checking for empty or unneeded directories
+Removed empty directory ‘document/log’
+* building ‘document_0.0.0.9000.tar.gz’
+
+Setting env vars ---------------------------------------------------------------
+_R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
+_R_CHECK_CRAN_INCOMING_           : TRUE
+_R_CHECK_FORCE_SUGGESTS_          : FALSE
+Checking document --------------------------------------------------------------
+  --as-cran --timings --no-tests --no-manual 
+
+* using R Under development (unstable) (2016-05-30 r70684)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-tests --no-manual --as-cran’
+* checking for file ‘document/DESCRIPTION’ ... OK
+* this is package ‘document’ version ‘0.0.0.9000’
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘First Last <first.last@example.com>’
+
+New submission
+
+Version contains large components (0.0.0.9000)
+
+Non-FOSS package license (What license is it under?)
+
+The Title field should be in title case, current version then in title case:
+‘What the Package Does (one line, title case)’
+‘What the Package Does (One Line, Title Case)’
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘document’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking ‘build’ directory ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  What license is it under?
+Standardizable: FALSE
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘simple.pdf’ ‘simple.txt’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... OK
+* checking Rd files ... WARNING
+checkRd: (5) remove_package_Rd.Rd:0-19: Must have a \description
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... WARNING
+Missing link or links in documentation object 'document.Rd':
+  ‘tempdir()’
+
+See section 'Cross-references' in the 'Writing R Extensions' manual.
+
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'Rd_txt_RUnit'
+  ‘txt’
+Documented arguments not in \usage in documentation object 'Rd_txt_RUnit':
+  ‘a’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking installed files from ‘inst/doc’ ... OK
+* checking files in ‘vignettes’ ... OK
+* checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+           user system elapsed
+document 30.588  3.772  42.047
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... SKIPPED
+* checking for unstated dependencies in vignettes ... OK
+* checking package vignettes in ‘inst/doc’ ... OK
+* checking re-building of vignette outputs ... OK
+* DONE
+
+Status: 4 WARNINGs, 2 NOTEs
+See
+for details.
+
+
+R CMD check results
+0 errors | 4 warnings | 3 notes
+checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  What license is it under?
+Standardizable: FALSE
+
+checking Rd files ... WARNING
+checkRd: (5) remove_package_Rd.Rd:0-19: Must have a \description
+
+checking Rd cross-references ... WARNING
+Missing link or links in documentation object 'document.Rd':
+  ‘tempdir()’
+
+See section 'Cross-references' in the 'Writing R Extensions' manual.
+
+
+checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'Rd_txt_RUnit'
+  ‘txt’
+Documented arguments not in \usage in documentation object 'Rd_txt_RUnit':
+  ‘a’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘First Last <first.last@example.com>’
+
+New submission
+
+Version contains large components (0.0.0.9000)
+
+Non-FOSS package license (What license is it under?)
+
+The Title field should be in title case, current version then in title case:
+‘What the Package Does (one line, title case)’
+‘What the Package Does (One Line, Title Case)’
+
+checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘simple.pdf’ ‘simple.txt’
+
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+           user system elapsed
+document 30.588  3.772  42.047
+Warning message:
+@description [package_utils.R#1]: mismatched braces or quotes 

@@ -11,12 +11,12 @@ test_txt <- function() {
                                  )
     ) {
         # create current
+        input <- file.path(system.file('tests', 'files', package = 'document'), 
+                           sub("\\.txt", ".R", basename(file_name)))
+        txt_name <- document(input, output_directory = tempdir())[["txt_path"]]
 
         current <- readLines(txt_name)
         reference  <- readLines(file_name)
-        # delete lines containing differing git Id tags
-        current <- grep("*\\$Id:*", current, invert = TRUE, value = TRUE)
-        reference <- grep("*\\$Id:*", reference, invert = TRUE, value = TRUE)
         checkTrue(identical(current, reference))
     }
 }

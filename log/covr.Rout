@@ -1,0 +1,39 @@
+             filename                       functions line value
+57       R/document.R                        document   47     0
+63       R/document.R                        document   50     0
+83       R/document.R                        document   57     0
+86       R/document.R                        document   58     0
+36   R/file_parsing.R          get_lines_between_tags   36     0
+46   R/file_parsing.R          get_lines_between_tags   41     0
+56   R/file_parsing.R          get_lines_between_tags   46     0
+58   R/file_parsing.R          get_lines_between_tags   47     0
+81   R/file_parsing.R          get_lines_between_tags   56     0
+92   R/file_parsing.R          get_lines_between_tags   61     0
+93   R/file_parsing.R          get_lines_between_tags   62     0
+95   R/file_parsing.R          get_lines_between_tags   63     0
+97   R/file_parsing.R          get_lines_between_tags   64     0
+99   R/file_parsing.R          get_lines_between_tags   65     0
+101  R/file_parsing.R          get_lines_between_tags   66     0
+102  R/file_parsing.R          get_lines_between_tags   67     0
+104  R/file_parsing.R          get_lines_between_tags   68     0
+110  R/file_parsing.R          get_lines_between_tags   71     0
+116  R/file_parsing.R          get_lines_between_tags   74     0
+123  R/file_parsing.R          get_lines_between_tags   77     0
+117 R/package_utils.R add_dependencies_to_description   75     0
+120 R/package_utils.R add_dependencies_to_description   76     0
+122 R/package_utils.R add_dependencies_to_description   77     0
+124 R/package_utils.R add_dependencies_to_description   78     0
+126 R/package_utils.R add_dependencies_to_description   79     0
+129 R/package_utils.R add_dependencies_to_description   80     0
+132 R/package_utils.R add_dependencies_to_description   81     0
+135 R/package_utils.R add_dependencies_to_description   82     0
+158 R/package_utils.R                    Rd_txt_RUnit  118     0
+159 R/package_utils.R                    Rd_txt_RUnit  119     0
+160 R/package_utils.R                    Rd_txt_RUnit  120     0
+161 R/package_utils.R                    Rd_txt_RUnit  121     0
+162 R/package_utils.R                    Rd_txt_RUnit  122     0
+163 R/package_utils.R                    Rd_txt_RUnit  123     0
+document Coverage: 79.14%
+R/package_utils.R: 62.16%
+R/file_parsing.R: 75.38%
+R/document.R: 93.44%

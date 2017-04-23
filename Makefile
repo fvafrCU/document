@@ -10,10 +10,10 @@ LOG_DIR := log
 R := R-devel
 Rscript := Rscript-devel
 
-all: install_bare dev_check dev_test dev_vignettes crancheck utils 
+all: install_bare dev_check dev_vignettes crancheck utils 
 
 # devtools
-dev_all: dev_test dev dev_vignettes
+dev_all: dev dev_vignettes
 
 
 dev: dev_check dev_spell
@@ -21,13 +21,8 @@ dev: dev_check dev_spell
 dev_spell: roxy 
 	${Rscript} --vanilla -e 'spell <- devtools::spell_check(ignore = c("pydoc", "javadoc", "docstrings", "doxygen", "roxygen", "CMD", "roxygenize", "RUnit", "github" , "https", "lintr", "pylint", "Kernighan", "jimhester", "Cullmann", "adc", "arcor", "de", "tryCatch", "org", "pandoc", "pypi", "rPython")); if (length(spell) > 0) {print(spell); stop("spell check failed")} '
 
-dev_test:
-	rm ${temp_file} || TRUE; \
-	${Rscript} --vanilla -e 'devtools::test()' >  ${temp_file} 2>&1; \
-	sed -n -e '/^DONE.*/q;p' < ${temp_file} | \
-	sed -e "s# /.*\(${PKGNAME}\)# \1#" > ${LOG_DIR}/dev_test.Rout 
 
-dev_check: dev_test README.md
+dev_check: runit README.md
 	rm ${temp_file} || TRUE; \
 		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--no-tests")' > ${temp_file} 2>&1; \
 		grep -v ".*'/" ${temp_file} | grep -v ".*‘/" > ${LOG_DIR}/dev_check.Rout ;\
@@ -90,7 +85,11 @@ roxy:
 
 # utils
 .PHONY: utils
-utils: cleanr lintr coverage
+utils: cleanr lintr coverage runit
+
+.PHONY: runit
+runit:
+	cd ./tests/ && ${Rscript} --vanilla ./runit.R || printf "\nMaybe your installation is stale? \nTry\n\tmake install_bare\n\n"
 
 .PHONY: coverage
 coverage:

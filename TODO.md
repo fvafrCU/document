@@ -1,3 +1,4 @@
 - vignette
 - DESCRIPTION 
 - README
+- improve coverage
