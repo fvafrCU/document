@@ -75,7 +75,7 @@ a_first_function <- function(data) {
 # set to one, albeit it would have been overwritten by the sourced code.
 options(warn = 1) 
 
-# Analyize the data
+# Analysize the data
 
 # Well, we fake data.
 # This structure was created by a call to dput() on an existing data.frame
