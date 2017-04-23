@@ -22,8 +22,8 @@ create_documentation <- function(file_name,
                                  ...
                                  ) {
     checkmate::assertFile(file_name, access = "r")
-    qcheckmate::assert(markdown, "B1")
-    qcheckmate::assert(roxygen, "B1")
+    checkmate::qassert(markdown, "B1")
+    checkmate::qassert(roxygen, "B1")
     if (length(file_name) == 0) {stop("give a file_name!")}
     status_markdown  <- status_roxygen <- FALSE
 
@@ -93,11 +93,11 @@ create_roxygen_documentation <- function(
                                          ) {
     checkmate::assertFile(file_name, access = "r")
     checkmate::assertDirectory(output_directory, access = "r")
-    qcheckmate::assert(overwrite, "B1")
-    qcheckmate::assert(check_package, "B1")
+    checkmate::qassert(overwrite, "B1")
+    checkmate::qassert(check_package, "B1")
     checkmate::assertDirectory(copy_tmp_files_to, access = "r")
     checkmate::assertCharacter(dependencies, null.ok = TRUE)
-    qcheckmate::assert(working_directory, "S1")
+    checkmate::qassert(working_directory, "S1")
     on.exit(unlink("Rd2.pdf"))
     #% define variables
     out_file_name <- sub(".Rnw$", ".r", basename(file_name))
@@ -222,10 +222,10 @@ create_markdown_documentation <- function(file_name, python3 = "python3",
                                           comment_character = "#"
                                           ) {
     checkmate::assertFile(file_name, access = "r")
-    qcheckmate::assert(python3, "S1")
+    checkmate::qassert(python3, "S1")
     checkmate::assertCharacter(arguments, null.ok = TRUE)
-    qcheckmate::assert(magic_character, "s1")
-    qcheckmate::assert(comment_character, "S1")
+    checkmate::qassert(magic_character, "s1")
+    checkmate::qassert(comment_character, "S1")
     status <- FALSE
     if (is.na(magic_character)) {
         python_arguments <- "-h"

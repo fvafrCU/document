@@ -4,7 +4,7 @@ devtools::load_all()
 #callr::rcmd_safe("build", ".")
 
 
-file_name = file.path("inst", "test", "files", "documentation_roxygen.r")
+file_name = file.path("inst", "tests", "files", "documentation_roxygen.r")
 output_directory = "/tmp/bar"
 check_package = TRUE
 clean = FALSE

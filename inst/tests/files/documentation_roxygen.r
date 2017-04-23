@@ -53,8 +53,8 @@ source("tmp.R")
 # ROXYGEN_START
 #' a first function example
 #' 
-#' This really is just an example, the function prints \code{head()} and
-#' \code{str} of the given \code{data.frame}.
+#' This really is just an example, the function prints \code{utils::head()} and
+#' \code{utils::str} of the given \code{data.frame}.
 #' 
 #' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de>  
 #' @section Version:* $Id: e9bb5e8a00421177f6b120e6475d48b2b2e3ff4a $  
@@ -62,9 +62,9 @@ source("tmp.R")
 #' @return NULL. This is no good.  
 a_first_function <- function(data) {
     message(paste("## Structure of", deparse(substitute(data)), ":"))
-    str(data)
+    utils::str(data)
     message(paste("## Head of", deparse(substitute(data)), ":"))
-    print(head(data))
+    print(utils::head(data))
     return(invisible(NULL))
 }
 # ROXYGEN_STOP
