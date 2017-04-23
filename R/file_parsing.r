@@ -21,12 +21,12 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
                          from_firstline = TRUE, 
                          to_lastline = TRUE
                          ) {
-    assertFile(file_name, access = "r")
-    qassert(begin_pattern, "S1")
-    qassert(end_pattern, "S1")
-    qassert(keep_tagged_lines, "B1")
-    qassert(from_firstline, "B1")
-    qassert(to_lastline, "B1")
+    checkmate::assertFile(file_name, access = "r")
+    qcheckmate::assert(begin_pattern, "S1")
+    qcheckmate::assert(end_pattern, "S1")
+    qcheckmate::assert(keep_tagged_lines, "B1")
+    qcheckmate::assert(from_firstline, "B1")
+    qcheckmate::assert(to_lastline, "B1")
 
     R_code_lines <- readLines(file_name)
     found_begin_tag <- any(grepl(begin_pattern, R_code_lines))

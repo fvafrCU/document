@@ -11,8 +11,8 @@
 #' @examples 
 #' create_template(file_name = "my_r_file.r", type = "roxygen_markdown")
 create_template <- function(type = "template", file_name = ".") {
-    qassert(type, "S1")
-    qassert(file_name, "S1")
+    qcheckmate::assert(type, "S1")
+    qcheckmate::assert(file_name, "S1")
     available_types <- c("template", "standard", "roxygen", "markdown",
                              "roxygen_markdown", "rnw")
     if (! type  %in% available_types) stop(paste("type must be in c('", 

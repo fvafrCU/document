@@ -109,8 +109,8 @@ fix_package_documentation <- function(package_directory) {
 #' @return invisibly 0, if R CMD check returned 0, nothing otherwise.
 build_and_check_package <- function(package_directory, 
                                     copy_tmp_files_to = dirname(tempdir())) {
-    assertDirectory(copy_tmp_files_to, access = "r")
-    assertDirectory(package_directory, access = "r")
+    checkmate::assertDirectory(copy_tmp_files_to, access = "r")
+    checkmate::assertDirectory(package_directory, access = "r")
     # TODO: R CMD build overwrites existing files!
     # Workaround: The tarball created will have name tar_ball, see below.
     system(paste("R --vanilla CMD build", package_directory))
