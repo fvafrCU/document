@@ -13,6 +13,7 @@
 #' \code{\link{unlink}}ed. You can erase your disk if you change the default!
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
 #' @return TRUE if pdf creation is successfull, FALSE otherwise.
+#' @export
 #' @examples
 #' document(file_name = system.file("tests", "files", "simple.R", package = "document"))
 document <- function(file_name, output_directory = ".", clean = FALSE,

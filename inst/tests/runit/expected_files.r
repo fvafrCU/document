@@ -1,9 +1,9 @@
 require("RUnit")
-require("documentation")
+require("document")
 test_md <- function() {
     for (file_name in list.files(full.names = TRUE, 
                                  system.file('tests', 'expected_files', 
-                                             package = 'documentation'),
+                                             package = 'document'),
                                  pattern = "\\.md"
                                  )
     ) {

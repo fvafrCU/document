@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript --vanilla
-library('documentation')
+library('document')
 library('RUnit')
 
 .failure_details <- function(result) {
@@ -19,8 +19,8 @@ It is copyright by The Bioconductor Dev Team (). ")
 }
 if (interactive()) setwd(dirname(tempdir()))
 # create files
-unit_dir <- system.file("tests", "runit", package = "documentation")
-package_suite <- defineTestSuite('documentation_unit_test',
+unit_dir <- system.file("tests", "runit", package = "document")
+package_suite <- defineTestSuite('document_unit_test',
                                  dirs = unit_dir,
                                  testFileRegexp = '^.*\\.r',
                                  testFuncRegexp = '^test_+')
