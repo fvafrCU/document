@@ -15,4 +15,3 @@ value of \code{link{base::file.remove()}}.
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
-

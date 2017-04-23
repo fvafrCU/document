@@ -120,5 +120,6 @@ Rd_txt_RUnit <- function(txt) {
                          iconv(txt, to = "ASCII", mark = TRUE, sub = "byte")
                          )
                     )
+    new_txt <- iconv(new_txt, to = "ASCII", mark = TRUE)
     return(new_txt)
 }

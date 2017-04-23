@@ -4,7 +4,7 @@
 \alias{document}
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
-document(file_name, output_directory = ".", clean = TRUE,
+document(file_name, output_directory = getwd(), clean = TRUE,
   check_package = TRUE, working_directory = tempfile(),
   dependencies = NULL, runit = FALSE, ...)
 }
@@ -17,8 +17,7 @@ document(file_name, output_directory = ".", clean = TRUE,
 
 \item{check_package}{Run R CMD check on the sources?}
 
-\item{working_directory}{A working directory. Defaults to
-\code{\link{tempdir()}}.
+\item{working_directory}{A working directory. 
 \bold{Warning} the working_directory will be recursively
 \code{\link{unlink}}ed. You can erase your disk if you change the default!}
 
@@ -42,4 +41,3 @@ document(file_name = system.file("tests", "files", "simple.R", package = "docume
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
-

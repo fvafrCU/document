@@ -41,8 +41,8 @@ This package is basically a wrapper to
  
 This package writes to disk, so \strong{NEVER} run it with superuser powers.
 }
+
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
 \keyword{package}
-

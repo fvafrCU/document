@@ -84,7 +84,7 @@ document <- function(file_name, output_directory = getwd(), clean = TRUE,
                                      c("--type=txt", rd_file))[["stdout"]])
     }
     if(isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt)
-    writeLines(iconv(Rd_txt, to = "ASCII", mark = TRUE), con = txt_path)
+    writeLines(Rd_txt, con = txt_path)
     status[["txt_path"]] <- txt_path
     if (check_package) {
         status[["check_result"]] <- devtools::check(package_directory)

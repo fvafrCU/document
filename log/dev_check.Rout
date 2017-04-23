@@ -1,5 +1,16 @@
 Updating document documentation
 Loading document
+Updating roxygen version in /home/qwer/git/cyclops/fvafrcu/document/DESCRIPTION
+Warning: @description [package_utils.R#1]: mismatched braces or quotes
+Writing document-package.Rd
+Writing document.Rd
+Writing get_lines_between_tags.Rd
+Writing sort_unlocale.Rd
+Writing remove_package_Rd.Rd
+Writing clean_description.Rd
+Writing add_dependencies_to_description.Rd
+Writing fix_package_documentation.Rd
+Writing Rd_txt_RUnit.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -13,7 +24,7 @@ Building document --------------------------------------------------------------
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.0.0.9000.tar.gz’
+* building ‘document_0.1.0.9000.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -22,19 +33,19 @@ _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking document --------------------------------------------------------------
   --as-cran --timings --no-tests --no-manual 
 
-* using R Under development (unstable) (2016-05-30 r70684)
+* using R Under development (unstable) (2017-04-20 r72572)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.0.0.9000’
+* this is package ‘document’ version ‘0.1.0.9000’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘First Last <first.last@example.com>’
 
 New submission
 
-Version contains large components (0.0.0.9000)
+Version contains large components (0.1.0.9000)
 
 Non-FOSS package license (What license is it under?)
 
@@ -58,8 +69,9 @@ Non-standard license specification:
   What license is it under?
 Standardizable: FALSE
 * checking top-level files ... NOTE
-Non-standard files/directories found at top level:
-  ‘simple.pdf’ ‘simple.txt’
+File
+  LICENSE
+is not mentioned in the DESCRIPTION file.
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -77,15 +89,10 @@ Non-standard files/directories found at top level:
 * checking foreign function calls ... OK
 * checking R code for possible problems ... OK
 * checking Rd files ... WARNING
-checkRd: (5) remove_package_Rd.Rd:0-19: Must have a \description
+checkRd: (5) remove_package_Rd.Rd:0-18: Must have a \description
 * checking Rd metadata ... OK
 * checking Rd line widths ... OK
-* checking Rd cross-references ... WARNING
-Missing link or links in documentation object 'document.Rd':
-  ‘tempdir()’
-
-See section 'Cross-references' in the 'Writing R Extensions' manual.
-
+* checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
 * checking Rd \usage sections ... WARNING
@@ -105,8 +112,8 @@ Extensions’ manual.
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-           user system elapsed
-document 30.588  3.772  42.047
+          user system elapsed
+document 8.032  0.676  13.681
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -114,27 +121,20 @@ document 30.588  3.772  42.047
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 4 WARNINGs, 2 NOTEs
+Status: 3 WARNINGs, 3 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 4 warnings | 3 notes
+0 errors | 3 warnings | 3 notes
 checking DESCRIPTION meta-information ... WARNING
 Non-standard license specification:
   What license is it under?
 Standardizable: FALSE
 
 checking Rd files ... WARNING
-checkRd: (5) remove_package_Rd.Rd:0-19: Must have a \description
-
-checking Rd cross-references ... WARNING
-Missing link or links in documentation object 'document.Rd':
-  ‘tempdir()’
-
-See section 'Cross-references' in the 'Writing R Extensions' manual.
-
+checkRd: (5) remove_package_Rd.Rd:0-18: Must have a \description
 
 checking Rd \usage sections ... WARNING
 Undocumented arguments in documentation object 'Rd_txt_RUnit'
@@ -153,7 +153,7 @@ Maintainer: ‘First Last <first.last@example.com>’
 
 New submission
 
-Version contains large components (0.0.0.9000)
+Version contains large components (0.1.0.9000)
 
 Non-FOSS package license (What license is it under?)
 
@@ -162,12 +162,11 @@ The Title field should be in title case, current version then in title case:
 ‘What the Package Does (One Line, Title Case)’
 
 checking top-level files ... NOTE
-Non-standard files/directories found at top level:
-  ‘simple.pdf’ ‘simple.txt’
+File
+  LICENSE
+is not mentioned in the DESCRIPTION file.
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-           user system elapsed
-document 30.588  3.772  42.047
-Warning message:
-@description [package_utils.R#1]: mismatched braces or quotes 
+          user system elapsed
+document 8.032  0.676  13.681

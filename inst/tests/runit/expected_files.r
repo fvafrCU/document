@@ -13,10 +13,14 @@ test_txt <- function() {
         # create current
         input <- file.path(system.file('tests', 'files', package = 'document'), 
                            sub("\\.txt", ".R", basename(file_name)))
-        txt_name <- document(input, output_directory = tempdir())[["txt_path"]]
+        txt_name <- document(input, output_directory = tempdir(),
+                             check = FALSE, runit = TRUE)[["txt_path"]]
 
         current <- readLines(txt_name)
         reference  <- readLines(file_name)
+        print(reference)
+        print(current)
+        print(setdiff(reference, current))
         checkTrue(identical(current, reference))
     }
 }

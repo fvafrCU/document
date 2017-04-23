@@ -19,4 +19,3 @@ This is just a convenience wrapper to \code{\link{remove_package_Rd}} and
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
-
