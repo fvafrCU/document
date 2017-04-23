@@ -14,9 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# roxygen2file
+# document
 
-The goal of roxygen2file is to ...
+The goal of document is to ...
 
 ## Example
 
