@@ -9,8 +9,7 @@
 #' Do not bother, this is for Unit testing only.
 #' @param dependencies a character vector of package names the functions depend
 #' on.
-#' @param working_directory A working directory. Defaults to
-#' \code{\link{tempdir()}}.
+#' @param working_directory A working directory. 
 #' \bold{Warning} the working_directory will be recursively
 #' \code{\link{unlink}}ed. You can erase your disk if you change the default!
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
@@ -18,7 +17,7 @@
 #' @export
 #' @examples
 #' document(file_name = system.file("tests", "files", "simple.R", package = "document"))
-document <- function(file_name, output_directory = ".", clean = TRUE,
+document <- function(file_name, output_directory = getwd(), clean = TRUE,
                      check_package = TRUE, working_directory = tempfile(),
                      dependencies = NULL, runit = FALSE,
                      ...
@@ -28,6 +27,7 @@ document <- function(file_name, output_directory = ".", clean = TRUE,
     checkmate::qassert(check_package, "B1")
     checkmate::assertCharacter(dependencies, null.ok = TRUE)
     checkmate::qassert(working_directory, "S1")
+    status <- list(pdf_path = NA, txt_path = NA, check_result = NA)
     out_file_name <- sub(".Rnw$", ".r", basename(file_name))
     package_name <- gsub("_", ".",
                          sub(".[rRS]$|.Rnw$", "", out_file_name, perl = TRUE)
@@ -72,6 +72,7 @@ document <- function(file_name, output_directory = ".", clean = TRUE,
     callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force", 
                                  paste0("--title=", pdf_title),  
                                  paste0("--output=", pdf_path), man_directory))
+    status[["pdf_path"]] <- pdf_path
     # using R CMD Rdconv on the system instead of Rd2txt since ?Rd2txt states
     # it's "mainly intended for internal use" and its interface is "subject to
     # change."
@@ -84,9 +85,9 @@ document <- function(file_name, output_directory = ".", clean = TRUE,
     }
     if(isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt)
     writeLines(iconv(Rd_txt, to = "ASCII", mark = TRUE), con = txt_path)
+    status[["txt_path"]] <- txt_path
     if (check_package) {
-        check <- devtools::check(package_directory)
+        status[["check_result"]] <- devtools::check(package_directory)
     }
-
-    return(invisible())
+    return(status)
 }
