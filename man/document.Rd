@@ -4,9 +4,9 @@
 \alias{document}
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
-document(file_name, output_directory = ".", clean = FALSE,
+document(file_name, output_directory = ".", clean = TRUE,
   check_package = TRUE, working_directory = tempfile(),
-  dependencies = NULL, ...)
+  dependencies = NULL, runit = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
@@ -25,10 +25,13 @@ document(file_name, output_directory = ".", clean = FALSE,
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
+\item{runit}{Convert the text recieved from the help files if running RUnit?
+Do not bother, this is for Unit testing only.}
+
 \item{...}{Arguments passed to \code{\link{get_lines_between_tags}}.}
 }
 \value{
-XXX
+FIXME
 }
 \description{
 roxygenize an R code file, output the documentation to pdf.

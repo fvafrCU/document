@@ -52,7 +52,7 @@ clean_description <- function(package_directory) {
     description <-  readLines(description_file)
     description <-  sub("(License: ).*", "\\1GPL", description)
     # TODO: nasty hardcoding
-    description <-  sub("(Version: ).*", "\\10.0-0", description) 
+    description <-  sub("(Version: ).*", "\\10.1.0", description) 
     description <-  sub("(Description: .*)", "\\1\\.", description) 
     status <- writeLines(description, con = description_file)
     return(invisible(status))
@@ -70,6 +70,8 @@ clean_description <- function(package_directory) {
 #' @return value of \code{link{writeLines}}.
 add_dependencies_to_description <- function(package_directory, 
                                             dependencies = NULL) {
+    # TODO: dependencies should be a named list possibly containing dependencies
+    # and imports and then alter the DESCRIPTION's lines accordingly
     description_file <- file.path(package_directory, "DESCRIPTION") 
     description <-  readLines(description_file)
     if (! is.null(dependencies))
@@ -79,6 +81,7 @@ add_dependencies_to_description <- function(package_directory,
     status <- writeLines(description, con = description_file)
     return(invisible(status))
 }
+
 #' fix a \code{\link{package.skeleton}}s package skeleton. 
 #'
 #' This is just a convenience wrapper to \code{\link{remove_package_Rd}} and
@@ -91,4 +94,31 @@ fix_package_documentation <- function(package_directory) {
     remove_package_Rd(package_directory)
     clean_description(package_directory)
     return(invisible(NULL))
+}
+
+Rd_txt_RUnit <- function(txt) {
+#' clean a string created from a run through RUnit  
+#'
+#' Why am I doing this? It want to run RUnit tests from within R CMD check
+#' and interactively. Files produced are compared with expected files. Now R
+#' CMD check and interactive (and batch) give different encodings. I don't
+#' know why, but they do. 
+#'
+#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
+#' @param a character vector
+#' @return the sanitized character vector
+    # TODO: this is dreadful, I'm converting non-ascii to byte and that back to
+    # ascii again, but 
+    # - setting the options(useFancyQuotes = 'UTF-8') and 
+    # - gsub("\u0060", "'", Rd_txt) (I thought u0060 would be the backtick)
+    # didn't seem to help. 
+    # After R CMD check the XXX.Rcheck/tests/startup.R reads:
+    # options(useFancyQuotes = FALSE)
+    # Have I tried that yet?
+    new_txt <- gsub("<e2><80><99>" ,"'", 
+                    gsub("<e2><80><98>", "'", 
+                         iconv(txt, to = "ASCII", mark = TRUE, sub = "byte")
+                         )
+                    )
+    return(new_txt)
 }
