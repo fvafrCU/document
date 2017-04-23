@@ -2,3 +2,4 @@
 - DESCRIPTION 
 - README
 - improve coverage
+- mark docmentation as unmaintained
