@@ -55,6 +55,7 @@ clean_description <- function(package_directory) {
     description <-  sub("(License: ).*", "\\1GPL", description)
     # TODO: nasty hardcoding
     description <-  sub("(Version: ).*", "\\10.0-0", description) 
+    description <-  sub("(Description: .*)", "\\1\\.", description) 
     status <- writeLines(description, con = description_file)
     return(invisible(status))
 }
