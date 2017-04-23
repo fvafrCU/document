@@ -37,5 +37,4 @@
 #' @aliases document-package 
 #' @docType package
 #' @keywords package
-#' @examples
 NULL

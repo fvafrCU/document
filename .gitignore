@@ -1,4 +1,10 @@
 .Rproj.user
 .Rhistory
 .RData
+*tar.gz
+*swp
+sedscr
+tmp_*
+*Rcheck
 inst/doc
+*.Rout

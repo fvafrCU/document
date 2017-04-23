@@ -1,0 +1,34 @@
+#!/usr/bin/Rscript --vanilla
+# search for  $ Rscript -e 'sessionInfo()' in the raw log of the travis build
+travis_copy <- c("
+R version 3.3.3 (2017-03-06)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu precise (12.04.5 LTS)
+")
+
+provide_cran_comments <- function(comments_file = "cran-comments.md",
+                                  check_log = "log/dev_check.Rout",
+                                  travis_raw_log = travis_copy) {
+    pkg <- devtools::as.package(".")
+    cat("\n# Package ", pkg$package, pkg$version, file = comments_file, "\n", 
+        append = FALSE)
+    travis <- unlist(strsplit(travis_raw_log, "\n"))
+    session <- sessionInfo()
+    here <- c("",
+              session$R.version$version.string,
+              paste0("Platform: ", session$platform),
+              paste0("Running under: ", session$running))
+
+    cat("\n## Test  environments ", "\n", file = comments_file, append = TRUE)
+    cat("-", paste(here[here != ""], collapse = "\n  "), "\n", 
+        file = comments_file, append = TRUE)
+    cat("-", paste(travis[travis != ""], collapse = "\n  "), "\n", 
+        file = comments_file, append = TRUE)
+    cat("- win-builder (devel)", "\n", file = comments_file, append = TRUE)
+    cat("\n## R CMD check results\n", file = comments_file, append = TRUE)
+    check <- readLines(check_log)
+    cat(check[seq.int(from = grep("^[0-9]* errors \\|", check), 
+                      to = length(check))],
+        "\n" , file = comments_file, append = TRUE, sep = "\n")
+    return(invisible(NULL))
+}
