@@ -1,4 +1,3 @@
 devtools::load_all()
+document(file_name = system.file("tests", "files", "simple.R", package = "document"))
 
-file_name = file.path("inst", "tests", "files", "documentation_roxygen.r")
-document(file_name = file_name)

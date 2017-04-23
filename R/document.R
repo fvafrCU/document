@@ -14,17 +14,12 @@
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
 #' @return TRUE if pdf creation is successfull, FALSE otherwise.
 #' @examples
-#' create_template(file_name = "my_r_file.r", type = "template")
-#' create_roxygen_documentation("my_r_file.r")
-document <- function(
-                                         file_name,
-                                         output_directory = ".",
-                                         clean = FALSE,
-                                         check_package = TRUE,
-                                         working_directory = tempfile(),
-                                         dependencies = NULL,
-                                         ...
-                                         ) {
+#' document(file_name = system.file("tests", "files", "simple.R", package = "document"))
+document <- function(file_name, output_directory = ".", clean = FALSE,
+                     check_package = TRUE, working_directory = tempfile(),
+                     dependencies = NULL,
+                     ...
+                     ) {
     checkmate::assertFile(file_name, access = "r")
     checkmate::assertDirectory(output_directory, access = "r")
     checkmate::qassert(check_package, "B1")
@@ -59,7 +54,7 @@ document <- function(
                                add = TRUE)
     if (! dir.exists(output_directory)) dir.create(output_directory)
 
-    roxygen_code <- get_lines_between_tags(file_name) # XXX:, ...)
+    roxygen_code <- get_lines_between_tags(file_name, ...)
     if (is.null(roxygen_code) || ! any(grepl("^#+'", roxygen_code))) {
         stop(paste("Couldn't find roxygen comments in file", file_name,
                    "\nYou shoud set from_firstline and to_lastline to FALSE."))
@@ -67,9 +62,10 @@ document <- function(
     #% write new file to disk
     writeLines(roxygen_code, con = file.path(working_directory, out_file_name))
     #% create a package from new file
-    package.skeleton(code_files = file.path(working_directory, out_file_name),
-                     name = package_name, path = working_directory,
-                     force = TRUE)
+    utils::package.skeleton(code_files = file.path(working_directory, 
+                                                   out_file_name),
+                            name = package_name, path = working_directory,
+                            force = TRUE)
     #% create documentation from roxygen comments for the package
     roxygen2::roxygenize(package.dir = package_directory)
     fix_package_documentation(package_directory)

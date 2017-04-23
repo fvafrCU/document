@@ -11,11 +11,12 @@ LazyData: true
 Imports:
     roxygen2,
     callr,
+    devtools,
     checkmate
 Suggests:
     knitr,
     rmarkdown,
-    testthat,
+    RUnit,
     covr
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1

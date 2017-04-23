@@ -96,35 +96,3 @@ fix_package_documentation <- function(package_directory) {
     clean_description(package_directory)
     return(invisible(NULL))
 }
-
-#' build and check a temporary package intended for documentation mainly.
-#'
-#' We might want to see if the temporary package we've created to document our
-#' code file would build and pass R CMD check as a proper package.
-#' 
-#' @author Dominik Cullmann, <dominik.cullmann@@forst.bwl.de>
-#' @section Version: $Id: 3d72fa8d41ea4e2e7b29ffdfefc45e58fe5274b5 $
-#' @param package_directory Path to the packages' directory.
-#' @param copy_tmp_files_to Path to save output from R CMD check to.
-#' @return invisibly 0, if R CMD check returned 0, nothing otherwise.
-build_and_check_package <- function(package_directory, 
-                                    copy_tmp_files_to = dirname(tempdir())) {
-    checkmate::assertDirectory(copy_tmp_files_to, access = "r")
-    checkmate::assertDirectory(package_directory, access = "r")
-    # TODO: R CMD build overwrites existing files!
-    # Workaround: The tarball created will have name tar_ball, see below.
-    system(paste("R --vanilla CMD build", package_directory))
-    package_name <- basename(package_directory)
-    # The name derives from clean_description(), see its NOTE.
-    tar_ball <- paste0(package_name, "_0.0-0.tar.gz")
-    on.exit(unlink(tar_ball))
-    r_cmd_check_status <- system(paste0("R --vanilla CMD check ", tar_ball, 
-                                        " --output=", copy_tmp_files_to))
-    if(r_cmd_check_status != 0) {
-        stop(paste0("R CMD check failed for package ", package_name, 
-                    ", R CMD check ouput is in ", copy_tmp_files_to, "."))
-    }
-    return(invisible(r_cmd_check_status))
-}
-
-
