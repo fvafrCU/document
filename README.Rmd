@@ -3,6 +3,10 @@ output:
   md_document:
     variant: markdown_github
 ---
+[![Build Status](https://travis-ci.org/fvafrCU/document.svg?branch=master)](https://travis-ci.org/fvafrCU/document)
+[![Coverage Status](https://codecov.io/github/fvafrCU/document/coverage.svg?branch=master)](https://codecov.io/github/fvafrCU/document?branch=master)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/document)](https://cran.r-project.org/package=document)
+
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -15,13 +19,29 @@ knitr::opts_chunk$set(
 ```
 
 # document
+Run  
+[roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
 
-The goal of document is to ...
+on single code files rather than whole packages.
 
-## Example
+## Introduction
+Please read the vignette. Either [the version on github](http://htmlpreview.github.io/?https://github.com/fvafrCU/cleanr/blob/master/inst/doc/cleanr_Introduction.html)
+or the one released on [cran](https://cran.r-project.org/package=cleanr).
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-## basic example code
+Or, after installation, the help page:
+```{r, eval = FALSE}
+help("excerptr-package", package = "excerptr")
+```
+```{r, echo = FALSE}
+  package <- "excerptr"
+  topic <- "excerptr-package"
+  help_file <- utils:::.getHelpFile(help(topic, package = (package)))
+  captured <- gsub('_\b', '',  capture.output(tools:::Rd2txt(help_file) ))
+  cat(captured, sep="\n")
+```
+## Installation
+You can install cleanr from github with:
+```{r, eval = TRUE, results = "hide", message = FALSE}
+if (! require("devtools")) install.packages("devtools")
+devtools::install_github("fvafrCU/cleanr", quiet = TRUE)
 ```
