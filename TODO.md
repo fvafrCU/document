@@ -1,5 +1,5 @@
-- vignette
-- DESCRIPTION 
-- README
+- improve vignette
+- fix DESCRIPTION 
+- improve README
 - improve coverage
 - mark docmentation as unmaintained
