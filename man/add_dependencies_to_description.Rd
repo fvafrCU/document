@@ -2,7 +2,7 @@
 % Please edit documentation in R/package_utils.R
 \name{add_dependencies_to_description}
 \alias{add_dependencies_to_description}
-\title{Add a "Depends:"-field to the DESCRIPTION file}
+\title{Add a "Depends:"-field to the DESCRIPTION File}
 \usage{
 add_dependencies_to_description(package_directory, dependencies = NULL)
 }

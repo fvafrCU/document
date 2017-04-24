@@ -17,7 +17,7 @@
 #' @export
 #' @examples
 #' document(file_name = system.file("tests", "files", "simple.R", package = "document"))
-document <- function(file_name, output_directory = getwd(), clean = TRUE,
+document <- function(file_name, output_directory = tempdir(), clean = TRUE,
                      check_package = TRUE, working_directory = tempfile(),
                      dependencies = NULL, runit = FALSE,
                      ...
@@ -64,9 +64,13 @@ document <- function(file_name, output_directory = getwd(), clean = TRUE,
                                                    out_file_name),
                             name = package_name, path = working_directory,
                             force = TRUE)
+    # roxygen2 does not overwrite files not written by roxygen2, so we need to
+    # delete some files
+    file.remove(list.files(man_directory, full.names = TRUE)) 
+    file.remove(file.path(package_directory, "NAMESPACE")) 
     #% create documentation from roxygen comments for the package
     roxygen2::roxygenize(package.dir = package_directory)
-    fix_package_documentation(package_directory)
+    clean_description(package_directory)
     if (! is.null(dependencies)) 
         add_dependencies_to_description(package_directory, dependencies)
     callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force", 

@@ -1,16 +1,5 @@
 Updating document documentation
 Loading document
-Updating roxygen version in /home/qwer/git/cyclops/fvafrcu/document/DESCRIPTION
-Warning: @description [package_utils.R#1]: mismatched braces or quotes
-Writing document-package.Rd
-Writing document.Rd
-Writing get_lines_between_tags.Rd
-Writing sort_unlocale.Rd
-Writing remove_package_Rd.Rd
-Writing clean_description.Rd
-Writing add_dependencies_to_description.Rd
-Writing fix_package_documentation.Rd
-Writing Rd_txt_RUnit.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -21,6 +10,10 @@ Building document --------------------------------------------------------------
 * checking DESCRIPTION meta-information ... OK
 * installing the package to build vignettes
 * creating vignettes ... OK
+Warning: ‘inst/doc’ files
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
+  ignored as vignettes have been rebuilt.
+  Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
@@ -41,13 +34,11 @@ Checking document --------------------------------------------------------------
 * this is package ‘document’ version ‘0.1.0.9000’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘First Last <first.last@example.com>’
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
 Version contains large components (0.1.0.9000)
-
-Non-FOSS package license (What license is it under?)
 
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’
@@ -64,14 +55,8 @@ The Title field should be in title case, current version then in title case:
 * checking installed package size ... OK
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
-* checking DESCRIPTION meta-information ... WARNING
-Non-standard license specification:
-  What license is it under?
-Standardizable: FALSE
-* checking top-level files ... NOTE
-File
-  LICENSE
-is not mentioned in the DESCRIPTION file.
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -88,24 +73,13 @@ is not mentioned in the DESCRIPTION file.
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
 * checking R code for possible problems ... OK
-* checking Rd files ... WARNING
-checkRd: (5) remove_package_Rd.Rd:0-18: Must have a \description
+* checking Rd files ... OK
 * checking Rd metadata ... OK
 * checking Rd line widths ... OK
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'Rd_txt_RUnit'
-  ‘txt’
-Documented arguments not in \usage in documentation object 'Rd_txt_RUnit':
-  ‘a’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
+* checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
@@ -113,7 +87,7 @@ Extensions’ manual.
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
           user system elapsed
-document 8.032  0.676  13.681
+document 8.248  0.612  10.855
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -121,52 +95,25 @@ document 8.032  0.676  13.681
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 3 WARNINGs, 3 NOTEs
+Status: 2 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 3 warnings | 3 notes
-checking DESCRIPTION meta-information ... WARNING
-Non-standard license specification:
-  What license is it under?
-Standardizable: FALSE
-
-checking Rd files ... WARNING
-checkRd: (5) remove_package_Rd.Rd:0-18: Must have a \description
-
-checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'Rd_txt_RUnit'
-  ‘txt’
-Documented arguments not in \usage in documentation object 'Rd_txt_RUnit':
-  ‘a’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
-
+0 errors | 0 warnings | 2 notes
 checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘First Last <first.last@example.com>’
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
 Version contains large components (0.1.0.9000)
 
-Non-FOSS package license (What license is it under?)
-
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’
 ‘What the Package Does (One Line, Title Case)’
 
-checking top-level files ... NOTE
-File
-  LICENSE
-is not mentioned in the DESCRIPTION file.
-
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
           user system elapsed
-document 8.032  0.676  13.681
+document 8.248  0.612  10.855

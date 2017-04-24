@@ -1,4 +1,21 @@
-#' sort a character vector in lexical order avoiding the locale.
+#' Remove Automatically Generated Package Rd from Man Directory
+#' 
+#' \code{\link[utils]{package.skeleton}} and
+#' \code{\link[roxygen2]{roxygenize}}
+#' leave us with an invalid name-package.Rd file in the man directory. 
+#' So we remove it.
+#'
+#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
+#' @param package_directory Path to the directory.
+#' @return value of \code{\link{file.remove}}.
+remove_package_Rd <- function(package_directory) {
+    package_name <- basename(package_directory)
+    package_rd <- paste(package_name, "-package.Rd", sep = "")
+    status <- file.remove(file.path(package_directory, "man", package_rd))
+    return(invisible(status))
+}
+
+#' Sort a Character Vector in Lexical Order Avoiding the Locale
 #'
 #' \code{\link{sort}} uses the collation of the locale (see
 #' \code{\link{Comparison}}), which results in different sorting. If a (RUnit)
@@ -20,23 +37,7 @@ sort_unlocale <- function(char) {
     return(char[order(char0)])
 }
 
-#' Remove automatically generated package Rd from man directory
-#'
-#' \code{\link{utils::package.skeleton} and \code{\link{roxygen2::roxygenize}
-#' leave us with an invalid #' name-package.Rd file in the man directory. 
-#' It needs to be removed.
-#'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
-#' @param package_directory Path to the directory.
-#' @return value of \code{link{base::file.remove()}}.
-remove_package_Rd <- function(package_directory) {
-    package_name <- basename(package_directory)
-    package_rd <- paste(package_name, "-package.Rd", sep = "")
-    status <- file.remove(file.path(package_directory, "man", package_rd))
-    return(invisible(status))
-}
-
-#' Change License in the DESCRIPTION file to "GPL"
+#' Change License in the DESCRIPTION File to "GPL"
 #'
 #' utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning 
 #' in R CMD check. Fix that.
@@ -58,7 +59,7 @@ clean_description <- function(package_directory) {
     return(invisible(status))
 }
 
-#' Add a "Depends:"-field to the DESCRIPTION file
+#' Add a "Depends:"-field to the DESCRIPTION File
 #'
 #' if the functions in the temporary package depend on other functions (from,
 #' for example, the checkmate package), you can add the whole package as a
@@ -82,19 +83,6 @@ add_dependencies_to_description <- function(package_directory,
     return(invisible(status))
 }
 
-#' fix a \code{\link{package.skeleton}}s package skeleton. 
-#'
-#' This is just a convenience wrapper to \code{\link{remove_package_Rd}} and
-#' \code{\link{clean_description}}.
-#'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
-#' @param package_directory Path to the directory.
-#' @return invisibly NULL.
-fix_package_documentation <- function(package_directory) {
-    remove_package_Rd(package_directory)
-    clean_description(package_directory)
-    return(invisible(NULL))
-}
 
 Rd_txt_RUnit <- function(txt) {
 #' clean a string created from a run through RUnit  
@@ -105,7 +93,7 @@ Rd_txt_RUnit <- function(txt) {
 #' know why, but they do. 
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
-#' @param a character vector
+#' @param txt a character vector
 #' @return the sanitized character vector
     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to
     # ascii again, but 

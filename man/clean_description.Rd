@@ -2,7 +2,7 @@
 % Please edit documentation in R/package_utils.R
 \name{clean_description}
 \alias{clean_description}
-\title{Change License in the DESCRIPTION file to "GPL"}
+\title{Change License in the DESCRIPTION File to "GPL"}
 \usage{
 clean_description(package_directory)
 }

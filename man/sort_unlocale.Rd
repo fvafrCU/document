@@ -2,7 +2,7 @@
 % Please edit documentation in R/package_utils.R
 \name{sort_unlocale}
 \alias{sort_unlocale}
-\title{sort a character vector in lexical order avoiding the locale.}
+\title{Sort a Character Vector in Lexical Order Avoiding the Locale}
 \usage{
 sort_unlocale(char)
 }

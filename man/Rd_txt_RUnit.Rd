@@ -7,7 +7,7 @@
 Rd_txt_RUnit(txt)
 }
 \arguments{
-\item{a}{character vector}
+\item{txt}{a character vector}
 }
 \value{
 the sanitized character vector

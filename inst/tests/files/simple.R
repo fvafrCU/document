@@ -3,7 +3,7 @@
 #'
 #' provide a simple example of a file using roxygen and standard R comments.
 #'
-#' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de>
+#' @author Dominik Cullmann <adc-r@@arcor.de>
 #' @note This header will show up in the documentation, but it's got nothing to
 #' do with the R statements below. Usually this is not intended.
 #' @section Warning: READ THIS FILE CAREFULLY. There's some information in the
@@ -32,19 +32,21 @@ source("tmp.R")
 
 #% define local functions
 # ROXYGEN_START
-#' a first function example
+
+#' a first function example XXX
 #' 
 #' This really is just an example, the function prints \code{utils::head()} and
-#' \code{utils::str} of the given \code{data.frame}.
-#' 
+#' \code{utils::str()} of the given \code{data.frame}.
 #' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de>  
-#' @param data Name of a data.frame to ... do whatever needs to be done.  
+#' @param df Name of a data.frame to ... do whatever needs to be done.  
 #' @return NULL. This is no good.  
-a_first_function <- function(data) {
-    message(paste("## Structure of", deparse(substitute(data)), ":"))
-    utils::str(data)
-    message(paste("## Head of", deparse(substitute(data)), ":"))
-    print(utils::head(data))
+#' @examples 
+#' a_first_function(mtcars)
+a_first_function <- function(df) {
+    message(paste("## Structure of", deparse(substitute(df)), ":"))
+    utils::str(df)
+    message(paste("## Head of", deparse(substitute(df)), ":"))
+    print(utils::head(df))
     return(invisible(NULL))
 }
 # ROXYGEN_STOP

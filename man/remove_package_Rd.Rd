@@ -2,7 +2,7 @@
 % Please edit documentation in R/package_utils.R
 \name{remove_package_Rd}
 \alias{remove_package_Rd}
-\title{Remove automatically generated package Rd from man directory}
+\title{Remove Automatically Generated Package Rd from Man Directory}
 \usage{
 remove_package_Rd(package_directory)
 }
@@ -10,7 +10,13 @@ remove_package_Rd(package_directory)
 \item{package_directory}{Path to the directory.}
 }
 \value{
-value of \code{link{base::file.remove()}}.
+value of \code{\link{file.remove}}.
+}
+\description{
+\code{\link[utils]{package.skeleton}} and
+\code{\link[roxygen2]{roxygenize}}
+leave us with an invalid name-package.Rd file in the man directory. 
+So we remove it.
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

@@ -4,7 +4,7 @@
 \alias{document}
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
-document(file_name, output_directory = getwd(), clean = TRUE,
+document(file_name, output_directory = tempdir(), clean = TRUE,
   check_package = TRUE, working_directory = tempfile(),
   dependencies = NULL, runit = FALSE, ...)
 }
