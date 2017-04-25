@@ -41,7 +41,8 @@ source("tmp.R")
 #' @param df Name of a data.frame to ... do whatever needs to be done.  
 #' @return NULL. This is no good.  
 #' @examples 
-#' a_first_function(mtcars)
+#' data(iris, package = "datasets")
+#' a_first_function(iris)
 a_first_function <- function(df) {
     message(paste("## Structure of", deparse(substitute(df)), ":"))
     utils::str(df)
@@ -58,7 +59,7 @@ a_first_function <- function(df) {
 options(warn = 1) 
 
 #% Analysize the data
-colMeans(mtcars)
+colMeans(iris[1:4])
 
 #% collect garbage  
 # We created a local options file on our file system, which we should

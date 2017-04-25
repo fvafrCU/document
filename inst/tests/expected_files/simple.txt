@@ -46,6 +46,7 @@ _A_u_t_h_o_r(_s):
 
 _E_x_a_m_p_l_e_s:
 
-     a_first_function(mtcars)
+     data(iris, package = "datasets")
+     a_first_function(iris)
      
 
