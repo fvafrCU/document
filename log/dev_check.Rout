@@ -1,11 +1,5 @@
 Updating document documentation
 Loading document
-Writing remove_package_Rd.Rd
-Writing sort_unlocale.Rd
-Writing clean_description.Rd
-Writing add_dependencies_to_description.Rd
-Writing Rd_txt_RUnit.Rd
-Deleting fix_package_documentation.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -17,7 +11,7 @@ Building document --------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files
@@ -32,7 +26,7 @@ _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking document --------------------------------------------------------------
   --as-cran --timings --no-tests --no-manual 
 
-* using R Under development (unstable) (2017-04-20 r72572)
+* using R Under development (unstable) (2017-04-25 r72618)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
@@ -92,28 +86,22 @@ The Title field should be in title case, current version then in title case:
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-           user system elapsed
-document 17.664   2.22  22.675
-* checking for unstated dependencies in ‘tests’ ... WARNING
-'library' or 'require' calls not declared from:
-  ‘excerptr’ ‘testthat’
+          user system elapsed
+document 18.16  2.196   27.79
+* checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 1 WARNING, 2 NOTEs
+Status: 2 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 1 warning  | 2 notes
-checking for unstated dependencies in ‘tests’ ... WARNING
-'library' or 'require' calls not declared from:
-  ‘excerptr’ ‘testthat’
-
+0 errors | 0 warnings | 2 notes
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
@@ -127,5 +115,5 @@ The Title field should be in title case, current version then in title case:
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-           user system elapsed
-document 17.664   2.22  22.675
+          user system elapsed
+document 18.16  2.196   27.79

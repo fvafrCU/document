@@ -18,6 +18,7 @@ Suggests:
     knitr,
     rmarkdown,
     RUnit,
+    testthat,
     datasets,
     covr
 VignetteBuilder: knitr
