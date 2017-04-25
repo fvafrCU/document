@@ -4,16 +4,13 @@
 \alias{document}
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
-document(file_name, output_directory = tempdir(), clean = TRUE,
-  check_package = TRUE, working_directory = tempfile(),
-  dependencies = NULL, runit = FALSE, ...)
+document(file_name, output_directory = tempdir(), check_package = TRUE,
+  working_directory = tempdir(), dependencies = NULL, runit = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
 
 \item{output_directory}{The directory to put the documentation into.}
-
-\item{clean}{Delete the working directory?}
 
 \item{check_package}{Run R CMD check on the sources?}
 
@@ -36,7 +33,8 @@ FIXME
 roxygenize an R code file, output the documentation to pdf.
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"))
+document(file_name = system.file("tests", "files", "simple.R", package = "document"),
+         check_package = FALSE)
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

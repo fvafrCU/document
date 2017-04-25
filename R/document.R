@@ -3,7 +3,6 @@
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be documented.
 #' @param output_directory The directory to put the documentation into.
-#' @param clean Delete the working directory?
 #' @param check_package Run R CMD check on the sources?
 #' @param runit Convert the text recieved from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
@@ -16,9 +15,12 @@
 #' @return FIXME
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"))
-document <- function(file_name, output_directory = tempdir(), clean = TRUE,
-                     check_package = TRUE, working_directory = tempfile(),
+#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
+#'          check_package = FALSE)
+document <- function(file_name, 
+                     #FIXME: output_directory = dirname(file_name),
+                     output_directory = tempdir(),
+                     check_package = TRUE, working_directory = tempdir(),
                      dependencies = NULL, runit = FALSE,
                      ...
                      ) {
@@ -32,7 +34,10 @@ document <- function(file_name, output_directory = tempdir(), clean = TRUE,
     package_name <- gsub("_", ".",
                          sub(".[rRS]$|.Rnw$", "", out_file_name, perl = TRUE)
                          )
-    package_directory <- file.path(working_directory, package_name)
+    physical_package_name <- paste("document", package_name, 
+                                    basename(tempfile(pattern = "")), sep = ".")
+    package_directory <- file.path(working_directory, physical_package_name)
+    options("document_package_directory" = package_directory)
     man_directory <- file.path(package_directory, "man")
     pdf_name <- sub("[rRS]$", "pdf", out_file_name)
     pdf_path <- file.path(output_directory, pdf_name)
@@ -50,7 +55,6 @@ document <- function(file_name, output_directory = tempdir(), clean = TRUE,
         man_directory <- sub("\\\\","/", man_directory)
     }
     dir.create(working_directory)
-    if (isTRUE(clean)) on.exit(unlink(working_directory, recursive = TRUE))
     if (! dir.exists(output_directory)) dir.create(output_directory)
     roxygen_code <- get_lines_between_tags(file_name, ...)
     if (is.null(roxygen_code) || ! any(grepl("^#+'", roxygen_code))) {
@@ -62,7 +66,7 @@ document <- function(file_name, output_directory = tempdir(), clean = TRUE,
     #% create a package from new file
     utils::package.skeleton(code_files = file.path(working_directory, 
                                                    out_file_name),
-                            name = package_name, path = working_directory,
+                            name = physical_package_name, path = working_directory,
                             force = TRUE)
     # roxygen2 does not overwrite files not written by roxygen2, so we need to
     # delete some files

@@ -1,5 +1,7 @@
 Updating document documentation
 Loading document
+Writing document.Rd
+Writing man.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -84,10 +86,7 @@ The Title field should be in title case, current version then in title case:
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-          user system elapsed
-document 18.16  2.196   27.79
+* checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -95,13 +94,13 @@ document 18.16  2.196   27.79
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 2 NOTEs
+Status: 1 NOTE
 See
 for details.
 
 
 R CMD check results
-0 errors | 0 warnings | 2 notes
+0 errors | 0 warnings | 1 note 
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
@@ -112,8 +111,3 @@ Version contains large components (0.1.0.9000)
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’
 ‘What the Package Does (One Line, Title Case)’
-
-checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-          user system elapsed
-document 18.16  2.196   27.79

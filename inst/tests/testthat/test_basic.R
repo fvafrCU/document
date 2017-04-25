@@ -22,7 +22,7 @@ test_that("simple", {
         print(file_name)
         print(input)
         txt_name <- document(input, output_directory = output_directory,
-                             check = FALSE, runit = TRUE, clean = FALSE)[["txt_path"]]
+                             check = FALSE, runit = TRUE)[["txt_path"]]
         current <- readLines(txt_name)
         reference  <- readLines(file_name)
         expect_equal(current, reference)
