@@ -3,8 +3,11 @@ Loading required package: testthat
 Testing document
 expected files: [1] "/home/qwer/git/cyclops/fvafrcu/document/inst/tests/expected_files/simple.txt"
 [1] "/home/qwer/git/cyclops/fvafrcu/document/inst/tests/files/simple.R"
-Writing NAMESPACE
+WWriting NAMESPACE
 Writing A-Header-for.Rd
 Writing a_first_function.Rd
 .
+
+Warnings -----------------------------------------------------------------------
+1. simple (@test_basic.R#24) - '/tmp/RtmpBAY6GB' already exists
 

@@ -1,7 +1,5 @@
 Updating document documentation
 Loading document
-Writing document.Rd
-Writing man.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -19,7 +17,7 @@ Warning: ‘inst/doc’ files
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.1.0.9000.tar.gz’
+* building ‘document_0.2.0.9000.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -33,14 +31,14 @@ Checking document --------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.1.0.9000’
+* this is package ‘document’ version ‘0.2.0.9000’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-Version contains large components (0.1.0.9000)
+Version contains large components (0.2.0.9000)
 
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’
@@ -106,7 +104,7 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-Version contains large components (0.1.0.9000)
+Version contains large components (0.2.0.9000)
 
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’

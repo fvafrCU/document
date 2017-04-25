@@ -5,3 +5,5 @@
 - mark docmentation as unmaintained
 - use subfunctions on document() unbloat it. Maybe fake_package()?
 - consider using withr
+- make cleanr
+- lint it

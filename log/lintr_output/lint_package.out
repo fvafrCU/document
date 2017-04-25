@@ -1,13 +1,13 @@
 inst/tests/files/simple.R 30 71 style Trailing whitespace is superfluous. cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n")  list(c(71, 71)) trailing_whitespace_linter
 inst/tests/files/simple.R 30 71 style Trailing whitespace is superfluous. cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n")  list(c(71, 71)) trailing_whitespace_linter
-inst/tests/files/simple.R 46 21 style Commented code should be removed.     message(paste("## Structure of", deparse(substitute(df)), ":")) list(c(21, 67)) commented_code_linter
-inst/tests/files/simple.R 46 21 style Commented code should be removed.     message(paste("## Structure of", deparse(substitute(df)), ":")) list(c(21, 67)) commented_code_linter
-inst/tests/files/simple.R 48 21 style Commented code should be removed.     message(paste("## Head of", deparse(substitute(df)), ":")) list(c(21, 62)) commented_code_linter
-inst/tests/files/simple.R 48 21 style Commented code should be removed.     message(paste("## Head of", deparse(substitute(df)), ":")) list(c(21, 62)) commented_code_linter
-inst/tests/files/simple.R 58 18 style Trailing whitespace is superfluous. options(warn = 1)  list(c(18, 18)) trailing_whitespace_linter
-inst/tests/files/simple.R 58 18 style Trailing whitespace is superfluous. options(warn = 1)  list(c(18, 18)) trailing_whitespace_linter
-inst/tests/files/simple.R 67 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
-inst/tests/files/simple.R 67 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
+inst/tests/files/simple.R 47 21 style Commented code should be removed.     message(paste("## Structure of", deparse(substitute(df)), ":")) list(c(21, 67)) commented_code_linter
+inst/tests/files/simple.R 47 21 style Commented code should be removed.     message(paste("## Structure of", deparse(substitute(df)), ":")) list(c(21, 67)) commented_code_linter
+inst/tests/files/simple.R 49 21 style Commented code should be removed.     message(paste("## Head of", deparse(substitute(df)), ":")) list(c(21, 62)) commented_code_linter
+inst/tests/files/simple.R 49 21 style Commented code should be removed.     message(paste("## Head of", deparse(substitute(df)), ":")) list(c(21, 62)) commented_code_linter
+inst/tests/files/simple.R 59 18 style Trailing whitespace is superfluous. options(warn = 1)  list(c(18, 18)) trailing_whitespace_linter
+inst/tests/files/simple.R 59 18 style Trailing whitespace is superfluous. options(warn = 1)  list(c(18, 18)) trailing_whitespace_linter
+inst/tests/files/simple.R 68 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
+inst/tests/files/simple.R 68 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
 inst/tests/runit.R 2 9 style Only use double-quotes. library('document') list(c(9, 18)) single_quotes_linter
 inst/tests/runit.R 2 9 style Only use double-quotes. library('document') list(c(9, 18)) single_quotes_linter
 inst/tests/runit.R 3 9 style Only use double-quotes. library('RUnit') list(c(9, 15)) single_quotes_linter
@@ -66,8 +66,6 @@ inst/tests/runit/expected_files.r 15 68 style Only use double-quotes.         in
 inst/tests/runit/expected_files.r 15 68 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(68, 77)) single_quotes_linter
 inst/tests/runit/expected_files.r 15 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
 inst/tests/runit/expected_files.r 15 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 18 1 style lines should not be more than 80 characters.                              check = FALSE, runit = TRUE, clean = FALSE)[["txt_path"]] list(c(1, 86)) line_length_linter
-inst/tests/runit/expected_files.r 18 1 style lines should not be more than 80 characters.                              check = FALSE, runit = TRUE, clean = FALSE)[["txt_path"]] list(c(1, 86)) line_length_linter
 inst/tests/runit/expected_files.r 21 9 style Variable and function names should be all lowercase.         checkTrue(identical(current, reference)) list(c(9, 17)) camel_case_linter
 inst/tests/runit/expected_files.r 21 9 warning no visible global function definition for ‘checkTrue’         checkTrue(identical(current, reference)) list(c(9, 17)) object_usage_linter
 inst/tests/runit/expected_files.r 21 9 style Variable and function names should be all lowercase.         checkTrue(identical(current, reference)) list(c(9, 17)) camel_case_linter
@@ -90,21 +88,22 @@ inst/tests/testthat/test_basic.R 20 68 style Only use double-quotes.         inp
 inst/tests/testthat/test_basic.R 20 68 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(68, 77)) single_quotes_linter
 inst/tests/testthat/test_basic.R 20 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
 inst/tests/testthat/test_basic.R 20 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
-inst/tests/testthat/test_basic.R 25 1 style lines should not be more than 80 characters.                              check = FALSE, runit = TRUE, clean = FALSE)[["txt_path"]] list(c(1, 86)) line_length_linter
-inst/tests/testthat/test_basic.R 25 1 style lines should not be more than 80 characters.                              check = FALSE, runit = TRUE, clean = FALSE)[["txt_path"]] list(c(1, 86)) line_length_linter
-R/document.R 44 38 style Opening curly braces should never go on their own line and should always be followed by a new line.     if (.Platform$OS.type != "unix") {  NULL open_curly_linter
-R/document.R 44 39 style Trailing whitespace is superfluous.     if (.Platform$OS.type != "unix") {  list(c(39, 39)) trailing_whitespace_linter
-R/document.R 45 10 style Commented code should be removed.         ## on windows, R CMD Rd2pdf crashes with multi-word titles... I have no list(c(10, 79)) commented_code_linter
-R/document.R 50 37 style Commas should always have a space after.         man_directory <- sub("\\\\","/", man_directory) NULL commas_linter
-R/document.R 63 70 style Trailing whitespace is superfluous.     utils::package.skeleton(code_files = file.path(working_directory,  list(c(70, 70)) trailing_whitespace_linter
-R/document.R 69 62 style Trailing whitespace is superfluous.     file.remove(list.files(man_directory, full.names = TRUE))  list(c(62, 62)) trailing_whitespace_linter
-R/document.R 70 59 style Trailing whitespace is superfluous.     file.remove(file.path(package_directory, "NAMESPACE"))  list(c(59, 59)) trailing_whitespace_linter
-R/document.R 74 33 style Trailing whitespace is superfluous.     if (! is.null(dependencies))  list(c(33, 33)) trailing_whitespace_linter
-R/document.R 76 69 style Trailing whitespace is superfluous.     callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force",  list(c(69, 69)) trailing_whitespace_linter
-R/document.R 77 64 style Trailing whitespace is superfluous.                                  paste0("--title=", pdf_title),   list(64:65) trailing_whitespace_linter
-R/document.R 86 28 style Trailing whitespace is superfluous.         Rd_txt <- c(Rd_txt,  list(c(28, 28)) trailing_whitespace_linter
-R/document.R 87 47 style Trailing whitespace is superfluous.                     callr::rcmd_safe("Rdconv",  list(c(47, 47)) trailing_whitespace_linter
-R/document.R 90 7 style Place a space before left parenthesis, except in a function call.     if(isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt) NULL spaces_left_parentheses_linter
+R/document.R 20 32 style Trailing whitespace is superfluous. document <- function(file_name,  list(c(32, 32)) trailing_whitespace_linter
+R/document.R 37 61 style Trailing whitespace is superfluous.     physical_package_name <- paste("document", package_name,  list(c(61, 61)) trailing_whitespace_linter
+R/document.R 49 38 style Opening curly braces should never go on their own line and should always be followed by a new line.     if (.Platform$OS.type != "unix") {  NULL open_curly_linter
+R/document.R 49 39 style Trailing whitespace is superfluous.     if (.Platform$OS.type != "unix") {  list(c(39, 39)) trailing_whitespace_linter
+R/document.R 50 10 style Commented code should be removed.         ## on windows, R CMD Rd2pdf crashes with multi-word titles... I have no list(c(10, 79)) commented_code_linter
+R/document.R 55 37 style Commas should always have a space after.         man_directory <- sub("\\\\","/", man_directory) NULL commas_linter
+R/document.R 67 70 style Trailing whitespace is superfluous.     utils::package.skeleton(code_files = file.path(working_directory,  list(c(70, 70)) trailing_whitespace_linter
+R/document.R 69 1 style lines should not be more than 80 characters.                             name = physical_package_name, path = working_directory, list(c(1, 83)) line_length_linter
+R/document.R 73 62 style Trailing whitespace is superfluous.     file.remove(list.files(man_directory, full.names = TRUE))  list(c(62, 62)) trailing_whitespace_linter
+R/document.R 74 59 style Trailing whitespace is superfluous.     file.remove(file.path(package_directory, "NAMESPACE"))  list(c(59, 59)) trailing_whitespace_linter
+R/document.R 78 33 style Trailing whitespace is superfluous.     if (! is.null(dependencies))  list(c(33, 33)) trailing_whitespace_linter
+R/document.R 80 69 style Trailing whitespace is superfluous.     callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force",  list(c(69, 69)) trailing_whitespace_linter
+R/document.R 81 64 style Trailing whitespace is superfluous.                                  paste0("--title=", pdf_title),   list(64:65) trailing_whitespace_linter
+R/document.R 90 28 style Trailing whitespace is superfluous.         Rd_txt <- c(Rd_txt,  list(c(28, 28)) trailing_whitespace_linter
+R/document.R 91 47 style Trailing whitespace is superfluous.                     callr::rcmd_safe("Rdconv",  list(c(47, 47)) trailing_whitespace_linter
+R/document.R 94 7 style Place a space before left parenthesis, except in a function call.     if(isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt) NULL spaces_left_parentheses_linter
 R/file_parsing.R 18 58 style Trailing whitespace is superfluous.                          begin_pattern = "ROXYGEN_START",  list(c(58, 58)) trailing_whitespace_linter
 R/file_parsing.R 20 49 style Trailing whitespace is superfluous.                          from_first_line = TRUE,  list(c(49, 49)) trailing_whitespace_linter
 R/file_parsing.R 35 11 style Place a space before left parenthesis, except in a function call.         if(! found_begin_tag) { NULL spaces_left_parentheses_linter
@@ -118,6 +117,10 @@ R/file_parsing.R 80 63 style Trailing whitespace is superfluous.                
 R/file_parsing.R 81 76 style Trailing whitespace is superfluous.                                             paste(paste(begin_line_indices,  list(c(76, 76)) trailing_whitespace_linter
 R/file_parsing.R 83 68 style Trailing whitespace is superfluous.                                                         sep = ":"),  list(c(68, 68)) trailing_whitespace_linter
 R/file_parsing.R 91 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
+R/man.R 12 23 style Use <-, not =, for assignment.     package_directory = getOption("document_package_directory") NULL assignment_linter
+R/man.R 14 41 style Trailing whitespace is superfluous.     rd_out <- callr::rcmd_safe("Rdconv",  list(c(41, 41)) trailing_whitespace_linter
+R/man.R 18 22 style Trailing whitespace is superfluous.     file.show(rd_txt)  list(c(22, 22)) trailing_whitespace_linter
+R/man.R 21 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
 R/utils.R 30 48 style Trailing whitespace is superfluous.         char0 <-  gsub(paste0(toupper(letter)),  list(c(48, 48)) trailing_whitespace_linter
 R/utils.R 33 39 style Trailing whitespace is superfluous.         char0 <-  gsub(paste0(letter),  list(c(39, 39)) trailing_whitespace_linter
 R/utils.R 52 68 style Trailing whitespace is superfluous.     description_file <- file.path(package_directory, "DESCRIPTION")  list(c(68, 68)) trailing_whitespace_linter
