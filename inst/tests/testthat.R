@@ -1,2 +1,2 @@
 library("testthat")
-test_check("excerptr")
+test_check("document")

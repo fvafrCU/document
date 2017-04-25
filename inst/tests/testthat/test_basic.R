@@ -5,7 +5,7 @@ if (interactive()) {
 }
 library("testthat")
 context("expected files")
-test_that("foo", {
+test_that("simple", {
     output_directory <- file.path(tempdir(), "document_testthat_txt")
     unlink(output_directory, recursive = TRUE)
     dir.create(output_directory)
