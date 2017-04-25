@@ -19,29 +19,26 @@ knitr::opts_chunk$set(
 ```
 
 # document
-Run  
-[roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
+Run  [roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
 
-on single code files rather than whole packages.
 
 ## Introduction
-Please read the vignette. Either [the version on github](http://htmlpreview.github.io/?https://github.com/fvafrCU/cleanr/blob/master/inst/doc/cleanr_Introduction.html)
-or the one released on [cran](https://cran.r-project.org/package=cleanr).
+Please read the [vignette](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/doc/document_Introduction.html).
 
 Or, after installation, the help page:
 ```{r, eval = FALSE}
-help("excerptr-package", package = "excerptr")
+help("document-package", package = "document")
 ```
 ```{r, echo = FALSE}
-  package <- "excerptr"
-  topic <- "excerptr-package"
+  package <- "document"
+  topic <- "document-package"
   help_file <- utils:::.getHelpFile(help(topic, package = (package)))
   captured <- gsub('_\b', '',  capture.output(tools:::Rd2txt(help_file) ))
   cat(captured, sep="\n")
 ```
 ## Installation
-You can install cleanr from github with:
+You can install document from github with:
 ```{r, eval = TRUE, results = "hide", message = FALSE}
 if (! require("devtools")) install.packages("devtools")
-devtools::install_github("fvafrCU/cleanr", quiet = TRUE)
+devtools::install_github("fvafrCU/document", quiet = TRUE)
 ```

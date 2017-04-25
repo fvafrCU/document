@@ -13,43 +13,69 @@ output:
 
 
 # document
-Run  
-[roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
+Run  [roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
 
-on single code files rather than whole packages.
 
 ## Introduction
-Please read the vignette. Either [the version on github](http://htmlpreview.github.io/?https://github.com/fvafrCU/cleanr/blob/master/inst/doc/cleanr_Introduction.html)
-or the one released on [cran](https://cran.r-project.org/package=cleanr).
+Please read the [vignette](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/doc/document_Introduction.html).
 
 Or, after installation, the help page:
 
 ```r
-help("excerptr-package", package = "excerptr")
+help("document-package", package = "document")
 ```
 
 ```
-#> Excerpt Structuring Comments from Your Code File and Set a Table of
-#> Contents
+#> document a single R code file.
 #> 
 #> Description:
 #> 
-#>      This is just an R interface to the python package excerpts (<URL:
-#>      https://pypi.python.org/pypi/excerpts>).
+#>      extract roxygen2-style and markdown comments from a single R code
+#>      file and convert them to various human-readable formats.
 #> 
 #> Details:
 #> 
-#>      You will probably only want to use 'excerptr', see there for a
-#>      usage example.
+#>      R is a programming language that supports and checks documentation
+#>      for program libraries (called `packages'). The package roxygen2
+#>      provides a tool for creating documentation from annotated source
+#>      code - much like doxygen, javadoc and docstrings/pydoc do.
+#> 
+#>      And R is a free software environment for statistical computing and
+#>      graphics, used by people like me who start out hacking down code,
+#>      eventually pouring chunks of code into functions (and sometimes
+#>      even ending up creating and documenting packages). Along that work
+#>      flow you cannot use R's documentation system, let alone roxygen2,
+#>      unless you have come to forge your code into a package.
+#> 
+#>      I am fully aware of the fact that roxygen2 is meant to document
+#>      packages, not single code chunks (see _Note_).  So should you.
+#>      Nevertheless I feel the temptation to use roxygen2-style comments
+#>      in code chunks that are not part of any package. And to convert
+#>      them to pdf for better readability.
+#> 
+#> Warning:
+#> 
+#>      This package writes to disk, so *NEVER* run it with superuser
+#>      powers.
+#> 
+#> Note:
+#> 
+#>      This package is basically a wrapper to
+#> 
+#>        1. 'roxygen2'. It internally creates a temporary package from
+#>           the code files provided (using 'utils::package.skeleton')
+#>           which it then passes to roxygen2.
+#> 
+#>        2. 'R CMD' commands run by 'callr'.
 #> 
 #> Author(s):
 #> 
 #>      Andreas Dominik Cullmann, <adc-r@arcor.de>
 ```
 ## Installation
-You can install cleanr from github with:
+You can install document from github with:
 
 ```r
 if (! require("devtools")) install.packages("devtools")
-devtools::install_github("fvafrCU/cleanr", quiet = TRUE)
+devtools::install_github("fvafrCU/document", quiet = TRUE)
 ```
