@@ -19,7 +19,7 @@
 #' @return Invisibly the status of \code{\link{display_Rd}}.
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
+#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
 #'          check_package = FALSE)
 #' man("a_first_function")
 man <- function(x, topic = NA, force_Rd = FALSE) {
@@ -29,12 +29,12 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
             status <- display_Rd(x)
         } else {
             if (! is.na(topic)) {
-                stop("Give either a path to an R documentation file or ", 
+                stop("Give either a path to an R documentation file or ",
                      "additionally give a topic.")
             } else {
                 document(x)
-                package_directory = getOption("document_package_directory")
-                rd_file <- file.path(package_directory, "man", 
+                package_directory <- getOption("document_package_directory")
+                rd_file <- file.path(package_directory, "man",
                                      paste0(topic, ".Rd"))
                 status <- display_Rd(rd_file)
             }
@@ -42,10 +42,10 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
     } else {
         package_directory <- getOption("document_package_directory")
         if (is.null(package_directory)) {
-            stop("Give the path to a file as x and ", deparse(substitute(x)), 
+            stop("Give the path to a file as x and ", deparse(substitute(x)),
                  " as topic.\n", usage)
         } else {
-                rd_file <- file.path(package_directory, "man", 
+                rd_file <- file.path(package_directory, "man",
                                      paste0(x, ".Rd"))
                 status <- display_Rd(rd_file)
         }
@@ -68,20 +68,20 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
 #' @export
 #' @examples
 #' # usage with assignment operator:
-#' foo <- function(x){
+#' foo <- function(x) {
 #'     u <- usage()
 #'     message("Usage is: ", u)
 #' }
 #' foo()
 #'
 #' # usage without assignment operator:
-#' bar <- function(x){
+#' bar <- function(x) {
 #'     message(usage(n = -2))
 #' }
 #' bar()
 usage <- function(n = -1) {
-    calling_function = as.list(sys.call(which = n))[[1]]
-    useage <- trimws(sub("^function ", calling_function, 
+    calling_function <- as.list(sys.call(which = n))[[1]]
+    useage <- trimws(sub("^function ", calling_function,
              deparse(args(as.character(calling_function)))[1]))
     return(useage)
 }
@@ -90,14 +90,14 @@ usage <- function(n = -1) {
 #'
 #' This is meant for internal use by \code{\link{man}}.
 #'
-#' @note The check might produce false negatives (erroneously assuming the file 
+#' @note The check might produce false negatives (erroneously assuming the file
 #' is not an R documentation file).
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @return TRUE if the file is probably an R documentation file, FALSE
 #' otherwise.
 #' @param x The path to the file to be checked.
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
+#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
 #'          check_package = FALSE)
 #' document:::is_Rd_file(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 is_Rd_file <- function(x) {
@@ -106,8 +106,8 @@ is_Rd_file <- function(x) {
     items <- c("name", "title", "usage")
     item <- items[1]
     pattern  <- paste0("^\\\\", item, "\\{")
-    has_item <- vapply(items, 
-                       function(item) return(any(grepl(pattern, lines))), 
+    has_item <- vapply(items,
+                       function(item) return(any(grepl(pattern, lines))),
                        logical(1))
     if (all(has_item) && has_ext) {
         status  <- TRUE
@@ -118,11 +118,11 @@ is_Rd_file <- function(x) {
 }
 
 #' Display the Contents of an R documentation file
-#' 
+#'
 #' This is meant for internal use by \code{\link{man}}.
 #'
-#' @note The Contents are converted to text with \code{Rdconv} and then saved 
-#' to a temporary file which is then displayed using the R pager. 
+#' @note The Contents are converted to text with \code{Rdconv} and then saved
+#' to a temporary file which is then displayed using the R pager.
 #' Using \code{\link{cat}} on the text would not allow for using different
 #' pagers.
 #'
@@ -130,15 +130,15 @@ is_Rd_file <- function(x) {
 #' @return the return value of removing the temporary file.
 #' @param rd_file The path to the Rd file to be displayed.
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
+#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
 #'          check_package = FALSE)
 #' document:::display_Rd(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 display_Rd <- function(rd_file) {
-    rd_out <- callr::rcmd_safe("Rdconv", 
+    rd_out <- callr::rcmd_safe("Rdconv",
                      c("--type=txt", rd_file))[["stdout"]]
     rd_txt <- tempfile()
     writeLines(rd_out, con = rd_txt)
-    file.show(rd_txt) 
+    file.show(rd_txt)
     status <- file.remove(rd_txt)
     return(status)
 }

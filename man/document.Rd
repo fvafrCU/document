@@ -14,7 +14,7 @@ document(file_name, output_directory = tempdir(), check_package = TRUE,
 
 \item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
 
-\item{working_directory}{A working directory. 
+\item{working_directory}{A working directory.
 \bold{Warning} the working_directory will be recursively
 \code{\link{unlink}}ed. You can erase your disk if you change the default!}
 

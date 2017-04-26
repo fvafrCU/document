@@ -17,11 +17,11 @@ otherwise.
 This is meant for internal use by \code{\link{man}}.
 }
 \note{
-The check might produce false negatives (erroneously assuming the file 
+The check might produce false negatives (erroneously assuming the file
 is not an R documentation file).
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
+document(file_name = system.file("tests", "files", "simple.R", package = "document"),
          check_package = FALSE)
 document:::is_Rd_file(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 }

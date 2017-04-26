@@ -16,13 +16,13 @@ the return value of removing the temporary file.
 This is meant for internal use by \code{\link{man}}.
 }
 \note{
-The Contents are converted to text with \code{Rdconv} and then saved 
-to a temporary file which is then displayed using the R pager. 
+The Contents are converted to text with \code{Rdconv} and then saved
+to a temporary file which is then displayed using the R pager.
 Using \code{\link{cat}} on the text would not allow for using different
 pagers.
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
+document(file_name = system.file("tests", "files", "simple.R", package = "document"),
          check_package = FALSE)
 document:::display_Rd(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 }

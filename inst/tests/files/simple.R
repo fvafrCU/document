@@ -1,5 +1,5 @@
 #!/usr/bin/Rscript --vanilla
-#' \emph{file} simple.R 
+#' \emph{file} simple.R
 #'
 #' provide a simple example of a file using roxygen and standard R comments.
 #'
@@ -15,9 +15,9 @@ NULL
 # ROXYGEN_STOP
 
 # load packages, load local code, define local functions, set options
-# You should stick to that order: if you define a function of a name which 
-# is used as a (function) name in a package you load, you _do_ want your 
-# version to mask the packages' version.  
+# You should stick to that order: if you define a function of a name which
+# is used as a (function) name in a package you load, you _do_ want your
+# version to mask the packages' version. 
 
 #% load packages
 library("methods") # load an example package from the standard library
@@ -25,44 +25,43 @@ library("methods") # load an example package from the standard library
 
 #% load local code
 # This would usually be functions defined and stored away in files.
-# For now we just we just create a file containing R options and 
-# and then source it. 
-cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n") 
+# For now we just we just create a file containing R options and
+# and then source it.
+cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n")
 source("tmp.R")
 
 #% define local functions
 # ROXYGEN_START
 
 #' a first function example XXX
-#' 
+#'
 #' This really is just an example, the function prints \code{utils::head()} and
 #' \code{utils::str()} of the given \code{data.frame}.
-#' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de>  
-#' @param df Name of a data.frame to ... do whatever needs to be done.  
-#' @return NULL. This is no good.  
-#' @examples 
+#' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de> 
+#' @param df Name of a data.frame to ... do whatever needs to be done. 
+#' @return NULL. This is no good. 
+#' @examples
 #' data(iris, package = "datasets")
 #' a_first_function(iris)
 a_first_function <- function(df) {
-    message(paste("## Structure of", deparse(substitute(df)), ":"))
+    message(paste("# Structure of", deparse(substitute(df)), ":"))
     utils::str(df)
-    message(paste("## Head of", deparse(substitute(df)), ":"))
+    message(paste("# Head of", deparse(substitute(df)), ":"))
     print(utils::head(df))
     return(invisible(NULL))
 }
 # ROXYGEN_STOP
 
 #% set "global" options
-# We overwrite (mask) the options set from the options file. Had we done 
-# it the other way round, we might be tempted to assume warn still to be 
+# We overwrite (mask) the options set from the options file. Had we done
+# it the other way round, we might be tempted to assume warn still to be
 # set to one, albeit it would have been overwritten by the sourced code.
-options(warn = 1) 
+options(warn = 1)
 
 #% Analysize the data
 colMeans(iris[1:4])
 
-#% collect garbage  
+#% collect garbage 
 # We created a local options file on our file system, which we should
 # remove now.
 file.remove("tmp.R")
-

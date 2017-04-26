@@ -18,7 +18,7 @@ part.}
 
 \item{end_pattern}{A pattern that marks the line ending the roxygen part.}
 
-\item{from_first_line}{use first line as tagged line if first tag found 
+\item{from_first_line}{use first line as tagged line if first tag found
 matches the end_pattern.}
 
 \item{to_last_line}{use last line as tagged line if last tag found matches

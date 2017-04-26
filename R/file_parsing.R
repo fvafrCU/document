@@ -6,7 +6,7 @@
 #' @param end_pattern  A pattern that marks the line ending the roxygen part.
 #' @param begin_pattern  A pattern that marks the line beginning the roxygen
 #' part.
-#' @param from_first_line use first line as tagged line if first tag found 
+#' @param from_first_line use first line as tagged line if first tag found
 #' matches the end_pattern.
 #' @param to_last_line use last line as tagged line if last tag found matches
 #' the begin_pattern.
@@ -15,9 +15,9 @@
 #' in this case the whole file will be returned.
 #' @return a character vector of matching lines.
 get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
-                         begin_pattern = "ROXYGEN_START", 
+                         begin_pattern = "ROXYGEN_START",
                          end_pattern = "ROXYGEN_STOP",
-                         from_first_line = TRUE, 
+                         from_first_line = TRUE,
                          to_last_line = TRUE
                          ) {
     checkmate::assertFile(file_name, access = "r")
@@ -32,18 +32,18 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
     found_end_tag <- any(grepl(end_pattern, R_code_lines))
 
     if (found_begin_tag || found_end_tag) {
-        if(! found_begin_tag) {
+        if (! found_begin_tag) {
             begin_line_indices <- 1
         } else {
-            begin_line_indices <- grep(begin_pattern, R_code_lines) 
+            begin_line_indices <- grep(begin_pattern, R_code_lines)
         }
-        if(! found_end_tag) {
+        if (! found_end_tag) {
             end_line_indices <- 1
         } else {
-            end_line_indices <- grep(end_pattern, R_code_lines) 
+            end_line_indices <- grep(end_pattern, R_code_lines)
         }
         if (! keep_tagged_lines){
-            begin_line_indices <- begin_line_indices + 1 
+            begin_line_indices <- begin_line_indices + 1
             end_line_indices <- end_line_indices - 1
         }
         if (from_first_line) {
@@ -62,8 +62,8 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
             begin_line_indices <- 1
             end_line_indices <- length(R_code_lines)
         } else {
-            ## file contains neither end_pattern nor begin_pattern and should 
-            ## not be used from first to last line. 
+            ## file contains neither end_pattern nor begin_pattern and should
+            ## not be used from first to last line.
             return(NULL)
         }
     }
@@ -77,10 +77,10 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
         stop("begin and end tags not in proper order")
     }
     selected_lines <- eval(parse(
-                               text = paste("R_code_lines[c(", 
-                                            paste(paste(begin_line_indices, 
+                               text = paste("R_code_lines[c(",
+                                            paste(paste(begin_line_indices,
                                                         end_line_indices,
-                                                        sep = ":"), 
+                                                        sep = ":"),
                                                   collapse = ",")
                                             , ")]"
                                             )
@@ -88,4 +88,3 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
     )
     return(selected_lines)
 }
-

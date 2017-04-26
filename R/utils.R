@@ -1,8 +1,8 @@
 #' Remove Automatically Generated Package Rd from Man Directory
-#' 
+#'
 #' \code{\link[utils]{package.skeleton}} and
 #' \code{\link[roxygen2]{roxygenize}}
-#' leave us with an invalid name-package.Rd file in the man directory. 
+#' leave us with an invalid name-package.Rd file in the man directory.
 #' So we remove it.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
@@ -27,10 +27,10 @@ remove_package_Rd <- function(package_directory) {
 sort_unlocale <- function(char) {
     char0 <- char
     for (letter in letters) {
-        char0 <-  gsub(paste0(toupper(letter)), 
+        char0 <-  gsub(paste0(toupper(letter)),
                          paste0(which(letter == letters) * 10, "_"),
                          char0)
-        char0 <-  gsub(paste0(letter), 
+        char0 <-  gsub(paste0(letter),
                          paste0(which(letter == letters) * 10 + 1, "_"),
                          char0)
     }
@@ -39,7 +39,7 @@ sort_unlocale <- function(char) {
 
 #' Change License in the DESCRIPTION File to "GPL"
 #'
-#' utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning 
+#' utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning
 #' in R CMD check. Fix that.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
@@ -49,12 +49,12 @@ sort_unlocale <- function(char) {
 #' @param package_directory Path to the directory.
 #' @return value of \code{link{writeLines}}.
 clean_description <- function(package_directory) {
-    description_file <- file.path(package_directory, "DESCRIPTION") 
+    description_file <- file.path(package_directory, "DESCRIPTION")
     description <-  readLines(description_file)
     description <-  sub("(License: ).*", "\\1GPL", description)
     # TODO: nasty hardcoding
-    description <-  sub("(Version: ).*", "\\10.1.0", description) 
-    description <-  sub("(Description: .*)", "\\1\\.", description) 
+    description <-  sub("(Version: ).*", "\\10.1.0", description)
+    description <-  sub("(Description: .*)", "\\1\\.", description)
     status <- writeLines(description, con = description_file)
     return(invisible(status))
 }
@@ -69,15 +69,15 @@ clean_description <- function(package_directory) {
 #' @param package_directory Path to the directory.
 #' @param dependencies the package names the temporary package will depend on.
 #' @return value of \code{link{writeLines}}.
-add_dependencies_to_description <- function(package_directory, 
+add_dependencies_to_description <- function(package_directory,
                                             dependencies = NULL) {
     # TODO: dependencies should be a named list possibly containing dependencies
     # and imports and then alter the DESCRIPTION's lines accordingly
-    description_file <- file.path(package_directory, "DESCRIPTION") 
+    description_file <- file.path(package_directory, "DESCRIPTION")
     description <-  readLines(description_file)
     if (! is.null(dependencies))
-        description <- c(description, paste0("Depends: ", 
-                                             paste(dependencies, 
+        description <- c(description, paste0("Depends: ",
+                                             paste(dependencies,
                                                    collapse = ", ")))
     status <- writeLines(description, con = description_file)
     return(invisible(status))
@@ -85,26 +85,26 @@ add_dependencies_to_description <- function(package_directory,
 
 
 Rd_txt_RUnit <- function(txt) {
-#' clean a string created from a run through RUnit  
+#' clean a string created from a run through RUnit
 #'
 #' Why am I doing this? It want to run RUnit tests from within R CMD check
 #' and interactively. Files produced are compared with expected files. Now R
 #' CMD check and interactive (and batch) give different encodings. I don't
-#' know why, but they do. 
+#' know why, but they do.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param txt a character vector
 #' @return the sanitized character vector
     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to
-    # ascii again, but 
-    # - setting the options(useFancyQuotes = 'UTF-8') and 
+    # ascii again, but
+    # - setting the options(useFancyQuotes = 'UTF-8') and
     # - gsub("\u0060", "'", Rd_txt) (I thought u0060 would be the backtick)
-    # didn't seem to help. 
-    # After R CMD check the XXX.Rcheck/tests/startup.R reads:
-    # options(useFancyQuotes = FALSE)
+    # didn't seem to help.
+    # After R CMD check the XXX.Rcheck/tests/startup.R
+    # reads: options(useFancyQuotes = FALSE) # Exclude Linting
     # Have I tried that yet?
-    new_txt <- gsub("<e2><80><99>" ,"'", 
-                    gsub("<e2><80><98>", "'", 
+    new_txt <- gsub("<e2><80><99>", "'",
+                    gsub("<e2><80><98>", "'",
                          iconv(txt, to = "ASCII", mark = TRUE, sub = "byte")
                          )
                     )

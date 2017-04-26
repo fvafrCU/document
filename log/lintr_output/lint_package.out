@@ -1,142 +1,23 @@
-inst/tests/files/simple.R 30 71 style Trailing whitespace is superfluous. cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n")  list(c(71, 71)) trailing_whitespace_linter
-inst/tests/files/simple.R 30 71 style Trailing whitespace is superfluous. cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n")  list(c(71, 71)) trailing_whitespace_linter
-inst/tests/files/simple.R 47 21 style Commented code should be removed.     message(paste("## Structure of", deparse(substitute(df)), ":")) list(c(21, 67)) commented_code_linter
-inst/tests/files/simple.R 47 21 style Commented code should be removed.     message(paste("## Structure of", deparse(substitute(df)), ":")) list(c(21, 67)) commented_code_linter
-inst/tests/files/simple.R 49 21 style Commented code should be removed.     message(paste("## Head of", deparse(substitute(df)), ":")) list(c(21, 62)) commented_code_linter
-inst/tests/files/simple.R 49 21 style Commented code should be removed.     message(paste("## Head of", deparse(substitute(df)), ":")) list(c(21, 62)) commented_code_linter
-inst/tests/files/simple.R 59 18 style Trailing whitespace is superfluous. options(warn = 1)  list(c(18, 18)) trailing_whitespace_linter
-inst/tests/files/simple.R 59 18 style Trailing whitespace is superfluous. options(warn = 1)  list(c(18, 18)) trailing_whitespace_linter
-inst/tests/files/simple.R 68 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
-inst/tests/files/simple.R 68 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
-inst/tests/runit.R 2 9 style Only use double-quotes. library('document') list(c(9, 18)) single_quotes_linter
-inst/tests/runit.R 2 9 style Only use double-quotes. library('document') list(c(9, 18)) single_quotes_linter
-inst/tests/runit.R 3 9 style Only use double-quotes. library('RUnit') list(c(9, 15)) single_quotes_linter
-inst/tests/runit.R 3 9 style Only use double-quotes. library('RUnit') list(c(9, 15)) single_quotes_linter
-inst/tests/runit.R 6 1 style lines should not be more than 80 characters.     message("This function is a verbatim copy of a part of the testPackage() function from:   list(c(1, 93)) line_length_linter
-inst/tests/runit.R 6 1 style lines should not be more than 80 characters.     message("This function is a verbatim copy of a part of the testPackage() function from:   list(c(1, 93)) line_length_linter
-inst/tests/runit.R 6 92 style Trailing whitespace is superfluous.     message("This function is a verbatim copy of a part of the testPackage() function from:   list(92:93) trailing_whitespace_linter
-inst/tests/runit.R 6 92 style Trailing whitespace is superfluous.     message("This function is a verbatim copy of a part of the testPackage() function from:   list(92:93) trailing_whitespace_linter
-inst/tests/runit.R 11 13 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(13, 17)) camel_case_linter
-inst/tests/runit.R 11 13 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(13, 17)) camel_case_linter
-inst/tests/runit.R 11 30 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(30, 33)) camel_case_linter
-inst/tests/runit.R 11 30 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(30, 33)) camel_case_linter
-inst/tests/runit.R 13 27 style Variable and function names should be all lowercase.                lapply(res$sourceFileResults, list(c(27, 43)) camel_case_linter
-inst/tests/runit.R 13 27 style Variable and function names should be all lowercase.                lapply(res$sourceFileResults, list(c(27, 43)) camel_case_linter
-inst/tests/runit.R 14 32 style Variable and function names should be all lowercase.                       function(fileRes) { list(c(32, 38)) camel_case_linter
-inst/tests/runit.R 14 32 style Variable and function names should be all lowercase.                       function(fileRes) { list(c(32, 38)) camel_case_linter
-inst/tests/runit.R 16 40 style Variable and function names should be all lowercase.                                        fileRes)) list(c(40, 46)) camel_case_linter
-inst/tests/runit.R 16 40 style Variable and function names should be all lowercase.                                        fileRes)) list(c(40, 46)) camel_case_linter
-inst/tests/runit.R 23 18 style Variable and function names should be all lowercase. package_suite <- defineTestSuite('document_unit_test', list(c(18, 32)) camel_case_linter
-inst/tests/runit.R 23 18 style Variable and function names should be all lowercase. package_suite <- defineTestSuite('document_unit_test', list(c(18, 32)) camel_case_linter
-inst/tests/runit.R 23 34 style Only use double-quotes. package_suite <- defineTestSuite('document_unit_test', list(c(34, 53)) single_quotes_linter
-inst/tests/runit.R 23 34 style Only use double-quotes. package_suite <- defineTestSuite('document_unit_test', list(c(34, 53)) single_quotes_linter
-inst/tests/runit.R 25 51 style Only use double-quotes.                                  testFileRegexp = '^.*\\.r', list(c(51, 59)) single_quotes_linter
-inst/tests/runit.R 25 51 style Only use double-quotes.                                  testFileRegexp = '^.*\\.r', list(c(51, 59)) single_quotes_linter
-inst/tests/runit.R 26 51 style Only use double-quotes.                                  testFuncRegexp = '^test_+') list(c(51, 59)) single_quotes_linter
-inst/tests/runit.R 26 51 style Only use double-quotes.                                  testFuncRegexp = '^test_+') list(c(51, 59)) single_quotes_linter
-inst/tests/runit.R 28 16 style Variable and function names should be all lowercase. test_result <- runTestSuite(package_suite) list(c(16, 27)) camel_case_linter
-inst/tests/runit.R 28 16 style Variable and function names should be all lowercase. test_result <- runTestSuite(package_suite) list(c(16, 27)) camel_case_linter
-inst/tests/runit.R 29 1 style Variable and function names should be all lowercase. printTextProtocol(test_result, showDetails = TRUE) list(c(1, 17)) camel_case_linter
-inst/tests/runit.R 29 1 style Variable and function names should be all lowercase. printTextProtocol(test_result, showDetails = TRUE) list(c(1, 17)) camel_case_linter
-inst/tests/runit.R 30 40 style Only use double-quotes. html_file <- paste(package_suite$name, 'html', sep = '.') list(c(40, 45)) single_quotes_linter
-inst/tests/runit.R 30 40 style Only use double-quotes. html_file <- paste(package_suite$name, 'html', sep = '.') list(c(40, 45)) single_quotes_linter
-inst/tests/runit.R 30 54 style Only use double-quotes. html_file <- paste(package_suite$name, 'html', sep = '.') list(c(54, 56)) single_quotes_linter
-inst/tests/runit.R 30 54 style Only use double-quotes. html_file <- paste(package_suite$name, 'html', sep = '.') list(c(54, 56)) single_quotes_linter
-inst/tests/runit.R 31 1 style Variable and function names should be all lowercase. printHTMLProtocol(test_result, fileName = html_file) list(c(1, 17)) camel_case_linter
-inst/tests/runit.R 31 1 style Variable and function names should be all lowercase. printHTMLProtocol(test_result, fileName = html_file) list(c(1, 17)) camel_case_linter
-inst/tests/runit.R 34 37 style Only use double-quotes. if (interactive()) browseURL(paste0('file:', html)) list(c(37, 43)) single_quotes_linter
-inst/tests/runit.R 34 37 style Only use double-quotes. if (interactive()) browseURL(paste0('file:', html)) list(c(37, 43)) single_quotes_linter
-inst/tests/runit.R 35 3 style Place a space before left parenthesis, except in a function call. if(length(.failure_details(test_result)) > 0) stop("RUnit failed.") NULL spaces_left_parentheses_linter
-inst/tests/runit.R 35 3 style Place a space before left parenthesis, except in a function call. if(length(.failure_details(test_result)) > 0) stop("RUnit failed.") NULL spaces_left_parentheses_linter
-inst/tests/runit/expected_files.r 8 52 style Trailing whitespace is superfluous.     for (file_name in list.files(full.names = TRUE,  list(c(52, 52)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 8 52 style Trailing whitespace is superfluous.     for (file_name in list.files(full.names = TRUE,  list(c(52, 52)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 9 46 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(46, 52)) single_quotes_linter
-inst/tests/runit/expected_files.r 9 46 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(46, 52)) single_quotes_linter
-inst/tests/runit/expected_files.r 9 55 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(55, 70)) single_quotes_linter
-inst/tests/runit/expected_files.r 9 55 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(55, 70)) single_quotes_linter
-inst/tests/runit/expected_files.r 9 72 style Trailing whitespace is superfluous.                                  system.file('tests', 'expected_files',  list(c(72, 72)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 9 72 style Trailing whitespace is superfluous.                                  system.file('tests', 'expected_files',  list(c(72, 72)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 10 56 style Only use double-quotes.                                              package = 'document'), list(c(56, 65)) single_quotes_linter
-inst/tests/runit/expected_files.r 10 56 style Only use double-quotes.                                              package = 'document'), list(c(56, 65)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 40 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(40, 46)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 40 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(40, 46)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 49 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(49, 55)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 49 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(49, 55)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 68 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(68, 77)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 68 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(68, 77)) single_quotes_linter
-inst/tests/runit/expected_files.r 15 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 15 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
-inst/tests/runit/expected_files.r 21 9 style Variable and function names should be all lowercase.         checkTrue(identical(current, reference)) list(c(9, 17)) camel_case_linter
-inst/tests/runit/expected_files.r 21 9 warning no visible global function definition for ‘checkTrue’         checkTrue(identical(current, reference)) list(c(9, 17)) object_usage_linter
-inst/tests/runit/expected_files.r 21 9 style Variable and function names should be all lowercase.         checkTrue(identical(current, reference)) list(c(9, 17)) camel_case_linter
-inst/tests/runit/expected_files.r 21 9 warning no visible global function definition for ‘checkTrue’         checkTrue(identical(current, reference)) list(c(9, 17)) object_usage_linter
-inst/tests/testthat/test_basic.R 12 52 style Trailing whitespace is superfluous.     for (file_name in list.files(full.names = TRUE,  list(c(52, 52)) trailing_whitespace_linter
-inst/tests/testthat/test_basic.R 12 52 style Trailing whitespace is superfluous.     for (file_name in list.files(full.names = TRUE,  list(c(52, 52)) trailing_whitespace_linter
-inst/tests/testthat/test_basic.R 13 46 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(46, 52)) single_quotes_linter
-inst/tests/testthat/test_basic.R 13 46 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(46, 52)) single_quotes_linter
-inst/tests/testthat/test_basic.R 13 55 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(55, 70)) single_quotes_linter
-inst/tests/testthat/test_basic.R 13 55 style Only use double-quotes.                                  system.file('tests', 'expected_files',  list(c(55, 70)) single_quotes_linter
-inst/tests/testthat/test_basic.R 13 72 style Trailing whitespace is superfluous.                                  system.file('tests', 'expected_files',  list(c(72, 72)) trailing_whitespace_linter
-inst/tests/testthat/test_basic.R 13 72 style Trailing whitespace is superfluous.                                  system.file('tests', 'expected_files',  list(c(72, 72)) trailing_whitespace_linter
-inst/tests/testthat/test_basic.R 14 56 style Only use double-quotes.                                              package = 'document'), list(c(56, 65)) single_quotes_linter
-inst/tests/testthat/test_basic.R 14 56 style Only use double-quotes.                                              package = 'document'), list(c(56, 65)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 40 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(40, 46)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 40 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(40, 46)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 49 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(49, 55)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 49 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(49, 55)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 68 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(68, 77)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 68 style Only use double-quotes.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(68, 77)) single_quotes_linter
-inst/tests/testthat/test_basic.R 20 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
-inst/tests/testthat/test_basic.R 20 80 style Trailing whitespace is superfluous.         input <- file.path(system.file('tests', 'files', package = 'document'),  list(c(80, 80)) trailing_whitespace_linter
-R/document.R 20 32 style Trailing whitespace is superfluous. document <- function(file_name,  list(c(32, 32)) trailing_whitespace_linter
-R/document.R 37 61 style Trailing whitespace is superfluous.     physical_package_name <- paste("document", package_name,  list(c(61, 61)) trailing_whitespace_linter
-R/document.R 49 38 style Opening curly braces should never go on their own line and should always be followed by a new line.     if (.Platform$OS.type != "unix") {  NULL open_curly_linter
-R/document.R 49 39 style Trailing whitespace is superfluous.     if (.Platform$OS.type != "unix") {  list(c(39, 39)) trailing_whitespace_linter
-R/document.R 50 10 style Commented code should be removed.         ## on windows, R CMD Rd2pdf crashes with multi-word titles... I have no list(c(10, 79)) commented_code_linter
-R/document.R 55 37 style Commas should always have a space after.         man_directory <- sub("\\\\","/", man_directory) NULL commas_linter
-R/document.R 67 70 style Trailing whitespace is superfluous.     utils::package.skeleton(code_files = file.path(working_directory,  list(c(70, 70)) trailing_whitespace_linter
-R/document.R 69 1 style lines should not be more than 80 characters.                             name = physical_package_name, path = working_directory, list(c(1, 83)) line_length_linter
-R/document.R 73 62 style Trailing whitespace is superfluous.     file.remove(list.files(man_directory, full.names = TRUE))  list(c(62, 62)) trailing_whitespace_linter
-R/document.R 74 59 style Trailing whitespace is superfluous.     file.remove(file.path(package_directory, "NAMESPACE"))  list(c(59, 59)) trailing_whitespace_linter
-R/document.R 78 33 style Trailing whitespace is superfluous.     if (! is.null(dependencies))  list(c(33, 33)) trailing_whitespace_linter
-R/document.R 80 69 style Trailing whitespace is superfluous.     callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force",  list(c(69, 69)) trailing_whitespace_linter
-R/document.R 81 64 style Trailing whitespace is superfluous.                                  paste0("--title=", pdf_title),   list(64:65) trailing_whitespace_linter
-R/document.R 90 28 style Trailing whitespace is superfluous.         Rd_txt <- c(Rd_txt,  list(c(28, 28)) trailing_whitespace_linter
-R/document.R 91 47 style Trailing whitespace is superfluous.                     callr::rcmd_safe("Rdconv",  list(c(47, 47)) trailing_whitespace_linter
-R/document.R 94 7 style Place a space before left parenthesis, except in a function call.     if(isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt) NULL spaces_left_parentheses_linter
-R/file_parsing.R 18 58 style Trailing whitespace is superfluous.                          begin_pattern = "ROXYGEN_START",  list(c(58, 58)) trailing_whitespace_linter
-R/file_parsing.R 20 49 style Trailing whitespace is superfluous.                          from_first_line = TRUE,  list(c(49, 49)) trailing_whitespace_linter
-R/file_parsing.R 35 11 style Place a space before left parenthesis, except in a function call.         if(! found_begin_tag) { NULL spaces_left_parentheses_linter
-R/file_parsing.R 38 68 style Trailing whitespace is superfluous.             begin_line_indices <- grep(begin_pattern, R_code_lines)  list(c(68, 68)) trailing_whitespace_linter
-R/file_parsing.R 40 11 style Place a space before left parenthesis, except in a function call.         if(! found_end_tag) { NULL spaces_left_parentheses_linter
-R/file_parsing.R 43 64 style Trailing whitespace is superfluous.             end_line_indices <- grep(end_pattern, R_code_lines)  list(c(64, 64)) trailing_whitespace_linter
-R/file_parsing.R 46 57 style Trailing whitespace is superfluous.             begin_line_indices <- begin_line_indices + 1  list(c(57, 57)) trailing_whitespace_linter
-R/file_parsing.R 65 78 style Trailing whitespace is superfluous.             ## file contains neither end_pattern nor begin_pattern and should  list(c(78, 78)) trailing_whitespace_linter
-R/file_parsing.R 66 52 style Trailing whitespace is superfluous.             ## not be used from first to last line.  list(c(52, 52)) trailing_whitespace_linter
-R/file_parsing.R 80 63 style Trailing whitespace is superfluous.                                text = paste("R_code_lines[c(",  list(c(63, 63)) trailing_whitespace_linter
-R/file_parsing.R 81 76 style Trailing whitespace is superfluous.                                             paste(paste(begin_line_indices,  list(c(76, 76)) trailing_whitespace_linter
-R/file_parsing.R 83 68 style Trailing whitespace is superfluous.                                                         sep = ":"),  list(c(68, 68)) trailing_whitespace_linter
-R/file_parsing.R 91 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
-R/man.R 12 23 style Use <-, not =, for assignment.     package_directory = getOption("document_package_directory") NULL assignment_linter
-R/man.R 14 41 style Trailing whitespace is superfluous.     rd_out <- callr::rcmd_safe("Rdconv",  list(c(41, 41)) trailing_whitespace_linter
-R/man.R 18 22 style Trailing whitespace is superfluous.     file.show(rd_txt)  list(c(22, 22)) trailing_whitespace_linter
-R/man.R 21 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter
-R/utils.R 30 48 style Trailing whitespace is superfluous.         char0 <-  gsub(paste0(toupper(letter)),  list(c(48, 48)) trailing_whitespace_linter
-R/utils.R 33 39 style Trailing whitespace is superfluous.         char0 <-  gsub(paste0(letter),  list(c(39, 39)) trailing_whitespace_linter
-R/utils.R 52 68 style Trailing whitespace is superfluous.     description_file <- file.path(package_directory, "DESCRIPTION")  list(c(68, 68)) trailing_whitespace_linter
-R/utils.R 56 66 style Trailing whitespace is superfluous.     description <-  sub("(Version: ).*", "\\10.1.0", description)  list(c(66, 66)) trailing_whitespace_linter
-R/utils.R 57 68 style Trailing whitespace is superfluous.     description <-  sub("(Description: .*)", "\\1\\.", description)  list(c(68, 68)) trailing_whitespace_linter
-R/utils.R 72 63 style Trailing whitespace is superfluous. add_dependencies_to_description <- function(package_directory,  list(c(63, 63)) trailing_whitespace_linter
-R/utils.R 76 68 style Trailing whitespace is superfluous.     description_file <- file.path(package_directory, "DESCRIPTION")  list(c(68, 68)) trailing_whitespace_linter
-R/utils.R 79 58 style Trailing whitespace is superfluous.         description <- c(description, paste0("Depends: ",  list(c(58, 58)) trailing_whitespace_linter
-R/utils.R 80 65 style Trailing whitespace is superfluous.                                              paste(dependencies,  list(c(65, 65)) trailing_whitespace_linter
-R/utils.R 88 51 style Trailing whitespace is superfluous. #' clean a string created from a run through RUnit   list(51:52) trailing_whitespace_linter
-R/utils.R 93 26 style Trailing whitespace is superfluous. #' know why, but they do.  list(c(26, 26)) trailing_whitespace_linter
-R/utils.R 99 23 style Trailing whitespace is superfluous.     # ascii again, but  list(c(23, 23)) trailing_whitespace_linter
-R/utils.R 100 58 style Trailing whitespace is superfluous.     # - setting the options(useFancyQuotes = 'UTF-8') and  list(c(58, 58)) trailing_whitespace_linter
-R/utils.R 102 27 style Trailing whitespace is superfluous.     # didn't seem to help.  list(c(27, 27)) trailing_whitespace_linter
-R/utils.R 104 7 style Commented code should be removed.     # options(useFancyQuotes = FALSE) list(c(7, 37)) commented_code_linter
-R/utils.R 106 36 style Commas should never have a space before.     new_txt <- gsub("<e2><80><99>" ,"'",  list(35:36) commas_linter
-R/utils.R 106 37 style Commas should always have a space after.     new_txt <- gsub("<e2><80><99>" ,"'",  NULL commas_linter
-R/utils.R 106 41 style Trailing whitespace is superfluous.     new_txt <- gsub("<e2><80><99>" ,"'",  list(c(41, 41)) trailing_whitespace_linter
-R/utils.R 107 46 style Trailing whitespace is superfluous.                     gsub("<e2><80><98>", "'",  list(c(46, 46)) trailing_whitespace_linter
+inst/tests/runit.R 12 13 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(13, 17)) camel_case_linter
+inst/tests/runit.R 12 13 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(13, 17)) camel_case_linter
+inst/tests/runit.R 12 30 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(30, 33)) camel_case_linter
+inst/tests/runit.R 12 30 style Variable and function names should be all lowercase.     if (res$nFail > 0 || res$nErr > 0) { list(c(30, 33)) camel_case_linter
+inst/tests/runit.R 14 27 style Variable and function names should be all lowercase.                lapply(res$sourceFileResults, list(c(27, 43)) camel_case_linter
+inst/tests/runit.R 14 27 style Variable and function names should be all lowercase.                lapply(res$sourceFileResults, list(c(27, 43)) camel_case_linter
+inst/tests/runit.R 15 32 style Variable and function names should be all lowercase.                       function(fileRes) { list(c(32, 38)) camel_case_linter
+inst/tests/runit.R 15 32 style Variable and function names should be all lowercase.                       function(fileRes) { list(c(32, 38)) camel_case_linter
+inst/tests/runit.R 17 40 style Variable and function names should be all lowercase.                                        fileRes)) list(c(40, 46)) camel_case_linter
+inst/tests/runit.R 17 40 style Variable and function names should be all lowercase.                                        fileRes)) list(c(40, 46)) camel_case_linter
+inst/tests/runit.R 24 18 style Variable and function names should be all lowercase. package_suite <- defineTestSuite("document_unit_test", list(c(18, 32)) camel_case_linter
+inst/tests/runit.R 24 18 style Variable and function names should be all lowercase. package_suite <- defineTestSuite("document_unit_test", list(c(18, 32)) camel_case_linter
+inst/tests/runit.R 29 16 style Variable and function names should be all lowercase. test_result <- runTestSuite(package_suite) list(c(16, 27)) camel_case_linter
+inst/tests/runit.R 29 16 style Variable and function names should be all lowercase. test_result <- runTestSuite(package_suite) list(c(16, 27)) camel_case_linter
+inst/tests/runit.R 31 1 style Variable and function names should be all lowercase. printTextProtocol(test_result, showDetails = TRUE, list(c(1, 17)) camel_case_linter
+inst/tests/runit.R 31 1 style Variable and function names should be all lowercase. printTextProtocol(test_result, showDetails = TRUE, list(c(1, 17)) camel_case_linter
+inst/tests/runit.R 33 1 style Variable and function names should be all lowercase. printTextProtocol(test_result, showDetails = TRUE) list(c(1, 17)) camel_case_linter
+inst/tests/runit.R 33 1 style Variable and function names should be all lowercase. printTextProtocol(test_result, showDetails = TRUE) list(c(1, 17)) camel_case_linter
+inst/tests/runit.R 35 1 style Variable and function names should be all lowercase. printHTMLProtocol(test_result, fileName = html_file) list(c(1, 17)) camel_case_linter
+inst/tests/runit.R 35 1 style Variable and function names should be all lowercase. printHTMLProtocol(test_result, fileName = html_file) list(c(1, 17)) camel_case_linter
+R/man.R 29 23 warning no visible global function definition for ‘display_Rd’             status <- display_Rd(x) list(c(23, 32)) object_usage_linter
+R/man.R 39 27 warning no visible global function definition for ‘display_Rd’                 status <- display_Rd(rd_file) list(c(27, 36)) object_usage_linter
+R/man.R 50 27 warning no visible global function definition for ‘display_Rd’                 status <- display_Rd(rd_file) list(c(27, 36)) object_usage_linter

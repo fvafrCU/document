@@ -9,15 +9,15 @@ test_that("simple", {
     output_directory <- file.path(tempdir(), "document_testthat_txt")
     unlink(output_directory, recursive = TRUE)
     dir.create(output_directory)
-    for (file_name in list.files(full.names = TRUE, 
-                                 system.file('tests', 'expected_files', 
-                                             package = 'document'),
+    for (file_name in list.files(full.names = TRUE,
+                                 system.file("tests", "expected_files",
+                                             package = "document"),
                                  pattern = "\\.txt"
                                  )
     ) {
         # create current
         options(useFancyQuotes = FALSE)
-        input <- file.path(system.file('tests', 'files', package = 'document'), 
+        input <- file.path(system.file("tests", "files", package = "document"),
                            sub("\\.txt", ".R", basename(file_name)))
         print(file_name)
         print(input)
