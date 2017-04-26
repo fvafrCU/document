@@ -18,7 +18,7 @@
 #' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
 #'          check_package = FALSE)
 document <- function(file_name, 
-                     #FIXME: output_directory = dirname(file_name),
+                     #TODO: output_directory = dirname(file_name),
                      output_directory = tempdir(),
                      check_package = TRUE, working_directory = tempdir(),
                      dependencies = NULL, runit = FALSE,
@@ -54,7 +54,7 @@ document <- function(file_name,
         ## again, I have no clue.
         man_directory <- sub("\\\\","/", man_directory)
     }
-    dir.create(working_directory)
+    dir.create(working_directory, showWarnings = FALSE, recursive = TRUE)
     if (! dir.exists(output_directory)) dir.create(output_directory)
     roxygen_code <- get_lines_between_tags(file_name, ...)
     if (is.null(roxygen_code) || ! any(grepl("^#+'", roxygen_code))) {
@@ -99,3 +99,9 @@ document <- function(file_name,
     }
     return(status)
 }
+
+#' A Convenience Wrapper to getOption("document_package_directory")
+#'
+#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
+#' @return getOption("document_package_directory")
+get_dpd <- function() return(getOption("document_package_directory"))

@@ -2,18 +2,22 @@
 % Please edit documentation in R/man.R
 \name{man}
 \alias{man}
-\title{view a help page from a file documentation}
+\title{XXX: view a help page from a file documentation}
 \usage{
-man(fun)
+man(x, topic = NA, force_Rd = FALSE)
 }
 \arguments{
-\item{fun}{A string giving the name of the function.}
+\item{x}{A XXX:}
+
+\item{topic}{XXX:}
+
+\item{force_Rd}{XXX:}
 }
 \value{
-Invisibly NULL
+Invisibly XXX:
 }
 \description{
-view a help page from a file documentation
+XXX: view a help page from a file documentation
 }
 \examples{
 document(file_name = system.file("tests", "files", "simple.R", package = "document"), 

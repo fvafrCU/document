@@ -29,3 +29,4 @@ test_that("simple", {
     }
                  }
 )
+context("man")

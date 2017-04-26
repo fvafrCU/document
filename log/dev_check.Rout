@@ -1,5 +1,6 @@
 Updating document documentation
 Loading document
+Writing usage.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
