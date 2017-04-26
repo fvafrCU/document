@@ -12,7 +12,7 @@ document(file_name, output_directory = tempdir(), check_package = TRUE,
 
 \item{output_directory}{The directory to put the documentation into.}
 
-\item{check_package}{Run R CMD check on the sources?}
+\item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
 
 \item{working_directory}{A working directory. 
 \bold{Warning} the working_directory will be recursively
@@ -21,13 +21,18 @@ document(file_name, output_directory = tempdir(), check_package = TRUE,
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
-\item{runit}{Convert the text recieved from the help files if running RUnit?
+\item{runit}{Convert the text received from the help files if running RUnit?
 Do not bother, this is for Unit testing only.}
 
 \item{...}{Arguments passed to \code{\link{get_lines_between_tags}}.}
 }
 \value{
-FIXME
+A list containing
+\describe{
+    \item{pdf_path}{The path to the pdf file produced.}
+    \item{txt_path}{The path to the text file produced.}
+    \item{check_result}{The value of \code{\link[devtools]{check}}.}
+}
 }
 \description{
 roxygenize an R code file, output the documentation to pdf.

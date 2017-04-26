@@ -3,8 +3,8 @@
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be documented.
 #' @param output_directory The directory to put the documentation into.
-#' @param check_package Run R CMD check on the sources?
-#' @param runit Convert the text recieved from the help files if running RUnit?
+#' @param check_package Run \code{\link[devtools]{check}} on the sources?
+#' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
 #' @param dependencies a character vector of package names the functions depend
 #' on.
@@ -12,7 +12,12 @@
 #' \bold{Warning} the working_directory will be recursively
 #' \code{\link{unlink}}ed. You can erase your disk if you change the default!
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
-#' @return FIXME
+#' @return A list containing
+#' \describe{
+#'     \item{pdf_path}{The path to the pdf file produced.}
+#'     \item{txt_path}{The path to the text file produced.}
+#'     \item{check_result}{The value of \code{\link[devtools]{check}}.}
+#' }
 #' @export
 #' @examples
 #' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
@@ -100,8 +105,9 @@ document <- function(file_name,
     return(status)
 }
 
-#' A Convenience Wrapper to getOption("document_package_directory")
+#' A Convenience Wrapper to \code{getOption("document_package_directory")}
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
-#' @return getOption("document_package_directory")
+#' @return \code{getOption("document_package_directory")}
+#' @export
 get_dpd <- function() return(getOption("document_package_directory"))

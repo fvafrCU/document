@@ -4,7 +4,16 @@
 \alias{usage}
 \title{Return the Usage of a Function From Within the Function}
 \usage{
-usage()
+usage(n = -1)
+}
+\arguments{
+\item{n}{A negative integer giving the number of from to frames/environments
+to go back (passed as \code{which} to \code{\link{sys.call}}). Set to
+\code{-2} if you want to encapsulate the call to \code{usage} into a function
+(like \code{\link{print}} or \code{\link{assign}}) within the function you
+want to obtain the usage for.
+Use the \code{<-} assignment operator with the default, see \bold{examples}
+below.}
 }
 \value{
 A character string giving the Usage as \code{\link{help}} would do.
@@ -12,17 +21,19 @@ A character string giving the Usage as \code{\link{help}} would do.
 \description{
 Return the Usage of a Function From Within the Function
 }
-\note{
-Do not encapsulate it inside a function like \code{\link{print}} or
-\code{\link{assign}} since it will then return that function's Usage. Use the
-\code{<-} assignment operator.
-}
 \examples{
+# usage with assignment operator:
 foo <- function(x){
     u <- usage()
     message("Usage is: ", u)
 }
 foo()
+
+# usage without assignment operator:
+bar <- function(x){
+    message(usage(n = -2))
+}
+bar()
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

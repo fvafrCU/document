@@ -2,21 +2,28 @@
 % Please edit documentation in R/man.R
 \name{is_Rd_file}
 \alias{is_Rd_file}
-\title{XXX:}
+\title{Check Whether a File is Probably an R documentation file}
 \usage{
 is_Rd_file(x)
 }
 \arguments{
-\item{x}{XXX:}
+\item{x}{The path to the file to be checked.}
 }
 \value{
-XXX:
+TRUE if the file is probably an R documentation file, FALSE
+otherwise.
 }
 \description{
-XXX:
+This is meant for internal use by \code{\link{man}}.
+}
+\note{
+The check might produce false negatives (erroneously assuming the file 
+is not an R documentation file).
 }
 \examples{
-warning("non given")
+document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
+         check_package = FALSE)
+document:::is_Rd_file(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

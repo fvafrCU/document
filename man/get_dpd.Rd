@@ -2,15 +2,15 @@
 % Please edit documentation in R/document.R
 \name{get_dpd}
 \alias{get_dpd}
-\title{A Convenience Wrapper to getOption("document_package_directory")}
+\title{A Convenience Wrapper to \code{getOption("document_package_directory")}}
 \usage{
 get_dpd()
 }
 \value{
-getOption("document_package_directory")
+\code{getOption("document_package_directory")}
 }
 \description{
-A Convenience Wrapper to getOption("document_package_directory")
+A Convenience Wrapper to \code{getOption("document_package_directory")}
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

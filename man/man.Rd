@@ -2,22 +2,34 @@
 % Please edit documentation in R/man.R
 \name{man}
 \alias{man}
-\title{XXX: view a help page from a file documentation}
+\title{Display a Help Page From a File's Documentation}
 \usage{
 man(x, topic = NA, force_Rd = FALSE)
 }
 \arguments{
-\item{x}{A XXX:}
+\item{x}{One of the following:
+\itemize{
+    \item A path to an R documentation (*.Rd) file.
+    \item A path to a  code file containing comments for \pkg{roxygen2}.
+    \item A help \code{\link{help}} if
+    \code{option("document_package_directory")} is set (by
+    \code{\link{document}}).
+}}
 
-\item{topic}{XXX:}
+\item{topic}{A \code{\link{help}} topic if \code{x} is a path to a code file
+containing comments for \pkg{roxygen2}.}
 
-\item{force_Rd}{XXX:}
+\item{force_Rd}{if \code{x} is a file's path, then \code{\link{is_Rd_file}}
+is used to decide whether the file is an R documentation file and call
+\code{\link{document}} otherwise. Set to TRUE to disable this check and force
+the file to be assumed to be an R documentation file.
+\code{\link{is_Rd_file}} may produce false negatives.}
 }
 \value{
-Invisibly XXX:
+Invisibly the status of \code{\link{display_Rd}}.
 }
 \description{
-XXX: view a help page from a file documentation
+Display a Help Page From a File's Documentation
 }
 \examples{
 document(file_name = system.file("tests", "files", "simple.R", package = "document"), 
