@@ -4,4 +4,6 @@ document(file_name = system.file("tests", "files", "simple.R", package = "docume
 man("a_first_function")
 
 b = fake_package(file_name = system.file("tests", "files", "simple.R", package = "document"))
+b = fake_package(file_name = system.file("tests", "files", "basic.R", package = "document"))
 
+document(file_name = system.file("tests", "files", "basic.R", package = "document"), check_package = FALSE)

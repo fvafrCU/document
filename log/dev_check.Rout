@@ -1,5 +1,6 @@
 Updating document documentation
 Loading document
+Writing document-package.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -11,13 +12,13 @@ Building document --------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.6.0.tar.gz’
+* building ‘document_0.7.0.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -31,16 +32,17 @@ Checking document --------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.6.0’
+* this is package ‘document’ version ‘0.7.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-The Title field should be in title case, current version then in title case:
-‘What the Package Does (one line, title case)’
-‘What the Package Does (One Line, Title Case)’
+Possibly mis-spelled words in DESCRIPTION:
+  roxygen (6:22)
+
+The Title field starts with the package name.
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -102,6 +104,7 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-The Title field should be in title case, current version then in title case:
-‘What the Package Does (one line, title case)’
-‘What the Package Does (One Line, Title Case)’
+Possibly mis-spelled words in DESCRIPTION:
+  roxygen (6:22)
+
+The Title field starts with the package name.

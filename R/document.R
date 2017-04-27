@@ -33,12 +33,15 @@ fake_package <- function(file_name, working_directory = NULL,
         stop(paste("Couldn't find roxygen comments in file", file_name,
                    "\nYou shoud set from_firstline and to_lastline to FALSE."))
     }
-    code_file <- tempfile(pattern = "file", fileext = ".R")
+    # need a hard coded basename here to ensure not replicating the input code
+    # if faking for the same code file again.
+    code_file <- file.path(working_directory, "code.R") 
     writeLines(roxygen_code, con = code_file)
     utils::package.skeleton(code_files = code_file,
                             name = package_name,
                             path = working_directory,
                             force = TRUE)
+    # file.remove(code_file)
     # roxygen2 does not overwrite files not written by roxygen2, so we need to
     # delete some files
     file.remove(list.files(man_directory, full.names = TRUE))

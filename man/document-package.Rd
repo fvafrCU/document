@@ -3,10 +3,11 @@
 \docType{package}
 \name{document-package}
 \alias{document-package}
-\title{document a single R code file.}
+\title{Document a Single R Code File}
 \description{
-extract roxygen2-style and markdown comments from a single R code 
-file and convert them to various human-readable formats.
+Extract roxygen2-style and markdown comments from a single R code 
+file and convert them to pdf and txt files and a temporary help page to be
+called from within R.
 }
 \details{
 R is a programming language that supports and checks documentation for
@@ -19,10 +20,10 @@ used by people like me who start out hacking down code, eventually pouring
 chunks of code into functions (and sometimes even ending up creating and 
 documenting packages).
 Along that work flow you cannot use R's documentation system, let alone
-roxygen2, unless you have come to forge your code into a package.
+\pkg{roxygen2}, unless you have come to forge your code into a package.
 
-I am fully aware of the fact that roxygen2 is meant to document packages, 
-not single code chunks (see \emph{Note}). 
+I am fully aware of the fact that \pkg{roxygen2} is meant to document
+packages, not single code chunks. 
 So should you. Nevertheless I feel the temptation to use
 roxygen2-style comments in code chunks that are not part of any package. And
 to convert them to pdf for better readability.
@@ -42,6 +43,14 @@ This package is basically a wrapper to
 This package writes to disk, so \strong{NEVER} run it with superuser powers.
 }
 
+\seealso{
+\pkg{docstring}
+(\url{https://cran.r-project.org/package=docstring}) also creates temporary
+help pages as well but using a different technical approach (allowing you to
+view them in the RStudio help pane). But it creates them from python style 
+docstring-like comments it then parses into \pkg{roxygen2}. And it does not
+write to file so far.
+}
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
