@@ -3,8 +3,8 @@
 112     R/document.R                        document   60     0
 124     R/document.R                        document   66     0
 126     R/document.R                        document   67     0
-189     R/document.R                        document  103     0
-208     R/document.R                         get_dpd  113     0
+190     R/document.R                        document  104     0
+210     R/document.R                         get_dpd  114     0
 39  R/file_parsing.R          get_lines_between_tags   36     0
 55  R/file_parsing.R          get_lines_between_tags   41     0
 70  R/file_parsing.R          get_lines_between_tags   46     0
@@ -20,7 +20,7 @@
 129 R/file_parsing.R          get_lines_between_tags   68     0
 133 R/file_parsing.R          get_lines_between_tags   71     0
 139 R/file_parsing.R          get_lines_between_tags   74     0
-145 R/file_parsing.R          get_lines_between_tags   77     0
+146 R/file_parsing.R          get_lines_between_tags   77     0
 9            R/man.R                             man   26     0
 11           R/man.R                             man   27     0
 13           R/man.R                             man   28     0
@@ -56,39 +56,39 @@
 172          R/man.R                           usage   86     0
 191          R/man.R                      is_Rd_file  104     0
 193          R/man.R                      is_Rd_file  105     0
-194          R/man.R                      is_Rd_file  106     0
-196          R/man.R                      is_Rd_file  107     0
-198          R/man.R                      is_Rd_file  108     0
-200          R/man.R                      is_Rd_file  109     0
-202          R/man.R                      is_Rd_file  110     0
-204          R/man.R                      is_Rd_file  111     0
-206          R/man.R                      is_Rd_file  112     0
+195          R/man.R                      is_Rd_file  106     0
+197          R/man.R                      is_Rd_file  107     0
+199          R/man.R                      is_Rd_file  108     0
+201          R/man.R                      is_Rd_file  109     0
+203          R/man.R                      is_Rd_file  110     0
+205          R/man.R                      is_Rd_file  111     0
+207          R/man.R                      is_Rd_file  112     0
 209          R/man.R                      is_Rd_file  113     0
-210          R/man.R                      is_Rd_file  114     0
-211          R/man.R                      is_Rd_file  115     0
-212          R/man.R                      is_Rd_file  116     0
-213          R/man.R                      is_Rd_file  117     0
-214          R/man.R                      display_Rd  137     0
-215          R/man.R                      display_Rd  138     0
-216          R/man.R                      display_Rd  139     0
-217          R/man.R                      display_Rd  140     0
-218          R/man.R                      display_Rd  141     0
-219          R/man.R                      display_Rd  142     0
-220          R/man.R                      display_Rd  143     0
+211          R/man.R                      is_Rd_file  114     0
+212          R/man.R                      is_Rd_file  115     0
+213          R/man.R                      is_Rd_file  116     0
+214          R/man.R                      is_Rd_file  117     0
+215          R/man.R                      display_Rd  137     0
+216          R/man.R                      display_Rd  138     0
+217          R/man.R                      display_Rd  139     0
+218          R/man.R                      display_Rd  140     0
+219          R/man.R                      display_Rd  141     0
+220          R/man.R                      display_Rd  142     0
+221          R/man.R                      display_Rd  143     0
 1          R/utils.R               remove_package_Rd   12     0
 2          R/utils.R               remove_package_Rd   13     0
 3          R/utils.R               remove_package_Rd   14     0
 4          R/utils.R               remove_package_Rd   15     0
 142        R/utils.R add_dependencies_to_description   76     0
-144        R/utils.R add_dependencies_to_description   77     0
-146        R/utils.R add_dependencies_to_description   78     0
+145        R/utils.R add_dependencies_to_description   77     0
+147        R/utils.R add_dependencies_to_description   78     0
 149        R/utils.R add_dependencies_to_description   79     0
 152        R/utils.R add_dependencies_to_description   80     0
-154        R/utils.R add_dependencies_to_description   81     0
+155        R/utils.R add_dependencies_to_description   81     0
 157        R/utils.R add_dependencies_to_description   82     0
 160        R/utils.R add_dependencies_to_description   83     0
-document Coverage: 60.00%
+document Coverage: 60.18%
 R/man.R: 0.00%
 R/utils.R: 65.71%
 R/file_parsing.R: 75.38%
-R/document.R: 90.91%
+R/document.R: 91.04%

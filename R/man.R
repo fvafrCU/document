@@ -19,8 +19,8 @@
 #' @return Invisibly the status of \code{\link{display_Rd}}.
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-#'          check_package = FALSE)
+#' document(file_name = system.file("tests", "files", "simple.R", 
+#'          package = "document"), check_package = FALSE)
 #' man("a_first_function")
 man <- function(x, topic = NA, force_Rd = FALSE) {
     usage <- usage()
@@ -97,9 +97,10 @@ usage <- function(n = -1) {
 #' otherwise.
 #' @param x The path to the file to be checked.
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-#'          check_package = FALSE)
-#' document:::is_Rd_file(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
+#' document(file_name = system.file("tests", "files", "simple.R",
+#'          package = "document"), check_package = FALSE)
+#' document:::is_Rd_file(list.files(file.path(get_dpd(), "man"),
+#'                       full.names = TRUE)[2])
 is_Rd_file <- function(x) {
     has_ext <-  grepl("\\.Rd$", x)
     lines <- readLines(x)
@@ -130,9 +131,10 @@ is_Rd_file <- function(x) {
 #' @return the return value of removing the temporary file.
 #' @param rd_file The path to the Rd file to be displayed.
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-#'          check_package = FALSE)
-#' document:::display_Rd(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
+#' document(file_name = system.file("tests", "files", "simple.R",
+#'          package = "document"), check_package = FALSE)
+#' document:::display_Rd(list.files(file.path(get_dpd(), "man"), 
+#'                       full.names = TRUE)[2])
 display_Rd <- function(rd_file) {
     rd_out <- callr::rcmd_safe("Rdconv",
                      c("--type=txt", rd_file))[["stdout"]]

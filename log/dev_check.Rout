@@ -1,9 +1,5 @@
 Updating document documentation
 Loading document
-Writing get_lines_between_tags.Rd
-Writing man.Rd
-Writing is_Rd_file.Rd
-Writing display_Rd.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -21,7 +17,7 @@ Warning: ‘inst/doc’ files
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.4.0.9000.tar.gz’
+* building ‘document_0.5.0.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -35,14 +31,12 @@ Checking document --------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.4.0.9000’
+* this is package ‘document’ version ‘0.5.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
-
-Version contains large components (0.4.0.9000)
 
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’
@@ -72,10 +66,7 @@ The Title field should be in title case, current version then in title case:
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
 * checking use of S3 registration ... OK
-* checking dependencies in R code ... NOTE
-There are ::: calls to the package's namespace in its code. A package
-  almost never needs to use ::: for its own objects:
-  ‘display_Rd’
+* checking dependencies in R code ... OK
 * checking S3 generic/method consistency ... OK
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
@@ -99,25 +90,18 @@ There are ::: calls to the package's namespace in its code. A package
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 2 NOTEs
+Status: 1 NOTE
 See
 for details.
 
 
 R CMD check results
-0 errors | 0 warnings | 2 notes
+0 errors | 0 warnings | 1 note 
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-Version contains large components (0.4.0.9000)
-
 The Title field should be in title case, current version then in title case:
 ‘What the Package Does (one line, title case)’
 ‘What the Package Does (One Line, Title Case)’
-
-checking dependencies in R code ... NOTE
-There are ::: calls to the package's namespace in its code. A package
-  almost never needs to use ::: for its own objects:
-  ‘display_Rd’

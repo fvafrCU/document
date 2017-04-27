@@ -20,8 +20,8 @@
 #' }
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-#'          check_package = FALSE)
+#' document(file_name = system.file("tests", "files", "simple.R",
+#'          package = "document"), check_package = FALSE)
 document <- function(file_name,
                      #TODO: output_directory = dirname(file_name),
                      output_directory = tempdir(),

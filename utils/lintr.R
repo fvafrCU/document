@@ -1,6 +1,7 @@
 if (interactive()) setwd(dirname(getwd()))
 options(warn = 1) # make warnings appear immediately
 
+devtools::load_all(quiet = TRUE)
 
 
 #% lintr

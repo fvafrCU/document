@@ -15,7 +15,7 @@ value of \code{\link{file.remove}}.
 \description{
 \code{\link[utils]{package.skeleton}} and
 \code{\link[roxygen2]{roxygenize}}
-leave us with an invalid name-package.Rd file in the man directory. 
+leave us with an invalid name-package.Rd file in the man directory.
 So we remove it.
 }
 \author{

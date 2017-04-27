@@ -13,7 +13,7 @@ clean_description(package_directory)
 value of \code{link{writeLines}}.
 }
 \description{
-utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning 
+utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning
 in R CMD check. Fix that.
 }
 \note{

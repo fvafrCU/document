@@ -15,15 +15,15 @@
 #' Along that work flow you cannot use R's documentation system, let alone
 #' roxygen2, unless you have come to forge your code into a package.
 #' 
-#' I am fully aware of the fact that roxygen2 is meant to document packages, not
-#' single code chunks (see \emph{Note}). 
+#' I am fully aware of the fact that roxygen2 is meant to document packages, 
+#' not single code chunks (see \emph{Note}). 
 #' So should you. Nevertheless I feel the temptation to use
 #' roxygen2-style comments in code chunks that are not part of any package. And
 #' to convert them to pdf for better readability.
 #' @note This package is basically a wrapper to 
 #' \enumerate{
-#'     \item \pkg{roxygen2}. It internally creates a temporary package from the code
-#'      files provided (using
+#'     \item \pkg{roxygen2}. It internally creates a temporary package from the
+#'      code files provided (using
 #'      \code{\link[utils:package.skeleton]{utils::package.skeleton}}) 
 #'      which it then passes to roxygen2.
 #'     \item 'R CMD' commands run by \pkg{callr}.
