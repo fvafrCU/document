@@ -38,8 +38,8 @@ A list containing
 roxygenize an R code file, output the documentation to pdf.
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-         check_package = FALSE)
+document(file_name = system.file("tests", "files", "simple.R",
+         package = "document"), check_package = FALSE)
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

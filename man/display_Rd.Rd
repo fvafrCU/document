@@ -22,9 +22,10 @@ Using \code{\link{cat}} on the text would not allow for using different
 pagers.
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-         check_package = FALSE)
-document:::display_Rd(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
+document(file_name = system.file("tests", "files", "simple.R",
+         package = "document"), check_package = FALSE)
+document:::display_Rd(list.files(file.path(get_dpd(), "man"), 
+                      full.names = TRUE)[2])
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

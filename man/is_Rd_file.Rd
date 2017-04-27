@@ -21,9 +21,10 @@ The check might produce false negatives (erroneously assuming the file
 is not an R documentation file).
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-         check_package = FALSE)
-document:::is_Rd_file(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
+document(file_name = system.file("tests", "files", "simple.R",
+         package = "document"), check_package = FALSE)
+document:::is_Rd_file(list.files(file.path(get_dpd(), "man"),
+                      full.names = TRUE)[2])
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

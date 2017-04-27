@@ -32,8 +32,8 @@ Invisibly the status of \code{\link{display_Rd}}.
 Display a Help Page From a File's Documentation
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R", package = "document"),
-         check_package = FALSE)
+document(file_name = system.file("tests", "files", "simple.R", 
+         package = "document"), check_package = FALSE)
 man("a_first_function")
 }
 \author{
