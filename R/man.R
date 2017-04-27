@@ -32,7 +32,7 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
                 stop("Give either a path to an R documentation file or ",
                      "additionally give a topic.")
             } else {
-                document(x)
+                document(x, clean = FALSE)
                 package_directory <- getOption("document_package_directory")
                 rd_file <- file.path(package_directory, "man",
                                      paste0(topic, ".Rd"))

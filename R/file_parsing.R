@@ -26,36 +26,28 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
     checkmate::qassert(keep_tagged_lines, "B1")
     checkmate::qassert(from_first_line, "B1")
     checkmate::qassert(to_last_line, "B1")
-
     R_code_lines <- readLines(file_name)
     found_begin_tag <- any(grepl(begin_pattern, R_code_lines))
     found_end_tag <- any(grepl(end_pattern, R_code_lines))
-
     if (found_begin_tag || found_end_tag) {
-        if (! found_begin_tag) {
+        if (! found_begin_tag)
             begin_line_indices <- 1
-        } else {
+        else
             begin_line_indices <- grep(begin_pattern, R_code_lines)
-        }
-        if (! found_end_tag) {
+        if (! found_end_tag)
             end_line_indices <- 1
-        } else {
+        else
             end_line_indices <- grep(end_pattern, R_code_lines)
-        }
-        if (! keep_tagged_lines){
+        if (! keep_tagged_lines) {
             begin_line_indices <- begin_line_indices + 1
             end_line_indices <- end_line_indices - 1
         }
-        if (from_first_line) {
-            if (begin_line_indices[1] > end_line_indices[1]) {
+        if (from_first_line)
+            if (begin_line_indices[1] > end_line_indices[1])
                 begin_line_indices  <- c(1, begin_line_indices)
-            }
-        }
-        if (to_last_line) {
-            if (end_line_indices[1] < begin_line_indices[1]) {
+        if (to_last_line)
+            if (end_line_indices[1] < begin_line_indices[1])
                 end_line_indices  <- c(end_line_indices, length(R_code_lines))
-            }
-        }
     } else {
         ## no tagged lines found
         if (from_first_line && to_last_line) {
@@ -67,24 +59,15 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
             return(NULL)
         }
     }
-    if (length(begin_line_indices) != length(end_line_indices)){
+    if (length(begin_line_indices) != length(end_line_indices))
         stop("found unequal number of begin and end tags")
-    }
-    if (length(begin_line_indices) != length(end_line_indices)){
+    if (length(begin_line_indices) != length(end_line_indices))
         stop("found unequal number of begin and end tags")
-    }
-    if (! all(begin_line_indices <= end_line_indices)) {
+    if (! all(begin_line_indices <= end_line_indices))
         stop("begin and end tags not in proper order")
-    }
-    selected_lines <- eval(parse(
-                               text = paste("R_code_lines[c(",
-                                            paste(paste(begin_line_indices,
-                                                        end_line_indices,
-                                                        sep = ":"),
-                                                  collapse = ",")
-                                            , ")]"
-                                            )
-                               )
-    )
+    t <- paste("R_code_lines[c(", paste(paste(begin_line_indices,
+                                        end_line_indices, sep = ":"),
+                        collapse = ","), ")]")
+    selected_lines <- eval(parse(text = t))
     return(selected_lines)
 }

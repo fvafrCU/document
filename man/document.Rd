@@ -5,7 +5,8 @@
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
 document(file_name, output_directory = tempdir(), check_package = TRUE,
-  working_directory = tempdir(), dependencies = NULL, runit = FALSE, ...)
+  working_directory = file.path(tempdir(), "document"), dependencies = NULL,
+  runit = FALSE, clean = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
@@ -14,15 +15,16 @@ document(file_name, output_directory = tempdir(), check_package = TRUE,
 
 \item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
 
-\item{working_directory}{A working directory.
-\bold{Warning} the working_directory will be recursively
-\code{\link{unlink}}ed. You can erase your disk if you change the default!}
+\item{working_directory}{A working directory.}
 
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
 \item{runit}{Convert the text received from the help files if running RUnit?
-Do not bother, this is for Unit testing only.}
+Do not bother, this is for Unit testing only.
+on.}
+
+\item{clean}{Delete the working directory?}
 
 \item{...}{Arguments passed to \code{\link{get_lines_between_tags}}.}
 }

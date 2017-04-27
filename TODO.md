@@ -1,8 +1,4 @@
 - improve vignette
-- fix DESCRIPTION 
-- improve README
 - improve coverage
 - mark docmentation as unmaintained
-- use subfunctions on document() unbloat it. Maybe fake_package()?
 - consider using withr
-- make cleanr clean more strict
