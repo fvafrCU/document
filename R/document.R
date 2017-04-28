@@ -6,13 +6,15 @@
 #' @param file_name  The name of the R code file to be documented.
 #' @param dependencies a character vector of package names the functions depend
 #' on.
-#' @param working_directory A working directory.
+#' @param working_directory A working directory. Keep the default.
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
 #' @return A string containing the path to the faked package.
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R",
-#'          package = "document"), check_package = FALSE)
+#' \dontrun{
+#' fake_package(file_name = system.file("tests", "files", "simple.R",
+#'          package = "document"))
+#' }
 fake_package <- function(file_name, working_directory = NULL,
                          dependencies = NULL, ...) {
     checkmate::assertCharacter(dependencies, null.ok = TRUE)
@@ -72,8 +74,10 @@ fake_package <- function(file_name, working_directory = NULL,
 #' }
 #' @export
 #' @examples
+#' \dontrun{
 #' document(file_name = system.file("tests", "files", "minimal.R",
 #'          package = "document"), check_package = FALSE)
+#' }
 document <- function(file_name,
                      working_directory = file.path(tempdir(), "document"),
                      output_directory = tempdir(),

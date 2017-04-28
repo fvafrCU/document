@@ -26,9 +26,10 @@ help("document-package", package = "document")
 # 
 # Description:
 # 
-#      Extract roxygen2-style and markdown comments from a single R code
-#      file and convert them to pdf, html and txt files and a temporary
-#      help page to be called from within R.
+#      Extract roxygen2-style comments from a single code file, run
+#      roxygen2 on them, save the results in various formats on disk and
+#      optionally display a temporary help page in an interactive R
+#      session.
 # 
 # Details:
 # 

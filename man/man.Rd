@@ -35,6 +35,10 @@ Display a Help Page From a File's Documentation
 document(file_name = system.file("tests", "files", "minimal.R", 
          package = "document"), check_package = FALSE)
 man("foo")
+# this equivalent to
+path <- system.file("tests", "files", "minimal.R", package = "document", 
+                    check_package = FALSE)
+document::man(x = path, topic = "foo")
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

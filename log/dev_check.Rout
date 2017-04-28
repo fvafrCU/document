@@ -1,5 +1,8 @@
 Updating document documentation
 Loading document
+Writing fake_package.Rd
+Writing document.Rd
+Writing man.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -39,7 +42,7 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 New submission
 
 Possibly mis-spelled words in DESCRIPTION:
-  roxygen (6:22)
+  roxygen (6:22, 7:5)
 
 The Title field starts with the package name.
 * checking package namespace information ... OK
@@ -85,8 +88,9 @@ The Title field starts with the package name.
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-         user system elapsed
-document  4.4  0.468    5.38
+            user system elapsed
+is_Rd_file 4.392   0.44   5.277
+man        4.260   0.50   5.243
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -107,11 +111,12 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 New submission
 
 Possibly mis-spelled words in DESCRIPTION:
-  roxygen (6:22)
+  roxygen (6:22, 7:5)
 
 The Title field starts with the package name.
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-         user system elapsed
-document  4.4  0.468    5.38
+            user system elapsed
+is_Rd_file 4.392   0.44   5.277
+man        4.260   0.50   5.243

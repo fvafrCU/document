@@ -11,7 +11,7 @@ document(file_name, working_directory = file.path(tempdir(), "document"),
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
 
-\item{working_directory}{A working directory.}
+\item{working_directory}{A working directory. Keep the default.}
 
 \item{output_directory}{The directory to put the documentation into.}
 
@@ -45,8 +45,10 @@ A list containing
 roxygenize an R code file, output the documentation to pdf.
 }
 \examples{
+\dontrun{
 document(file_name = system.file("tests", "files", "minimal.R",
          package = "document"), check_package = FALSE)
+}
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

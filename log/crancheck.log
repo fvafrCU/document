@@ -55,8 +55,8 @@ The Title field starts with the package name.
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-          user system elapsed
-document 4.464  0.444   5.428
+             user system elapsed
+fake_package 4.38  0.444   5.266
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’

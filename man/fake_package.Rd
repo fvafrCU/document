@@ -9,7 +9,7 @@ fake_package(file_name, working_directory = NULL, dependencies = NULL, ...)
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
 
-\item{working_directory}{A working directory.}
+\item{working_directory}{A working directory. Keep the default.}
 
 \item{dependencies}{a character vector of package names the functions depend
 on.}
@@ -24,8 +24,10 @@ To build documentation for a single code file, we need a temporary package.
 Of course the code file should contain \pkg{roxygen2} comments.
 }
 \examples{
-document(file_name = system.file("tests", "files", "simple.R",
-         package = "document"), check_package = FALSE)
+\dontrun{
+fake_package(file_name = system.file("tests", "files", "simple.R",
+         package = "document"))
+}
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

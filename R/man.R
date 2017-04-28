@@ -22,6 +22,11 @@
 #' document(file_name = system.file("tests", "files", "minimal.R", 
 #'          package = "document"), check_package = FALSE)
 #' man("foo")
+#' # this equivalent to
+#' path <- system.file("tests", "files", "minimal.R", package = "document", 
+#'                     check_package = FALSE)
+#' document::man(x = path, topic = "foo")
+
 man <- function(x, topic = NA, force_Rd = FALSE) {
     usage <- usage()
     if (file.exists(x)) {
