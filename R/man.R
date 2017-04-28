@@ -25,7 +25,7 @@
 man <- function(x, topic = NA, force_Rd = FALSE) {
     usage <- usage()
     if (file.exists(x)) {
-        if (is_Rd_file(x) && ! identical(FALSE, force_Rd)) {
+        if (is_Rd_file(x) || ! identical(FALSE, force_Rd)) {
             status <- display_Rd(x)
         } else {
             if (! is.na(topic)) {
@@ -81,7 +81,7 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
 #' bar()
 usage <- function(n = -1) {
     calling_function <- as.list(sys.call(which = n))[[1]]
-    useage <- trimws(sub("^function ", calling_function,
+    useage <- trimws(sub("^function ", deparse(calling_function),
              deparse(args(as.character(calling_function)))[1]))
     return(useage)
 }
