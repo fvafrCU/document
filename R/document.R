@@ -119,10 +119,10 @@ document <- function(file_name,
                                  paste0("--title=", pdf_title),
                                  paste0("--output=", pdf_path), man_directory))
     status[["pdf_path"]] <- pdf_path
-    # using R CMD Rdconv on the system instead of tools::Rd2txt since
-    # ?tools::Rd2txt states it is
-    # "mainly intended for internal use" and its interface is "subject to
-    # change."
+    # using R CMD Rdconv on the system instead of tools::Rd2... since
+    # ?tools::Rd2txt states that 
+    # "These functions ... are mainly intended for internal use, their 
+    # interfaces are subject to change".
     Rd_txt <- NULL
     Rd_html <- NULL
     files  <- sort_unlocale(list.files(man_directory, full.names = TRUE))
