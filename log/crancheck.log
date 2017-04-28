@@ -53,17 +53,14 @@ The Title field starts with the package name.
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-             user system elapsed
-fake_package 4.38  0.444   5.266
+* checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’
+  Running ‘testthat.R’ [14s/15s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 NOTEs
+Status: 1 NOTE

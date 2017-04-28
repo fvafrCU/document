@@ -32,6 +32,7 @@ Invisibly the status of \code{\link{display_Rd}}.
 Display a Help Page From a File's Documentation
 }
 \examples{
+\dontrun{
 document(file_name = system.file("tests", "files", "minimal.R", 
          package = "document"), check_package = FALSE)
 man("foo")
@@ -39,6 +40,7 @@ man("foo")
 path <- system.file("tests", "files", "minimal.R", package = "document", 
                     check_package = FALSE)
 document::man(x = path, topic = "foo")
+}
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

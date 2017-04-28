@@ -1,8 +1,7 @@
 Updating document documentation
 Loading document
-Writing fake_package.Rd
-Writing document.Rd
 Writing man.Rd
+Writing is_Rd_file.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -86,11 +85,7 @@ The Title field starts with the package name.
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-            user system elapsed
-is_Rd_file 4.392   0.44   5.277
-man        4.260   0.50   5.243
+* checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -98,13 +93,13 @@ man        4.260   0.50   5.243
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 2 NOTEs
+Status: 1 NOTE
 See
 for details.
 
 
 R CMD check results
-0 errors | 0 warnings | 2 notes
+0 errors | 0 warnings | 1 note 
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
@@ -114,9 +109,3 @@ Possibly mis-spelled words in DESCRIPTION:
   roxygen (6:22, 7:5)
 
 The Title field starts with the package name.
-
-checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-            user system elapsed
-is_Rd_file 4.392   0.44   5.277
-man        4.260   0.50   5.243

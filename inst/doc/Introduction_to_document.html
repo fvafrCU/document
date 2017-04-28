@@ -69,13 +69,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to <em>document</em></h1>
 <h4 class="author"><em>Andreas Dominik Cullmann</em></h4>
-<h4 class="date"><em>2017-04-28, 10:57:27</em></h4>
+<h4 class="date"><em>2017-04-28, 11:37:33</em></h4>
 
 
 
-<div id="writing-documentation-files-to-disk" class="section level1">
-<h1>Writing Documentation Files to Disk</h1>
-<p>Suppose you have a script</p>
+<div id="a-minimal-example" class="section level1">
+<h1>A Minimal Example</h1>
+<p>Suppose you have a script ## Writing Documentation Files to Disk</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
 <span class="kw">cat</span>(<span class="kw">readLines</span>(path), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
 <pre><code>#' Nothing Good For
@@ -151,12 +151,175 @@ Examples:
      foo(x = 2)
      </code></pre>
 <p>You can view a copy of the html file <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html">here</a>. The pdf file resembles a package’s documentation pdf file.</p>
+<div id="a-simple-example" class="section level2">
+<h2>A Simple Example</h2>
+<p>Suppose you have a script</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;simple.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
+<span class="kw">cat</span>(<span class="kw">readLines</span>(path), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>#!/usr/bin/Rscript --vanilla
+#' \emph{file} simple.R
+#'
+#' provide a simple example of a file using roxygen and standard R comments.
+#'
+#' @author Dominik Cullmann &lt;adc-r@@arcor.de&gt;
+#' @note This header will show up in the documentation, but it's got nothing to
+#' do with the R statements below. Usually this is not intended.
+#' @section Warning: READ THIS FILE CAREFULLY. There's some information in the
+#' comments.
+# DO NOT CHANGE THE FOLLWOWING THREE LINES.
+#' @docType data
+#' @name A Header for
+NULL
+# ROXYGEN_STOP
+
+# load packages, load local code, define local functions, set options
+# You should stick to that order: if you define a function of a name which
+# is used as a (function) name in a package you load, you _do_ want your
+# version to mask the packages' version. 
+
+#% load packages
+library(&quot;methods&quot;) # load an example package from the standard library
+
+
+#% load local code
+# This would usually be functions defined and stored away in files.
+# For now we just we just create a file containing R options and
+# and then source it.
+cat(file = &quot;tmp.R&quot;, &quot;options(warn = 2) # treat warnings as errors \n&quot;)
+source(&quot;tmp.R&quot;)
+
+#% define local functions
+# ROXYGEN_START
+
+#' a first function example XXX
+#'
+#' This really is just an example, the function prints \code{utils::head()} and
+#' \code{utils::str()} of the given \code{data.frame}.
+#' @author Dominik Cullmann &lt;dominik.cullmann@@forst.bwl.de&gt; 
+#' @param df Name of a data.frame to ... do whatever needs to be done. 
+#' @return NULL. This is no good. 
+#' @examples
+#' data(iris, package = &quot;datasets&quot;)
+#' a_first_function(iris)
+a_first_function &lt;- function(df) {
+    message(paste(&quot;# Structure of&quot;, deparse(substitute(df)), &quot;:&quot;))
+    utils::str(df)
+    message(paste(&quot;# Head of&quot;, deparse(substitute(df)), &quot;:&quot;))
+    print(utils::head(df))
+    return(invisible(NULL))
+}
+# ROXYGEN_STOP
+
+#% set &quot;global&quot; options
+# We overwrite (mask) the options set from the options file. Had we done
+# it the other way round, we might be tempted to assume warn still to be
+# set to one, albeit it would have been overwritten by the sourced code.
+options(warn = 1)
+
+#% Analysize the data
+colMeans(iris[1:4])
+
+#% collect garbage 
+# We created a local options file on our file system, which we should
+# remove now.
+file.remove(&quot;tmp.R&quot;)</code></pre>
+<p>Then</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span>document::<span class="kw">document</span>(<span class="dt">file_name =</span> path, <span class="dt">check_package =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## Writing NAMESPACE
+## Writing A-Header-for.Rd
+## Writing a_first_function.Rd</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readLines</span>(d[[<span class="st">&quot;txt_path&quot;</span>]]), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>_file_ simple.R
+
+Description:
+
+     provide a simple example of a file using roxygen and standard R
+     comments.
+
+Warning:
+
+     READ THIS FILE CAREFULLY. There's some information in the
+     comments.
+
+Note:
+
+     This header will show up in the documentation, but it's got
+     nothing to do with the R statements below. Usually this is not
+     intended.
+
+Author(s):
+
+     Dominik Cullmann &lt;adc-r@arcor.de&gt;
+
+
+a first function example XXX
+
+Description:
+
+     This really is just an example, the function prints
+     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
+
+Usage:
+
+     a_first_function(df)
+     
+Arguments:
+
+      df: Name of a data.frame to ... do whatever needs to be done.
+
+Value:
+
+     NULL. This is no good.
+
+Author(s):
+
+     Dominik Cullmann &lt;dominik.cullmann@forst.bwl.de&gt;
+
+Examples:
+
+     data(iris, package = &quot;datasets&quot;)
+     a_first_function(iris)
+     </code></pre>
+</div>
 </div>
 <div id="displaying-temporary-help-files" class="section level1">
 <h1>Displaying Temporary Help Files</h1>
 <p>You can display the help page for one of the documented functions using</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">options</span>(<span class="dt">pager =</span> switch(.Platform[[<span class="st">&quot;OS.type&quot;</span>]], <span class="st">&quot;unix&quot;</span> =<span class="st"> &quot;cat&quot;</span>, <span class="st">&quot;console&quot;</span>))
-document::<span class="kw">man</span>(<span class="st">&quot;foo&quot;</span>)</code></pre></div>
+path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
+document::<span class="kw">man</span>(<span class="dt">x =</span> path, <span class="dt">topic =</span> <span class="st">&quot;foo&quot;</span>)</code></pre></div>
+<pre><code>Creating directories ...</code></pre>
+<pre><code>Creating DESCRIPTION ...</code></pre>
+<pre><code>Creating NAMESPACE ...</code></pre>
+<pre><code>Creating Read-and-delete-me ...</code></pre>
+<pre><code>Copying code files ...</code></pre>
+<pre><code>Making help files ...</code></pre>
+<pre><code>Done.</code></pre>
+<pre><code>Further steps are described in '/tmp/RtmpGGfXgO/document/minimal/Read-and-delete-me'.</code></pre>
+<pre><code>First time using roxygen2. Upgrading automatically...</code></pre>
+<pre><code>Updating roxygen version in /tmp/RtmpGGfXgO/document/minimal/DESCRIPTION</code></pre>
+<pre><code>Writing NAMESPACE
+Writing foo.Rd
+Writing bar.Rd</code></pre>
+<pre><code>Updating minimal documentation</code></pre>
+<pre><code>Loading minimal</code></pre>
+<pre><code>Setting env vars ----------------------------------------------------------</code></pre>
+<pre><code>CFLAGS  : -Wall -pedantic
+CXXFLAGS: -Wall -pedantic</code></pre>
+<pre><code>Building minimal ----------------------------------------------------------</code></pre>
+<pre><code>'/home/qwer/svn/R/r-devel/build/bin/R' --no-site-file --no-environ  \
+  --no-save --no-restore --quiet CMD build  \
+  '/tmp/RtmpGGfXgO/document/minimal' --no-resave-data --no-manual </code></pre>
+<pre><code></code></pre>
+<pre><code>Setting env vars ----------------------------------------------------------</code></pre>
+<pre><code>_R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
+_R_CHECK_CRAN_INCOMING_           : FALSE
+_R_CHECK_FORCE_SUGGESTS_          : FALSE</code></pre>
+<pre><code>Checking minimal ----------------------------------------------------------</code></pre>
+<pre><code>'/home/qwer/svn/R/r-devel/build/bin/R' --no-site-file --no-environ  \
+  --no-save --no-restore --quiet CMD check  \
+  '/tmp/RtmpGGfXgO/minimal_0.1.0.tar.gz' --as-cran --timings --no-manual </code></pre>
+<pre><code></code></pre>
 <p>but I can’t figure how to caputure it’s output knitring R markdown vignette.</p>
 </div>
 
