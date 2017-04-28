@@ -51,13 +51,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
 
 <h1 class="title toc-ignore">Introduction to <em>document</em></h1>
 <h4 class="author"><em>Andreas Dominik Cullmann</em></h4>
-<h4 class="date"><em>2017-04-29, 00:21:14</em></h4>
+<h4 class="date"><em>2017-04-29, 00:35:14</em></h4>
 
 
 
 <div id="a-minimal-example" class="section level1">
 <h1>A Minimal Example</h1>
-<p>Suppose you have a script ## Writing Documentation Files to Disk</p>
+<div id="writing-documentation-files-to-disk" class="section level2">
+<h2>Writing Documentation Files to Disk</h2>
+<p>Suppose you have a script</p>
 <pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
 <span class="kw">cat</span>(<span class="kw">readLines</span>(path), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre>
 <pre><code>#' Nothing Good For
@@ -130,6 +132,7 @@ Examples:
      foo(x = 2)
      </code></pre>
 <p>You can view a copy of the html file <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html">here</a>. The pdf file resembles a package’s documentation pdf file.</p>
+</div>
 <div id="a-simple-example" class="section level2">
 <h2>A Simple Example</h2>
 <p>Suppose you have a script</p>
@@ -202,7 +205,7 @@ colMeans(iris[1:4])
 # We created a local options file on our file system, which we should
 # remove now.
 file.remove(&quot;tmp.R&quot;)</code></pre>
-<p>Then</p>
+<p>Then you can write documentation using:</p>
 <pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span>document::<span class="kw">document</span>(<span class="dt">file_name =</span> path, <span class="dt">check_package =</span> <span class="ot">FALSE</span>)</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readLines</span>(d[[<span class="st">&quot;txt_path&quot;</span>]]), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre>
 <pre><code>_file_ simple.R
@@ -286,11 +289,6 @@ Examples:
      foo(x = 2)
      
  </code></pre>
-<p>but I can’t figure how to caputure it’s output knitring R markdown vignette. # Displaying Temporary Help Files You can display the help page for one of the documented functions using</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">options</span>(<span class="dt">pager =</span> switch(.Platform[[<span class="st">&quot;OS.type&quot;</span>]], <span class="st">&quot;unix&quot;</span> =<span class="st"> &quot;cat&quot;</span>, <span class="st">&quot;console&quot;</span>))
-path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
-document::<span class="kw">man</span>(<span class="dt">x =</span> path, <span class="dt">topic =</span> <span class="st">&quot;foo&quot;</span>)</code></pre>
-<p>but I can’t figure how to caputure it’s output knitring R markdown vignette.</p>
 </div>
 
 

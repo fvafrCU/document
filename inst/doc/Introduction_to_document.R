@@ -1,67 +1,31 @@
----
-title: "Introduction to *document*"
-author: "Andreas Dominik Cullmann"
-date: 2017-04-29, 00:35:14
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-# A Minimal Example
-
-## Writing Documentation Files to Disk
-
-Suppose you have a script
-```{r, comment = ""}
+## ---- comment = ""-------------------------------------------------------
 path <- system.file("tests", "files", "minimal.R", package = "document")
 cat(readLines(path), sep = "\n")
-```
-Then
-```{r, result = "hide", message = FALSE}
-d <- document::document(file_name = path, check_package = FALSE)
-```
-creates a
-Portable Document Format 
-[(pdf)](https://en.wikipedia.org/wiki/Portable_Document_Format) file,
-an Hypertext Markup Language
-[(html)](https://en.wikipedia.org/wiki/HTML) file and a 
-[plain text](https://en.wikipedia.org/wiki/Plain_text) file.
-The plain text reads
-```{r, comment = ""}
-cat(readLines(d[["txt_path"]]), sep = "\n")
-```
 
-```{r, echo = FALSE, results = "hide", message = FALSE}
+## ---- result = "hide", message = FALSE-----------------------------------
+d <- document::document(file_name = path, check_package = FALSE)
+
+## ---- comment = ""-------------------------------------------------------
+cat(readLines(d[["txt_path"]]), sep = "\n")
+
+## ---- echo = FALSE, results = "hide", message = FALSE--------------------
 d <- document::document(file_name = path, 
                         output_directory = file.path(rprojroot::find_root(rprojroot::is_r_package), 
                                                      "inst", "tests", "files"),
                         check_package = FALSE)
 file.remove(unlist(d[c("txt_path", "pdf_path")]))
-```
 
-You can view a copy of the html file [here](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html). 
-The pdf file resembles a package's documentation pdf file.
-
-
-## A Simple Example
-Suppose you have a script
-
-```{r, comment = ""}
+## ---- comment = ""-------------------------------------------------------
 path <- system.file("tests", "files", "simple.R", package = "document")
 cat(readLines(path), sep = "\n")
-```
-Then you can write documentation using:
-```{r, result = "hide", message = FALSE}
-d <- document::document(file_name = path, check_package = FALSE)
-```
-```{r, comment = ""}
-cat(readLines(d[["txt_path"]]), sep = "\n")
-```
 
-```{r, echo = FALSE}
+## ---- result = "hide", message = FALSE-----------------------------------
+d <- document::document(file_name = path, check_package = FALSE)
+
+## ---- comment = ""-------------------------------------------------------
+cat(readLines(d[["txt_path"]]), sep = "\n")
+
+## ---- echo = FALSE-------------------------------------------------------
 # owing to Dason Kurkiewicz <dasonk@gmail.com>, https://github.com/Dasonk/docstring
 options(help_type="text")
 
@@ -75,10 +39,8 @@ console_pager <- function(x, ...){
     input <- gsub("_", "", input)
     cat(paste(input,collapse="\n"), "\n")}
 options(pager=console_pager)
-```
-# Displaying Temporary Help Files
-You can display the help page for one of the documented functions using
-```{r, comment = "", message = FALSE, warning = FALSE}
+
+## ---- comment = "", message = FALSE, warning = FALSE---------------------
 path <- system.file("tests", "files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")
-```
+

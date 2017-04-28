@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-04-29, 00:21:14
+date: 2017-04-29, 00:35:14
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -11,9 +11,10 @@ vignette: >
 
 
 # A Minimal Example
-Suppose you have a script
+
 ## Writing Documentation Files to Disk
 
+Suppose you have a script
 ```{r, comment = ""}
 path <- system.file("tests", "files", "minimal.R", package = "document")
 cat(readLines(path), sep = "\n")
@@ -52,7 +53,7 @@ Suppose you have a script
 path <- system.file("tests", "files", "simple.R", package = "document")
 cat(readLines(path), sep = "\n")
 ```
-Then
+Then you can write documentation using:
 ```{r, result = "hide", message = FALSE}
 d <- document::document(file_name = path, check_package = FALSE)
 ```
@@ -61,6 +62,7 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 ```
 
 ```{r, echo = FALSE}
+# owing to Dason Kurkiewicz <dasonk@gmail.com>, https://github.com/Dasonk/docstring
 options(help_type="text")
 
 # A pager that outputs to the console
@@ -80,12 +82,3 @@ You can display the help page for one of the documented functions using
 path <- system.file("tests", "files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")
 ```
-but I can't figure how to caputure it's output knitring R markdown vignette.
-# Displaying Temporary Help Files
-You can display the help page for one of the documented functions using
-```{r, comment = ""}
-options(pager = switch(.Platform[["OS.type"]], "unix" = "cat", "console"))
-path <- system.file("tests", "files", "minimal.R", package = "document")
-document::man(x = path, topic = "foo")
-```
-but I can't figure how to caputure it's output knitring R markdown vignette.
