@@ -4,25 +4,27 @@
 \alias{document}
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
-document(file_name, output_directory = tempdir(), check_package = TRUE,
-  working_directory = file.path(tempdir(), "document"), dependencies = NULL,
-  runit = FALSE, clean = FALSE, ...)
+document(file_name, working_directory = file.path(tempdir(), "document"),
+  output_directory = tempdir(), dependencies = NULL, sanitize_Rd = TRUE,
+  runit = FALSE, check_package = TRUE, clean = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
 
-\item{output_directory}{The directory to put the documentation into.}
-
-\item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
-
 \item{working_directory}{A working directory.}
+
+\item{output_directory}{The directory to put the documentation into.}
 
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
+\item{sanitize_Rd}{Remove strange characters from Rdconv?}
+
 \item{runit}{Convert the text received from the help files if running RUnit?
 Do not bother, this is for Unit testing only.
 on.}
+
+\item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
 
 \item{clean}{Delete the working directory?}
 
@@ -33,6 +35,7 @@ A list containing
 \describe{
     \item{pdf_path}{The path to the pdf file produced.}
     \item{txt_path}{The path to the text file produced.}
+    \item{html_path}{The path to the html file produced.}
     \item{check_result}{The value of \code{\link[devtools]{check}}.}
 }
 }

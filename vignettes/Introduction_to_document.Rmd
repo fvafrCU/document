@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-04-28, 08:13:07
+date: 2017-04-28, 10:40:23
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -10,25 +10,44 @@ vignette: >
 ---
 
 
-
+# Writing Documentation Files to Disk
 Suppose you have a script
 
 ```{r, comment = ""}
-path <- system.file("tests", "files", "basic.R", package = "document")
+path <- system.file("tests", "files", "minimal.R", package = "document")
 cat(readLines(path), sep = "\n")
 ```
+Then
 ```{r, result = "hide", message = FALSE}
-d <- document::document(file_name = path, output_directory = tempdir(), 
-                        check_package = FALSE)
+d <- document::document(file_name = path, check_package = FALSE)
 ```
-gives you a pdf file and a text file that looks like
-
+creates a
+Portable Document Format 
+[(pdf)](https://en.wikipedia.org/wiki/Portable_Document_Format) file,
+an Hypertext Markup Language
+[(html)](https://en.wikipedia.org/wiki/HTML) file and a 
+[plain text](https://en.wikipedia.org/wiki/Plain_text) file.
+The plain text reads
 ```{r, comment = ""}
 cat(readLines(d[["txt_path"]]), sep = "\n")
 ```
+
+```{r, echo = FALSE, results = "hide", message = FALSE}
+d <- document::document(file_name = path, 
+                        output_directory = file.path(rprojroot::find_root(rprojroot::is_r_package), 
+                                                     "inst", "tests", "files"),
+                        check_package = FALSE)
+file.remove(unlist(d[c("txt_path", "pdf_path")]))
+```
+
+You can view a copy of the html file [here](http://htmlpreview.github.io/?https://github.com/fvafrCU/excerptr/blob/master/inst/tests/files/simple.html), the pdf file looks accordingly.
+
+
+
+# Displaying Temporary Help Files
 You can display the help page for one of the documented functions using
-```{r, comment = "", warning = FALSE}
+```{r, comment = ""}
 options(pager = switch(.Platform[["OS.type"]], "unix" = "cat", "console"))
 document::man("foo")
 ```
-but I can't figure how to make this work in a vignette.
+but I can't figure how to caputure it's output knitring R markdown vignette.

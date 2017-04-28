@@ -4,7 +4,6 @@
 #' Of course the code file should contain \pkg{roxygen2} comments.
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be documented.
-#' @param check_package Run \code{\link[devtools]{check}} on the sources?
 #' @param dependencies a character vector of package names the functions depend
 #' on.
 #' @param working_directory A working directory.
@@ -15,7 +14,7 @@
 #' document(file_name = system.file("tests", "files", "simple.R",
 #'          package = "document"), check_package = FALSE)
 fake_package <- function(file_name, working_directory = NULL,
-                         check_package = FALSE, dependencies = NULL, ...) {
+                         dependencies = NULL, ...) {
     checkmate::assertCharacter(dependencies, null.ok = TRUE)
     # Work around default here to stay below line with of 80:
     if (is.null(working_directory))
@@ -35,13 +34,13 @@ fake_package <- function(file_name, working_directory = NULL,
     }
     # need a hard coded basename here to ensure not replicating the input code
     # if faking for the same code file again.
-    code_file <- file.path(working_directory, "code.R") 
+    code_file <- file.path(working_directory, "code.R")
     writeLines(roxygen_code, con = code_file)
     utils::package.skeleton(code_files = code_file,
                             name = package_name,
                             path = working_directory,
                             force = TRUE)
-    # file.remove(code_file)
+    file.remove(code_file)
     # roxygen2 does not overwrite files not written by roxygen2, so we need to
     # delete some files
     file.remove(list.files(man_directory, full.names = TRUE))
@@ -57,6 +56,8 @@ fake_package <- function(file_name, working_directory = NULL,
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @inheritParams fake_package
+#' @inheritParams write_the_docs
+#' @param check_package Run \code{\link[devtools]{check}} on the sources?
 #' @param output_directory The directory to put the documentation into.
 #' @param sanitize_Rd Remove strange characters from Rdconv?
 #' @param clean Delete the working directory?
@@ -75,25 +76,54 @@ fake_package <- function(file_name, working_directory = NULL,
 #' document(file_name = system.file("tests", "files", "simple.R",
 #'          package = "document"), check_package = FALSE)
 document <- function(file_name,
-                     #TODO: output_directory = dirname(file_name),
-                     output_directory = tempdir(), check_package = TRUE,
                      working_directory = file.path(tempdir(), "document"),
-                     dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE, 
-                     clean = FALSE, ...) {
+                     output_directory = tempdir(),
+                     dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
+                     check_package = TRUE, clean = FALSE, ...) {
     checkmate::assertFile(file_name, access = "r")
     checkmate::assertDirectory(output_directory, access = "r")
     checkmate::qassert(check_package, "B1")
     checkmate::qassert(working_directory, "S1")
-    status <- list(pdf_path = NA, txt_path = NA, html_path = NA,
-                   check_result = NA)
     if (isTRUE(clean)) on.exit({
         unlink(working_directory, recursive = TRUE)
         options("document_package_directory" = NULL)
     })
     package_directory <- fake_package(file_name,
                                       working_directory = working_directory,
-                                      check_package = check_package,
                                       dependencies = dependencies, ...)
+    status <- write_the_docs(package_directory = package_directory,
+                             file_name = file_name,
+                             output_directory = output_directory,
+                             dependencies = dependencies,
+                             sanitize_Rd = sanitize_Rd, runit = runit)
+    if (check_package) {
+        status[["check_result"]] <- devtools::check(package_directory)
+    }
+    return(status)
+}
+
+#' Read R Documentation Files from a Package's Source, Convert and Write Them
+#' to Disk
+#'
+#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
+#' @inheritParams fake_package
+#' @param package_directory The directory containing the package's source.
+#' @param output_directory The directory to put the documentation into.
+#' @param sanitize_Rd Remove strange characters from Rdconv?
+#' @param runit Convert the text received from the help files if running RUnit?
+#' Do not bother, this is for Unit testing only.
+#' on.
+#' @return A list containing
+#' \describe{
+#'     \item{pdf_path}{The path to the pdf file produced.}
+#'     \item{txt_path}{The path to the text file produced.}
+#'     \item{html_path}{The path to the html file produced.}
+#' }
+write_the_docs <- function(package_directory, file_name,
+                           output_directory = tempdir(),
+                           dependencies = NULL, sanitize_Rd = TRUE,
+                           runit = FALSE
+                           ) {
     man_directory <- file.path(package_directory, "man")
     package_name <- basename(package_directory)
     html_name <- paste0(package_name, ".html")
@@ -102,6 +132,10 @@ document <- function(file_name,
     pdf_path <- file.path(output_directory, pdf_name)
     txt_name <- paste0(package_name, ".txt")
     txt_path <- file.path(output_directory, txt_name)
+    # TODO: make status depend on the status of the corresponding call to 
+    # rcmd_safe!
+    status <- list(pdf_path = pdf_path, txt_path = txt_path, 
+                   html_path = html_path)
     # out_file_name may contain underscores, which need to be escaped for LaTeX.
     file_name_tex <- gsub("_", "\\_", basename(file_name), fixed = TRUE)
     pdf_title <- paste("'Roxygen documentation for file", file_name_tex, "\'")
@@ -118,10 +152,9 @@ document <- function(file_name,
     callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force",
                                  paste0("--title=", pdf_title),
                                  paste0("--output=", pdf_path), man_directory))
-    status[["pdf_path"]] <- pdf_path
     # using R CMD Rdconv on the system instead of tools::Rd2... since
-    # ?tools::Rd2txt states that 
-    # "These functions ... are mainly intended for internal use, their 
+    # ?tools::Rd2txt states that
+    # "These functions ... are mainly intended for internal use, their
     # interfaces are subject to change".
     Rd_txt <- NULL
     Rd_html <- NULL
@@ -137,15 +170,9 @@ document <- function(file_name,
     if (isTRUE(sanitize_Rd)) Rd_txt <- gsub("_\b", "", Rd_txt, fixed = TRUE)
     if (isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt)
     writeLines(Rd_txt, con = txt_path)
-    status[["txt_path"]] <- txt_path
     writeLines(Rd_html, con = html_path)
-    status[["html_path"]] <- html_path
-    if (check_package) {
-        status[["check_result"]] <- devtools::check(package_directory)
-    }
     return(status)
 }
-
 #' A Convenience Wrapper to \code{getOption("document_package_directory")}
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>

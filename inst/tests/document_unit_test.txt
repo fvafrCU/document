@@ -1,4 +1,4 @@
-RUNIT TEST PROTOCOL -- Thu Apr 27 22:45:13 2017 
+RUNIT TEST PROTOCOL -- Fri Apr 28 10:34:04 2017 
 *********************************************** 
 Number of test functions: 1 
 Number of errors: 0 
@@ -19,4 +19,4 @@ Involved directory:
 /home/qwer/svn/R/r-devel/build/library/document/tests/runit 
 --------------------------- 
 Test file: /home/qwer/svn/R/r-devel/build/library/document/tests/runit/expected_files.r 
-test_txt: (1 checks) ... OK (4.69 seconds)
+test_txt: (1 checks) ... OK (6.05 seconds)

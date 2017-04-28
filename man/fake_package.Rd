@@ -4,15 +4,12 @@
 \alias{fake_package}
 \title{Fake a Package From a Single Code File}
 \usage{
-fake_package(file_name, working_directory = NULL, check_package = FALSE,
-  dependencies = NULL, ...)
+fake_package(file_name, working_directory = NULL, dependencies = NULL, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
 
 \item{working_directory}{A working directory.}
-
-\item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
 
 \item{dependencies}{a character vector of package names the functions depend
 on.}

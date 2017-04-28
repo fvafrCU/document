@@ -1,50 +1,50 @@
-__f_i_l_e_ _s_i_m_p_l_e._R
+_file_ simple.R
 
-_D_e_s_c_r_i_p_t_i_o_n:
+Description:
 
      provide a simple example of a file using roxygen and standard R
      comments.
 
-_W_a_r_n_i_n_g:
+Warning:
 
      READ THIS FILE CAREFULLY. There's some information in the
      comments.
 
-_N_o_t_e:
+Note:
 
      This header will show up in the documentation, but it's got
      nothing to do with the R statements below. Usually this is not
      intended.
 
-_A_u_t_h_o_r(_s):
+Author(s):
 
      Dominik Cullmann <adc-r@arcor.de>
 
 
-_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
+a first function example XXX
 
-_D_e_s_c_r_i_p_t_i_o_n:
+Description:
 
      This really is just an example, the function prints
      'utils::head()' and 'utils::str()' of the given 'data.frame'.
 
-_U_s_a_g_e:
+Usage:
 
      a_first_function(df)
      
-_A_r_g_u_m_e_n_t_s:
+Arguments:
 
       df: Name of a data.frame to ... do whatever needs to be done.
 
-_V_a_l_u_e:
+Value:
 
      NULL. This is no good.
 
-_A_u_t_h_o_r(_s):
+Author(s):
 
      Dominik Cullmann <dominik.cullmann@forst.bwl.de>
 
-_E_x_a_m_p_l_e_s:
+Examples:
 
      data(iris, package = "datasets")
      a_first_function(iris)
