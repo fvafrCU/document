@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-04-28, 10:57:27
+date: 2017-04-28, 11:37:33
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -10,8 +10,9 @@ vignette: >
 ---
 
 
-# Writing Documentation Files to Disk
+# A Minimal Example
 Suppose you have a script
+## Writing Documentation Files to Disk
 
 ```{r, comment = ""}
 path <- system.file("tests", "files", "minimal.R", package = "document")
@@ -44,11 +45,26 @@ You can view a copy of the html file [here](http://htmlpreview.github.io/?https:
 The pdf file resembles a package's documentation pdf file.
 
 
+## A Simple Example
+Suppose you have a script
+
+```{r, comment = ""}
+path <- system.file("tests", "files", "simple.R", package = "document")
+cat(readLines(path), sep = "\n")
+```
+Then
+```{r, result = "hide", message = FALSE}
+d <- document::document(file_name = path, check_package = FALSE)
+```
+```{r, comment = ""}
+cat(readLines(d[["txt_path"]]), sep = "\n")
+```
 
 # Displaying Temporary Help Files
 You can display the help page for one of the documented functions using
 ```{r, comment = ""}
 options(pager = switch(.Platform[["OS.type"]], "unix" = "cat", "console"))
-document::man("foo")
+path <- system.file("tests", "files", "minimal.R", package = "document")
+document::man(x = path, topic = "foo")
 ```
 but I can't figure how to caputure it's output knitring R markdown vignette.

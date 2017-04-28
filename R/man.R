@@ -28,7 +28,7 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
         if (is_Rd_file(x) || ! identical(FALSE, force_Rd)) {
             status <- display_Rd(x)
         } else {
-            if (! is.na(topic)) {
+            if (is.na(topic)) {
                 stop("Give either a path to an R documentation file or ",
                      "additionally give a topic.")
             } else {
