@@ -29,3 +29,4 @@ document:::is_Rd_file(list.files(file.path(get_dpd(), "man"),
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
+

@@ -1,10 +1,10 @@
 Package: document
-Title:  Document a Single R Code File
+Title: Document a Single R Code File
 Version: 0.8.0
 Authors@R: person(given = c("Andreas", "Dominik"), family = "Cullmann",
     email = "adc-r@arcor.de", role = c("aut","cre"))
 Description: Extract roxygen2-style comments from a single code file, run
-    roxygen2 on them, save the results in various formats on disk and optionally 
+    roxygen2 on them, save the results in various formats on disk and optionally
     display a temporary help page in an interactive R session.
 Depends:
     R (>= 3.3.0)
@@ -25,4 +25,4 @@ Suggests:
     rprojroot,
     covr
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 5.0.1

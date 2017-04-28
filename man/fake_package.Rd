@@ -32,3 +32,4 @@ fake_package(file_name = system.file("tests", "files", "simple.R",
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
+

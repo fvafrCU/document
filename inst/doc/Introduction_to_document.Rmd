@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-04-28, 11:37:33
+date: 2017-04-29, 00:21:14
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -60,6 +60,27 @@ d <- document::document(file_name = path, check_package = FALSE)
 cat(readLines(d[["txt_path"]]), sep = "\n")
 ```
 
+```{r, echo = FALSE}
+options(help_type="text")
+
+# A pager that outputs to the console
+console_pager <- function(x, ...){
+    input <- readLines(x)
+    # Had some issues with _ getting displayed
+    # in the output console output which
+    # messed up rendering in the created html vignette
+    # So remove that before outputting.
+    input <- gsub("_", "", input)
+    cat(paste(input,collapse="\n"), "\n")}
+options(pager=console_pager)
+```
+# Displaying Temporary Help Files
+You can display the help page for one of the documented functions using
+```{r, comment = "", message = FALSE, warning = FALSE}
+path <- system.file("tests", "files", "minimal.R", package = "document")
+document::man(x = path, topic = "foo")
+```
+but I can't figure how to caputure it's output knitring R markdown vignette.
 # Displaying Temporary Help Files
 You can display the help page for one of the documented functions using
 ```{r, comment = ""}

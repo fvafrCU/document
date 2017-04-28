@@ -45,3 +45,4 @@ document::man(x = path, topic = "foo")
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
+

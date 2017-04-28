@@ -15,3 +15,4 @@ A Convenience Wrapper to \code{getOption("document_package_directory")}
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
+

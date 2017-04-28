@@ -38,17 +38,18 @@ fake_package <- function(file_name, working_directory = NULL,
     # if faking for the same code file again.
     code_file <- file.path(working_directory, "code.R")
     writeLines(roxygen_code, con = code_file)
-    utils::package.skeleton(code_files = code_file,
-                            name = package_name,
-                            path = working_directory,
-                            force = TRUE)
+    suppressMessages(utils::package.skeleton(code_files = code_file,
+                                             name = package_name,
+                                             path = working_directory,
+                                             force = TRUE))
     file.remove(code_file)
     # roxygen2 does not overwrite files not written by roxygen2, so we need to
     # delete some files
     file.remove(list.files(man_directory, full.names = TRUE))
     file.remove(file.path(package_directory, "NAMESPACE"))
     #% create documentation from roxygen comments for the package
-    roxygen2::roxygenize(package.dir = package_directory)
+    foo <- capture.output(suppressWarnings(suppressMessages(roxygen2::roxygenize(package.dir = 
+                                                           package_directory))))
     clean_description(package_directory)
     if (! is.null(dependencies))
         add_dependencies_to_description(package_directory, dependencies)
