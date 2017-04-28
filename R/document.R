@@ -58,6 +58,7 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @inheritParams fake_package
 #' @param output_directory The directory to put the documentation into.
+#' @param sanitize_Rd Remove strange characters from Rdconv?
 #' @param clean Delete the working directory?
 #' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
@@ -66,6 +67,7 @@ fake_package <- function(file_name, working_directory = NULL,
 #' \describe{
 #'     \item{pdf_path}{The path to the pdf file produced.}
 #'     \item{txt_path}{The path to the text file produced.}
+#'     \item{html_path}{The path to the html file produced.}
 #'     \item{check_result}{The value of \code{\link[devtools]{check}}.}
 #' }
 #' @export
@@ -76,13 +78,14 @@ document <- function(file_name,
                      #TODO: output_directory = dirname(file_name),
                      output_directory = tempdir(), check_package = TRUE,
                      working_directory = file.path(tempdir(), "document"),
-                     dependencies = NULL, runit = FALSE, clean = FALSE, ...
-                     ) {
+                     dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE, 
+                     clean = FALSE, ...) {
     checkmate::assertFile(file_name, access = "r")
     checkmate::assertDirectory(output_directory, access = "r")
     checkmate::qassert(check_package, "B1")
     checkmate::qassert(working_directory, "S1")
-    status <- list(pdf_path = NA, txt_path = NA, check_result = NA)
+    status <- list(pdf_path = NA, txt_path = NA, html_path = NA,
+                   check_result = NA)
     if (isTRUE(clean)) on.exit({
         unlink(working_directory, recursive = TRUE)
         options("document_package_directory" = NULL)
@@ -93,6 +96,8 @@ document <- function(file_name,
                                       dependencies = dependencies, ...)
     man_directory <- file.path(package_directory, "man")
     package_name <- basename(package_directory)
+    html_name <- paste0(package_name, ".html")
+    html_path <- file.path(output_directory, html_name)
     pdf_name <- paste0(package_name, ".pdf")
     pdf_path <- file.path(output_directory, pdf_name)
     txt_name <- paste0(package_name, ".txt")
@@ -114,19 +119,27 @@ document <- function(file_name,
                                  paste0("--title=", pdf_title),
                                  paste0("--output=", pdf_path), man_directory))
     status[["pdf_path"]] <- pdf_path
-    # using R CMD Rdconv on the system instead of Rd2txt since ?Rd2txt states
-    # it's "mainly intended for internal use" and its interface is "subject to
+    # using R CMD Rdconv on the system instead of tools::Rd2txt since
+    # ?tools::Rd2txt states it is
+    # "mainly intended for internal use" and its interface is "subject to
     # change."
     Rd_txt <- NULL
+    Rd_html <- NULL
     files  <- sort_unlocale(list.files(man_directory, full.names = TRUE))
     for (rd_file in files) {
         Rd_txt <- c(Rd_txt,
                     callr::rcmd_safe("Rdconv",
                                      c("--type=txt", rd_file))[["stdout"]])
+        Rd_html <- c(Rd_html,
+                     callr::rcmd_safe("Rdconv",
+                                      c("--type=html", rd_file))[["stdout"]])
     }
+    if (isTRUE(sanitize_Rd)) Rd_txt <- gsub("_\b", "", Rd_txt, fixed = TRUE)
     if (isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt)
     writeLines(Rd_txt, con = txt_path)
     status[["txt_path"]] <- txt_path
+    writeLines(Rd_html, con = html_path)
+    status[["html_path"]] <- html_path
     if (check_package) {
         status[["check_result"]] <- devtools::check(package_directory)
     }
