@@ -6,8 +6,8 @@
 \title{Document a Single R Code File}
 \description{
 Extract roxygen2-style and markdown comments from a single R code 
-file and convert them to pdf and txt files and a temporary help page to be
-called from within R.
+file and convert them to pdf, html and txt files and a temporary help page
+to be called from within R.
 }
 \details{
 R is a programming language that supports and checks documentation for
@@ -47,9 +47,9 @@ This package writes to disk, so \strong{NEVER} run it with superuser powers.
 \pkg{docstring}
 (\url{https://cran.r-project.org/package=docstring}) also creates temporary
 help pages as well but using a different technical approach (allowing you to
-view them in the \code{RStudio} help pane). But it creates them from python style 
-docstring-like comments it then parses into \pkg{roxygen2}. And it does not
-write to file so far.
+view them in the \code{RStudio} help pane). But it creates them from python
+style docstring-like comments it then parses into \pkg{roxygen2}. And it
+does not write to file so far.
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

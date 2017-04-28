@@ -72,7 +72,7 @@ fake_package <- function(file_name, working_directory = NULL,
 #' }
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R",
+#' document(file_name = system.file("tests", "files", "minimal.R",
 #'          package = "document"), check_package = FALSE)
 document <- function(file_name,
                      working_directory = file.path(tempdir(), "document"),

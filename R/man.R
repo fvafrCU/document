@@ -19,9 +19,9 @@
 #' @return Invisibly the status of \code{\link{display_Rd}}.
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "simple.R", 
+#' document(file_name = system.file("tests", "files", "minimal.R", 
 #'          package = "document"), check_package = FALSE)
-#' man("a_first_function")
+#' man("foo")
 man <- function(x, topic = NA, force_Rd = FALSE) {
     usage <- usage()
     if (file.exists(x)) {
@@ -130,11 +130,6 @@ is_Rd_file <- function(x) {
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @return the return value of removing the temporary file.
 #' @param rd_file The path to the Rd file to be displayed.
-#' @examples
-#' document(file_name = system.file("tests", "files", "simple.R",
-#'          package = "document"), check_package = FALSE)
-#' document:::display_Rd(list.files(file.path(get_dpd(), "man"), 
-#'                       full.names = TRUE)[2])
 display_Rd <- function(rd_file) {
     rd_out <- callr::rcmd_safe("Rdconv",
                      c("--type=txt", rd_file))[["stdout"]]

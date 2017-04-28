@@ -4,8 +4,8 @@ Version: 0.8.0
 Authors@R: person(given = c("Andreas", "Dominik"), family = "Cullmann",
     email = "adc-r@arcor.de", role = c("aut","cre"))
 Description: Extract roxygen2-style comments from a single R code file and 
-    convert them to pdf and txt files and a temporary help page to be called 
-    from within R.
+    convert them to pdf, html and txt files and a temporary help page to be 
+    called from within R.
 Depends:
     R (>= 3.3.0)
 License: BSD_2_clause + file LICENSE

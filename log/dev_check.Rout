@@ -1,7 +1,5 @@
 Updating document documentation
 Loading document
-Writing document.Rd
-Writing write_the_docs.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -13,7 +11,7 @@ Building document --------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files
@@ -87,9 +85,8 @@ The Title field starts with the package name.
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-            user system elapsed
-display_Rd 4.916  0.476   9.094
-document   3.568  0.444   8.768
+         user system elapsed
+document  4.4  0.468    5.38
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -116,6 +113,5 @@ The Title field starts with the package name.
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-            user system elapsed
-display_Rd 4.916  0.476   9.094
-document   3.568  0.444   8.768
+         user system elapsed
+document  4.4  0.468    5.38

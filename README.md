@@ -22,12 +22,13 @@ help("document-package", package = "document")
 ```
 
 ```
-# document a single R code file.
+# Document a Single R Code File
 # 
 # Description:
 # 
-#      extract roxygen2-style and markdown comments from a single R code
-#      file and convert them to various human-readable formats.
+#      Extract roxygen2-style and markdown comments from a single R code
+#      file and convert them to pdf, html and txt files and a temporary
+#      help page to be called from within R.
 # 
 # Details:
 # 
@@ -40,14 +41,15 @@ help("document-package", package = "document")
 #      graphics, used by people like me who start out hacking down code,
 #      eventually pouring chunks of code into functions (and sometimes
 #      even ending up creating and documenting packages). Along that work
-#      flow you cannot use R's documentation system, let alone roxygen2,
-#      unless you have come to forge your code into a package.
+#      flow you cannot use R's documentation system, let alone
+#      'roxygen2', unless you have come to forge your code into a
+#      package.
 # 
-#      I am fully aware of the fact that roxygen2 is meant to document
-#      packages, not single code chunks (see _Note_).  So should you.
-#      Nevertheless I feel the temptation to use roxygen2-style comments
-#      in code chunks that are not part of any package. And to convert
-#      them to pdf for better readability.
+#      I am fully aware of the fact that 'roxygen2' is meant to document
+#      packages, not single code chunks.  So should you. Nevertheless I
+#      feel the temptation to use roxygen2-style comments in code chunks
+#      that are not part of any package. And to convert them to pdf for
+#      better readability.
 # 
 # Warning:
 # 
@@ -67,6 +69,15 @@ help("document-package", package = "document")
 # Author(s):
 # 
 #      Andreas Dominik Cullmann, <adc-r@arcor.de>
+# 
+# See Also:
+# 
+#      'docstring' (<URL: https://cran.r-project.org/package=docstring>)
+#      also creates temporary help pages as well but using a different
+#      technical approach (allowing you to view them in the 'RStudio'
+#      help pane). But it creates them from python style docstring-like
+#      comments it then parses into 'roxygen2'. And it does not write to
+#      file so far.
 ```
 ## Installation
 You can install document from github with:

@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-04-28, 10:51:33
+date: 2017-04-28, 10:57:27
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
@@ -40,7 +40,8 @@ d <- document::document(file_name = path,
 file.remove(unlist(d[c("txt_path", "pdf_path")]))
 ```
 
-You can view a copy of the html file [here](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html), the pdf file looks accordingly.
+You can view a copy of the html file [here](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html). 
+The pdf file resembles a package's documentation pdf file.
 
 
 

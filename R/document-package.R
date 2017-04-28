@@ -1,8 +1,8 @@
 #' Document a Single R Code File
 #' 
 #' Extract roxygen2-style and markdown comments from a single R code 
-#' file and convert them to pdf and txt files and a temporary help page to be
-#' called from within R.
+#' file and convert them to pdf, html and txt files and a temporary help page
+#' to be called from within R.
 #'
 #' R is a programming language that supports and checks documentation for
 #' program libraries (called `packages'). The package roxygen2 provides a
