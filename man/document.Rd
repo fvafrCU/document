@@ -18,7 +18,9 @@ document(file_name, working_directory = file.path(tempdir(), "document"),
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
-\item{sanitize_Rd}{Remove strange characters from Rdconv?}
+\item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?
+Do not bother, this is for Unit testing only.
+on.}
 
 \item{runit}{Convert the text received from the help files if running RUnit?
 Do not bother, this is for Unit testing only.

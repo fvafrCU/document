@@ -47,7 +47,7 @@ This package writes to disk, so \strong{NEVER} run it with superuser powers.
 \pkg{docstring}
 (\url{https://cran.r-project.org/package=docstring}) also creates temporary
 help pages as well but using a different technical approach (allowing you to
-view them in the RStudio help pane). But it creates them from python style 
+view them in the \code{RStudio} help pane). But it creates them from python style 
 docstring-like comments it then parses into \pkg{roxygen2}. And it does not
 write to file so far.
 }

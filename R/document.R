@@ -59,7 +59,6 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @inheritParams write_the_docs
 #' @param check_package Run \code{\link[devtools]{check}} on the sources?
 #' @param output_directory The directory to put the documentation into.
-#' @param sanitize_Rd Remove strange characters from Rdconv?
 #' @param clean Delete the working directory?
 #' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
@@ -109,8 +108,8 @@ document <- function(file_name,
 #' @inheritParams fake_package
 #' @param package_directory The directory containing the package's source.
 #' @param output_directory The directory to put the documentation into.
-#' @param sanitize_Rd Remove strange characters from Rdconv?
 #' @param runit Convert the text received from the help files if running RUnit?
+#' @param sanitize_Rd Remove strange characters from \code{Rdconv}?
 #' Do not bother, this is for Unit testing only.
 #' on.
 #' @return A list containing
@@ -132,9 +131,9 @@ write_the_docs <- function(package_directory, file_name,
     pdf_path <- file.path(output_directory, pdf_name)
     txt_name <- paste0(package_name, ".txt")
     txt_path <- file.path(output_directory, txt_name)
-    # TODO: make status depend on the status of the corresponding call to 
+    # TODO: make status depend on the status of the corresponding call to
     # rcmd_safe!
-    status <- list(pdf_path = pdf_path, txt_path = txt_path, 
+    status <- list(pdf_path = pdf_path, txt_path = txt_path,
                    html_path = html_path)
     # out_file_name may contain underscores, which need to be escaped for LaTeX.
     file_name_tex <- gsub("_", "\\_", basename(file_name), fixed = TRUE)

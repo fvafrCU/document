@@ -1,6 +1,5 @@
 Updating document documentation
 Loading document
-Writing fake_package.Rd
 Writing document.Rd
 Writing write_the_docs.Rd
 Setting env vars ---------------------------------------------------------------
@@ -20,7 +19,7 @@ Warning: ‘inst/doc’ files
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.7.1.tar.gz’
+* building ‘document_0.8.0.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -34,7 +33,7 @@ Checking document --------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.7.1’
+* this is package ‘document’ version ‘0.8.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
@@ -81,17 +80,7 @@ The Title field starts with the package name.
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'write_the_docs'
-  ‘package_directory’
-Documented arguments not in \usage in documentation object 'write_the_docs':
-  ‘clean’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
+* checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
@@ -99,7 +88,8 @@ Extensions’ manual.
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
             user system elapsed
-display_Rd 4.728   0.52   5.775
+display_Rd 4.916  0.476   9.094
+document   3.568  0.444   8.768
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -107,25 +97,13 @@ display_Rd 4.728   0.52   5.775
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 1 WARNING, 2 NOTEs
+Status: 2 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 1 warning  | 2 notes
-checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'write_the_docs'
-  ‘package_directory’
-Documented arguments not in \usage in documentation object 'write_the_docs':
-  ‘clean’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
-
+0 errors | 0 warnings | 2 notes
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
@@ -139,4 +117,5 @@ The Title field starts with the package name.
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
             user system elapsed
-display_Rd 4.728   0.52   5.775
+display_Rd 4.916  0.476   9.094
+document   3.568  0.444   8.768
