@@ -42,9 +42,7 @@ This package is basically a wrapper to
  
 This package writes to disk, so \strong{NEVER} run it with superuser powers.
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}
+
 \seealso{
 \pkg{docstring}
 (\url{https://cran.r-project.org/package=docstring}) also creates temporary
@@ -53,5 +51,7 @@ view them in the \code{RStudio} help pane). But it creates them from python
 style docstring-like comments it then parses into \pkg{roxygen2}. And it
 does not write to file so far.
 }
+\author{
+Andreas Dominik Cullmann, <adc-r@arcor.de>
+}
 \keyword{package}
-

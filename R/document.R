@@ -48,8 +48,8 @@ fake_package <- function(file_name, working_directory = NULL,
     file.remove(list.files(man_directory, full.names = TRUE))
     file.remove(file.path(package_directory, "NAMESPACE"))
     #% create documentation from roxygen comments for the package
-    foo <- capture.output(suppressWarnings(suppressMessages(roxygen2::roxygenize(package.dir = 
-                                                           package_directory))))
+    dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir = 
+                                                           package_directory))
     clean_description(package_directory)
     if (! is.null(dependencies))
         add_dependencies_to_description(package_directory, dependencies)

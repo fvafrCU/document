@@ -24,4 +24,3 @@ pagers.
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
-

@@ -53,4 +53,3 @@ document(file_name = system.file("tests", "files", "minimal.R",
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
-

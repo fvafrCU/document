@@ -38,4 +38,3 @@ in this case the whole file will be returned.
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
-

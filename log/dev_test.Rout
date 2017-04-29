@@ -3,14 +3,8 @@ Loading required package: testthat
 Testing document
 expected files: [1] "/home/qwer/git/cyclops/fvafrcu/document/inst/tests/expected_files/simple.txt"
 [1] "/home/qwer/git/cyclops/fvafrcu/document/inst/tests/files/simple.R"
-Writing NAMESPACE
-Writing A-Header-for.Rd
-Writing a_first_function.Rd
 .
-man: Writing NAMESPACE
-Writing A-Header-for.Rd
-Writing a_first_function.Rd
-_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
+man: _a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
 
 _D_e_s_c_r_i_p_t_i_o_n:
 
@@ -40,10 +34,7 @@ _E_x_a_m_p_l_e_s:
      
 
 
-.Writing NAMESPACE
-Writing A-Header-for.Rd
-Writing a_first_function.Rd
-_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
+._a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
 
 _D_e_s_c_r_i_p_t_i_o_n:
 
