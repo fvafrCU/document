@@ -1,20 +1,3 @@
-#' Remove Automatically Generated Package Rd from Man Directory
-#'
-#' \code{\link[utils]{package.skeleton}} and
-#' \code{\link[roxygen2]{roxygenize}}
-#' leave us with an invalid name-package.Rd file in the man directory.
-#' So we remove it.
-#'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
-#' @param package_directory Path to the directory.
-#' @return value of \code{\link{file.remove}}.
-remove_package_Rd <- function(package_directory) {
-    package_name <- basename(package_directory)
-    package_rd <- paste(package_name, "-package.Rd", sep = "")
-    status <- file.remove(file.path(package_directory, "man", package_rd))
-    return(invisible(status))
-}
-
 #' Sort a Character Vector in Lexical Order Avoiding the Locale
 #'
 #' \code{\link{sort}} uses the collation of the locale (see
