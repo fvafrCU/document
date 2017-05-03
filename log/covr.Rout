@@ -6,12 +6,10 @@
 158 R/document.R                        document  104     0
 204 R/document.R                  write_the_docs  149     0
 207 R/document.R                  write_the_docs  152     0
-43       R/man.R                             man   35     0
 52       R/man.R                             man   38     0
 55       R/man.R                             man   39     0
 88       R/man.R                             man   51     0
 92       R/man.R                             man   52     0
-177      R/man.R                      is_Rd_file  120     0
 1      R/utils.R               remove_package_Rd   12     0
 2      R/utils.R               remove_package_Rd   13     0
 3      R/utils.R               remove_package_Rd   14     0
@@ -24,8 +22,8 @@
 134    R/utils.R add_dependencies_to_description   81     0
 135    R/utils.R add_dependencies_to_description   82     0
 136    R/utils.R add_dependencies_to_description   83     0
-document Coverage: 89.13%
+document Coverage: 90.00%
 R/utils.R: 65.71%
-R/man.R: 88.89%
 R/document.R: 92.47%
+R/man.R: 92.59%
 R/file_parsing.R: 100.00%

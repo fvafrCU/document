@@ -47,6 +47,22 @@ test_that("from R file", {
           expect_equal(current, reference)
 }
 )
+test_that("from Rd file", {
+          options(pager = switch(.Platform[["OS.type"]],
+                                 "unix" = "cat", "console"))
+          path <- system.file("tests", "files", "simple.R",
+                              package = "document")
+          document::document(file_name = path, check_package = FALSE)
+          cfile <- file.path(get_dpd(), "man", "a_first_function.Rd")
+          document::man(x = cfile)
+          current <- utils::capture.output(tools::Rd2txt(cfile))
+          rfile <- system.file("tests", "expected_files",
+                               "sanitized_a_first_function.txt", 
+                               package = "document")
+          reference  <- readLines(rfile)
+          expect_equal(current, reference)
+}
+)
 test_that("from topic", {
           options(pager = switch(.Platform[["OS.type"]],
                                  "unix" = "cat", "console"))
