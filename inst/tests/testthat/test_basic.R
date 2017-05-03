@@ -5,6 +5,22 @@ if (interactive()) {
     library("document")
 }
 context("expected files")
+test_that("clean", {
+          file_name  <- file.path(system.file("tests",
+                                              "files",
+                                              package = "document"),
+                                  "simple.R")
+          expected_file <- file.path(system.file("tests",
+                                              "expected_files",
+                                              package = "document"),
+                                  "simple.txt")
+
+          res <- document(file_name, check = TRUE, clean = TRUE, runit = TRUE)
+          current <- readLines(res[["txt_path"]])
+          reference  <- readLines(expected_file)
+          expect_equal(current, reference)
+}
+)
 test_that("simple", {
           output_directory <- file.path(tempdir(),
                                         "document_testthat_txt")
@@ -41,10 +57,27 @@ test_that("from R file", {
           cfile <- file.path(get_dpd(), "man", "a_first_function.Rd")
           current <- utils::capture.output(tools::Rd2txt(cfile))
           rfile <- system.file("tests", "expected_files",
-                               "sanitized_a_first_function.txt", 
+                               "sanitized_a_first_function.txt",
                                package = "document")
           reference  <- readLines(rfile)
           expect_equal(current, reference)
+}
+)
+test_that("from R file missing topic", {
+          path <- system.file("tests", "files", "simple.R",
+                              package = "document")
+          error_message <-
+                paste0("Give either a path to an R documentation file or ",
+                     "additionally give a topic.")
+          expect_error(document::man(x = path), error_message)
+}
+)
+
+test_that("from topic, missing package", {
+              options("document_package_directory" = NULL)
+              error_message <- paste("Give the path to a file as x",
+                                     "and \"foo\" as topic.")
+              expect_error(document::man(x = "foo"), error_message)
 }
 )
 test_that("from Rd file", {
@@ -57,7 +90,7 @@ test_that("from Rd file", {
           document::man(x = cfile)
           current <- utils::capture.output(tools::Rd2txt(cfile))
           rfile <- system.file("tests", "expected_files",
-                               "sanitized_a_first_function.txt", 
+                               "sanitized_a_first_function.txt",
                                package = "document")
           reference  <- readLines(rfile)
           expect_equal(current, reference)
@@ -160,5 +193,24 @@ test_that("no tagged lines, not_from", {
           current <- document:::get_lines_between_tags(path,
                                                        from_first_line = FALSE)
           expect_equal(current, NULL)
+}
+)
+context("utils")
+test_that("fake package", {
+          path <- system.file("tests", "files", "no_roxy.R",
+                              package = "document")
+          f <- document:::fake_package(file_name = path)
+          expect_true(file.exists(file.path(f, "DESCRIPTION")))
+}
+)
+test_that("add deps", {
+          path <- system.file("tests", "files", "minimal.R",
+                              package = "document")
+          f <- fake_package(file_name = path, working_directory = NULL,
+                            dependencies = "utils")
+          lines <- readLines(file.path(f, "DESCRIPTION"))
+          current <- grep("^Depends:", lines, value = TRUE)
+          reference <- "Depends: utils"
+          expect_equal(current, reference)
 }
 )

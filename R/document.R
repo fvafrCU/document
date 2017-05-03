@@ -31,8 +31,7 @@ fake_package <- function(file_name, working_directory = NULL,
     dir.create(working_directory, showWarnings = FALSE, recursive = TRUE)
     roxygen_code <- get_lines_between_tags(file_name, ...)
     if (is.null(roxygen_code) || ! any(grepl("^#+'", roxygen_code))) {
-        stop(paste("Couldn't find roxygen comments in file", file_name,
-                   "\nYou shoud set from_firstline and to_lastline to FALSE."))
+        warning("Couldn't find roxygen comments in file ", file_name, ".")
     }
     # need a hard coded basename here to ensure not replicating the input code
     # if faking for the same code file again.
@@ -60,7 +59,8 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @inheritParams fake_package
 #' @inheritParams write_the_docs
-#' @param check_package Run \code{\link[devtools]{check}} on the sources?
+#' @param check_package Run \code{\link[devtools]{check}} on the sources? Do not
+#' forget to export your functions if set to TRUE.
 #' @param output_directory The directory to put the documentation into.
 #' @param clean Delete the working directory?
 #' @param runit Convert the text received from the help files if running RUnit?

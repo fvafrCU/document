@@ -40,6 +40,7 @@ source("tmp.R")
 #' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de> 
 #' @param df Name of a data.frame to ... do whatever needs to be done. 
 #' @return NULL. This is no good. 
+#' @export
 #' @examples
 #' data(iris, package = "datasets")
 #' a_first_function(iris)

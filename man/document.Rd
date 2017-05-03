@@ -26,7 +26,8 @@ on.}
 Do not bother, this is for Unit testing only.
 on.}
 
-\item{check_package}{Run \code{\link[devtools]{check}} on the sources?}
+\item{check_package}{Run \code{\link[devtools]{check}} on the sources? Do not
+forget to export your functions if set to TRUE.}
 
 \item{clean}{Delete the working directory?}
 

@@ -47,7 +47,7 @@ help("document-package", package = "document")
 #      package.
 # 
 #      I am fully aware of the fact that 'roxygen2' is meant to document
-#      packages, not single code chunks.  So should you. Nevertheless I
+#      packages, not single code chunks. So should you. Nevertheless I
 #      feel the temptation to use roxygen2-style comments in code chunks
 #      that are not part of any package. And to convert them to pdf for
 #      better readability.

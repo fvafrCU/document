@@ -1,5 +1,5 @@
-* using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-04-25 r72618)
+* using log directory ‘/home/nik/git/cs/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2016-12-20 r71827)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using option ‘--as-cran’
@@ -57,7 +57,7 @@ The Title field starts with the package name.
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [14s/15s]
+  Running ‘testthat.R’
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
