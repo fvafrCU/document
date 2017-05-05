@@ -69,17 +69,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to <em>document</em></h1>
 <h4 class="author"><em>Andreas Dominik Cullmann</em></h4>
-<h4 class="date"><em>2017-05-05, 17:26:43</em></h4>
+<h4 class="date"><em>2017-05-05, 22:28:56</em></h4>
 
 
 
 <div id="teaser" class="section level1">
 <h1>Teaser</h1>
 <p>Have you ever been tempted to create roxygen2-style documentation comments for one of your functions that was not part of one of your packages (yet)?</p>
-<p>This is exactly what this package is about: run roxygen2 on (chunks of) single code files.</p>
+<p>This is exactly what this package is about: run roxygen2 on (chunks of) a single code file.</p>
 <div id="features" class="section level2">
 <h2>Features</h2>
-<p>It enables you to - create function documentation with roxygen2 - save that documentation to disk - view that documentation in your interactive R session It does this by creating a temporary package from (the chunks) of your single code file. So we can even use <strong>R CMD check –as-cran</strong> to see if your code and documentation would pass a CRAN check (possibly detecting undocumented function arguments). For the sake of cpu time on CRAN, I have disabled the package checks in all examples, you should always set check_package to <code>TRUE</code>.</p>
+<p>It enables you to</p>
+<ul>
+<li>create function documentation with roxygen2</li>
+<li>save that documentation to disk</li>
+<li>view that documentation in your interactive R session</li>
+</ul>
+<p>It does this by creating a temporary package from (the chunks) of your single code file. So we can use <strong>R CMD check –as-cran</strong> to see if your code and documentation would pass a CRAN check (possibly detecting undocumented function arguments). For the sake of cpu time on CRAN, I have disabled the package checks in all examples; you should always set check_package to <code>TRUE</code> (which is the default).</p>
 </div>
 </div>
 <div id="writing-documentation-files-to-disk" class="section level1">
@@ -166,16 +172,14 @@ Examples:
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;simple.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
 <span class="kw">cat</span>(<span class="kw">readLines</span>(path), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
 <pre><code>#!/usr/bin/Rscript --vanilla
-#' \emph{file} simple.R
+#' \emph{File} simple.R
 #'
-#' provide a simple example of a file using roxygen and standard R comments.
+#' Provide a simple example of a file using roxygen and standard R comments.
 #'
 #' @author Dominik Cullmann &lt;adc-r@@arcor.de&gt;
 #' @note This header will show up in the documentation, but it's got nothing to
 #' do with the R statements below. Usually this is not intended.
-#' @section Warning: READ THIS FILE CAREFULLY. There's some information in the
-#' comments.
-# DO NOT CHANGE THE FOLLWOWING THREE LINES.
+#' @section Warning: DO NOT CHANGE THE FOLLWOWING THREE LINES.
 #' @docType data
 #' @name A Header for
 NULL
@@ -204,7 +208,7 @@ source(&quot;tmp.R&quot;)
 #'
 #' This really is just an example, the function prints \code{utils::head()} and
 #' \code{utils::str()} of the given \code{data.frame}.
-#' @author Dominik Cullmann &lt;dominik.cullmann@@forst.bwl.de&gt; 
+#' @author Dominik Cullmann &lt;adc-r@@arcor.de&gt; 
 #' @param df Name of a data.frame to ... do whatever needs to be done. 
 #' @return NULL. This is no good. 
 #' @export
@@ -236,17 +240,16 @@ file.remove(&quot;tmp.R&quot;)</code></pre>
 <p>Then you can write documentation using:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span>document::<span class="kw">document</span>(<span class="dt">file_name =</span> path, <span class="dt">check_package =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readLines</span>(d[[<span class="st">&quot;txt_path&quot;</span>]]), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
-<pre><code>_file_ simple.R
+<pre><code>_File_ simple.R
 
 Description:
 
-     provide a simple example of a file using roxygen and standard R
+     Provide a simple example of a file using roxygen and standard R
      comments.
 
 Warning:
 
-     READ THIS FILE CAREFULLY. There's some information in the
-     comments.
+     DO NOT CHANGE THE FOLLWOWING THREE LINES.
 
 Note:
 
@@ -280,7 +283,7 @@ Value:
 
 Author(s):
 
-     Dominik Cullmann &lt;dominik.cullmann@forst.bwl.de&gt;
+     Dominik Cullmann &lt;adc-r@arcor.de&gt;
 
 Examples:
 

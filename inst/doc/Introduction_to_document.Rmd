@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-05-05, 17:26:43
+date: 2017-05-05, 22:28:56
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -13,20 +13,23 @@ vignette: >
 Have you ever been tempted to create roxygen2-style documentation comments for 
 one of your functions that was not part of one of your packages (yet)?
 
-This is exactly what this package is about: run roxygen2 on (chunks of) single 
-code files.
+This is exactly what this package is about: run roxygen2 on (chunks of) a single 
+code file.
 
 ## Features
 It enables you to
+
  - create function documentation with roxygen2 
  - save that documentation to disk
  - view that documentation in your interactive R session
+
 It does this by creating a temporary package from (the chunks) of your single 
-code file. So we can even use **R CMD check --as-cran** to see if your code and
+code file. So we can use **R CMD check --as-cran** to see if your code and
 documentation would pass a CRAN check 
 (possibly detecting undocumented function arguments).
 For the sake of cpu time on CRAN, I have disabled the package checks in all 
-examples, you should always set check_package to ```TRUE```.
+examples; you should always set check_package to ```TRUE```
+(which is the default).
 
 # Writing Documentation Files to Disk
 

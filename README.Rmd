@@ -14,9 +14,6 @@ knitr::opts_chunk$set(
 ```
 
 # document
-Run [roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
-Produce pdf and txt output and display a temporary help page from your interactive R session.
-
 
 ## Introduction
 Please read the [vignette](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/doc/Introduction_to_document.html).

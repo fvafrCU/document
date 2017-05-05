@@ -1,7 +1,7 @@
 #!/usr/bin/Rscript --vanilla
 # search for  $ Rscript -e 'sessionInfo()' in the raw log of the travis build
 travis_copy <- c("
-R version 3.3.3 (2017-03-06)
+R version 3.4.0 (2017-04-21)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu precise (12.04.5 LTS)
 ")

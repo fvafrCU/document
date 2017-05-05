@@ -5,9 +5,10 @@
 \alias{document-package}
 \title{Document a Single R Code File}
 \description{
-Extract roxygen2-style comments from a single code file, run roxygen2 on
-them, save the results in various formats on disk and optionally display a
-temporary help page in an interactive R session.
+Have you ever been tempted to create roxygen2-style documentation comments
+for one of your functions that was not part of one of your packages (yet)?
+This is exactly what this package is about: run roxygen2 on (chunks of) a
+single code file.
 }
 \details{
 R is a programming language that supports and checks documentation for
