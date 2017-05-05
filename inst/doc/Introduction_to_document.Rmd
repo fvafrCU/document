@@ -1,13 +1,32 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-04-29, 00:41:11
+date: 2017-05-05, 17:26:43
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{Introduction to document}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+# Teaser
+Have you ever been tempted to create roxygen2-style documentation comments for 
+one of your functions that was not part of one of your packages (yet)?
+
+This is exactly what this package is about: run roxygen2 on (chunks of) single 
+code files.
+
+## Features
+It enables you to
+ - create function documentation with roxygen2 
+ - save that documentation to disk
+ - view that documentation in your interactive R session
+It does this by creating a temporary package from (the chunks) of your single 
+code file. So we can even use **R CMD check --as-cran** to see if your code and
+documentation would pass a CRAN check 
+(possibly detecting undocumented function arguments).
+For the sake of cpu time on CRAN, I have disabled the package checks in all 
+examples, you should always set check_package to ```TRUE```.
 
 # Writing Documentation Files to Disk
 
@@ -42,7 +61,8 @@ d <- document::document(file_name = path,
 file.remove(unlist(d[c("txt_path", "pdf_path")]))
 ```
 
-You can view a copy of the html file [here](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html). 
+You can view a copy of the html file 
+[here](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html). 
 The pdf file resembles a package's documentation pdf file.
 
 

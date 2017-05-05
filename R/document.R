@@ -71,7 +71,7 @@ fake_package <- function(file_name, working_directory = NULL,
 #'     \item{pdf_path}{The path to the pdf file produced.}
 #'     \item{txt_path}{The path to the text file produced.}
 #'     \item{html_path}{The path to the html file produced.}
-#'     \item{check_result}{The value of \code{\link[devtools]{check}}.}
+#'     \item{check_result}{A list giving the R CMD check results.}
 #' }
 #' @export
 #' @examples
@@ -80,14 +80,19 @@ fake_package <- function(file_name, working_directory = NULL,
 #'          package = "document"), check_package = FALSE)
 #' }
 document <- function(file_name,
-                     working_directory = file.path(tempdir(), "document"),
+                     working_directory = NULL,
                      output_directory = tempdir(),
                      dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
                      check_package = TRUE, clean = FALSE, ...) {
+    if (is.null(working_directory))
+        working_directory <- file.path(tempdir(),
+                                       paste0("document_",
+                                              basename(tempfile(pattern = ""))))
     checkmate::assertFile(file_name, access = "r")
     checkmate::assertDirectory(output_directory, access = "r")
     checkmate::qassert(check_package, "B1")
     checkmate::qassert(working_directory, "S1")
+    dir.create(working_directory, showWarnings = FALSE, recursive = TRUE)
     if (isTRUE(clean)) on.exit({
         unlink(working_directory, recursive = TRUE)
         options("document_package_directory" = NULL)
@@ -101,7 +106,10 @@ document <- function(file_name,
                              dependencies = dependencies,
                              sanitize_Rd = sanitize_Rd, runit = runit)
     if (check_package) {
-        status[["check_result"]] <- devtools::check(package_directory)
+        tmp <- callr::rcmd_safe("check", c(paste0("--output=",
+                                                  working_directory),
+                                     "--as-cran", package_directory))
+        status[["check_result"]] <- tmp
     }
     return(status)
 }

@@ -4,7 +4,7 @@
 
 <head>
 
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 
@@ -69,10 +69,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to <em>document</em></h1>
 <h4 class="author"><em>Andreas Dominik Cullmann</em></h4>
-<h4 class="date"><em>2017-04-29, 00:41:11</em></h4>
+<h4 class="date"><em>2017-05-05, 17:26:43</em></h4>
 
 
 
+<div id="teaser" class="section level1">
+<h1>Teaser</h1>
+<p>Have you ever been tempted to create roxygen2-style documentation comments for one of your functions that was not part of one of your packages (yet)?</p>
+<p>This is exactly what this package is about: run roxygen2 on (chunks of) single code files.</p>
+<div id="features" class="section level2">
+<h2>Features</h2>
+<p>It enables you to - create function documentation with roxygen2 - save that documentation to disk - view that documentation in your interactive R session It does this by creating a temporary package from (the chunks) of your single code file. So we can even use <strong>R CMD check –as-cran</strong> to see if your code and documentation would pass a CRAN check (possibly detecting undocumented function arguments). For the sake of cpu time on CRAN, I have disabled the package checks in all examples, you should always set check_package to <code>TRUE</code>.</p>
+</div>
+</div>
 <div id="writing-documentation-files-to-disk" class="section level1">
 <h1>Writing Documentation Files to Disk</h1>
 <div id="a-minimal-example" class="section level2">
@@ -198,6 +207,7 @@ source(&quot;tmp.R&quot;)
 #' @author Dominik Cullmann &lt;dominik.cullmann@@forst.bwl.de&gt; 
 #' @param df Name of a data.frame to ... do whatever needs to be done. 
 #' @return NULL. This is no good. 
+#' @export
 #' @examples
 #' data(iris, package = &quot;datasets&quot;)
 #' a_first_function(iris)

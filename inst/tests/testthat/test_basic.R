@@ -15,7 +15,8 @@ test_that("clean", {
                                               package = "document"),
                                   "simple.txt")
 
-          res <- document(file_name, check = TRUE, clean = TRUE, runit = TRUE)
+          res <- document(file_name, check_package = TRUE, clean = TRUE, 
+                          runit = TRUE)
           current <- readLines(res[["txt_path"]])
           reference  <- readLines(expected_file)
           expect_equal(current, reference)

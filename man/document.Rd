@@ -4,9 +4,9 @@
 \alias{document}
 \title{roxygenize an R code file, output the documentation to pdf.}
 \usage{
-document(file_name, working_directory = file.path(tempdir(), "document"),
-  output_directory = tempdir(), dependencies = NULL, sanitize_Rd = TRUE,
-  runit = FALSE, check_package = TRUE, clean = FALSE, ...)
+document(file_name, working_directory = NULL, output_directory = tempdir(),
+  dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
+  check_package = TRUE, clean = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
@@ -39,7 +39,7 @@ A list containing
     \item{pdf_path}{The path to the pdf file produced.}
     \item{txt_path}{The path to the text file produced.}
     \item{html_path}{The path to the html file produced.}
-    \item{check_result}{The value of \code{\link[devtools]{check}}.}
+    \item{check_result}{A list giving the R CMD check results.}
 }
 }
 \description{
