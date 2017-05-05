@@ -1,3 +1,12 @@
+Dear CRAN Team,
+I have packaged my version of a wrapper to utils::sekelton.package,
+roxgen2::roxygenize and callr::rcmd.
+It aims at function definitions not yet part of a package. I've been using it's
+predecessor for more than two year, mainly for educational purposes (I know a
+lot of people who don't [cd]are writing whole (private) packages.
+Hope it may be of use to others.
+
+Best, Dominik Cullmann
 
 # Package  document 1.0.0 
 
