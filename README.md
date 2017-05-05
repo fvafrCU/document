@@ -8,9 +8,6 @@
 
 
 # document
-Run [roxygen2](https://cran.r-project.org/package=roxygen2) on single code files rather than whole packages.
-Produce pdf and txt output and display a temporary help page from your interactive R session.
-
 
 ## Introduction
 Please read the [vignette](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/doc/Introduction_to_document.html).
@@ -26,10 +23,10 @@ help("document-package", package = "document")
 # 
 # Description:
 # 
-#      Extract roxygen2-style comments from a single code file, run
-#      roxygen2 on them, save the results in various formats on disk and
-#      optionally display a temporary help page in an interactive R
-#      session.
+#      Have you ever been tempted to create roxygen2-style documentation
+#      comments for one of your functions that was not part of one of
+#      your packages (yet)? This is exactly what this package is about:
+#      run roxygen2 on (chunks of) a single code file.
 # 
 # Details:
 # 
