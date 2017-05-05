@@ -1,5 +1,5 @@
 
-# Package  document 0.10.1 
+# Package  document 1.0.0 
 
 ## Test  environments  
 - R Under development (unstable) (2017-04-25 r72618)
@@ -16,8 +16,5 @@ checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
-
-Possibly mis-spelled words in DESCRIPTION:
-  roxygen (2:13, 6:51, 9:53)
 
 

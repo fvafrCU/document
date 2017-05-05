@@ -17,7 +17,7 @@ Warning: ‘inst/doc’ files
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.10.1.tar.gz’
+* building ‘document_1.0.0.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -31,7 +31,7 @@ Checking document --------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.10.1’
+* this is package ‘document’ version ‘1.0.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
@@ -42,14 +42,7 @@ New submission
 * checking if this is a source package ... OK
 * checking if there is a namespace ... OK
 * checking for executable files ... OK
-* checking for hidden files and directories ... NOTE
-Found the following hidden files and directories:
-  vignettes/.Rd2pdf28758
-These were most likely included in error. See section ‘Package
-structure’ in the ‘Writing R Extensions’ manual.
-
-CRAN-pack does not know about
-  vignettes/.Rd2pdf28758
+* checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
 * checking whether package ‘document’ can be installed ... OK
@@ -60,10 +53,7 @@ CRAN-pack does not know about
 * checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
-* checking package subdirectories ... WARNING
-Found the following directory with the name of a Rd2pdf directory:
-  ./vignettes/.Rd2pdf28758
-Most likely, these were included erroneously.
+* checking package subdirectories ... OK
 * checking R files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
 * checking whether the package can be loaded ... OK
@@ -96,28 +86,14 @@ Most likely, these were included erroneously.
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 1 WARNING, 2 NOTEs
+Status: 1 NOTE
 See
 for details.
 
 
 R CMD check results
-0 errors | 1 warning  | 2 notes
-checking package subdirectories ... WARNING
-Found the following directory with the name of a Rd2pdf directory:
-  ./vignettes/.Rd2pdf28758
-Most likely, these were included erroneously.
-
+0 errors | 0 warnings | 1 note 
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
-
-checking for hidden files and directories ... NOTE
-Found the following hidden files and directories:
-  vignettes/.Rd2pdf28758
-These were most likely included in error. See section ‘Package
-structure’ in the ‘Writing R Extensions’ manual.
-
-CRAN-pack does not know about
-  vignettes/.Rd2pdf28758

@@ -130,9 +130,13 @@ cran-comments.md: log/dev_check.Rout
 README.md: README.Rmd install_bare
 	${Rscript} --vanilla -e 'knitr::knit("README.Rmd")'
 
+.PHONY: fixes
+fixes:
+	./utils/fixes.cl
+
 ##% git tag
 .PHONY: tag
-make tag:
+tag:
 	./utils/tag.cl
 
 .PHONY: dependencies
