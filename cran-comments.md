@@ -1,23 +1,23 @@
-## Test environments
-* local OS X install, R 3.3.3
-* ubuntu 12.04 (on travis-ci), R 3.3.3
-* win-builder (devel and release)
+
+# Package  document 0.10.1 
+
+## Test  environments  
+- R Under development (unstable) (2017-04-25 r72618)
+  Platform: x86_64-pc-linux-gnu (64-bit)
+  Running under: Debian GNU/Linux 8 (jessie) 
+- R version 3.4.0 (2017-04-21)
+  Platform: x86_64-pc-linux-gnu (64-bit)
+  Running under: Ubuntu precise (12.04.5 LTS) 
+- win-builder (devel) 
 
 ## R CMD check results
+0 errors | 0 warnings | 1 note 
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-0 errors | 0 warnings | 1 note
+New submission
 
-* This is a new release.
+Possibly mis-spelled words in DESCRIPTION:
+  roxygen (2:13, 6:51, 9:53)
 
-## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
-
----
-
-* I have run R CMD check on the NUMBER downstream dependencies.
-  (Summary at ...). 
-  
-* FAILURE SUMMARY
-
-* All revdep maintainers were notified of the release on RELEASE DATE.

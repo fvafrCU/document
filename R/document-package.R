@@ -2,8 +2,8 @@
 #'
 #' Have you ever been tempted to create roxygen2-style documentation comments
 #' for one of your functions that was not part of one of your packages (yet)?
-#' This is exactly what this package is about: run roxygen2 on (chunks of) a
-#' single code file.
+#' This is exactly what this package is about: running roxygen2 on (chunks of)
+#' a single code file.
 #'
 #' R is a programming language that supports and checks documentation for
 #' program libraries (called `packages'). The package roxygen2 provides a

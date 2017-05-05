@@ -1,6 +1,5 @@
 Updating document documentation
 Loading document
-Writing document-package.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -12,7 +11,7 @@ Building document --------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files
@@ -38,15 +37,19 @@ Checking document --------------------------------------------------------------
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
-
-Possibly mis-spelled words in DESCRIPTION:
-  roxygen (2:13, 6:51, 9:53)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
 * checking if there is a namespace ... OK
 * checking for executable files ... OK
-* checking for hidden files and directories ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  vignettes/.Rd2pdf28758
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+
+CRAN-pack does not know about
+  vignettes/.Rd2pdf28758
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
 * checking whether package ‘document’ can be installed ... OK
@@ -57,7 +60,10 @@ Possibly mis-spelled words in DESCRIPTION:
 * checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
-* checking package subdirectories ... OK
+* checking package subdirectories ... WARNING
+Found the following directory with the name of a Rd2pdf directory:
+  ./vignettes/.Rd2pdf28758
+Most likely, these were included erroneously.
 * checking R files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
 * checking whether the package can be loaded ... OK
@@ -90,17 +96,28 @@ Possibly mis-spelled words in DESCRIPTION:
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 1 NOTE
+Status: 1 WARNING, 2 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 0 warnings | 1 note 
+0 errors | 1 warning  | 2 notes
+checking package subdirectories ... WARNING
+Found the following directory with the name of a Rd2pdf directory:
+  ./vignettes/.Rd2pdf28758
+Most likely, these were included erroneously.
+
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-Possibly mis-spelled words in DESCRIPTION:
-  roxygen (2:13, 6:51, 9:53)
+checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  vignettes/.Rd2pdf28758
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+
+CRAN-pack does not know about
+  vignettes/.Rd2pdf28758

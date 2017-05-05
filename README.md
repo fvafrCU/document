@@ -26,7 +26,7 @@ help("document-package", package = "document")
 #      Have you ever been tempted to create roxygen2-style documentation
 #      comments for one of your functions that was not part of one of
 #      your packages (yet)? This is exactly what this package is about:
-#      run roxygen2 on (chunks of) a single code file.
+#      running roxygen2 on (chunks of) a single code file.
 # 
 # Details:
 # 
