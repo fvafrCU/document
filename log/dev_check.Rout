@@ -1,6 +1,5 @@
 Updating document documentation
 Loading document
-Writing document.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -18,7 +17,7 @@ Warning: ‘inst/doc’ files
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_0.9.0.tar.gz’
+* building ‘document_0.10.0.tar.gz’
 
 Setting env vars ---------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -32,7 +31,7 @@ Checking document --------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘0.9.0’
+* this is package ‘document’ version ‘0.10.0’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’

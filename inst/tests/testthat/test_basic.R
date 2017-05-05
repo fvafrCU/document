@@ -15,36 +15,21 @@ test_that("clean", {
                                               package = "document"),
                                   "simple.txt")
 
-          res <- document(file_name, check_package = TRUE, clean = TRUE, 
-                          runit = TRUE)
+          res <- document(file_name, clean = TRUE, runit = TRUE)
           current <- readLines(res[["txt_path"]])
           reference  <- readLines(expected_file)
           expect_equal(current, reference)
 }
 )
 test_that("simple", {
-          output_directory <- file.path(tempdir(),
-                                        "document_testthat_txt")
-          unlink(output_directory, recursive = TRUE)
-          dir.create(output_directory)
-          file_name  <- file.path(system.file("tests",
-                                              "expected_files",
-                                              package = "document"),
-                                  "simple.txt")
-          # create current
           options(useFancyQuotes = FALSE)
-          input <- file.path(system.file("tests", "files",
-                                         package = "document"),
-                             sub("\\.txt", ".R",
-                                 basename(file_name)))
-          print(file_name)
-          print(input)
-          txt_name <- document(input,
-                               output_directory = output_directory,
-                               check = FALSE,
-                               runit = TRUE)[["txt_path"]]
-          current <- readLines(txt_name)
-          reference  <- readLines(file_name)
+          file_name  <- file.path(system.file("tests",
+                                              "files",
+                                              package = "document"),
+                                  "simple.R")
+          res <- document(file_name, check_package = TRUE, runit = TRUE)
+          current <- res[["check_result"]][["status"]]
+          reference  <- 0
           expect_equal(current, reference)
 }
 )

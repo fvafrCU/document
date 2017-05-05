@@ -1,1 +1,1 @@
-R/document.R 109 63 style Trailing whitespace is superfluous.         tmp <- callr::rcmd_safe("check", c(paste0("--output=",  list(c(63, 63)) trailing_whitespace_linter
+Congratulations: no lints found.
