@@ -1,14 +1,12 @@
 #!/usr/bin/Rscript --vanilla
-#' \emph{file} simple.R
+#' \emph{File} simple.R
 #'
-#' provide a simple example of a file using roxygen and standard R comments.
+#' Provide a simple example of a file using roxygen and standard R comments.
 #'
 #' @author Dominik Cullmann <adc-r@@arcor.de>
 #' @note This header will show up in the documentation, but it's got nothing to
 #' do with the R statements below. Usually this is not intended.
-#' @section Warning: READ THIS FILE CAREFULLY. There's some information in the
-#' comments.
-# DO NOT CHANGE THE FOLLWOWING THREE LINES.
+#' @section Warning: DO NOT CHANGE THE FOLLWOWING THREE LINES.
 #' @docType data
 #' @name A Header for
 NULL
@@ -37,7 +35,7 @@ source("tmp.R")
 #'
 #' This really is just an example, the function prints \code{utils::head()} and
 #' \code{utils::str()} of the given \code{data.frame}.
-#' @author Dominik Cullmann <dominik.cullmann@@forst.bwl.de> 
+#' @author Dominik Cullmann <adc-r@@arcor.de> 
 #' @param df Name of a data.frame to ... do whatever needs to be done. 
 #' @return NULL. This is no good. 
 #' @export

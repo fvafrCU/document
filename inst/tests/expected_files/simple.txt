@@ -1,14 +1,13 @@
-_file_ simple.R
+_File_ simple.R
 
 Description:
 
-     provide a simple example of a file using roxygen and standard R
+     Provide a simple example of a file using roxygen and standard R
      comments.
 
 Warning:
 
-     READ THIS FILE CAREFULLY. There's some information in the
-     comments.
+     DO NOT CHANGE THE FOLLWOWING THREE LINES.
 
 Note:
 
@@ -42,7 +41,7 @@ Value:
 
 Author(s):
 
-     Dominik Cullmann <dominik.cullmann@forst.bwl.de>
+     Dominik Cullmann <adc-r@arcor.de>
 
 Examples:
 
