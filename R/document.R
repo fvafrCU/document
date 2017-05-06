@@ -43,13 +43,10 @@ fake_package <- function(file_name, working_directory = NULL,
     # roxygen2 does not overwrite files not written by roxygen2, so we need to
     # delete some files
     file.remove(list.files(man_directory, full.names = TRUE))
-    file.remove(file.path(package_directory, "NAMESPACE"),
-                # Get rid of one of R CMD checks' NOTEs
-                file.path(package_directory, "Read-and-delete-me"))
+    file.remove(file.path(package_directory, "NAMESPACE"))
     #% create documentation from roxygen comments for the package
     dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir =
                                                            package_directory))
-    clean_description(package_directory)
     if (! is.null(dependencies))
         add_dependencies_to_description(package_directory, dependencies)
     return(package_directory)
@@ -75,8 +72,8 @@ fake_package <- function(file_name, working_directory = NULL,
 #' }
 #' @export
 #' @examples
-#' res <- document(file_name = system.file("tests", "files", "minimal.R", 
-#'                                         package = "document"), 
+#' res <- document(file_name = system.file("tests", "files", "minimal.R",
+#'                                         package = "document"),
 #'                 check_package = TRUE)
 #' cat(res[["check_result"]][["stdout"]], sep = "\n")
 #' cat(res[["check_result"]][["stderr"]], sep = "\n")
@@ -107,9 +104,14 @@ document <- function(file_name,
                              dependencies = dependencies,
                              sanitize_Rd = sanitize_Rd, runit = runit)
     if (check_package) {
-        tmp <- callr::rcmd_safe("check", c(paste0("--output=",
-                                                  working_directory),
-                                     package_directory))
+        # Get rid of one of R CMD checks' NOTEs
+        file.remove(file.path(package_directory, "Read-and-delete-me"))
+        clean_description(package_directory)
+        # Use devtools::build to build in the package_directory.
+        tgz <- devtools::build(package_directory, quiet = TRUE)
+        # devtools::check's return value is crap, so use R CMD check via callr.
+        tmp <- callr::rcmd_safe("check",
+                                c(paste0("--output=", working_directory), tgz))
         status[["check_result"]] <- tmp
     }
     return(status)

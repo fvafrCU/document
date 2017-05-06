@@ -54,11 +54,11 @@ New submission
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
            user system elapsed
-document 16.904  2.212  21.694
+document 17.932  2.412  23.922
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [51s/58s]
+  Running ‘testthat.R’ [53s/62s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
