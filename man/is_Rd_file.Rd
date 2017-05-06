@@ -21,10 +21,8 @@ The check might produce false negatives (erroneously assuming the file
 is not an R documentation file).
 }
 \examples{
-\dontrun{
 document:::is_Rd_file(list.files(file.path(get_dpd(), "man"),
                       full.names = TRUE)[2])
-}
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

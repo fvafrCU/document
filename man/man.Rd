@@ -32,11 +32,11 @@ Invisibly the status of \code{\link{display_Rd}}.
 Display a Help Page From a File's Documentation
 }
 \examples{
-\dontrun{
 document(file_name = system.file("tests", "files", "minimal.R", 
          package = "document"), check_package = FALSE)
 man("foo")
 # this equivalent to
+\dontrun{
 path <- system.file("tests", "files", "minimal.R", package = "document", 
                     check_package = FALSE)
 document::man(x = path, topic = "foo")

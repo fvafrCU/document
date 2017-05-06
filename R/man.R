@@ -19,11 +19,11 @@
 #' @return Invisibly the status of \code{\link{display_Rd}}.
 #' @export
 #' @examples
-#' \dontrun{
 #' document(file_name = system.file("tests", "files", "minimal.R", 
 #'          package = "document"), check_package = FALSE)
 #' man("foo")
 #' # this equivalent to
+#' \dontrun{
 #' path <- system.file("tests", "files", "minimal.R", package = "document", 
 #'                     check_package = FALSE)
 #' document::man(x = path, topic = "foo")
@@ -103,10 +103,8 @@ usage <- function(n = -1) {
 #' otherwise.
 #' @param x The path to the file to be checked.
 #' @examples
-#' \dontrun{
 #' document:::is_Rd_file(list.files(file.path(get_dpd(), "man"),
 #'                       full.names = TRUE)[2])
-#' }
 is_Rd_file <- function(x) {
     has_ext <-  grepl("\\.Rd$", x)
     lines <- readLines(x)

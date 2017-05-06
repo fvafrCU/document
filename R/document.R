@@ -11,10 +11,8 @@
 #' @return A string containing the path to the faked package.
 #' @export
 #' @examples
-#' \dontrun{
 #' fake_package(file_name = system.file("tests", "files", "simple.R",
 #'          package = "document"))
-#' }
 fake_package <- function(file_name, working_directory = NULL,
                          dependencies = NULL, ...) {
     checkmate::assertCharacter(dependencies, null.ok = TRUE)
@@ -75,10 +73,8 @@ fake_package <- function(file_name, working_directory = NULL,
 #' }
 #' @export
 #' @examples
-#' \dontrun{
 #' document(file_name = system.file("tests", "files", "minimal.R",
 #'          package = "document"), check_package = FALSE)
-#' }
 document <- function(file_name,
                      working_directory = NULL,
                      output_directory = tempdir(),
