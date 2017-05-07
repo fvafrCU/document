@@ -2,7 +2,7 @@
 % Please edit documentation in R/document.R
 \name{document}
 \alias{document}
-\title{roxygenize an R code file, output the documentation to pdf.}
+\title{Document (Chunks of) an R Code File}
 \usage{
 document(file_name, working_directory = NULL, output_directory = tempdir(),
   dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
@@ -23,11 +23,10 @@ Do not bother, this is for Unit testing only.
 on.}
 
 \item{runit}{Convert the text received from the help files if running RUnit?
-Do not bother, this is for Unit testing only.
-on.}
+Do not bother, this is for Unit testing only.}
 
-\item{check_package}{Run \code{\link[devtools]{check}} on the sources? Do not
-forget to export your functions if set to TRUE.}
+\item{check_package}{Run R CMD check on the sources? See
+\bold{Note} below.}
 
 \item{clean}{Delete the working directory?}
 
@@ -43,14 +42,37 @@ A list containing
 }
 }
 \description{
-roxygenize an R code file, output the documentation to pdf.
+Document (Chunks of) an R Code File
+}
+\note{
+One of the main features of 'R CMD check' is checking for 
+code/documentation mismatches (it behaves pretty much like doxygen).
+No build system can check whether your documentation is useful, but 'R CMD
+check' checks if it is formally matching your code. This check is the basic 
+idea behind \pkg{document}. The posibility to disable the R CMD check is
+there to disable cpu consuming checks while testing the package. Stick with 
+the default! 
+And do not forget to export your functions using the line\cr
+#' @export\cr
+if you provide examples.
 }
 \examples{
-res <- document(file_name = system.file("tests", "files", "minimal.R",
-                                        package = "document"),
-                check_package = TRUE)
+\donttest{
+res <- document(file_name = system.file("tests", "files", "minimal.R", 
+                                        package = "document"), 
+                check_package = FALSE) # this is for the sake of CRAN cpu
+                # time only. _Always_ stick with the default!
+
+# View R CMD check results.
 cat(res[["check_result"]][["stdout"]], sep = "\\n")
 cat(res[["check_result"]][["stderr"]], sep = "\\n")
+
+# Copy docmentation to current working directory.
+# This writes to your disk, so it's disabled. 
+# Remove or comment out the next line to enable.
+if (FALSE) 
+    file.copy(res[["pdf_path"]], getwd())
+}
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

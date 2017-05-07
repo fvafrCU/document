@@ -51,17 +51,15 @@ New submission
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-           user system elapsed
-document 17.932  2.412  23.922
+* checking examples ... OK
+** found \donttest examples: check also with --run-donttest
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’
-  Running ‘testthat.R’ [53s/62s]
+  Running ‘runit.R’ [22s/25s]
+  Running ‘testthat.R’ [83s/96s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 NOTEs
+Status: 1 NOTE

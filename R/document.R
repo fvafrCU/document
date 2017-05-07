@@ -51,18 +51,27 @@ fake_package <- function(file_name, working_directory = NULL,
         add_dependencies_to_description(package_directory, dependencies)
     return(package_directory)
 }
-#' roxygenize an R code file, output the documentation to pdf.
+#' Document (Chunks of) an R Code File
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @inheritParams fake_package
 #' @inheritParams write_the_docs
-#' @param check_package Run \code{\link[devtools]{check}} on the sources? Do not
-#' forget to export your functions if set to TRUE.
+#' @param check_package Run R CMD check on the sources? See
+#' \bold{Note} below.
 #' @param output_directory The directory to put the documentation into.
 #' @param clean Delete the working directory?
 #' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
-#' on.
+#' @note One of the main features of 'R CMD check' is checking for 
+#' code/documentation mismatches (it behaves pretty much like doxygen).
+#' No build system can check whether your documentation is useful, but 'R CMD
+#' check' checks if it is formally matching your code. This check is the basic 
+#' idea behind \pkg{document}. The posibility to disable the R CMD check is
+#' there to disable cpu consuming checks while testing the package. Stick with 
+#' the default! 
+#' And do not forget to export your functions using the line\cr
+#' #' @export\cr
+#' if you provide examples.
 #' @return A list containing
 #' \describe{
 #'     \item{pdf_path}{The path to the pdf file produced.}
@@ -72,11 +81,22 @@ fake_package <- function(file_name, working_directory = NULL,
 #' }
 #' @export
 #' @examples
-#' res <- document(file_name = system.file("tests", "files", "minimal.R",
-#'                                         package = "document"),
-#'                 check_package = TRUE)
+#' \donttest{
+#' res <- document(file_name = system.file("tests", "files", "minimal.R", 
+#'                                         package = "document"), 
+#'                 check_package = FALSE) # this is for the sake of CRAN cpu
+#'                 # time only. _Always_ stick with the default!
+#' 
+#' # View R CMD check results.
 #' cat(res[["check_result"]][["stdout"]], sep = "\n")
 #' cat(res[["check_result"]][["stderr"]], sep = "\n")
+#' 
+#' # Copy docmentation to current working directory.
+#' # This writes to your disk, so it's disabled. 
+#' # Remove or comment out the next line to enable.
+#' if (FALSE) 
+#'     file.copy(res[["pdf_path"]], getwd())
+#' }
 document <- function(file_name,
                      working_directory = NULL,
                      output_directory = tempdir(),

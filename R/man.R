@@ -22,10 +22,9 @@
 #' document(file_name = system.file("tests", "files", "minimal.R", 
 #'          package = "document"), check_package = FALSE)
 #' man("foo")
+#' \donttest{
 #' # this equivalent to
-#' \dontrun{
-#' path <- system.file("tests", "files", "minimal.R", package = "document", 
-#'                     check_package = FALSE)
+#' path <- system.file("tests", "files", "minimal.R", package = "document") 
 #' document::man(x = path, topic = "foo")
 #' }
 man <- function(x, topic = NA, force_Rd = FALSE) {
@@ -102,9 +101,6 @@ usage <- function(n = -1) {
 #' @return TRUE if the file is probably an R documentation file, FALSE
 #' otherwise.
 #' @param x The path to the file to be checked.
-#' @examples
-#' document:::is_Rd_file(list.files(file.path(get_dpd(), "man"),
-#'                       full.names = TRUE)[2])
 is_Rd_file <- function(x) {
     has_ext <-  grepl("\\.Rd$", x)
     lines <- readLines(x)

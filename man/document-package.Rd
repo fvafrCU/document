@@ -8,7 +8,9 @@
 Have you ever been tempted to create roxygen2-style documentation comments
 for one of your functions that was not part of one of your packages (yet)?
 This is exactly what this package is about: running roxygen2 on (chunks of)
-a single code file.
+a single code file.\cr
+You will probably look for \code{\link{document}} and \code{\link{man}}, the
+remaining functions documented here are mainly for internal use.
 }
 \details{
 R is a programming language that supports and checks documentation for

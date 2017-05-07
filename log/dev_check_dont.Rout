@@ -1,6 +1,5 @@
 Updating document documentation
 Loading document
-Writing document.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -25,12 +24,12 @@ _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
 _R_CHECK_CRAN_INCOMING_           : TRUE
 _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking document --------------------------------------------------------------
-  --as-cran --timings --no-tests --no-manual 
+  --as-cran --timings --run-donttest --no-manual 
 
 * using R Under development (unstable) (2017-04-25 r72618)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
-* using options ‘--no-tests --no-manual --as-cran’
+* using options ‘--run-donttest --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
 * this is package ‘document’ version ‘1.0.0’
 * package encoding: UTF-8
@@ -79,23 +78,35 @@ New submission
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... OK
-** found \donttest examples: check also with --run-donttest
+* checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+          user system elapsed
+man      6.988  0.868   8.877
+document 4.496  0.412   5.439
 * checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ... SKIPPED
+* checking tests ...
+  Running ‘runit.R’
+  Running ‘testthat.R’ [55s/62s]
+ OK
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 1 NOTE
+Status: 2 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 0 warnings | 1 note 
+0 errors | 0 warnings | 2 notes
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
+
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+          user system elapsed
+man      6.988  0.868   8.877
+document 4.496  0.412   5.439

@@ -1,36 +1,8 @@
-Updating document documentation
-Loading document
-Writing document.Rd
-Setting env vars ---------------------------------------------------------------
-CFLAGS  : -Wall -pedantic
-CXXFLAGS: -Wall -pedantic
-Building document --------------------------------------------------------------
-  --no-resave-data --no-manual 
-
-* preparing ‘document’:
-* checking DESCRIPTION meta-information ... OK
-* installing the package to build vignettes
-* creating vignettes ... OK
-Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
-  ignored as vignettes have been rebuilt.
-  Run R CMD build with --no-build-vignettes to prevent rebuilding.
-* checking for LF line-endings in source and make files
-* checking for empty or unneeded directories
-Removed empty directory ‘document/log’
-* building ‘document_1.0.0.tar.gz’
-
-Setting env vars ---------------------------------------------------------------
-_R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
-_R_CHECK_CRAN_INCOMING_           : TRUE
-_R_CHECK_FORCE_SUGGESTS_          : FALSE
-Checking document --------------------------------------------------------------
-  --as-cran --timings --no-tests --no-manual 
-
+* using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
 * using R Under development (unstable) (2017-04-25 r72618)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
-* using options ‘--no-tests --no-manual --as-cran’
+* using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
 * this is package ‘document’ version ‘1.0.0’
 * package encoding: UTF-8
@@ -79,23 +51,18 @@ New submission
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... OK
-** found \donttest examples: check also with --run-donttest
+* checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+          user system elapsed
+man      6.904   0.90   8.747
+document 4.428   0.44   5.364
 * checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ... SKIPPED
+* checking tests ... OK
+  Running ‘runit.R’ [22s/25s]
+  Running ‘testthat.R’ [84s/96s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
+* checking PDF version of manual ... OK
 * DONE
-
-Status: 1 NOTE
-See
-for details.
-
-
-R CMD check results
-0 errors | 0 warnings | 1 note 
-checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-New submission
+Status: 2 NOTEs

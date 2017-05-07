@@ -27,11 +27,17 @@ dev_check_bare:
 		grep -v ".*'/" ${temp_file} | grep -v ".*‘/" > ${LOG_DIR}/dev_check.Rout ;\
 		grep "checking tests ... SKIPPED" ${LOG_DIR}/dev_check.Rout
 
+dev_check_dont: 
+	rm ${temp_file} || true; \
+		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--run-donttest")' > ${temp_file} 2>&1; \
+		grep -v ".*'/" ${temp_file} | grep -v ".*‘/" > ${LOG_DIR}/dev_check_dont.Rout ;\
+
 dev_check: dev_test README.md
 	rm ${temp_file} || true; \
 		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--no-tests")' > ${temp_file} 2>&1; \
 		grep -v ".*'/" ${temp_file} | grep -v ".*‘/" > ${LOG_DIR}/dev_check.Rout ;\
 		grep "checking tests ... SKIPPED" ${LOG_DIR}/dev_check.Rout
+
 dev_test:
 	rm ${temp_file} || true; \
 	${Rscript} --vanilla -e 'devtools::test()' >  ${temp_file} 2>&1; \
@@ -54,10 +60,11 @@ dev_devel:
 craninstall: crancheck
 	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz
 
-crancheck: build  
+check_donttest: ${PKGNAME}_${PKGVERS}.tar.gz
 	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
-		${R} --vanilla CMD check --as-cran ${PKGNAME}_${PKGVERS}.tar.gz && \
-		cp ${PKGNAME}.Rcheck/00check.log log/crancheck.log
+		${R} --vanilla CMD check --as-cran --run-donttest \
+		${PKGNAME}_${PKGVERS}.tar.gz && \
+		cp ${PKGNAME}.Rcheck/00check.log log/check_donttest.log
 
 install: check 
 	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz && \
@@ -73,7 +80,7 @@ check_bare: build_bare
         ${R} --vanilla CMD check --no-examples ${PKGNAME}_${PKGVERS}.tar.gz && \
         printf '===== run\n\tmake install\n!!\n'
 
-check: build 
+check:  ${PKGNAME}_${PKGVERS}.tar.gz
 	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
         ${R} --vanilla CMD check ${PKGNAME}_${PKGVERS}.tar.gz && \
 		cp ${PKGNAME}.Rcheck/00check.log log/check.log && \
@@ -82,7 +89,8 @@ check: build
 build_bare:
 	${R} --vanilla CMD build ../${PKGSRC}
 
-build: roxy README.md
+build: ${PKGNAME}_${PKGVERS}.tar.gz
+${PKGNAME}_${PKGVERS}.tar.gz: roxy README.md
 	${R} --vanilla CMD build ../${PKGSRC}
 
 direct_check:  

@@ -35,10 +35,9 @@ Display a Help Page From a File's Documentation
 document(file_name = system.file("tests", "files", "minimal.R", 
          package = "document"), check_package = FALSE)
 man("foo")
+\donttest{
 # this equivalent to
-\dontrun{
-path <- system.file("tests", "files", "minimal.R", package = "document", 
-                    check_package = FALSE)
+path <- system.file("tests", "files", "minimal.R", package = "document") 
 document::man(x = path, topic = "foo")
 }
 }

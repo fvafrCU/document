@@ -1,8 +1,8 @@
         filename      functions line value
-214 R/document.R write_the_docs  162     0
-217 R/document.R write_the_docs  165     0
-document Coverage: 99.17%
-R/document.R: 98.11%
+212 R/document.R write_the_docs  180     0
+215 R/document.R write_the_docs  183     0
+document Coverage: 99.16%
+R/document.R: 98.08%
 R/file_parsing.R: 100.00%
 R/man.R: 100.00%
 R/utils.R: 100.00%

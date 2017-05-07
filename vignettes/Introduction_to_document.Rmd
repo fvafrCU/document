@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-06-05, 20:12:38
+date: 2017-05-07, 21:06:33
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -20,16 +20,16 @@ single code file.
 This package enables you to
 
  - create function documentation with roxygen2 
- - save that documentation to disk
- - view that documentation in your interactive R session
+ - detect code/documentation mismatches  
+ - save the documentation to disk
+ - view the documentation in your interactive R session
 
 It does this by creating a temporary package from (the chunks) of your single 
-code file. So we can use **R CMD check** to see if your code and
-documentation would pass a CRAN check 
-(possibly detecting undocumented function arguments).
-For the sake of cpu time on CRAN, I have disabled the package checks in all 
-examples; you should always set check_package to ```TRUE```
-(which is the default).
+code file. It runs **R CMD check** to see if your code and
+documentation match.
+For the sake of cpu time on CRAN, I have disabled the those checks in all 
+examples below by setting ```check_package = FALSE```. You should **always** 
+stick with the default. This is what this package is about!
 
 # Writing Documentation Files to Disk
 

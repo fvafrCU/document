@@ -69,7 +69,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to <em>document</em></h1>
 <h4 class="author"><em>Andreas Dominik Cullmann</em></h4>
-<h4 class="date"><em>2017-06-05, 20:12:38</em></h4>
+<h4 class="date"><em>2017-05-07, 21:06:33</em></h4>
 
 
 
@@ -82,10 +82,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>This package enables you to</p>
 <ul>
 <li>create function documentation with roxygen2</li>
-<li>save that documentation to disk</li>
-<li>view that documentation in your interactive R session</li>
+<li>detect code/documentation mismatches<br />
+</li>
+<li>save the documentation to disk</li>
+<li>view the documentation in your interactive R session</li>
 </ul>
-<p>It does this by creating a temporary package from (the chunks) of your single code file. So we can use <strong>R CMD check</strong> to see if your code and documentation would pass a CRAN check (possibly detecting undocumented function arguments). For the sake of cpu time on CRAN, I have disabled the package checks in all examples; you should always set check_package to <code>TRUE</code> (which is the default).</p>
+<p>It does this by creating a temporary package from (the chunks) of your single code file. It runs <strong>R CMD check</strong> to see if your code and documentation match. For the sake of cpu time on CRAN, I have disabled the those checks in all examples below by setting <code>check_package = FALSE</code>. You should <strong>always</strong> stick with the default. This is what this package is about!</p>
 </div>
 </div>
 <div id="writing-documentation-files-to-disk" class="section level1">

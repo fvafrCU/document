@@ -1,7 +1,3 @@
-- use dontrun
-- add a crancheck target with run-dontrun
-- set check_package = TRUE in all tests
-- explain check_package in a note section
 - improve vignette
 - mark docmentation as unmaintained
 - consider using withr

@@ -23,5 +23,22 @@ man(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 res <- document(file_name = system.file("tests", "files", "minimal.R", 
                                         package = "document"), 
                 check_package = TRUE)
+
+# View R CMD check results.
 cat(res[["check_result"]][["stdout"]], sep = "\n")
 cat(res[["check_result"]][["stderr"]], sep = "\n")
+
+# Copy docmentation to current working directory.
+# This writes to your disk. So it's disabled. 
+# Remove or comment out the next line to enable.
+if (FALSE) 
+    file.copy(res[["pdf_path"]], getwd())
+
+library(profvis)
+profvis({
+res <- document(file_name = system.file("tests", "files", "minimal.R", 
+                                        package = "document"), 
+                check_package = TRUE)
+})
+
+

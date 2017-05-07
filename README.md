@@ -27,6 +27,8 @@ help("document-package", package = "document")
 #      comments for one of your functions that was not part of one of
 #      your packages (yet)? This is exactly what this package is about:
 #      running roxygen2 on (chunks of) a single code file.
+#      You will probably look for 'document' and 'man', the remaining
+#      functions documented here are mainly for internal use.
 # 
 # Details:
 # 
