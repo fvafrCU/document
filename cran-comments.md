@@ -1,13 +1,16 @@
 Dear CRAN Team,
 this is a resubmission of package document 1.0.0.
 I have run package profvis on the examples from document() and man() but could
-not figure how to reduce cpu times. The package builds, checks and roxgenizes
+not figure how to reduce cpu times. The package roxygenizes, builds and checks
 (chunks of) single R code files. To me, there seems no way to get around these
 cpu times. I've again disabled the examples of the package's two main functions,
 document() and man(), using \donttest{} to pass R CMD check --as-cran.
 I have included the NOTEs from  R CMD check --as-cran --run-donttest. They
-affect the two main functions, document() and man(). I have included the output
-from running covr on the package below: I heavily test the code. Please see 
+affect the two main functions, document() and man(). I guess this is what users
+of the package will to pay for building, roxygenizing, building and checking 
+theirs codes.
+I have included the output from running covr on the package below: I heavily 
+test the code. Please see 
 https://codecov.io/github/fvafrCU/document?branch=master for third party
 results.
 
@@ -66,7 +69,7 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
 
-## R CMD check results from --dont-test
+## R CMD check  --dont-test results
 0 errors | 0 warnings | 2 notes
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
