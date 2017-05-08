@@ -32,10 +32,10 @@ Invisibly the status of \code{\link{display_Rd}}.
 Display a Help Page From a File's Documentation
 }
 \examples{
+\donttest{
 document(file_name = system.file("tests", "files", "minimal.R", 
          package = "document"), check_package = FALSE)
 man("foo")
-\donttest{
 # this equivalent to
 path <- system.file("tests", "files", "minimal.R", package = "document") 
 document::man(x = path, topic = "foo")
