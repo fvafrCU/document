@@ -1,3 +1,2 @@
 - improve vignette
-- mark docmentation as unmaintained
 - consider using withr
