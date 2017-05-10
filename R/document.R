@@ -180,7 +180,7 @@ write_the_docs <- function(package_directory, file_name,
         pdf_title <- file_name_tex
         # Man dir on windows must be in slashes... at least for R CMD Rd2pdf,
         # again, I have no clue.
-        man_directory <- sub("\\\\", "/", man_directory)
+        man_directory <- gsub("\\\\", "/", man_directory)
     }
     if (! dir.exists(output_directory)) dir.create(output_directory)
     options("document_package_directory" = package_directory)
