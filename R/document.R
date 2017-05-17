@@ -160,12 +160,12 @@ write_the_docs <- function(package_directory, file_name,
                            runit = FALSE
                            ) {
     man_directory <- file.path(package_directory, "man")
-    package_name <- basename(package_directory)
-    html_name <- paste0(package_name, ".html")
+    base_name <- sub(".[rRS]$|.Rnw$", "", basename(file_name), perl = TRUE)
+    html_name <- paste0(base_name, ".html")
     html_path <- file.path(output_directory, html_name)
-    pdf_name <- paste0(package_name, ".pdf")
+    pdf_name <- paste0(base_name, ".pdf")
     pdf_path <- file.path(output_directory, pdf_name)
-    txt_name <- paste0(package_name, ".txt")
+    txt_name <- paste0(base_name, ".txt")
     txt_path <- file.path(output_directory, txt_name)
     # TODO: make status depend on the status of the corresponding call to
     # rcmd_safe!
