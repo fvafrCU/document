@@ -10,7 +10,7 @@ LOG_DIR := log
 R := R-devel
 Rscript := Rscript-devel
 
-all: install_bare dev_check dev_vignettes crancheck utils 
+all: install_bare dev_check dev_vignettes check_donttest utils 
 
 # devtools
 dev_all: dev dev_vignettes
@@ -57,7 +57,7 @@ dev_devel:
 	${Rscript} --vanilla -e 'devtools::use_dev_version()'
 
 # R CMD 
-craninstall: crancheck
+craninstall: check_donttest
 	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz
 
 check_donttest: ${PKGNAME}_${PKGVERS}.tar.gz
