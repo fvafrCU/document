@@ -4,6 +4,24 @@ if (interactive()) {
 } else {
     library("document")
 }
+context("files")
+file_name  <- file.path(system.file("tests",
+                                    "files",
+                                    package = "document"),
+                        "mini_mal.R")
+res <- document(file_name, check_package = TRUE, runit = TRUE)
+test_that("path", {
+          options(useFancyQuotes = FALSE)
+          current <- res[["txt_path"]]
+          reference  <- file.path(tempdir(), "mini_mal.txt")
+          expect_equal(current, reference)
+}
+)
+test_that("existance", {
+          current <- res[["txt_path"]]
+          expect_true(file.exists(current))
+}
+)
 context("expected files")
 test_that("clean", {
           file_name  <- file.path(system.file("tests",
