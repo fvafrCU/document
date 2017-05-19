@@ -8,7 +8,7 @@ Best, Dominik
 # Package  document 1.1.0 
 
 ## Test  environments  
-- R Under development (unstable) (2017-05-12 r72670)
+- R Under development (unstable) (2017-05-19 r72700)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Debian GNU/Linux 8 (jessie) 
 - R version 3.4.0 (2017-04-21)
