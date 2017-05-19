@@ -66,8 +66,8 @@ fake_package <- function(file_name, working_directory = NULL,
 #' code/documentation mismatches (it behaves pretty much like doxygen).
 #' No build system can check whether your documentation is useful, but 'R CMD
 #' check' checks if it is formally matching your code. This check is the basic
-#' idea behind \pkg{document}. The posibility to disable the R CMD check is
-#' there to disable cpu consuming checks while testing the package. Stick with
+#' idea behind \pkg{document}. The possibility to disable the R CMD check is
+#' there to disable CPU consuming checks while testing the package. Stick with
 #' the default!
 #' And do not forget to export your functions using the line\cr
 #' #' @export\cr
