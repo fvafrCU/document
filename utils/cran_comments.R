@@ -10,8 +10,10 @@ provide_cran_comments <- function(comments_file = "cran-comments.md",
                                   check_log = "log/dev_check.Rout",
                                   travis_raw_log = travis_copy) {
     pkg <- devtools::as.package(".")
-    cat("\n# Package ", pkg$package, pkg$version, file = comments_file, "\n", 
+    cat("Dear CRAN Team,\nXXX\nBest, Dominik", file = comments_file, "\n", 
         append = FALSE)
+    cat("\n# Package ", pkg$package, pkg$version, file = comments_file, "\n", 
+        append = TRUE)
     travis <- unlist(strsplit(travis_raw_log, "\n"))
     session <- sessionInfo()
     here <- c("",
