@@ -210,7 +210,10 @@ write_the_docs <- function(package_directory, file_name,
     if (isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt)
     writeLines(Rd_txt, con = txt_path)
     writeLines(Rd_html, con = html_path)
+    # only return paths for existing files
+    status[! sapply(status, file.exists)] <- NULL
     return(status)
+
 }
 #' A Convenience Wrapper to \code{getOption("document_package_directory")}
 #'
