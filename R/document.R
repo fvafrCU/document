@@ -188,6 +188,7 @@ write_the_docs <- function(package_directory, file_name,
                                    paste0("--output=", pdf_path),
                                    man_directory))
     if (! as.logical(call_pdf[["status"]])) status[["pdf_path"]]  <- pdf_path
+    files  <- sort_unlocale(list.files(man_directory, full.names = TRUE))
     # using R CMD Rdconv on the system instead of tools::Rd2... since
     # ?tools::Rd2txt states that
     # "These functions ... are mainly intended for internal use, their
