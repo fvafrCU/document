@@ -52,12 +52,12 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
           user system elapsed
-man      7.008  1.032   9.028
-document 4.400  0.476   5.355
+man      7.008  0.948   8.956
+document 4.408  0.428   5.310
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [53s/61s]
+  Running ‘testthat.R’ [72s/82s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
