@@ -62,13 +62,13 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @param clean Delete the working directory?
 #' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
-#' @note One of the main features of 'R CMD check' is checking for 
+#' @note One of the main features of 'R CMD check' is checking for
 #' code/documentation mismatches (it behaves pretty much like doxygen).
 #' No build system can check whether your documentation is useful, but 'R CMD
-#' check' checks if it is formally matching your code. This check is the basic 
+#' check' checks if it is formally matching your code. This check is the basic
 #' idea behind \pkg{document}. The posibility to disable the R CMD check is
-#' there to disable cpu consuming checks while testing the package. Stick with 
-#' the default! 
+#' there to disable cpu consuming checks while testing the package. Stick with
+#' the default!
 #' And do not forget to export your functions using the line\cr
 #' #' @export\cr
 #' if you provide examples.
@@ -82,19 +82,19 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @export
 #' @examples
 #' \donttest{
-#' res <- document(file_name = system.file("tests", "files", "minimal.R", 
-#'                                         package = "document"), 
+#' res <- document(file_name = system.file("tests", "files", "minimal.R",
+#'                                         package = "document"),
 #'                 check_package = FALSE) # this is for the sake of CRAN cpu
 #'                 # time only. _Always_ stick with the default!
-#' 
+#'
 #' # View R CMD check results.
 #' cat(res[["check_result"]][["stdout"]], sep = "\n")
 #' cat(res[["check_result"]][["stderr"]], sep = "\n")
-#' 
+#'
 #' # Copy docmentation to current working directory.
-#' # This writes to your disk, so it's disabled. 
+#' # This writes to your disk, so it's disabled.
 #' # Remove or comment out the next line to enable.
-#' if (FALSE) 
+#' if (FALSE)
 #'     file.copy(res[["pdf_path"]], getwd())
 #' }
 document <- function(file_name,
@@ -182,10 +182,10 @@ write_the_docs <- function(package_directory, file_name,
     }
     if (! dir.exists(output_directory)) dir.create(output_directory)
     options("document_package_directory" = package_directory)
-    call_pdf <- callr::rcmd_safe("Rd2pdf", 
-                                 c("--no-preview --internals --force", 
+    call_pdf <- callr::rcmd_safe("Rd2pdf",
+                                 c("--no-preview --internals --force",
                                    paste0("--title=", pdf_title),
-                                   paste0("--output=", pdf_path), 
+                                   paste0("--output=", pdf_path),
                                    man_directory))
     if (! as.logical(call_pdf[["status"]])) status[["pdf_path"]]  <- pdf_path
     # using R CMD Rdconv on the system instead of tools::Rd2... since
@@ -195,8 +195,8 @@ write_the_docs <- function(package_directory, file_name,
     call_txt <- lapply(files,
                        function(x) callr::rcmd_safe("Rdconv",
                                                     c("--type=txt", x)))
-    call_html <- lapply(files, 
-                        function(x) callr::rcmd_safe("Rdconv", 
+    call_html <- lapply(files,
+                        function(x) callr::rcmd_safe("Rdconv",
                                                      c("--type=html", x)))
     Rd_txt <- sapply(call_txt, function(x) return(x[["stdout"]]))
     Rd_html <- sapply(call_html, function(x) return(x[["stdout"]]))

@@ -1,1 +1,5 @@
-Congratulations: no lints found.
+R/document.R 185 43 style Trailing whitespace is superfluous.     call_pdf <- callr::rcmd_safe("Rd2pdf",  list(c(43, 43)) trailing_whitespace_linter
+R/document.R 186 71 style Trailing whitespace is superfluous.                                  c("--no-preview --internals --force",  list(c(71, 71)) trailing_whitespace_linter
+R/document.R 188 66 style Trailing whitespace is superfluous.                                    paste0("--output=", pdf_path),  list(c(66, 66)) trailing_whitespace_linter
+R/document.R 198 31 style Trailing whitespace is superfluous.     call_html <- lapply(files,  list(c(31, 31)) trailing_whitespace_linter
+R/document.R 199 63 style Trailing whitespace is superfluous.                         function(x) callr::rcmd_safe("Rdconv",  list(c(63, 63)) trailing_whitespace_linter
