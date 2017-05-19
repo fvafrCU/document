@@ -167,10 +167,8 @@ write_the_docs <- function(package_directory, file_name,
     pdf_path <- file.path(output_directory, pdf_name)
     txt_name <- paste0(base_name, ".txt")
     txt_path <- file.path(output_directory, txt_name)
-    # TODO: make status depend on the status of the corresponding call to
-    # rcmd_safe!
-    status <- list(pdf_path = pdf_path, txt_path = txt_path,
-                   html_path = html_path)
+    status <- list(pdf_path = NULL, txt_path = NULL,
+                   html_path = NULL)
     # out_file_name may contain underscores, which need to be escaped for LaTeX.
     file_name_tex <- gsub("_", "\\_", basename(file_name), fixed = TRUE)
     pdf_title <- paste("'Roxygen documentation for file", file_name_tex, "\'")
@@ -184,24 +182,29 @@ write_the_docs <- function(package_directory, file_name,
     }
     if (! dir.exists(output_directory)) dir.create(output_directory)
     options("document_package_directory" = package_directory)
-    callr::rcmd_safe("Rd2pdf", c("--no-preview --internals --force",
-                                 paste0("--title=", pdf_title),
-                                 paste0("--output=", pdf_path), man_directory))
+    call_pdf <- callr::rcmd_safe("Rd2pdf", 
+                                 c("--no-preview --internals --force", 
+                                   paste0("--title=", pdf_title),
+                                   paste0("--output=", pdf_path), 
+                                   man_directory))
+    if (! as.logical(call_pdf[["status"]])) status[["pdf_path"]]  <- pdf_path
     # using R CMD Rdconv on the system instead of tools::Rd2... since
     # ?tools::Rd2txt states that
     # "These functions ... are mainly intended for internal use, their
     # interfaces are subject to change".
-    Rd_txt <- NULL
-    Rd_html <- NULL
-    files  <- sort_unlocale(list.files(man_directory, full.names = TRUE))
-    for (rd_file in files) {
-        Rd_txt <- c(Rd_txt,
-                    callr::rcmd_safe("Rdconv",
-                                     c("--type=txt", rd_file))[["stdout"]])
-        Rd_html <- c(Rd_html,
-                     callr::rcmd_safe("Rdconv",
-                                      c("--type=html", rd_file))[["stdout"]])
-    }
+    call_txt <- lapply(files,
+                       function(x) callr::rcmd_safe("Rdconv",
+                                                    c("--type=txt", x)))
+    call_html <- lapply(files, 
+                        function(x) callr::rcmd_safe("Rdconv", 
+                                                     c("--type=html", x)))
+    Rd_txt <- sapply(call_txt, function(x) return(x[["stdout"]]))
+    Rd_html <- sapply(call_html, function(x) return(x[["stdout"]]))
+    status_txt <- sapply(call_txt, function(x) return(x[["status"]]))
+    status_html <- sapply(call_html, function(x) return(x[["status"]]))
+    if (all(! as.logical(status_txt))) status[["txt_path"]]  <- txt_path
+    if (all(! as.logical(status_html))) status[["html_path"]]  <- html_path
+
     if (isTRUE(sanitize_Rd)) Rd_txt <- gsub("_\b", "", Rd_txt, fixed = TRUE)
     if (isTRUE(runit)) Rd_txt <- Rd_txt_RUnit(Rd_txt)
     writeLines(Rd_txt, con = txt_path)
