@@ -1,5 +1,5 @@
 * using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-05-12 r72670)
+* using R Under development (unstable) (2017-05-19 r72700)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
@@ -52,8 +52,8 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
           user system elapsed
-man      7.008  0.948   8.956
-document 4.408  0.428   5.310
+man      6.940  0.996   9.353
+document 4.392  0.464   5.404
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’

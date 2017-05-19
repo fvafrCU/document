@@ -26,7 +26,7 @@ _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking document -------------------------------------------------------------
   --as-cran --timings --no-tests --no-manual 
 
-* using R Under development (unstable) (2017-05-12 r72670)
+* using R Under development (unstable) (2017-05-19 r72700)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
