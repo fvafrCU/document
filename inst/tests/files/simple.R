@@ -12,23 +12,15 @@
 NULL
 # ROXYGEN_STOP
 
-# load packages, load local code, define local functions, set options
-# You should stick to that order: if you define a function of a name which
-# is used as a (function) name in a package you load, you _do_ want your
-# version to mask the packages' version. 
-
-#% load packages
+#% Front Matter
+##% load packages
 library("methods") # load an example package from the standard library
 
 
-#% load local code
+##% load local code
 # This would usually be functions defined and stored away in files.
-# For now we just we just create a file containing R options and
-# and then source it.
-cat(file = "tmp.R", "options(warn = 2) # treat warnings as errors \n")
-source("tmp.R")
 
-#% define local functions
+##% define local functions
 # ROXYGEN_START
 
 #' a first function example XXX
@@ -51,16 +43,14 @@ a_first_function <- function(df) {
 }
 # ROXYGEN_STOP
 
-#% set "global" options
-# We overwrite (mask) the options set from the options file. Had we done
-# it the other way round, we might be tempted to assume warn still to be
-# set to one, albeit it would have been overwritten by the sourced code.
+##% set "global" options
 options(warn = 1)
 
-#% Analysize the data
-colMeans(iris[1:4])
+#% Body Matter
+##% Load data
+data(iris, package = "datasets")
 
-#% collect garbage 
-# We created a local options file on our file system, which we should
-# remove now.
-file.remove("tmp.R")
+##% Analysize the data
+a_first_function(iris)
+
+#% Back Matter
