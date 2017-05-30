@@ -18,11 +18,11 @@ write_the_docs(package_directory, file_name, output_directory = tempdir(),
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
-\item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?
+\item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?}
+
+\item{runit}{Convert the text received from the help files if running RUnit?
 Do not bother, this is for Unit testing only.
 on.}
-
-\item{runit}{Convert the text received from the help files if running RUnit?}
 }
 \value{
 A list containing

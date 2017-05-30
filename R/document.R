@@ -51,6 +51,7 @@ fake_package <- function(file_name, working_directory = NULL,
         add_dependencies_to_description(package_directory, dependencies)
     return(package_directory)
 }
+
 #' Document (Chunks of) an R Code File
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
@@ -58,10 +59,7 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @inheritParams write_the_docs
 #' @param check_package Run R CMD check on the sources? See
 #' \bold{Note} below.
-#' @param output_directory The directory to put the documentation into.
 #' @param clean Delete the working directory?
-#' @param runit Convert the text received from the help files if running RUnit?
-#' Do not bother, this is for Unit testing only.
 #' @note One of the main features of 'R CMD check' is checking for
 #' code/documentation mismatches (it behaves pretty much like doxygen).
 #' No build system can check whether your documentation is useful, but 'R CMD
@@ -144,8 +142,8 @@ document <- function(file_name,
 #' @inheritParams fake_package
 #' @param package_directory The directory containing the package's source.
 #' @param output_directory The directory to put the documentation into.
-#' @param runit Convert the text received from the help files if running RUnit?
 #' @param sanitize_Rd Remove strange characters from \code{Rdconv}?
+#' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
 #' on.
 #' @return A list containing

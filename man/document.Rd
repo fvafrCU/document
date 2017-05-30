@@ -18,12 +18,11 @@ document(file_name, working_directory = NULL, output_directory = tempdir(),
 \item{dependencies}{a character vector of package names the functions depend
 on.}
 
-\item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?
-Do not bother, this is for Unit testing only.
-on.}
+\item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?}
 
 \item{runit}{Convert the text received from the help files if running RUnit?
-Do not bother, this is for Unit testing only.}
+Do not bother, this is for Unit testing only.
+on.}
 
 \item{check_package}{Run R CMD check on the sources? See
 \bold{Note} below.}
