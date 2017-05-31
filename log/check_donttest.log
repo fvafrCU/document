@@ -1,5 +1,5 @@
-* using log directory ‘/home/nik/git/cs/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-05-04 r72654)
+* using log directory ‘/home/nik/git/cyclops/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2017-04-29 r72639)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
@@ -23,10 +23,7 @@ Version contains large components (1.1.0.9000)
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
-* checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Could not fetch https://travis-ci.org/fvafrCU/document.svg?branch=master
-InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
+* checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -54,14 +51,18 @@ InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... OK
+* checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+           user system elapsed
+man      14.704  2.132  18.284
+document  9.660  1.020  11.395
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’
-  Running ‘testthat.R’ [29s/34s]
+  Running ‘runit.R’ [12s/13s]
+  Running ‘testthat.R’ [146s/160s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 WARNING, 1 NOTE
+Status: 2 NOTEs

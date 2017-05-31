@@ -27,8 +27,18 @@ help("document-package", package = "document")
 #      comments for one of your functions that was not part of one of
 #      your packages (yet)? This is exactly what this package is about:
 #      running roxygen2 on (chunks of) a single code file.
-#      You will probably look for 'document' and 'man', the remaining
-#      functions documented here are mainly for internal use.
+#      This package enables you to
+# 
+#        1. create function documentation with roxygen2
+# 
+#        2. detect code/documentation mismatches
+# 
+#        3. save the documentation to disk
+# 
+#        4. view the documentation in your interactive R session
+# 
+#      You will probably be looking for 'document' and 'man', the
+#      remaining functions documented here are mainly for internal use.
 # 
 # Details:
 # 
@@ -53,8 +63,7 @@ help("document-package", package = "document")
 # 
 # Warning:
 # 
-#      This package writes to disk, so *NEVER* run it with superuser
-#      powers.
+#      This package writes to disk, so *never* run as superuser.
 # 
 # Note:
 # 

@@ -15,7 +15,8 @@ The sanitized character vector.
 \description{
 Why am I doing this? It want to run RUnit tests from within R CMD check
 and interactively. Files produced are compared with expected files. Now R
-CMD check and interactive (and batch) runs of RUnit give different encodings. 
+CMD check and interactive (and batch) runs of RUnit give different
+encodings.
 I don't know why, but they do. And this is a rather lousy fix. See the code
 for details.
 }
