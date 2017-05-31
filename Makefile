@@ -131,6 +131,10 @@ clean:
 remove:
 	 ${R} --vanilla CMD REMOVE  ${PKGNAME}
 
+.PHONY: news 
+news: DESCRIPTION NEWS.md
+	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_news()'
+
 # specifics
 cran-comments.md: log/dev_check.Rout
 	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments()' > log/cran_comments.Rout 2>&1 

@@ -1,3 +1,7 @@
+# document 1.1.0.9000
+
+* enhance documenation
+
 # document 1.1.0
 
 * Use the input file's basename instead of the temporary package's name as
