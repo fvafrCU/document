@@ -75,8 +75,8 @@ add_dependencies_to_description <- function(package_directory,
 #' for details.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
-#' @param txt a character vector
-#' @return the sanitized character vector
+#' @param txt A character vector.
+#' @return The sanitized character vector.
 Rd_txt_RUnit <- function(txt) {
     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to
     # ascii again, but

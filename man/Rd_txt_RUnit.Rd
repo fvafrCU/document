@@ -7,10 +7,10 @@
 Rd_txt_RUnit(txt)
 }
 \arguments{
-\item{txt}{a character vector}
+\item{txt}{A character vector.}
 }
 \value{
-the sanitized character vector
+The sanitized character vector.
 }
 \description{
 Why am I doing this? It want to run RUnit tests from within R CMD check
