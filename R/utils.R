@@ -22,15 +22,14 @@ sort_unlocale <- function(char) {
 
 #' Change License in the DESCRIPTION File to "GPL"
 #'
-#' utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning
-#' in R CMD check. Fix that.
+#' \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
+#' that throws a warning in R CMD check. Fix that.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 # TODO: nasty hardcoding
-#' @note We also set Version to 0.0-0, hoping nobody is going to use
-#' that.
+#' @note We also set Version to 1.0.0.
 #' @param package_directory Path to the directory.
-#' @return value of \code{link{writeLines}}.
+#' @return value of \code{\link{writeLines}}.
 clean_description <- function(package_directory) {
     description_file <- file.path(package_directory, "DESCRIPTION")
     description <-  readLines(description_file)
@@ -42,16 +41,16 @@ clean_description <- function(package_directory) {
     return(invisible(status))
 }
 
-#' Add a "Depends:"-field to the DESCRIPTION File
+#' Add a Dependency to the DESCRIPTION File
 #'
-#' if the functions in the temporary package depend on other functions (from,
+#' If the functions in a package depend on other functions (from,
 #' for example, the checkmate package), you can add the whole package as a
 #' dependency.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param package_directory Path to the directory.
 #' @param dependencies the package names the temporary package will depend on.
-#' @return value of \code{link{writeLines}}.
+#' @return value of \code{\link{writeLines}}.
 add_dependencies_to_description <- function(package_directory,
                                             dependencies = NULL) {
     # TODO: dependencies should be a named list possibly containing dependencies
@@ -67,17 +66,18 @@ add_dependencies_to_description <- function(package_directory,
 }
 
 
-Rd_txt_RUnit <- function(txt) {
-#' clean a string created from a run through RUnit
+#' Clean a String Created From a Run Through RUnit
 #'
 #' Why am I doing this? It want to run RUnit tests from within R CMD check
 #' and interactively. Files produced are compared with expected files. Now R
-#' CMD check and interactive (and batch) give different encodings. I don't
-#' know why, but they do.
+#' CMD check and interactive (and batch) runs of RUnit give different encodings. 
+#' I don't know why, but they do. And this is a rather lousy fix. See the code
+#' for details.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param txt a character vector
 #' @return the sanitized character vector
+Rd_txt_RUnit <- function(txt) {
     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to
     # ascii again, but
     # - setting the options(useFancyQuotes = 'UTF-8') and

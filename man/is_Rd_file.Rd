@@ -2,7 +2,7 @@
 % Please edit documentation in R/man.R
 \name{is_Rd_file}
 \alias{is_Rd_file}
-\title{Check Whether a File is Probably an R documentation file}
+\title{Check Whether a File is Probably an R Documentation File}
 \usage{
 is_Rd_file(x)
 }

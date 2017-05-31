@@ -10,15 +10,14 @@ clean_description(package_directory)
 \item{package_directory}{Path to the directory.}
 }
 \value{
-value of \code{link{writeLines}}.
+value of \code{\link{writeLines}}.
 }
 \description{
-utils::package.skeleton() leaves us with a DESCRIPTION that throws a warning
-in R CMD check. Fix that.
+\code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
+that throws a warning in R CMD check. Fix that.
 }
 \note{
-We also set Version to 0.0-0, hoping nobody is going to use
-that.
+We also set Version to 1.0.0.
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

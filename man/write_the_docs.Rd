@@ -5,24 +5,25 @@
 \title{Read R Documentation Files from a Package's Source, Convert and Write Them
 to Disk}
 \usage{
-write_the_docs(package_directory, file_name, output_directory = tempdir(),
-  dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE)
+write_the_docs(package_directory, file_name = package_directory,
+  output_directory = tempdir(), dependencies = NULL, sanitize_Rd = TRUE,
+  runit = FALSE)
 }
 \arguments{
 \item{package_directory}{The directory containing the package's source.}
 
 \item{file_name}{The name of the R code file to be documented.}
 
-\item{output_directory}{The directory to put the documentation into.}
+\item{output_directory}{The directory to put the documentation into. You
+might want to use \code{\link[base]{dirname}(file_name)}.}
 
-\item{dependencies}{a character vector of package names the functions depend
+\item{dependencies}{A character vector of package names the functions depend
 on.}
 
 \item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?}
 
 \item{runit}{Convert the text received from the help files if running RUnit?
-Do not bother, this is for Unit testing only.
-on.}
+Do not bother, this is for Unit testing only.}
 }
 \value{
 A list containing
@@ -33,8 +34,15 @@ A list containing
 }
 }
 \description{
-Read R Documentation Files from a Package's Source, Convert and Write Them
-to Disk
+What does it?
+}
+\details{
+\code{file_name} will usually be provided by \code{\link{document}} as the
+R code file's name. This may, differing from a (temporary) package's name,
+contain underscores. If you use the functions directly: stick with the 
+default, in which case the internally 
+the  \code{\link[base]{basename}} of your \code{package_directory} will be
+used. This should be a good guess.
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

@@ -2,7 +2,7 @@
 % Please edit documentation in R/file_parsing.R
 \name{get_lines_between_tags}
 \alias{get_lines_between_tags}
-\title{get all lines between tagged lines}
+\title{Cut Code Chunks From a File}
 \usage{
 get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
   begin_pattern = "ROXYGEN_START", end_pattern = "ROXYGEN_STOP",
@@ -11,24 +11,25 @@ get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
 \arguments{
 \item{file_name}{The name of the R code file to be parsed.}
 
-\item{keep_tagged_lines}{keep tagged lines output?}
+\item{keep_tagged_lines}{Keep tagged lines output?}
 
-\item{begin_pattern}{A pattern that marks the line beginning the roxygen
-part.}
+\item{begin_pattern}{A pattern that marks the line beginning a roxygen
+chunk.}
 
-\item{end_pattern}{A pattern that marks the line ending the roxygen part.}
+\item{end_pattern}{A pattern that marks the line ending a roxygen chunk.}
 
-\item{from_first_line}{use first line as tagged line if first tag found
-matches the end_pattern.}
+\item{from_first_line}{Use first line as tagged line if first tag found
+matches the \code{end_pattern}?}
 
-\item{to_last_line}{use last line as tagged line if last tag found matches
-the begin_pattern.}
+\item{to_last_line}{Use last line as tagged line if last tag found matches
+the \code{begin_pattern}?}
 }
 \value{
-a character vector of matching lines.
+A character vector of matching lines.
 }
 \description{
-get all lines between tagged lines
+Get all lines between tagged lines. The tagged lines themselves may be in- or
+excluded from the selection.
 }
 \note{
 If you know the file to contain valid roxygen code only, you do not

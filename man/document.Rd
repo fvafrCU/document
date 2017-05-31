@@ -13,16 +13,16 @@ document(file_name, working_directory = NULL, output_directory = tempdir(),
 
 \item{working_directory}{A working directory. Keep the default.}
 
-\item{output_directory}{The directory to put the documentation into.}
+\item{output_directory}{The directory to put the documentation into. You
+might want to use \code{\link[base]{dirname}(file_name)}.}
 
-\item{dependencies}{a character vector of package names the functions depend
+\item{dependencies}{A character vector of package names the functions depend
 on.}
 
 \item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?}
 
 \item{runit}{Convert the text received from the help files if running RUnit?
-Do not bother, this is for Unit testing only.
-on.}
+Do not bother, this is for Unit testing only.}
 
 \item{check_package}{Run R CMD check on the sources? See
 \bold{Note} below.}
@@ -34,9 +34,9 @@ on.}
 \value{
 A list containing
 \describe{
-    \item{pdf_path}{The path to the pdf file produced.}
-    \item{txt_path}{The path to the text file produced.}
-    \item{html_path}{The path to the html file produced.}
+    \item{pdf_path}{The path to the pdf file produced,}
+    \item{txt_path}{The path to the text file produced,}
+    \item{html_path}{The path to the html file produced,}
     \item{check_result}{A list giving the R CMD check results.}
 }
 }
@@ -53,7 +53,7 @@ there to disable CPU consuming checks while testing the package. Stick with
 the default!
 And do not forget to export your functions using the line\cr
 #' @export\cr
-if you provide examples.
+should you provide examples.
 }
 \examples{
 \donttest{

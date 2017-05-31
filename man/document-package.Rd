@@ -9,8 +9,16 @@ Have you ever been tempted to create roxygen2-style documentation comments
 for one of your functions that was not part of one of your packages (yet)?
 This is exactly what this package is about: running roxygen2 on (chunks of)
 a single code file.\cr
-You will probably look for \code{\link{document}} and \code{\link{man}}, the
-remaining functions documented here are mainly for internal use.
+This package enables you to
+\enumerate{
+\item create function documentation with roxygen2
+\item detect code/documentation mismatches
+\item save the documentation to disk
+\item view the documentation in your interactive R session
+}
+You will probably be looking for \code{\link{document}} and 
+\code{\link{man}}, the remaining functions documented here are mainly 
+for internal use.
 }
 \details{
 R is a programming language that supports and checks documentation for
@@ -43,7 +51,7 @@ This package is basically a wrapper to
 }
 \section{Warning}{
 
-This package writes to disk, so \strong{NEVER} run it with superuser powers.
+This package writes to disk, so \strong{never} run as superuser.
 }
 
 \seealso{

@@ -1,19 +1,22 @@
-#' get all lines between tagged lines
+#' Cut Code Chunks From a File
+#'
+#' Get all lines between tagged lines. The tagged lines themselves may be in- or
+#' excluded from the selection.
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be parsed.
-#' @param keep_tagged_lines keep tagged lines output?
-#' @param end_pattern  A pattern that marks the line ending the roxygen part.
-#' @param begin_pattern  A pattern that marks the line beginning the roxygen
-#' part.
-#' @param from_first_line use first line as tagged line if first tag found
-#' matches the end_pattern.
-#' @param to_last_line use last line as tagged line if last tag found matches
-#' the begin_pattern.
+#' @param keep_tagged_lines Keep tagged lines output?
+#' @param end_pattern  A pattern that marks the line ending a roxygen chunk.
+#' @param begin_pattern  A pattern that marks the line beginning a roxygen
+#' chunk.
+#' @param from_first_line Use first line as tagged line if first tag found
+#' matches the \code{end_pattern}?
+#' @param to_last_line Use last line as tagged line if last tag found matches
+#' the \code{begin_pattern}?
 #' @note If you know the file to contain valid roxygen code only, you do not
 #' need to tag any lines if you keep from_first_line and to_last_line both TRUE:
 #' in this case the whole file will be returned.
-#' @return a character vector of matching lines.
+#' @return A character vector of matching lines.
 get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
                          begin_pattern = "ROXYGEN_START",
                          end_pattern = "ROXYGEN_STOP",

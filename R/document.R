@@ -4,7 +4,7 @@
 #' Of course the code file should contain \pkg{roxygen2} comments.
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be documented.
-#' @param dependencies a character vector of package names the functions depend
+#' @param dependencies A character vector of package names the functions depend
 #' on.
 #' @param working_directory A working directory. Keep the default.
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
@@ -69,12 +69,12 @@ fake_package <- function(file_name, working_directory = NULL,
 #' the default!
 #' And do not forget to export your functions using the line\cr
 #' #' @export\cr
-#' if you provide examples.
+#' should you provide examples.
 #' @return A list containing
 #' \describe{
-#'     \item{pdf_path}{The path to the pdf file produced.}
-#'     \item{txt_path}{The path to the text file produced.}
-#'     \item{html_path}{The path to the html file produced.}
+#'     \item{pdf_path}{The path to the pdf file produced,}
+#'     \item{txt_path}{The path to the text file produced,}
+#'     \item{html_path}{The path to the html file produced,}
 #'     \item{check_result}{A list giving the R CMD check results.}
 #' }
 #' @export
@@ -138,21 +138,31 @@ document <- function(file_name,
 #' Read R Documentation Files from a Package's Source, Convert and Write Them
 #' to Disk
 #'
+#' What does it?
+#'
+#' \code{file_name} will usually be provided by \code{\link{document}} as the
+#' R code file's name. This may, differing from a (temporary) package's name,
+#' contain underscores. If you use the functions directly: stick with the 
+#' default, in which case the internally 
+#' the  \code{\link[base]{basename}} of your \code{package_directory} will be
+#' used. This should be a good guess.
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @inheritParams fake_package
+#' @param file_name The name of the file where to write the documentation into. 
+#' See \strong{Det
 #' @param package_directory The directory containing the package's source.
-#' @param output_directory The directory to put the documentation into.
+#' @param output_directory The directory to put the documentation into. You
+#' might want to use \code{\link[base]{dirname}(file_name)}.
 #' @param sanitize_Rd Remove strange characters from \code{Rdconv}?
 #' @param runit Convert the text received from the help files if running RUnit?
 #' Do not bother, this is for Unit testing only.
-#' on.
 #' @return A list containing
 #' \describe{
 #'     \item{pdf_path}{The path to the pdf file produced.}
 #'     \item{txt_path}{The path to the text file produced.}
 #'     \item{html_path}{The path to the html file produced.}
 #' }
-write_the_docs <- function(package_directory, file_name,
+write_the_docs <- function(package_directory, file_name = package_directory,
                            output_directory = tempdir(),
                            dependencies = NULL, sanitize_Rd = TRUE,
                            runit = FALSE
@@ -213,7 +223,9 @@ write_the_docs <- function(package_directory, file_name,
     return(status)
 
 }
-#' A Convenience Wrapper to \code{getOption("document_package_directory")}
+
+#' A Convenience Wrapper 
+#' Just a wrapper to \code{\link[base]{getOption}("document_package_directory")}
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @return \code{getOption("document_package_directory")}

@@ -4,7 +4,7 @@
 \alias{usage}
 \title{Return the Usage of a Function From Within the Function}
 \usage{
-usage(n = -1)
+usage(n = -1, usage = FALSE)
 }
 \arguments{
 \item{n}{A negative integer giving the number of from to frames/environments
@@ -14,12 +14,15 @@ to go back (passed as \code{which} to \code{\link{sys.call}}). Set to
 want to obtain the usage for.
 Use the \code{<-} assignment operator with the default, see \bold{examples}
 below.}
+
+\item{usage}{Give this functions usage (as a usage example \ldots) and exit?}
 }
 \value{
 A character string giving the Usage as \code{\link{help}} would do.
 }
 \description{
-Return the Usage of a Function From Within the Function
+Get a usage template for a function from within the function if you encounter
+misguided usage, you can display the template.
 }
 \examples{
 # usage with assignment operator:

@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{add_dependencies_to_description}
 \alias{add_dependencies_to_description}
-\title{Add a "Depends:"-field to the DESCRIPTION File}
+\title{Add a Dependency to the DESCRIPTION File}
 \usage{
 add_dependencies_to_description(package_directory, dependencies = NULL)
 }
@@ -12,10 +12,10 @@ add_dependencies_to_description(package_directory, dependencies = NULL)
 \item{dependencies}{the package names the temporary package will depend on.}
 }
 \value{
-value of \code{link{writeLines}}.
+value of \code{\link{writeLines}}.
 }
 \description{
-if the functions in the temporary package depend on other functions (from,
+If the functions in a package depend on other functions (from,
 for example, the checkmate package), you can add the whole package as a
 dependency.
 }

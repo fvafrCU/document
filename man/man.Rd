@@ -11,7 +11,7 @@ man(x, topic = NA, force_Rd = FALSE)
 \itemize{
     \item A path to an R documentation (*.Rd) file.
     \item A path to a  code file containing comments for \pkg{roxygen2}.
-    \item A help \code{\link{help}} if
+    \item A  \code{\link{help}} topic if
     \code{option("document_package_directory")} is set (by
     \code{\link{document}}).
 }}
@@ -29,7 +29,10 @@ the file to be assumed to be an R documentation file.
 Invisibly the status of \code{\link{display_Rd}}.
 }
 \description{
-Display a Help Page From a File's Documentation
+Display a \code{\link[base]{help}}-like page from an existing R documentation
+(*.Rd) file, a topic from a temporary package with the
+\code{option("document_package_directory")} set or a topic from an R code
+file containing \pkg{roxygen2} documentation.
 }
 \examples{
 \donttest{
