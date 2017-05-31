@@ -149,7 +149,7 @@ document <- function(file_name,
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @inheritParams fake_package
 #' @param file_name The name of the file where to write the documentation into. 
-#' See \strong{Det
+#' See \strong{Details}.
 #' @param package_directory The directory containing the package's source.
 #' @param output_directory The directory to put the documentation into. You
 #' might want to use \code{\link[base]{dirname}(file_name)}.
@@ -225,6 +225,7 @@ write_the_docs <- function(package_directory, file_name = package_directory,
 }
 
 #' A Convenience Wrapper 
+#'
 #' Just a wrapper to \code{\link[base]{getOption}("document_package_directory")}
 #'
 #' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>

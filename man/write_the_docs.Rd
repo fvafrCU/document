@@ -12,7 +12,8 @@ write_the_docs(package_directory, file_name = package_directory,
 \arguments{
 \item{package_directory}{The directory containing the package's source.}
 
-\item{file_name}{The name of the R code file to be documented.}
+\item{file_name}{The name of the file where to write the documentation into. 
+See \strong{Details}.}
 
 \item{output_directory}{The directory to put the documentation into. You
 might want to use \code{\link[base]{dirname}(file_name)}.}
