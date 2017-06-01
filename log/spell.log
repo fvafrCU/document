@@ -1,0 +1,5 @@
+  WORD      FOUND IN
+CMD       document-package.Rd:52, document.Rd:28,41,48,51,53, Rd_txt_RUnit.Rd:16,19
+roxygen   title:1, description:1,4
+Warning message:
+spell check failed 
