@@ -1,14 +1,11 @@
 Dear CRAN Team,
-this is a resubmission of package document.
-I have added checks to only return file paths if file.exist() returns TRUE and I
-have change file paths to match the input paths.
+this is a resubmission of package document. I have enhanced the documentation.
+Please upload to CRAN.
+Best, Dominik
 
-Best, Dominik 
-
-# Package  document 1.1.0 
-
+# Package  document 1.2.0
 ## Test  environments  
-- R Under development (unstable) (2017-05-19 r72700)
+- R Under development (unstable) (2017-05-31 r72750)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Debian GNU/Linux 8 (jessie) 
 - R version 3.4.0 (2017-04-21)
