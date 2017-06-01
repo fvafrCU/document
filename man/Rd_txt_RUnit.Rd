@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{Rd_txt_RUnit}
 \alias{Rd_txt_RUnit}
-\title{Clean a String Created From a Run Through RUnit}
+\title{Clean a String Created From a Run Through \pkg{RUnit}}
 \usage{
 Rd_txt_RUnit(txt)
 }
@@ -13,13 +13,12 @@ Rd_txt_RUnit(txt)
 The sanitized character vector.
 }
 \description{
-Why am I doing this? It want to run RUnit tests from within R CMD check
-and interactively. Files produced are compared with expected files. Now R
-CMD check and interactive (and batch) runs of RUnit give different
-encodings.
+Why am I doing this? It want to run \pkg{RUnit} tests from within 
+\command{R CMD check}
+check and interactively.
+Files produced are compared with expected files. 
+Now \command{R CMD check} and interactive (and batch) runs of \pkg{RUnit}
+give different encodings.
 I don't know why, but they do. And this is a rather lousy fix. See the code
 for details.
-}
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
 }

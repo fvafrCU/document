@@ -38,6 +38,3 @@ bar <- function(x) {
 }
 bar()
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}

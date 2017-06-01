@@ -14,11 +14,8 @@ value of \code{\link{writeLines}}.
 }
 \description{
 \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
-that throws a warning in R CMD check. Fix that.
+that throws a warning in \command{R CMD check}. Fix that.
 }
 \note{
 We also set Version to 1.0.0.
-}
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
 }

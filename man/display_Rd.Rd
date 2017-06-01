@@ -21,6 +21,3 @@ to a temporary file which is then displayed using the R pager.
 Using \code{\link{cat}} on the text would not allow for using different
 pagers.
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}

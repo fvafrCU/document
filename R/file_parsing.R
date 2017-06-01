@@ -3,17 +3,19 @@
 #' Get all lines between tagged lines. The tagged lines themselves may be in- or
 #' excluded from the selection.
 #'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param file_name  The name of the R code file to be parsed.
 #' @param keep_tagged_lines Keep tagged lines output?
-#' @param end_pattern  A pattern that marks the line ending a roxygen chunk.
-#' @param begin_pattern  A pattern that marks the line beginning a roxygen
+#' @param end_pattern  A pattern that marks the line ending a \pkg{roxygen2}
+#' chunk.
+#' @param begin_pattern  A pattern that marks the line beginning a
+#' \pkg{roxygen2}
 #' chunk.
 #' @param from_first_line Use first line as tagged line if first tag found
 #' matches the \code{end_pattern}?
 #' @param to_last_line Use last line as tagged line if last tag found matches
 #' the \code{begin_pattern}?
-#' @note If you know the file to contain valid roxygen code only, you do not
+#' @note If you know the file to contain valid \pkg{roxygen2} code only, you do
+#' not
 #' need to tag any lines if you keep from_first_line and to_last_line both TRUE:
 #' in this case the whole file will be returned.
 #' @return A character vector of matching lines.

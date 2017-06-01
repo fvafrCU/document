@@ -27,6 +27,3 @@ Of course the code file should contain \pkg{roxygen2} comments.
 fake_package(file_name = system.file("tests", "files", "simple.R",
          package = "document"))
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}

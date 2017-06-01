@@ -19,6 +19,3 @@ If the functions in a package depend on other functions (from,
 for example, the checkmate package), you can add the whole package as a
 dependency.
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}

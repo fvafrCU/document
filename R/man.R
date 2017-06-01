@@ -5,7 +5,6 @@
 #' \code{option("document_package_directory")} set or a topic from an R code
 #' file containing \pkg{roxygen2} documentation.
 #'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param x One of the following:
 #' \itemize{
 #'     \item A path to an R documentation (*.Rd) file.
@@ -69,7 +68,6 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
 #' Get a usage template for a function from within the function if you encounter
 #' misguided usage, you can display the template.
 #'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @param n A negative integer giving the number of from to frames/environments
 #' to go back (passed as \code{which} to \code{\link{sys.call}}). Set to
 #' \code{-2} if you want to encapsulate the call to \code{usage} into a function
@@ -108,7 +106,6 @@ usage <- function(n = -1, usage = FALSE) {
 #'
 #' @note The check might produce false negatives (erroneously assuming the file
 #' is not an R documentation file).
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @return TRUE if the file is probably an R documentation file, FALSE
 #' otherwise.
 #' @param x The path to the file to be checked.
@@ -138,7 +135,6 @@ is_Rd_file <- function(x) {
 #' Using \code{\link{cat}} on the text would not allow for using different
 #' pagers.
 #'
-#' @author Andreas Dominik Cullmann, <adc-r@@arcor.de>
 #' @return The return value of removing the temporary file.
 #' @param rd_file The path to the Rd file to be displayed.
 display_Rd <- function(rd_file) {

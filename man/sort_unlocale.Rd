@@ -14,9 +14,7 @@ The sorted character vector.
 }
 \description{
 \code{\link{sort}} uses the collation of the locale (see
-\code{\link{Comparison}}), which results in different sorting. If a (RUnit)
+\code{\link{Comparison}}), which results in different sorting. If a
+(\pkg{RUnit})
 check relies on sorting, we need to avoid the locale.
-}
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
 }

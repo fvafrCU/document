@@ -12,6 +12,3 @@ get_dpd()
 \description{
 Just a wrapper to \code{\link[base]{getOption}("document_package_directory")}
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}

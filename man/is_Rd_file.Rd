@@ -20,6 +20,3 @@ This is meant for internal use by \code{\link{man}}.
 The check might produce false negatives (erroneously assuming the file
 is not an R documentation file).
 }
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
-}

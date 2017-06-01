@@ -23,7 +23,8 @@ on.}
 
 \item{sanitize_Rd}{Remove strange characters from \code{Rdconv}?}
 
-\item{runit}{Convert the text received from the help files if running RUnit?
+\item{runit}{Convert the text received from the help files if running
+\pkg{RUnit}?
 Do not bother, this is for Unit testing only.}
 }
 \value{
@@ -44,7 +45,4 @@ contain underscores. If you use the functions directly: stick with the
 default, in which case the internally 
 the  \code{\link[base]{basename}} of your \code{package_directory} will be
 used. This should be a good guess.
-}
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
 }

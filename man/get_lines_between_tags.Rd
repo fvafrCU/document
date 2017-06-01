@@ -13,10 +13,12 @@ get_lines_between_tags(file_name, keep_tagged_lines = TRUE,
 
 \item{keep_tagged_lines}{Keep tagged lines output?}
 
-\item{begin_pattern}{A pattern that marks the line beginning a roxygen
+\item{begin_pattern}{A pattern that marks the line beginning a
+\pkg{roxygen2}
 chunk.}
 
-\item{end_pattern}{A pattern that marks the line ending a roxygen chunk.}
+\item{end_pattern}{A pattern that marks the line ending a \pkg{roxygen2}
+chunk.}
 
 \item{from_first_line}{Use first line as tagged line if first tag found
 matches the \code{end_pattern}?}
@@ -32,10 +34,8 @@ Get all lines between tagged lines. The tagged lines themselves may be in- or
 excluded from the selection.
 }
 \note{
-If you know the file to contain valid roxygen code only, you do not
+If you know the file to contain valid \pkg{roxygen2} code only, you do
+not
 need to tag any lines if you keep from_first_line and to_last_line both TRUE:
 in this case the whole file will be returned.
-}
-\author{
-Andreas Dominik Cullmann, <adc-r@arcor.de>
 }
