@@ -34,9 +34,9 @@ sort_unlocale <- function(char) {
 clean_description <- function(package_directory) {
     description_file <- file.path(package_directory, "DESCRIPTION")
     description <-  readLines(description_file)
+    description <-  sub("(Version: ).*", "\\11.0.0", description)
     description <-  sub("(License: ).*", "\\1GPL", description)
-    # TODO: nasty hardcoding
-    description <-  sub("(Version: ).*", "\\10.1.0", description)
+    description <-  sub("(Title: ).*", "\\1Fake a Title", description)
     description <-  sub("(Description: .*)", "\\1\\.", description)
     status <- writeLines(description, con = description_file)
     return(invisible(status))

@@ -43,7 +43,9 @@ fake_package <- function(file_name, working_directory = NULL,
     # roxygen2 does not overwrite files not written by roxygen2, so we need to
     # delete some files
     file.remove(list.files(man_directory, full.names = TRUE))
-    file.remove(file.path(package_directory, "NAMESPACE"))
+    file.remove(file.path(package_directory, "NAMESPACE"),
+                # Get rid of one of R CMD checks' NOTEs
+                file.path(package_directory, "Read-and-delete-me"))
     #% create documentation from roxygen comments for the package
     dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir =
                                                            package_directory))
@@ -107,7 +109,7 @@ document <- function(file_name,
     if (check_package) {
         tmp <- callr::rcmd_safe("check", c(paste0("--output=",
                                                   working_directory),
-                                     "--as-cran", package_directory))
+                                     package_directory))
         status[["check_result"]] <- tmp
     }
     return(status)

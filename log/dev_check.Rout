@@ -1,6 +1,5 @@
 Updating document documentation
 Loading document
-Writing document.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -82,7 +81,7 @@ New submission
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
            user system elapsed
-document 27.532   2.64  36.838
+document 17.672  2.264  22.727
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -105,4 +104,4 @@ New submission
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
            user system elapsed
-document 27.532   2.64  36.838
+document 17.672  2.264  22.727

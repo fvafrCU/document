@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-06-05, 16:34:45
+date: 2017-06-05, 19:37:30
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -24,7 +24,7 @@ It enables you to
  - view that documentation in your interactive R session
 
 It does this by creating a temporary package from (the chunks) of your single 
-code file. So we can use **R CMD check --as-cran** to see if your code and
+code file. So we can use **R CMD check** to see if your code and
 documentation would pass a CRAN check 
 (possibly detecting undocumented function arguments).
 For the sake of cpu time on CRAN, I have disabled the package checks in all 
@@ -70,7 +70,7 @@ The pdf file resembles a package's documentation pdf file.
 
 ### Checking the code with R CMD check
 By default, ```document``` checks the temporary package it creates from your code file using 
-**R CMD check --as-cran**.
+**R CMD check**.
 The corresponding call would be:
 
 ```{r, eval = FALSE}
