@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-06-05, 19:37:30
+date: 2017-06-05, 20:12:38
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -17,7 +17,7 @@ This is exactly what this package is about: running roxygen2 on (chunks of) a
 single code file.
 
 ## Features
-It enables you to
+This package enables you to
 
  - create function documentation with roxygen2 
  - save that documentation to disk
