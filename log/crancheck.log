@@ -1,5 +1,5 @@
-* using log directory ‘/home/nik/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-04-29 r72639)
+* using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2017-04-25 r72618)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using option ‘--as-cran’
@@ -53,13 +53,12 @@ New submission
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-          user system elapsed
-document 9.680  1.136  11.498
-man      7.404  1.212   9.305
+           user system elapsed
+document 27.508  2.436  37.082
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’ [12s/13s]
-  Running ‘testthat.R’ [147s/161s]
+  Running ‘runit.R’
+  Running ‘testthat.R’ [72s/84s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK

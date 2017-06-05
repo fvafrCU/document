@@ -46,8 +46,11 @@ A list containing
 roxygenize an R code file, output the documentation to pdf.
 }
 \examples{
-document(file_name = system.file("tests", "files", "minimal.R",
-         package = "document"), check_package = FALSE)
+res <- document(file_name = system.file("tests", "files", "minimal.R", 
+                                        package = "document"), 
+                check_package = TRUE)
+cat(res[["check_result"]][["stdout"]], sep = "\\n")
+cat(res[["check_result"]][["stderr"]], sep = "\\n")
 }
 \author{
 Andreas Dominik Cullmann, <adc-r@arcor.de>

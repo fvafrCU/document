@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-05-05, 22:54:09
+date: 2017-06-05, 16:34:45
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -68,6 +68,21 @@ You can view a copy of the html file
 [here](http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html). 
 The pdf file resembles a package's documentation pdf file.
 
+### Checking the code with R CMD check
+By default, ```document``` checks the temporary package it creates from your code file using 
+**R CMD check --as-cran**.
+The corresponding call would be:
+
+```{r, eval = FALSE}
+res <- document(file_name = system.file("tests", "files", "minimal.R", 
+                                        package = "document"), 
+                check_package = TRUE)
+```
+After that you could display the check results with:
+```{r, eval = FALSE}
+cat(res[["check_result"]][["stdout"]], sep = "\n")
+cat(res[["check_result"]][["stderr"]], sep = "\n")
+```
 
 ## A Simple Example
 Suppose you have a script

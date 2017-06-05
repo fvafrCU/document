@@ -73,8 +73,11 @@ fake_package <- function(file_name, working_directory = NULL,
 #' }
 #' @export
 #' @examples
-#' document(file_name = system.file("tests", "files", "minimal.R",
-#'          package = "document"), check_package = FALSE)
+#' res <- document(file_name = system.file("tests", "files", "minimal.R", 
+#'                                         package = "document"), 
+#'                 check_package = TRUE)
+#' cat(res[["check_result"]][["stdout"]], sep = "\n")
+#' cat(res[["check_result"]][["stderr"]], sep = "\n")
 document <- function(file_name,
                      working_directory = NULL,
                      output_directory = tempdir(),

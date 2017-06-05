@@ -1,8 +1,6 @@
 Updating document documentation
 Loading document
-Writing fake_package.Rd
-Writing man.Rd
-Writing is_Rd_file.Rd
+Writing document.Rd
 Setting env vars ---------------------------------------------------------------
 CFLAGS  : -Wall -pedantic
 CXXFLAGS: -Wall -pedantic
@@ -29,7 +27,7 @@ _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking document --------------------------------------------------------------
   --as-cran --timings --no-tests --no-manual 
 
-* using R Under development (unstable) (2017-04-29 r72639)
+* using R Under development (unstable) (2017-04-25 r72618)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
@@ -83,9 +81,8 @@ New submission
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-          user system elapsed
-document 9.876  0.964  11.572
-man      7.524  1.052   9.346
+           user system elapsed
+document 27.532   2.64  36.838
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... SKIPPED
 * checking for unstated dependencies in vignettes ... OK
@@ -107,6 +104,5 @@ New submission
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-          user system elapsed
-document 9.876  0.964  11.572
-man      7.524  1.052   9.346
+           user system elapsed
+document 27.532   2.64  36.838

@@ -17,3 +17,11 @@ document(file_name = system.file("tests", "files", "minimal.R", package = "docum
 devtools::load_all()
 document::man(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 man(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
+
+
+
+res <- document(file_name = system.file("tests", "files", "minimal.R", 
+                                        package = "document"), 
+                check_package = TRUE)
+cat(res[["check_result"]][["stdout"]], sep = "\n")
+cat(res[["check_result"]][["stderr"]], sep = "\n")

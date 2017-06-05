@@ -1,12 +1,10 @@
 Dear CRAN Team,
-I have packaged my version of a wrapper to utils::sekelton.package,
-roxgen2::roxygenize and callr::rcmd.
-It aims at function definitions not yet part of a package. I've been using it's
-predecessor for more than two year, mainly for educational purposes (I know a
-lot of people who don't [cd]are writing whole (private) packages).
-Hope it may be of use to others.
+this is a resubmission of package document 1.0.0.
+Following Uwe Ligges' request I have moved some of the examples out of \dontrun,
+this leads to the second NOTE (the first one is on the new submission).
 
-Best, Dominik Cullmann
+Best,
+Dominik Cullmann
 
 # Package  document 1.0.0 
 
@@ -20,10 +18,15 @@ Best, Dominik Cullmann
 - win-builder (devel) 
 
 ## R CMD check results
-0 errors | 0 warnings | 1 note 
+0 errors | 0 warnings | 2 notes
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 New submission
+
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+           user system elapsed
+document 27.532   2.64  36.838
 
 
