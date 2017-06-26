@@ -10,7 +10,7 @@ LOG_DIR := log
 R := R-devel
 Rscript := Rscript-devel
 
-all: install_bare dev_check dev_vignettes check_donttest utils 
+all: install_bare dev_check dev_vignettes check_donttest utils craninstall
 
 # devtools
 dev_all: dev dev_vignettes
