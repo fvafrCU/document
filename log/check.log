@@ -1,9 +1,9 @@
-* using log directory ‘/home/nik/git/cs/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-05-04 r72654)
+* using log directory ‘/home/nik/git/cyclops/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2017-06-23 r72845)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘1.0.0.9000’
+* this is package ‘document’ version ‘1.2.0’
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... OK

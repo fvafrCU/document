@@ -15,14 +15,10 @@ LOG_DIR := log
 R := R-devel
 Rscript := Rscript-devel
 
-all: dev_check dev_vignettes check_donttest utils craninstall
+all: ${LOG_DIR}/install.log devel
+devel: utils dev_check dev_vignettes dev_check_bare dev_check_dont dev_test dev_win dev_release dev_devel
 
 # devtools
-dev_all: dev dev_vignettes
-
-
-dev: dev_check dev_spell
-
 
 dev_check_bare:
 	rm ${temp_file} || true; \
@@ -35,7 +31,7 @@ dev_check_dont:
 		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--run-donttest")' > ${temp_file} 2>&1; \
 		grep -v ".*'/" ${temp_file} | grep -v ".*‘/" > ${LOG_DIR}/dev_check_dont.Rout ;\
 
-dev_check: dev_test README.md
+dev_check: dev_test 
 	rm ${temp_file} || true; \
 		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--no-tests")' > ${temp_file} 2>&1; \
 		grep -v ".*'/" ${temp_file} | grep -v ".*‘/" > ${LOG_DIR}/dev_check.Rout ;\
@@ -59,28 +55,7 @@ dev_release: dev_win
 dev_devel:
 	${Rscript} --vanilla -e 'devtools::use_dev_version()'
 
-# R CMD 
-craninstall: check_donttest
-	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz
 
-check_donttest: ${PKGNAME}_${PKGVERS}.tar.gz
-	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
-		${R} --vanilla CMD check --as-cran --run-donttest \
-		${PKGNAME}_${PKGVERS}.tar.gz && \
-		cp ${PKGNAME}.Rcheck/00check.log log/check_donttest.log
-
-install: check 
-	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz && \
-        printf '===== have you run\n\tmake demo && ' && \
-        printf 'make utils\n?!\n' 
-
-
-.PHONY: check
-check: ${LOG_DIR}/check.log
-${LOG_DIR}/check.log: ${PKGNAME}_${PKGVERS}.tar.gz
-	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
-        ${R} --vanilla CMD check ${PKGNAME}_${PKGVERS}.tar.gz && \
-		cp ${PKGNAME}.Rcheck/00check.log ${LOG_DIR}/check.log
 
 # utils
 .PHONY: utils
@@ -137,18 +112,33 @@ dependencies_forced:
 
 
 ##: TODO 
+# R CMD 
+.PHONY: install
+install: ${LOG_DIR}/install.log
+${LOG_DIR}/install.log: ${LOG_DIR}/check.log
+	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz > ${LOG_DIR}/install.log 2>&1 
+
+
+.PHONY: check
+check: ${LOG_DIR}/check.log
+${LOG_DIR}/check.log: ${PKGNAME}_${PKGVERS}.tar.gz
+	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
+		${R} --vanilla CMD check --as-cran --run-donttest \
+		${PKGNAME}_${PKGVERS}.tar.gz && \
+		cp ${PKGNAME}.Rcheck/00check.log ${LOG_DIR}/check.log
+
+.PHONY: build
+build: ${PKGNAME}_${PKGVERS}.tar.gz
+${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTE_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout ${LOG_DIR}/spell.log  ${LOG_DIR}/news.log 
+	${R} --vanilla CMD build ../${PKGSRC}
+
 ${LOG_DIR}/news.log: DESCRIPTION NEWS.md
 	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_news()' > ${LOG_DIR}/news.log 2>&1 
 
 .PHONY: spell
 spell: ${LOG_DIR}/spell.log
-${LOG_DIR}/spell.log: ${MAN_FILES} DESCRIPTION
+${LOG_DIR}/spell.log: ${MAN_FILES} DESCRIPTION ${LOG_DIR}/roxygen2.Rout 
 	${Rscript} --vanilla -e 'spell <- devtools::spell_check(); if (length(spell) > 0) {print(spell); warning("spell check failed")} ' > ${LOG_DIR}/spell.log 2>&1 
-
-.PHONY: build
-build: ${PKGNAME}_${PKGVERS}.tar.gz
-${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTE_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout 
-	${R} --vanilla CMD build ../${PKGSRC}
 
 ${LOG_DIR}/roxygen2.Rout: ${R_FILES}
 	${R} --vanilla -e 'roxygen2::roxygenize(".")' > ${LOG_DIR}/roxygen2.Rout 2>&1 
@@ -157,5 +147,15 @@ README.md: README.Rmd
 	${Rscript} --vanilla -e 'knitr::knit("README.Rmd")'
 
 # visualize the Makefile
-${LOG_DIR}/plot_make.png: Makefile
-	make -Bnd | makefile2graph | dot -Tpng -o ${LOG_DIR}/plot_make.png
+.PHONY: viz
+viz: ${LOG_DIR}/make_all.png ${LOG_DIR}/make_devel.png
+${LOG_DIR}/make_all.png: Makefile
+	make -Bnd all | makefile2graph | dot -Tpng -o ${LOG_DIR}/make_all.png
+
+${LOG_DIR}/make_devel.png: Makefile
+	make -nd devel | makefile2graph | dot -Tpng -o ${LOG_DIR}/make_devel.png
+
+# bare build to install or run test without spell checking and such
+.PHONY: build_bare
+build_bare:
+	${R} --vanilla CMD build ../${PKGSRC}
