@@ -24,11 +24,10 @@ Or, after installation, the help page:
 help("document-package", package = "document")
 ```
 ```{r, echo = FALSE}
-  package <- "document"
-  topic <- "document-package"
-  help_file <- utils:::.getHelpFile(help(topic, package = (package)))
+  # insert developement page
+  help_file <- list.files("man", pattern = ".*-package\\.Rd", full.names = TRUE)
   captured <- gsub('_\b', '',  capture.output(tools:::Rd2txt(help_file) ))
-  cat(captured, sep="\n")
+  cat(captured, sep = "\n")
 ```
 ## Installation
 You can install document from github with:

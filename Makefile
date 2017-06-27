@@ -2,6 +2,11 @@
 PKGNAME := $(shell sed -n "s/Package: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGSRC  := $(shell basename `pwd`)
+R_FILES := $(shell find R/ -type f)
+MAN_FILES := $(shell find man/ -type f)
+TESTS_FILES := $(shell find tests/ -type f | egrep  -E '(testthat|runit)')
+VIGNETTES_FILES := $(shell find vignettes/ -type f)
+
 
 temp_file := $(shell tempfile)
 lintr_script := utils/lintr.R
@@ -10,7 +15,7 @@ LOG_DIR := log
 R := R-devel
 Rscript := Rscript-devel
 
-all: install_bare dev_check dev_vignettes check_donttest utils craninstall
+all: dev_check dev_vignettes check_donttest utils craninstall
 
 # devtools
 dev_all: dev dev_vignettes
@@ -18,8 +23,6 @@ dev_all: dev dev_vignettes
 
 dev: dev_check dev_spell
 
-dev_spell: roxy 
-	${Rscript} --vanilla -e 'spell <- devtools::spell_check(); if (length(spell) > 0) {print(spell); warning("spell check failed")} ' > log/spell.log 2>&1 
 
 dev_check_bare:
 	rm ${temp_file} || true; \
@@ -71,35 +74,13 @@ install: check
         printf '===== have you run\n\tmake demo && ' && \
         printf 'make utils\n?!\n' 
 
-install_bare: build_bare 
-	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz 
 
-check_bare: build_bare 
-	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
-		_R_CHECK_CRAN_INCOMING_USE_ASPELL_=TRUE && \
-        ${R} --vanilla CMD check --no-examples ${PKGNAME}_${PKGVERS}.tar.gz && \
-        printf '===== run\n\tmake install\n!!\n'
-
-check:  ${PKGNAME}_${PKGVERS}.tar.gz
+.PHONY: check
+check: ${LOG_DIR}/check.log
+${LOG_DIR}/check.log: ${PKGNAME}_${PKGVERS}.tar.gz
 	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
         ${R} --vanilla CMD check ${PKGNAME}_${PKGVERS}.tar.gz && \
-		cp ${PKGNAME}.Rcheck/00check.log log/check.log && \
-        printf '===== run\n\tmake install\n!!\n'
-
-build_bare:
-	${R} --vanilla CMD build ../${PKGSRC}
-
-build: ${PKGNAME}_${PKGVERS}.tar.gz
-${PKGNAME}_${PKGVERS}.tar.gz: roxy README.md
-	${R} --vanilla CMD build ../${PKGSRC}
-
-direct_check:  
-	${R} --vanilla CMD check ../${PKGSRC} ## check without build -- not recommended
-
-
-.PHONY: roxy
-roxy:
-	${R} --vanilla -e 'roxygen2::roxygenize(".")'
+		cp ${PKGNAME}.Rcheck/00check.log ${LOG_DIR}/check.log
 
 # utils
 .PHONY: utils
@@ -131,16 +112,11 @@ clean:
 remove:
 	 ${R} --vanilla CMD REMOVE  ${PKGNAME}
 
-.PHONY: news 
-news: DESCRIPTION NEWS.md
-	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_news()'
 
 # specifics
 cran-comments.md: log/dev_check.Rout
 	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments()' > log/cran_comments.Rout 2>&1 
 
-README.md: README.Rmd install_bare
-	${Rscript} --vanilla -e 'knitr::knit("README.Rmd")'
 
 .PHONY: fixes
 fixes:
@@ -159,3 +135,27 @@ dependencies:
 dependencies_forced:
 	${Rscript} --vanilla -e 'deps <-c("callr", "rprojroot", "covr", "knitr", "devtools", "rmarkdown", "RUnit", "checkmate", "roxygen2", "lintr", "hunspell"); for (dep in deps) install.packages(dep, repos = "https://cran.uni-muenster.de/")'
 
+
+##: TODO 
+${LOG_DIR}/news.log: DESCRIPTION NEWS.md
+	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_news()' > ${LOG_DIR}/news.log 2>&1 
+
+.PHONY: spell
+spell: ${LOG_DIR}/spell.log
+${LOG_DIR}/spell.log: ${MAN_FILES} DESCRIPTION
+	${Rscript} --vanilla -e 'spell <- devtools::spell_check(); if (length(spell) > 0) {print(spell); warning("spell check failed")} ' > ${LOG_DIR}/spell.log 2>&1 
+
+.PHONY: build
+build: ${PKGNAME}_${PKGVERS}.tar.gz
+${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTE_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout 
+	${R} --vanilla CMD build ../${PKGSRC}
+
+${LOG_DIR}/roxygen2.Rout: ${R_FILES}
+	${R} --vanilla -e 'roxygen2::roxygenize(".")' > ${LOG_DIR}/roxygen2.Rout 2>&1 
+
+README.md: README.Rmd 
+	${Rscript} --vanilla -e 'knitr::knit("README.Rmd")'
+
+# visualize the Makefile
+${LOG_DIR}/plot_make.png: Makefile
+	make -Bnd | makefile2graph | dot -Tpng -o ${LOG_DIR}/plot_make.png
