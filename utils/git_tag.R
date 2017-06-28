@@ -22,7 +22,7 @@ git_tag <- function(path = ".") {
     d <- readLines(file.path(root, "DESCRIPTION"))
     version <- sub("^Version: ", "", grep("^Version: ", d, value = TRUE))
     if (version != last_version_number)
-         status <- system2("git", paste("tag -a", version), stdout = TRUE)
+         status <- system(paste("git tag -a", version))
     ret(status)
 }
 
