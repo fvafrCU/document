@@ -1,11 +1,11 @@
 Dear CRAN Team,
-this is a resubmission of package document. I have enhanced the documentation.
-Please upload to CRAN.
+this is a resubmission of package document. I have
+XXX
 Best, Dominik
 
-# Package  document 1.2.0
+# Package  document 1.2.0.9000
 ## Test  environments  
-- R Under development (unstable) (2017-05-31 r72750)
+- R Under development (unstable) (2017-06-23 r72845)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Debian GNU/Linux 8 (jessie) 
 - R version 3.4.0 (2017-04-21)
@@ -14,7 +14,23 @@ Best, Dominik
 - win-builder (devel) 
 
 ## R CMD check results
-0 errors | 0 warnings | 0 notes
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
+Version contains large components (1.2.0.9000)
+
+DONE
+
+Status: 1 NOTE
+See
+for details.
+
+
+R CMD check results
+0 errors | 0 warnings | 1 note 
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+Version contains large components (1.2.0.9000)
 
 

@@ -31,9 +31,8 @@ provide_cran_comments <- function(comments_file = "cran-comments.md",
         file = comments_file, append = TRUE)
     cat("- win-builder (devel)", "\n", file = comments_file, append = TRUE)
     cat("\n## R CMD check results\n", file = comments_file, append = TRUE)
-    check <- readLines(check_log)
-    cat(check[seq.int(from = grep("^[0-9]* errors \\|", check), 
-                      to = length(check))],
-        "\n" , file = comments_file, append = TRUE, sep = "\n")
+    check <- devtools:::parse_check_results(check_log)
+    cat(capture.output(print(check)), "\n" , file = comments_file, 
+        append = TRUE, sep = "\n")
     return(invisible(NULL))
 }

@@ -10,33 +10,6 @@
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
 Version contains large components (1.2.0.9000)
-
-Found the following (possibly) invalid URLs:
-  URL: http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html
-    From: inst/doc/Introduction_to_document.html
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: htmlpreview.github.io
-  URL: https://cran.r-project.org/package=docstring
-    From: man/document-package.Rd
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: cran.r-project.org
-  URL: https://en.wikipedia.org/wiki/HTML
-    From: inst/doc/Introduction_to_document.html
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: en.wikipedia.org
-  URL: https://en.wikipedia.org/wiki/Plain_text
-    From: inst/doc/Introduction_to_document.html
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: en.wikipedia.org
-  URL: https://en.wikipedia.org/wiki/Portable_Document_Format
-    From: inst/doc/Introduction_to_document.html
-    Status: Error
-    Message: libcurl error code 6:
-    	Could not resolve host: en.wikipedia.org
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -50,10 +23,7 @@ Found the following (possibly) invalid URLs:
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
-* checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Failed to retrieve https://travis-ci.org/fvafrCU/document.svg?branch=master
-FailedConnectionException2 "travis-ci.org" 443 True getAddrInfo: does not exist (Name or service not known)
+* checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -84,15 +54,15 @@ FailedConnectionException2 "travis-ci.org" 443 True getAddrInfo: does not exist 
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
            user system elapsed
-man      14.596  2.412  20.079
-document  9.664  1.076  13.046
+man      14.788  2.296  19.320
+document  9.852  1.028  11.856
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’ [12s/14s]
-  Running ‘testthat.R’ [138s/162s]
+  Running ‘runit.R’ [12s/13s]
+  Running ‘testthat.R’ [149s/172s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 WARNING, 2 NOTEs
+Status: 2 NOTEs

@@ -54,7 +54,7 @@ dependencies_forced:
 devtools: cran_comments use_dev_version
 
 cran-comments.md: ${LOG_DIR}/dev_check.Rout
-	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments()' > ${LOG_DIR}/cran_comments.Rout 2>&1 
+	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments(check_log = "log/dev_check.Rout")' > ${LOG_DIR}/cran_comments.Rout 2>&1 
 
 .PHONY: use_dev_version
 use_dev_version:
@@ -87,7 +87,7 @@ ${LOG_DIR}/check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
 
 .PHONY: build
 build: ${PKGNAME}_${PKGVERS}.tar.gz
-${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTE_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout ${LOG_DIR}/spell.Rout  ${LOG_DIR}/news.Rout dependencies
+${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTE_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout ${LOG_DIR}/spell.Rout  ${LOG_DIR}/news.Rout ${LOG_DIR}/dependencies.Rout
 	${R} --vanilla CMD build ../${PKGSRC}
 
 ${LOG_DIR}/news.Rout: DESCRIPTION NEWS.md
