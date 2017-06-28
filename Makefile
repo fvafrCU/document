@@ -19,24 +19,26 @@ Rscript := Rscript-devel
 .PHONY: all
 all: ${LOG_DIR}/install.Rout utils 
 
-##: TODO START
+# TODO: START
 
 .PHONY: lefts
-lefts: tag fixes 
-
-.PHONY: fixes
-fixes:
-	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_codetags()'
+lefts: tag 
 
 .PHONY: tag
 tag:
 	./utils/tag.cl
 
-##: TODO END
+# TODO: END
 #% devtools
 # a loose collection of helpful stuff while developing
 .PHONY: devtools
-devtools: cran_comments use_dev_version dependencies_forced vignettes
+devtools: cran_comments use_dev_version dependencies_forced vignettes codetags
+
+.PHONY: codetags
+codetags: ${LOG_DIR}/check_codetags.Rout 
+${LOG_DIR}/check_codetags.Rout:
+	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_codetags()' > ${LOG_DIR}/check_codetags.Rout 2>&1 
+
 
 .PHONY: build_win
 build_win:
