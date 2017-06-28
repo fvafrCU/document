@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/fvafrCU/document.svg?branch=master)](https://travis-ci.org/fvafrCU/document)
 [![Coverage Status](https://codecov.io/github/fvafrCU/document/coverage.svg?branch=master)](https://codecov.io/github/fvafrCU/document?branch=master)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/document)](https://cran.r-project.org/package=document)
-[![RStudio_downloads_monthly](https://cranlogs.r-pkg.org/badges/document)](https://cran.r-project.org/package=index.html)
-[![RStudio_downloads_total](https://cranlogs.r-pkg.org/badges/grand-total/document)](https://cran.r-project.org/package=index.html)
+[![RStudio_downloads_monthly](https://cranlogs.r-pkg.org/badges/document)](https://cran.r-project.org/package=document)
+[![RStudio_downloads_total](https://cranlogs.r-pkg.org/badges/grand-total/document)](https://cran.r-project.org/package=document)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
