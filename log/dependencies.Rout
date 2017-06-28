@@ -1,0 +1,19 @@
+Loading required package: callr
+Loading required package: rprojroot
+Loading required package: covr
+Loading required package: methods
+Loading required package: knitr
+Loading required package: devtools
+Loading required package: rmarkdown
+Loading required package: RUnit
+Loading required package: checkmate
+Loading required package: roxygen2
+Loading required package: lintr
+
+Attaching package: ‘lintr’
+
+The following object is masked from ‘package:devtools’:
+
+    lint
+
+Loading required package: hunspell

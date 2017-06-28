@@ -11,13 +11,13 @@ Building document -------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_1.2.0.tar.gz’
+* building ‘document_1.2.0.9000.tar.gz’
 
 Setting env vars --------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -31,12 +31,12 @@ Checking document -------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--run-donttest --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘1.2.0’
+* this is package ‘document’ version ‘1.2.0.9000’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... WARNING
+* checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Insufficient package version (submitted: 1.2.0, existing: 1.2.0)
+Version contains large components (1.2.0.9000)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -50,12 +50,7 @@ Insufficient package version (submitted: 1.2.0, existing: 1.2.0)
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
-* checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Failed to retrieve https://codecov.io/github/fvafrCU/document/coverage.svg?branch=master
-StatusCodeException (Status {statusCode = 504, statusMessage = "Gateway Time-out"}) [("Connection","keep-alive"),("Server","nginx"),("Date","Tue, 27 Jun 2017 21:06:36 GMT"),("Content-Type","text/html"),("Content-Length","176"),("Via","1.1 vegur"),("X-Response-Body-Start","<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"),("X-Request-URL","GET https://codecov.io:443/github/fvafrCU/document/coverage.svg?branch=master")] (CJ {expose = []})
-Non-standard file/directory found at top level:
-  ‘foo.cl’
+* checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -85,40 +80,33 @@ Non-standard file/directory found at top level:
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-          user system elapsed
-man      14.78  1.892  19.334
-document  9.78  0.940  12.380
+           user system elapsed
+man      14.632  2.556  18.653
+document  9.684  1.056  12.031
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ...
-  Running ‘runit.R’ [12s/14s]
-  Running ‘testthat.R’ [153s/177s]
+  Running ‘runit.R’ [12s/13s]
+  Running ‘testthat.R’ [154s/167s]
  OK
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 2 WARNINGs, 1 NOTE
+Status: 2 NOTEs
 See
 for details.
 
 
 R CMD check results
-0 errors | 2 warnings | 1 note 
-checking CRAN incoming feasibility ... WARNING
+0 errors | 0 warnings | 2 notes
+checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Insufficient package version (submitted: 1.2.0, existing: 1.2.0)
-
-checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Failed to retrieve https://codecov.io/github/fvafrCU/document/coverage.svg?branch=master
-StatusCodeException (Status {statusCode = 504, statusMessage = "Gateway Time-out"}) [("Connection","keep-alive"),("Server","nginx"),("Date","Tue, 27 Jun 2017 21:06:36 GMT"),("Content-Type","text/html"),("Content-Length","176"),("Via","1.1 vegur"),("X-Response-Body-Start","<html>\r\n<head><title>504 Gateway Time-out</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>504 Gateway Time-out</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n"),("X-Request-URL","GET https://codecov.io:443/github/fvafrCU/document/coverage.svg?branch=master")] (CJ {expose = []})
-Non-standard file/directory found at top level:
-  ‘foo.cl’
+Version contains large components (1.2.0.9000)
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-          user system elapsed
-man      14.78  1.892  19.334
-document  9.78  0.940  12.380
+           user system elapsed
+man      14.632  2.556  18.653
+document  9.684  1.056  12.031
