@@ -4,7 +4,7 @@ PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGSRC  := $(shell basename `pwd`)
 R_FILES := $(shell find R/ -type f)
 MAN_FILES := $(shell find man/ -type f)
-TESTS_FILES := $(shell find tests/ -type f | egrep  -E '(testthat|runit)')
+TESTS_FILES := $(shell find tests/ -type f | egrep  -E '(testthat|runit)') # XXX: Do not grep.
 VIGNETTES_FILES := $(shell find vignettes/ -type f)
 
 
@@ -15,7 +15,8 @@ LOG_DIR := log
 R := R-devel
 Rscript := Rscript-devel
 
-all: ${LOG_DIR}/install.log devel
+all: ${LOG_DIR}/install.log 
+
 devel: utils dev_check dev_vignettes dev_check_bare dev_check_dont dev_test dev_win dev_release dev_devel
 
 # devtools
@@ -72,7 +73,7 @@ coverage:
 
 .PHONY: cleanr
 cleanr:
-	${Rscript} --vanilla -e 'cleanr::check_directory("R/",  max_num_arguments = 9, check_return = FALSE)'
+	${Rscript} --vanilla -e 'print(cleanr::check_directory("R/",  max_num_arguments = 9, check_return = FALSE))' > ${LOG_DIR}/cleanr.Rout 2>&1 
 
 .PHONY: lintr
 lintr:
