@@ -26,7 +26,7 @@ lefts: tag fixes
 
 .PHONY: fixes
 fixes:
-	./utils/fixes.cl
+	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_codetags()'
 
 .PHONY: tag
 tag:

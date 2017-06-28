@@ -1,3 +1,23 @@
+grep_directory <- function(path, pattern, exclude = NULL) {
+    hits <- NULL
+    files <- list.files(path, full.names = TRUE, recursive = TRUE)
+    if (! is.null(exclude))
+        files <- grep(exclude, files, value = TRUE, invert = TRUE)
+    for (f in files) {
+        l <- readLines(f)
+        if (any(grepl(l, pattern = pattern, perl = TRUE))) {
+            found <- paste(f, sep = ": ",
+                         grep(l, pattern = pattern, perl = TRUE, value = TRUE))
+            hits <- c(hits, found)
+        }
+    }
+    return(hits)
+}
+
+check_codetags <- function(path = ".", exclude = ".*\\.tar\\.gz$") {
+    return(grep_directory(path = path, exclude = exclude, pattern =  "XXX:|FIXME:|TODO:"))
+}
+
 check_news <- function() {
     root <- rprojroot::find_root(rprojroot::is_r_package)
     description <- readLines(file.path(root, "DESCRIPTION"))
