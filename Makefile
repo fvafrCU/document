@@ -4,7 +4,7 @@ PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGSRC  := $(shell basename `pwd`)
 R_FILES := $(shell find R/ -type f)
 MAN_FILES := $(shell find man/ -type f)
-TESTS_FILES := $(shell find tests/ -type f | egrep  -E '(testthat|runit)') # XXX: Do not grep.
+TESTS_FILES := $(shell find tests/ -type f)
 RUNIT_FILES := $(shell find tests/ -type f | grep  'runit')
 TESTTHAT_FILES := $(shell find tests/ -type f | grep  'testthat')
 VIGNETTES_FILES := $(shell find vignettes/ -type f)
@@ -22,17 +22,7 @@ all: ${LOG_DIR}/install.Rout utils
 ##: TODO START
 
 .PHONY: lefts
-lefts: dependencies dependencies_forced tag fixes dev_vignettes dev_release dev_devel cran_comments
-dev_vignettes:
-	${Rscript} --vanilla -e 'devtools::build_vignettes()'
-
-dev_win:
-	${Rscript} --vanilla -e 'devtools::build_win()'
-
-dev_release: dev_win
-	echo "${Rscript} --vanilla -e 'devtools::release(check = FALSE)'"
-
-
+lefts: tag fixes 
 
 .PHONY: fixes
 fixes:
@@ -42,23 +32,35 @@ fixes:
 tag:
 	./utils/tag.cl
 
-.PHONY: dependencies_forced
-dependencies_forced:
-	${Rscript} --vanilla -e 'deps <-c(${DEPS}); for (dep in deps) install.packages(dep, repos = "https://cran.uni-muenster.de/")'
-
-
 ##: TODO END
 #% devtools
 # a loose collection of helpful stuff while developing
 .PHONY: devtools
-devtools: cran_comments use_dev_version
+devtools: cran_comments use_dev_version dependencies_forced vignettes
+
+.PHONY: build_win
+build_win:
+	echo "Run \n \t${Rscript} --vanilla -e 'devtools::build_win()'"
+
+.PHONY: release
+release: build_win
+	echo "Run \n \t${Rscript} --vanilla -e 'devtools::release(check = FALSE)'"
+.PHONY: vignettes
+vignettes:
+	${Rscript} --vanilla -e 'devtools::build_vignettes()'
 
 cran-comments.md: ${LOG_DIR}/dev_check.Rout
 	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments(check_log = "log/dev_check.Rout")' > ${LOG_DIR}/cran_comments.Rout 2>&1 
 
 .PHONY: use_dev_version
-use_dev_version:
-	${Rscript} --vanilla -e 'devtools::use_dev_version()'
+use_dev_version: ${LOG_DIR}/use_dev_version.Rout
+${LOG_DIR}/use_dev_version.Rout:
+	${Rscript} --vanilla -e 'devtools::use_dev_version()' > ${LOG_DIR}/use_dev_version.Rout 2>&1 
+
+.PHONY: dependencies_forced
+dependencies_forced: ${LOG_DIR}/dependencies_forced.Rout
+${LOG_DIR}/dependencies_forced.Rout:
+	${Rscript} --vanilla -e 'deps <-c(${DEPS}); for (dep in deps) install.packages(dep, repos = "https://cran.uni-muenster.de/")' > ${LOG_DIR}/dependencies_forced.Rout 2>&1 
 
 #% install
 
