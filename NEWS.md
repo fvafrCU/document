@@ -1,3 +1,7 @@
+# document 1.2.0.9000
+
+* restructre Makefile
+
 # document 1.2.0
 
 * enhance documenation
