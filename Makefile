@@ -64,7 +64,7 @@ utils: cleanr lintr coverage
 
 .PHONY: runit
 runit:
-	cd ./tests/ && ${Rscript} --vanilla ./runit.R || printf "\nMaybe your installation is stale? \nTry\n\tmake install_bare\n\n"
+	cd ./tests/ && ${Rscript} --vanilla ./runit.R > ../../${LOG_DIR}/runit.Rout 2>&1 || printf "\nMaybe your installation is stale? \nTry\n\tmake install_bare\n\n"
 
 .PHONY: coverage
 coverage:
