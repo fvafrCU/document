@@ -6,7 +6,6 @@ is_failure <- function(result) {
     fail <- as.logical(sum_of_exceptions)
     return(fail)
 }
-if (interactive()) setwd(dirname(tempdir()))
 unit_dir <- system.file("tests", "runit", package = "document")
 package_suite <- RUnit::defineTestSuite("document_unit_test",
                                         dirs = unit_dir,
@@ -14,9 +13,6 @@ package_suite <- RUnit::defineTestSuite("document_unit_test",
                                         testFuncRegexp = "^test_+")
 
 test_result <- RUnit::runTestSuite(package_suite)
-txt_file <- paste(package_suite$name, "txt", sep = ".")
-RUnit::printTextProtocol(test_result, showDetails = TRUE,
-                         fileName = file.path(getwd(), txt_file))
 RUnit::printTextProtocol(test_result, showDetails = TRUE)
 if (interactive()) {
     html_file <- paste(package_suite$name, "html", sep = ".")
