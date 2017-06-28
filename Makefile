@@ -19,18 +19,14 @@ Rscript := Rscript-devel
 .PHONY: all
 all: ${LOG_DIR}/install.Rout utils 
 
-# TODO: START
-
-.PHONY: lefts
-lefts: tag 
-
-.PHONY: tag
-tag:
-	./utils/tag.cl
-
-# TODO: END
 #% devtools
 # a loose collection of helpful stuff while developing
+
+.PHONY: tag
+tag: ${LOG_DIR}/git_tag.Rout 
+${LOG_DIR}/git_tag.Rout:
+	${Rscript} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 2>&1 
+
 .PHONY: devtools
 devtools: cran_comments use_dev_version dependencies_forced vignettes codetags
 
