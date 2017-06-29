@@ -24,8 +24,9 @@ all: ${LOG_DIR}/install.Rout utils
 
 .PHONY: tag
 tag: ${LOG_DIR}/git_tag.Rout 
+.PHONY: ${LOG_DIR}/git_tag.Rout
 ${LOG_DIR}/git_tag.Rout:
-	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 2>&1 
+	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 
 
 .PHONY: devtools
 devtools: cran_comments use_dev_version dependencies_forced vignettes codetags
