@@ -10,11 +10,13 @@ is_git_clone <- function(path = ".") {
     return(is_git_clone)
 }
 
-git_tag <- function(path = ".") {
+git_tag <- function(path = ".", tag_uncommited = FALSE) {
     status <- TRUE
     root <- tryCatch(rprojroot::find_root(rprojroot::is_r_package),
                      error = function(e) return(path))
-    if (is_git_clone(root) && is_git_uncommitted(root))
+    if (is_git_clone(root))
+        stop("Not a git repository.")
+    if (! isTRUE(tag_uncommited))
         stop("Uncommited changes. Aborting")
     repo <- git2r::repository(root)
     tags <- git2r::tags(repo)
