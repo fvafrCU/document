@@ -1,4 +1,3 @@
-# inspired by https://raw.githubusercontent.com/yihui/knitr/master/Makefile
 PKGNAME := $(shell sed -n "s/Package: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGVERS := $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGSRC  := $(shell basename `pwd`)
@@ -17,16 +16,10 @@ R := R-devel
 Rscript := Rscript-devel
 
 .PHONY: all
-all: ${LOG_DIR}/install.Rout utils 
+all: ${LOG_DIR}/git_tag.Rout utils 
 
 #% devtools
 # a loose collection of helpful stuff while developing
-
-.PHONY: tag
-tag: ${LOG_DIR}/git_tag.Rout 
-.PHONY: ${LOG_DIR}/git_tag.Rout
-${LOG_DIR}/git_tag.Rout:
-	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 
 
 .PHONY: devtools
 devtools: cran_comments use_dev_version dependencies_forced vignettes codetags
@@ -36,7 +29,6 @@ codetags: ${LOG_DIR}/check_codetags.Rout
 ${LOG_DIR}/check_codetags.Rout:
 	${Rscript} --vanilla -e 'source(file.path("utils", "checks.R")); check_codetags()' > ${LOG_DIR}/check_codetags.Rout 2>&1 
 
-
 .PHONY: build_win
 build_win:
 	echo "Run \n \t${Rscript} --vanilla -e 'devtools::build_win()'"
@@ -44,12 +36,22 @@ build_win:
 .PHONY: release
 release: build_win
 	echo "Run \n \t${Rscript} --vanilla -e 'devtools::release(check = FALSE)'"
+
 .PHONY: vignettes
 vignettes:
 	${Rscript} --vanilla -e 'devtools::build_vignettes()'
 
 cran-comments.md: ${LOG_DIR}/dev_check.Rout
 	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments(check_log = "log/dev_check.Rout")' > ${LOG_DIR}/cran_comments.Rout 2>&1 
+	
+# rerun check without --run-donttest to create Rout for cran-comments
+.PHONY: dev_check
+dev_check: ${LOG_DIR}/dev_check.Rout
+${LOG_DIR}/dev_check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
+	rm ${TEMP_FILE} || true; \
+		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--no-tests")' > ${TEMP_FILE} 2>&1; \
+		grep -v ".*'/" ${TEMP_FILE} | grep -v ".*‘/" > ${LOG_DIR}/dev_check.Rout ;\
+		grep "checking tests ... SKIPPED" ${LOG_DIR}/dev_check.Rout
 
 .PHONY: use_dev_version
 use_dev_version: ${LOG_DIR}/use_dev_version.Rout
@@ -61,21 +63,17 @@ dependencies_forced: ${LOG_DIR}/dependencies_forced.Rout
 ${LOG_DIR}/dependencies_forced.Rout:
 	${Rscript} --vanilla -e 'deps <-c(${DEPS}); for (dep in deps) install.packages(dep, repos = "https://cran.uni-muenster.de/")' > ${LOG_DIR}/dependencies_forced.Rout 2>&1 
 
-#% install
+#% install/tag
+
+.PHONY: tag
+tag: ${LOG_DIR}/git_tag.Rout 
+${LOG_DIR}/git_tag.Rout: ${LOG_DIR}/install.Rout  
+	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 
 
 .PHONY: install
 install: ${LOG_DIR}/install.Rout
 ${LOG_DIR}/install.Rout: ${LOG_DIR}/check.Rout
 	${R} --vanilla CMD INSTALL  ${PKGNAME}_${PKGVERS}.tar.gz > ${LOG_DIR}/install.Rout 2>&1 
-
-# rerun check without --run-donttest to create Rout for cran-comments
-.PHONY: dev_check
-dev_check: ${LOG_DIR}/dev_check.Rout
-${LOG_DIR}/dev_check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
-	rm ${TEMP_FILE} || true; \
-		${Rscript} --vanilla -e 'devtools::check(cran = TRUE, check_version = TRUE, args = "--no-tests")' > ${TEMP_FILE} 2>&1; \
-		grep -v ".*'/" ${TEMP_FILE} | grep -v ".*‘/" > ${LOG_DIR}/dev_check.Rout ;\
-		grep "checking tests ... SKIPPED" ${LOG_DIR}/dev_check.Rout
 
 # run check with --run-donttest 
 .PHONY: check
