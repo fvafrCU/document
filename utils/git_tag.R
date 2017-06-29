@@ -1,12 +1,13 @@
 # unexported from devtools
 is_git_uncommitted <- function(path = ".") {
   r <- git2r::repository(path, discover = TRUE)
-  st <- vapply(git2r::status(r), length, integer(1))
-  any(st != 0)
+  status <- vapply(git2r::status(r), length, integer(1))
+  return(any(status != 0))
 }
 
 is_git_clone <- function(path = ".") {
-  ! is.null(git2r::discover_repository(path, ceiling = 0))
+    is_git_clone <- ! is.null(git2r::discover_repository(path, ceiling = 0))
+    return(is_git_clone)
 }
 
 git_tag <- function(path = ".") {
@@ -23,6 +24,6 @@ git_tag <- function(path = ".") {
     version <- sub("^Version: ", "", grep("^Version: ", d, value = TRUE))
     if (version != last_version_number)
          status <- system(paste("git tag -a", version))
-    ret(status)
+    return(status)
 }
 
