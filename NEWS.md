@@ -1,10 +1,11 @@
 # document 1.2.0.9000
 
-* restructre Makefile
+* Fix return status of write_the_docs().
+* Restructre the Makefile.
 
 # document 1.2.0
 
-* enhance documenation
+* Enhance documenation.
 
 # document 1.1.0
 

@@ -220,6 +220,7 @@ write_the_docs <- function(package_directory, file_name = package_directory,
     writeLines(Rd_txt, con = txt_path)
     writeLines(Rd_html, con = html_path)
     # only return paths for existing files
+    status[! sapply(status[! sapply(status, is.null)], file.exists)] <- NULL
     status[! sapply(status, file.exists)] <- NULL
     return(status)
 
