@@ -32,6 +32,14 @@
 #' document::man(x = path, topic = "foo")
 #' }
 man <- function(x, topic = NA, force_Rd = FALSE) {
+    if (.Platform$GUI == "RStudio") {
+        if (.Platform$OS.type == "windows") {
+            r_interface <- normalizePath(Sys.which("Rgui"))
+        } else {
+            r_interface <- normalizePath(Sys.which("R"))
+        }
+        stop("Doesn't work with RStudio, use ", r_interface, " instead.")
+    }
     usage <- usage()
     if (file.exists(x)) {
         if (is_Rd_file(x) || ! identical(FALSE, force_Rd)) {
