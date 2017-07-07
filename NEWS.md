@@ -1,6 +1,6 @@
-# document 1.2.0.9000
+# document 1.2.1
 
-* check for RStudio in man().
+* Check for RStudio in man().
 * Fix return status of write_the_docs().
 
 # document 1.2.0
