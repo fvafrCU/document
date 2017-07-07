@@ -1,7 +1,6 @@
 # document 1.2.0.9000
 
 * Fix return status of write_the_docs().
-* Restructre the Makefile.
 
 # document 1.2.0
 
