@@ -1,11 +1,11 @@
 Dear CRAN Team,
-this is a resubmission of package document. I have
-XXX
+this is a patch for package document. I have fixed one function's return value
+and added a RStudio workaround to the man() function.
 Best, Dominik
 
-# Package  document 1.2.0.9000
+# Package  document 1.2.1
 ## Test  environments  
-- R Under development (unstable) (2017-06-23 r72845)
+- R Under development (unstable) (2017-07-07 r72896)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Debian GNU/Linux 8 (jessie) 
 - R version 3.4.0 (2017-04-21)
@@ -14,23 +14,7 @@ Best, Dominik
 - win-builder (devel) 
 
 ## R CMD check results
-checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-Version contains large components (1.2.0.9000)
-
-DONE
-
-Status: 1 NOTE
-See
-for details.
-
-
 R CMD check results
-0 errors | 0 warnings | 1 note 
-checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-Version contains large components (1.2.0.9000)
+0 errors | 0 warnings | 0 notes
 
 
