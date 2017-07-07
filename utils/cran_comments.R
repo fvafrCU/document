@@ -7,7 +7,7 @@ Running under: Ubuntu precise (12.04.5 LTS)
 ")
 
 provide_cran_comments <- function(comments_file = "cran-comments.md",
-                                  check_log = "log/dev_check.Rout",
+                                  check_log = "../log/dev_check.Rout",
                                   travis_raw_log = travis_copy) {
     pkg <- devtools::as.package(".")
     cat("Dear CRAN Team,\n", 
@@ -32,7 +32,8 @@ provide_cran_comments <- function(comments_file = "cran-comments.md",
     cat("- win-builder (devel)", "\n", file = comments_file, append = TRUE)
     cat("\n## R CMD check results\n", file = comments_file, append = TRUE)
     check <- devtools:::parse_check_results(check_log)
-    cat(capture.output(print(check)), "\n" , file = comments_file, 
+    cat(capture.output(devtools:::print.check_results(check), type = "message"),
+        "\n" , file = comments_file, 
         append = TRUE, sep = "\n")
     return(invisible(NULL))
 }
