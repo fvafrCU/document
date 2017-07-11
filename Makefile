@@ -55,6 +55,7 @@ ${LOG_DIR}/dev_check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
 
 .PHONY: use_dev_version
 use_dev_version: ${LOG_DIR}/use_dev_version.Rout
+.PHONY: ${LOG_DIR}/use_dev_version.Rout
 ${LOG_DIR}/use_dev_version.Rout:
 	${Rscript} --vanilla -e 'devtools::use_dev_version()' > ${LOG_DIR}/use_dev_version.Rout 2>&1 
 
