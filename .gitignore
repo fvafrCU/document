@@ -7,3 +7,4 @@ sedscr
 tmp_*
 *Rcheck
 *.png
+log/use_dev_version.Rout
