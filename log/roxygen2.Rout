@@ -24,5 +24,7 @@ Loading required package: devtools
 Loading required package: checkmate
 Writing document.Rd
 Writing write_the_docs.Rd
+Writing throw.Rd
+Writing warn.Rd
 > 
 > 

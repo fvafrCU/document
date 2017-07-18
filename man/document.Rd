@@ -6,12 +6,16 @@
 \usage{
 document(file_name, working_directory = NULL, output_directory = tempdir(),
   dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
-  check_package = TRUE, clean = FALSE, ...)
+  check_package = TRUE, stop_on_check_not_passing = TRUE, clean = FALSE,
+  ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
 
 \item{working_directory}{A working directory. Keep the default.}
+
+\item{output_directory}{The directory to put the documentation into. You
+might want to use \code{\link[base]{dirname}(file_name)}.}
 
 \item{dependencies}{A character vector of package names the functions depend
 on.}
@@ -24,6 +28,8 @@ Do not bother, this is for Unit testing only.}
 
 \item{check_package}{Run \command{R CMD check} the sources? See
 \bold{Note} below.}
+
+\item{stop_on_check_not_passing}{Stop if R CMD check does not pass?}
 
 \item{clean}{Delete the working directory?}
 

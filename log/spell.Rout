@@ -1,4 +1,5 @@
   WORD      FOUND IN
+CMD       document.Rd:32
 roxygen   title:1, description:1,4
 Warning message:
 spell check failed 
