@@ -1,3 +1,7 @@
+# document 1.2.1.9000
+
+* make the check_package return an error...
+
 # document 1.2.1
 
 * Check for RStudio in man().
