@@ -13,9 +13,6 @@ document(file_name, working_directory = NULL, output_directory = tempdir(),
 
 \item{working_directory}{A working directory. Keep the default.}
 
-\item{output_directory}{The directory to put the documentation into. You
-might want to use \code{\link[base]{dirname}(file_name)}.}
-
 \item{dependencies}{A character vector of package names the functions depend
 on.}
 

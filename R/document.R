@@ -58,6 +58,7 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @param check_package Run \command{R CMD check} the sources? See
 #' \bold{Note} below.
 #' @param clean Delete the working directory?
+#' @param stop_on_check_not_passing Stop if R CMD check does not pass?
 #' @note One of the main features of \command{R CMD check} is checking for
 #' code/documentation mismatches (it behaves pretty much like
 #' \command{doxygen}).
@@ -100,7 +101,8 @@ document <- function(file_name,
                      working_directory = NULL,
                      output_directory = tempdir(),
                      dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
-                     check_package = TRUE, clean = FALSE, ...) {
+                     check_package = TRUE, stop_on_check_not_passing = TRUE,
+                     clean = FALSE, ...) {
     if (is.null(working_directory))
         working_directory <- file.path(tempdir(),
                                        paste0("document_",
@@ -131,6 +133,15 @@ document <- function(file_name,
         # devtools::check's return value is crap, so use R CMD check via callr.
         tmp <- callr::rcmd_safe("check",
                                 c(paste0("--output=", working_directory), tgz))
+        check_log <- unlist(strsplit(tmp[["stdout"]], split = "\n"))
+        if (check_log[length(check_log)] != "Status: OK") {
+            if (isTRUE(stop_on_check_not_passing)) {
+                print(check_log)
+                throw("R CMD check failed, read the above log and fix.")
+            } else {
+                warn("R CMD check failed, read the log and fix.")
+            }
+        }
         status[["check_result"]] <- tmp
     }
     return(status)

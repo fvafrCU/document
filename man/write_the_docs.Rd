@@ -15,9 +15,6 @@ write_the_docs(package_directory, file_name = package_directory,
 \item{file_name}{The name of the file where to write the documentation into. 
 See \strong{Details}.}
 
-\item{output_directory}{The directory to put the documentation into. You
-might want to use \code{\link[base]{dirname}(file_name)}.}
-
 \item{dependencies}{A character vector of package names the functions depend
 on.}
 
@@ -26,6 +23,9 @@ on.}
 \item{runit}{Convert the text received from the help files if running
 \pkg{RUnit}?
 Do not bother, this is for Unit testing only.}
+
+\item{autput_directory}{The directory to put the documentation into. You
+might want to use \code{\link[base]{dirname}(file_name)}.}
 }
 \value{
 A list containing

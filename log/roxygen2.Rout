@@ -1,5 +1,5 @@
 
-R Under development (unstable) (2017-07-07 r72896) -- "Unsuffered Consequences"
+R Under development (unstable) (2017-05-04 r72654) -- "Unsuffered Consequences"
 Copyright (C) 2017 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -22,5 +22,7 @@ Loading required package: roxygen2
 Loading required package: callr
 Loading required package: devtools
 Loading required package: checkmate
+Writing document.Rd
+Writing write_the_docs.Rd
 > 
 > 

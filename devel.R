@@ -41,4 +41,10 @@ res <- document(file_name = system.file("tests", "files", "minimal.R",
                 check_package = TRUE)
 })
 
+working_directory = "/tmp"
+package_directory = "."
+tgz <- "document_1.2.1.9000.tar.gz"
+    tmp <- callr::rcmd_safe("check",
+                        c(paste0("--output=", working_directory), tgz))
 
+d <- document("R/document.R", stop_on_check_not_passing = FALSE)
