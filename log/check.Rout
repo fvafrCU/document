@@ -1,15 +1,15 @@
-* using log directory ‘/home/nik/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-07-07 r72896)
+* using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2017-07-24 r72966)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘1.2.0.9000’
+* this is package ‘document’ version ‘1.2.1.9000’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Version contains large components (1.2.0.9000)
+Version contains large components (1.2.1.9000)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -23,7 +23,8 @@ Version contains large components (1.2.0.9000)
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
-* checking top-level files ... OK
+* checking top-level files ... NOTE
+Files ‘README.md’ or ‘NEWS.md’ cannot be checked without ‘pandoc’ being installed.
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -34,6 +35,7 @@ Version contains large components (1.2.0.9000)
 * checking whether the package can be unloaded cleanly ... OK
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
 * checking use of S3 registration ... OK
 * checking dependencies in R code ... OK
 * checking S3 generic/method consistency ... OK
@@ -49,20 +51,38 @@ Version contains large components (1.2.0.9000)
 * checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
+ WARNING
+‘qpdf’ is needed for checks on size reduction of PDFs
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-           user system elapsed
-man      15.476  2.256  39.827
-document 10.252  1.104  25.827
+     user system elapsed
+man 4.252  0.512   6.253
 * checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ... OK
-  Running ‘runit.R’ [12s/18s]
-  Running ‘testthat.R’ [153s/199s]
+* checking tests ... ERROR
+  Running ‘runit.R’
+  Running ‘testthat.R’ [14s/24s]
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+  [45] "* checking for missing documentation entries ... OK"                           
+  [46] "* checking for code/documentation mismatches ... OK"                           
+  [47] "* checking Rd \\usage sections ... OK"                                         
+  [48] "* checking Rd contents ... OK"                                                 
+  [49] "* checking for unstated dependencies in examples ... OK"                       
+  [50] "* checking examples ... OK"                                                    
+  [51] "* checking PDF version of manual ... OK"                                       
+  [52] "* DONE"                                                                        
+  [53] "Status: 1 WARNING"                                                             
+  Error in document(file_name, check_package = TRUE, runit = TRUE) : 
+    R CMD check failed, read the above log and fix.
+  Calls: test_check ... force -> source_file -> eval -> eval -> document -> throw
+  testthat results ================================================================
+  OK: 0 SKIPPED: 0 FAILED: 0
+  Execution halted
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 NOTEs
+Status: 1 ERROR, 1 WARNING, 3 NOTEs

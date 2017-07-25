@@ -82,7 +82,7 @@ check: ${LOG_DIR}/check.Rout
 ${LOG_DIR}/check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
 	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
 		${R} --vanilla CMD check --as-cran --run-donttest \
-		${PKGNAME}_${PKGVERS}.tar.gz && \
+		${PKGNAME}_${PKGVERS}.tar.gz ; \
 		cp ${PKGNAME}.Rcheck/00check.log ${LOG_DIR}/check.Rout
 
 .PHONY: build
