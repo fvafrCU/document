@@ -7,7 +7,7 @@ TESTS_FILES := $(shell find tests/ -type f)
 RUNIT_FILES := $(shell find tests/ -type f | grep  'runit')
 TESTTHAT_FILES := $(shell find tests/ -type f | grep  'testthat')
 VIGNETTES_FILES := $(shell find vignettes/ -type f)
-DEPS := "callr", "rprojroot", "covr", "knitr", "devtools", "rmarkdown", "RUnit", "checkmate", "roxygen2", "lintr", "hunspell"
+DEPS := "callr", "rprojroot", "covr", "knitr", "devtools", "rmarkdown", "RUnit", "checkmate", "roxygen2", "lintr", "hunspell", "roxygen2", "devtools"
 
 TEMP_FILE := $(shell tempfile)
 LOG_DIR := log
@@ -16,13 +16,18 @@ R := R-devel
 Rscript := Rscript-devel
 
 .PHONY: all
-all: ${LOG_DIR}/git_tag.Rout utils 
+all: install utils 
 
 #% devtools
 # a loose collection of helpful stuff while developing
 
 .PHONY: devtools
-devtools: cran_comments use_dev_version dependencies_forced vignettes codetags
+devtools: cran_comments use_dev_version dependencies_forced vignettes codetags tag
+
+.PHONY: tag
+tag: ${LOG_DIR}/git_tag.Rout 
+${LOG_DIR}/git_tag.Rout: ${LOG_DIR}/install.Rout  
+	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 
 
 .PHONY: codetags
 codetags: ${LOG_DIR}/check_codetags.Rout 
@@ -64,12 +69,7 @@ dependencies_forced: ${LOG_DIR}/dependencies_forced.Rout
 ${LOG_DIR}/dependencies_forced.Rout:
 	${Rscript} --vanilla -e 'deps <-c(${DEPS}); for (dep in deps) install.packages(dep, repos = "https://cran.uni-muenster.de/")' > ${LOG_DIR}/dependencies_forced.Rout 2>&1 
 
-#% install/tag
-
-.PHONY: tag
-tag: ${LOG_DIR}/git_tag.Rout 
-${LOG_DIR}/git_tag.Rout: ${LOG_DIR}/install.Rout  
-	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 
+#% install
 
 .PHONY: install
 install: ${LOG_DIR}/install.Rout
@@ -106,6 +106,7 @@ README.md: README.Rmd
 
 .PHONY: dependencies
 dependencies: ${LOG_DIR}/dependencies.Rout
+.PHONY: ${LOG_DIR}/dependencies.Rout
 ${LOG_DIR}/dependencies.Rout:
 	${Rscript} --vanilla -e 'deps <-c(${DEPS}); for (dep in deps) {if (! require(dep, character.only = TRUE)) install.packages(dep, repos = "https://cran.uni-muenster.de/")}' > ${LOG_DIR}/dependencies.Rout 2>&1 
 
