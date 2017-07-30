@@ -1,6 +1,6 @@
 #' Throw an Error
 #'
-#' Throws a condition of class c("error", "document", "condition").
+#' Throws a condition of class c("document", "error", "condition").
 #'
 #' We use this condition as an error dedicated to \pkg{document}.
 #'
@@ -15,7 +15,7 @@
 throw <- function(message_string, system_call = sys.call(-1), ...) {
     checkmate::qassert(message_string, "s*")
     condition <- structure(
-                           class = c("error", "document", "condition"),
+                           class = c("document", "error", "condition"),
                            list(message = message_string, call = system_call),
                            ...
                            )
@@ -25,7 +25,7 @@ throw <- function(message_string, system_call = sys.call(-1), ...) {
 
 #' Throw a Warning
 #'
-#' Throws a condition of class c("warning", "document", "condition").
+#' Throws a condition of class c("document", "warning", "condition").
 #'
 #' We use this condition as a warning dedicated to \pkg{document}.
 #'
@@ -39,7 +39,7 @@ throw <- function(message_string, system_call = sys.call(-1), ...) {
 warn <- function(message_string, system_call = sys.call(-1), ...) {
     checkmate::qassert(message_string, "s*")
     condition <- structure(
-                           class = c("warning", "document", "condition"),
+                           class = c("document", "warning", "condition"),
                            list(message = message_string, call = system_call),
                            ...
                            )

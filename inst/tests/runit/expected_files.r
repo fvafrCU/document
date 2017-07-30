@@ -9,7 +9,7 @@ test_txt <- function() {
     input <- file.path(system.file("tests", "files", package = "document"),
                        sub("\\.txt", ".R", basename(file_name)))
     txt_name <- document(input, output_directory = output_directory,
-                         check = FALSE, runit = TRUE)[["txt_path"]]
+                         check_package = FALSE, runit = TRUE)[["txt_path"]]
     current <- readLines(txt_name)
     reference  <- readLines(file_name)
     RUnit::checkTrue(identical(current, reference))

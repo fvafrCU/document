@@ -17,7 +17,7 @@ warn(message_string, system_call = sys.call(-1), ...)
 The condition.
 }
 \description{
-Throws a condition of class c("warning", "document", "condition").
+Throws a condition of class c("document", "warning", "condition").
 }
 \details{
 We use this condition as a warning dedicated to \pkg{document}.

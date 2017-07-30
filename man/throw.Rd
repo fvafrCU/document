@@ -18,7 +18,7 @@ FALSE. But it does not return anything, it stops with a
 condition of class c("document", "error", "condition").
 }
 \description{
-Throws a condition of class c("error", "document", "condition").
+Throws a condition of class c("document", "error", "condition").
 }
 \details{
 We use this condition as an error dedicated to \pkg{document}.
