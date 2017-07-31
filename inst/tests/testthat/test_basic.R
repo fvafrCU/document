@@ -9,4 +9,4 @@ file_name  <- file.path(system.file("tests",
                                     "files",
                                     package = "document"),
                         "mini_mal.R")
-res <- document(file_name, check_package = TRUE, runit = TRUE, debug = TRUE)
+res <- document(file_name, check_package = TRUE, runit = TRUE, debug = TRUE, stop_on_check_not_passing = TRUE)

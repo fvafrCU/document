@@ -81,7 +81,6 @@ ${LOG_DIR}/install.Rout: ${LOG_DIR}/check.Rout
 check: ${LOG_DIR}/check.Rout
 ${LOG_DIR}/check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
 	export _R_CHECK_FORCE_SUGGESTS_=TRUE && \
-		export R_LIBS_USER="/home/qwer/svn/R/r-devel/build/library" && \
 		${R} --vanilla CMD check --as-cran --run-donttest \
 		${PKGNAME}_${PKGVERS}.tar.gz ; \
 		cp ${PKGNAME}.Rcheck/00check.log ${LOG_DIR}/check.Rout
