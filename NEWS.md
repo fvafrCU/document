@@ -1,6 +1,12 @@
 # document 1.2.1.9000
 
-* make the check_package return an error...
+* document() throws an error if the temporary package does not pass R CMD
+  check without errors, warnings or notes. 
+  - add argument 'stop\_on\_check\_not\_passing'. Set to FALSE to issue a
+    warning() instead of throwing an error.
+  - add argument 'check_as_cran' to use the --as-cran flaog with R CMD check,
+    document() then assumes a single NOTE (on the CRAN incoming feasibility) to
+    be okay.
 
 # document 1.2.1
 

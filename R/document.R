@@ -159,7 +159,7 @@ document <- function(file_name,
         check_log <- unlist(strsplit(tmp[["stdout"]], split = "\n"))
         if (check_log[length(check_log)] != expectation) {
             if (isTRUE(stop_on_check_not_passing)) {
-                print(check_log)
+                message(paste(check_log, collapse = "\n"))
                 throw("R CMD check failed, read the above log and fix.")
             } else {
                 warn("R CMD check failed, read the log and fix.")

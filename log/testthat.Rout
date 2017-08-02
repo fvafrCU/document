@@ -2,7 +2,7 @@ Loading document
 Loading required package: testthat
 Testing document
 files: First time using roxygen2. Upgrading automatically...
-Updating roxygen version in document_1143679caf59/mini.mal/DESCRIPTION
+Updating roxygen version in document_69d34d0c90dd/mini.mal/DESCRIPTION
 ..
 expected files: ..
 man: _a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
@@ -97,8 +97,6 @@ _E_x_a_m_p_l_e_s:
 
 .
 file parsing: .........
-utils: W..
-
-Warnings -----------------------------------------------------------------------
-1. fake package (@test_basic.R#206) - Couldn't find roxygen comments in file document/inst/tests/files/no_roxy.R.
+utils: ...
+checking the package: ....
 

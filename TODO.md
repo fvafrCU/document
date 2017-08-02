@@ -1,4 +1,3 @@
-- throw an error if RMD check fails an error is not forced to warning
 - fix man() to run with RStudio
 - improve vignette
 - consider using withr
