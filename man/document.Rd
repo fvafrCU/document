@@ -6,8 +6,8 @@
 \usage{
 document(file_name, working_directory = NULL, output_directory = tempdir(),
   dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
-  check_package = TRUE, stop_on_check_not_passing = TRUE, clean = FALSE,
-  check_as_cran = TRUE, debug = TRUE, ...)
+  check_package = TRUE, check_as_cran = check_package,
+  stop_on_check_not_passing = TRUE, clean = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
@@ -29,13 +29,12 @@ Do not bother, this is for Unit testing only.}
 \item{check_package}{Run \command{R CMD check} the sources? See
 \bold{Note} below.}
 
+\item{check_as_cran}{Use the \command{--as-cran} flag with 
+\command{R CMD check}?}
+
 \item{stop_on_check_not_passing}{Stop if \command{R CMD check} does not pass?}
 
 \item{clean}{Delete the working directory?}
-
-\item{check_as_cran}{Use the --as-cran flag with \command{R CMD check}?}
-
-\item{debug}{Write the R CMD check log to a temporary file on disk?}
 
 \item{...}{Arguments passed to \code{\link{get_lines_between_tags}}.}
 }

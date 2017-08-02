@@ -57,10 +57,10 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @inheritParams write_the_docs
 #' @param check_package Run \command{R CMD check} the sources? See
 #' \bold{Note} below.
-#' @param clean Delete the working directory?
+#' @param check_as_cran Use the \command{--as-cran} flag with 
+#' \command{R CMD check}?
 #' @param stop_on_check_not_passing Stop if \command{R CMD check} does not pass?
-#' @param check_as_cran Use the --as-cran flag with \command{R CMD check}?
-#' @param debug Write the R CMD check log to a temporary file on disk?
+#' @param clean Delete the working directory?
 #' @note One of the main features of \command{R CMD check} is checking for
 #' code/documentation mismatches (it behaves pretty much like
 #' \command{doxygen}).
@@ -103,8 +103,8 @@ document <- function(file_name,
                      working_directory = NULL,
                      output_directory = tempdir(),
                      dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
-                     check_package = TRUE, stop_on_check_not_passing = TRUE,
-                     clean = FALSE, check_as_cran = TRUE, debug = TRUE, ...) {
+                     check_package = TRUE, check_as_cran = check_package, 
+                     stop_on_check_not_passing = TRUE, clean = FALSE, ...) {
     if (is.null(working_directory))
         working_directory <- file.path(tempdir(),
                                        paste0("document_",
@@ -141,12 +141,22 @@ document <- function(file_name,
         } else {
             expectation <- "Status: OK"
         }
-        tmp <- callr::rcmd_safe("check", check_args)
+        # When running the tests via R CMD check, libPath()'s first element is a
+        # path to a temporary library. callr::rcmd_safe() seems to only read the
+        # first element of its libpath argument, and then R CMD check warns:
+        #
+        # > * checking Rd cross-references ... WARNING
+        # > Error in find.package(package, lib.loc) : 
+        # >   there is no package called ‘MASS’
+        # > Calls: <Anonymous> -> lapply -> FUN -> find.package
+        # > Execution halted
+        #
+        # We could ignore this, but checking the log on the existance of
+        # warnings to stop_on_check_not_passing does not work then. So:
+        libpath <- .libPaths()[length(.libPaths())]
+        tmp <- callr::rcmd_safe("check", cmdargs = check_args, 
+                                libpath = libpath)
         check_log <- unlist(strsplit(tmp[["stdout"]], split = "\n"))
-        if (isTRUE(debug)) {
-            cat(tmp$stdout, sep = "\n", 
-                file = file.path(dirname(tempdir()), "check.log"))
-        }
         if (check_log[length(check_log)] != expectation) {
             if (isTRUE(stop_on_check_not_passing)) {
                 print(check_log)
