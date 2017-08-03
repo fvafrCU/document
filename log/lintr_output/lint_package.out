@@ -1,1 +1,47 @@
-Congratulations: no lints found.
+inst/tests/testthat/test_basic.R 126 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = TRUE) list(c(1, 84)) line_length_linter
+inst/tests/testthat/test_basic.R 126 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = TRUE) list(c(1, 84)) line_length_linter
+inst/tests/testthat/test_basic.R 128 61 style Trailing whitespace is superfluous.                                                  "simple.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 128 61 style Trailing whitespace is superfluous.                                                  "simple.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 138 61 style Trailing whitespace is superfluous.                                                  "foobar.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 138 61 style Trailing whitespace is superfluous.                                                  "foobar.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 147 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = FALSE) list(c(1, 85)) line_length_linter
+inst/tests/testthat/test_basic.R 147 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = FALSE) list(c(1, 85)) line_length_linter
+inst/tests/testthat/test_basic.R 155 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "foo.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 155 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "foo.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 164 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "foo.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 164 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "foo.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 167 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = F) list(c(1, 81)) line_length_linter
+inst/tests/testthat/test_basic.R 167 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = F) list(c(1, 81)) line_length_linter
+inst/tests/testthat/test_basic.R 169 61 style Trailing whitespace is superfluous.                                                  "foo_nl.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 169 61 style Trailing whitespace is superfluous.                                                  "foo_nl.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 175 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "bar.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 175 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "bar.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 184 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "bar.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 184 61 style Trailing whitespace is superfluous.               path <- system.file("tests", "files", "bar.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 187 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = F) list(c(1, 81)) line_length_linter
+inst/tests/testthat/test_basic.R 187 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = F) list(c(1, 81)) line_length_linter
+inst/tests/testthat/test_basic.R 189 61 style Trailing whitespace is superfluous.                                                  "bar_nl.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 189 61 style Trailing whitespace is superfluous.                                                  "bar_nl.R",  list(c(61, 61)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 198 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = F) list(c(1, 81)) line_length_linter
+inst/tests/testthat/test_basic.R 198 1 style lines should not be more than 80 characters.                                                            keep_tagged_lines = F) list(c(1, 81)) line_length_linter
+inst/tests/testthat/test_basic.R 206 1 style lines should not be more than 80 characters.                                                            from_first_line = FALSE) list(c(1, 83)) line_length_linter
+inst/tests/testthat/test_basic.R 206 1 style lines should not be more than 80 characters.                                                            from_first_line = FALSE) list(c(1, 83)) line_length_linter
+inst/tests/testthat/test_basic.R 237 69 style Trailing whitespace is superfluous.                            document(file_name, check_package = TRUE,  list(c(69, 69)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 237 69 style Trailing whitespace is superfluous.                            document(file_name, check_package = TRUE,  list(c(69, 69)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 238 50 style Trailing whitespace is superfluous.                                     runit = TRUE,  list(c(50, 50)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 238 50 style Trailing whitespace is superfluous.                                     runit = TRUE,  list(c(50, 50)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 239 70 style Trailing whitespace is superfluous.                                     stop_on_check_not_passing = TRUE,  list(c(70, 70)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 239 70 style Trailing whitespace is superfluous.                                     stop_on_check_not_passing = TRUE,  list(c(70, 70)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 251 69 style Trailing whitespace is superfluous.                            document(file_name, check_package = TRUE,  list(c(69, 69)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 251 69 style Trailing whitespace is superfluous.                            document(file_name, check_package = TRUE,  list(c(69, 69)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 252 50 style Trailing whitespace is superfluous.                                     runit = TRUE,  list(c(50, 50)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 252 50 style Trailing whitespace is superfluous.                                     runit = TRUE,  list(c(50, 50)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 265 71 style Trailing whitespace is superfluous.                              document(file_name, check_package = TRUE,  list(c(71, 71)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 265 71 style Trailing whitespace is superfluous.                              document(file_name, check_package = TRUE,  list(c(71, 71)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 279 71 style Trailing whitespace is superfluous.                              document(file_name, check_package = TRUE,  list(c(71, 71)) trailing_whitespace_linter
+inst/tests/testthat/test_basic.R 279 71 style Trailing whitespace is superfluous.                              document(file_name, check_package = TRUE,  list(c(71, 71)) trailing_whitespace_linter
+R/document.R 106 74 style Trailing whitespace is superfluous.                      check_package = TRUE, check_as_cran = check_package,  list(c(74, 74)) trailing_whitespace_linter
+R/document.R 138 53 style Trailing whitespace is superfluous.             check_args <- c("--as-cran", check_args)  list(c(53, 53)) trailing_whitespace_linter
+R/document.R 149 54 style Trailing whitespace is superfluous.         # > Error in find.package(package, lib.loc) :  list(c(54, 54)) trailing_whitespace_linter
+R/document.R 157 63 style Trailing whitespace is superfluous.         tmp <- callr::rcmd_safe("check", cmdargs = check_args,  list(c(63, 63)) trailing_whitespace_linter
+R/internals.R 49 1 style Trailing blank lines are superfluous.  NULL trailing_blank_lines_linter

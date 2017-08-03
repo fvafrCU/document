@@ -7,7 +7,7 @@ TESTS_FILES := $(shell find tests/ -type f)
 RUNIT_FILES := $(shell find tests/ -type f | grep  'runit')
 TESTTHAT_FILES := $(shell find tests/ -type f | grep  'testthat')
 VIGNETTES_FILES := $(shell find vignettes/ -type f)
-DEPS := "callr", "rprojroot", "covr", "knitr", "devtools", "rmarkdown", "RUnit", "checkmate", "roxygen2", "lintr", "hunspell", "roxygen2", "devtools"
+DEPS := "callr", "rprojroot", "covr", "knitr", "devtools", "rmarkdown", "RUnit", "checkmate", "roxygen2", "lintr", "hunspell", "roxygen2", "cleanr"
 
 TEMP_FILE := $(shell tempfile)
 LOG_DIR := log
@@ -22,7 +22,7 @@ all: install utils
 # a loose collection of helpful stuff while developing
 
 .PHONY: devtools
-devtools: cran_comments use_dev_version dependencies_forced vignettes codetags tag
+devtools: cran_comments.md use_dev_version dependencies_forced vignettes codetags tag
 
 .PHONY: tag
 tag: ${LOG_DIR}/git_tag.Rout 
@@ -124,7 +124,7 @@ ${LOG_DIR}/covr.Rout: ${R_FILES} ${TESTS_FILES}
 .PHONY: cleanr
 cleanr: ${LOG_DIR}/cleanr.Rout 
 ${LOG_DIR}/cleanr.Rout: ${R_FILES}
-	${Rscript} --vanilla -e 'print(cleanr::check_directory("R/",  max_num_arguments = 9, check_return = FALSE))' > ${LOG_DIR}/cleanr.Rout 2>&1 
+	${Rscript} --vanilla -e 'print(cleanr::check_directory("R/",  max_num_arguments = 11, check_return = FALSE))' > ${LOG_DIR}/cleanr.Rout 2>&1 
 
 .PHONY: lintr
 lintr: ${LOG_DIR}/lintr.Rout 
