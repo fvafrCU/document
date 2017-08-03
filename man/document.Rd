@@ -7,7 +7,7 @@
 document(file_name, working_directory = NULL, output_directory = tempdir(),
   dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
   check_package = TRUE, check_as_cran = check_package,
-  stop_on_check_not_passing = TRUE, clean = FALSE, ...)
+  stop_on_check_not_passing = TRUE, clean = FALSE, debug = FALSE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
@@ -35,6 +35,8 @@ Do not bother, this is for Unit testing only.}
 \item{stop_on_check_not_passing}{Stop if \command{R CMD check} does not pass?}
 
 \item{clean}{Delete the working directory?}
+
+\item{debug}{For internal use only: Summarize errors for \command{travis}?}
 
 \item{...}{Arguments passed to \code{\link{get_lines_between_tags}}.}
 }

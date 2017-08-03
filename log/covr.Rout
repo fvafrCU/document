@@ -1,16 +1,31 @@
-         filename      functions line value
-268  R/document.R write_the_docs  221     0
-271  R/document.R write_the_docs  224     0
-23  R/internals.R          throw   23     0
-49        R/man.R            man   36     0
-53        R/man.R            man   37     0
-57        R/man.R            man   38     0
-61        R/man.R            man   39     0
-65        R/man.R            man   40     0
-69        R/man.R            man   41     0
-document Coverage: 97.00%
+                 filename      functions line value
+273          R/document.R write_the_docs  138     0
+276          R/document.R write_the_docs  141     0
+23          R/internals.R          throw   23     0
+49                R/man.R            man   36     0
+53                R/man.R            man   37     0
+57                R/man.R            man   38     0
+61                R/man.R            man   39     0
+65                R/man.R            man   40     0
+69                R/man.R            man   41     0
+191 R/package_functions.R  check_package   81     0
+221 R/package_functions.R  check_package  106     0
+223 R/package_functions.R  check_package  107     0
+225 R/package_functions.R  check_package  108     0
+227 R/package_functions.R  check_package  109     0
+228 R/package_functions.R  check_package  110     0
+229 R/package_functions.R  check_package  111     0
+230 R/package_functions.R  check_package  112     0
+231 R/package_functions.R  check_package  113     0
+232 R/package_functions.R  check_package  114     0
+233 R/package_functions.R  check_package  115     0
+234 R/package_functions.R  check_package  116     0
+235 R/package_functions.R  check_package  117     0
+236 R/package_functions.R  check_package  118     0
+document Coverage: 92.63%
+R/package_functions.R: 81.08%
 R/man.R: 90.62%
 R/internals.R: 93.75%
-R/document.R: 98.57%
+R/document.R: 97.44%
 R/file_parsing.R: 100.00%
 R/utils.R: 100.00%

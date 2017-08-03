@@ -4,6 +4,7 @@ if (interactive()) {
 } else {
     library("document")
 }
+glbt <- document:::get_lines_between_tags
 context("files")
 file_name  <- file.path(system.file("tests",
                                     "files",
@@ -122,10 +123,9 @@ context("file parsing")
 test_that("simple", {
               path <- system.file("tests", "files", "simple.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path,
-                                                           keep_tagged_lines = TRUE)
+              current <- glbt(path, keep_tagged_lines = TRUE)
               reference <- readLines(system.file("tests", "expected_files",
-                                                 "simple.R", 
+                                                 "simple.R",
                                                  package = "document"))
               expect_equal(current, reference)
 }
@@ -133,9 +133,9 @@ test_that("simple", {
 test_that("foobar", {
               path <- system.file("tests", "files", "foobar.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path)
+              current <- glbt(path)
               reference <- readLines(system.file("tests", "expected_files",
-                                                 "foobar.R", 
+                                                 "foobar.R",
                                                  package = "document"))
               expect_equal(current, reference)
 }
@@ -143,8 +143,7 @@ test_that("foobar", {
 test_that("foobar no tagged lines", {
               path <- system.file("tests", "files", "foobar.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path,
-                                                           keep_tagged_lines = FALSE)
+              current <- glbt(path, keep_tagged_lines = FALSE)
               reference <- readLines(system.file("tests", "expected_files",
                                                  "foobar_nl.R",
                                                  package = "document"))
@@ -152,41 +151,41 @@ test_that("foobar no tagged lines", {
 }
 )
 test_that("foo", {
-              path <- system.file("tests", "files", "foo.R", 
+              path <- system.file("tests", "files", "foo.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path)
+              current <- glbt(path)
               reference <- readLines(system.file("tests", "expected_files",
-                                                 "foo.R", package = "document"))
+                                                 "foo.R",
+                                                 package = "document"))
               expect_equal(current, reference)
 }
 )
 test_that("foo no tagged lines", {
-              path <- system.file("tests", "files", "foo.R", 
+              path <- system.file("tests", "files", "foo.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path,
-                                                           keep_tagged_lines = F)
+              current <- glbt(path, keep_tagged_lines = FALSE)
               reference <- readLines(system.file("tests", "expected_files",
-                                                 "foo_nl.R", 
+                                                 "foo_nl.R",
                                                  package = "document"))
               expect_equal(current, reference)
 }
 )
 test_that("bar", {
-              path <- system.file("tests", "files", "bar.R", 
+              path <- system.file("tests", "files", "bar.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path)
+              current <- glbt(path)
               reference <- readLines(system.file("tests", "expected_files",
-                                                 "bar.R", package = "document"))
+                                                 "bar.R",
+                                                 package = "document"))
               expect_equal(current, reference)
 }
 )
 test_that("bar no tagged lines", {
-              path <- system.file("tests", "files", "bar.R", 
+              path <- system.file("tests", "files", "bar.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path,
-                                                           keep_tagged_lines = F)
+              current <- glbt(path, keep_tagged_lines = FALSE)
               reference <- readLines(system.file("tests", "expected_files",
-                                                 "bar_nl.R", 
+                                                 "bar_nl.R",
                                                  package = "document"))
               expect_equal(current, reference)
 }
@@ -194,16 +193,14 @@ test_that("bar no tagged lines", {
 test_that("no tagged lines", {
               path <- system.file("tests", "files", "minimal.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path,
-                                                           keep_tagged_lines = F)
+              current <- glbt(path, keep_tagged_lines = FALSE)
               expect_equal(current, character(0))
 }
 )
 test_that("no tagged lines, not_from", {
               path <- system.file("tests", "files", "minimal.R",
                                   package = "document")
-              current <- document:::get_lines_between_tags(path,
-                                                           from_first_line = FALSE)
+              current <- glbt(path, from_first_line = FALSE)
               expect_equal(current, NULL)
 }
 )
@@ -234,9 +231,9 @@ test_that("error on bug, not as cran", {
                                                   package = "document"),
                                       "warn.R")
               expect_error(
-                           document(file_name, check_package = TRUE, 
-                                    runit = TRUE, 
-                                    stop_on_check_not_passing = TRUE, 
+                           document(file_name, check_package = TRUE,
+                                    runit = TRUE,
+                                    stop_on_check_not_passing = TRUE,
                                     check_as_cran = FALSE)
                            )
 }
@@ -248,8 +245,8 @@ test_that("error on bug, as cran", {
                                                   package = "document"),
                                       "warn.R")
               expect_error(
-                           document(file_name, check_package = TRUE, 
-                                    runit = TRUE, 
+                           document(file_name, check_package = TRUE,
+                                    runit = TRUE,
                                     stop_on_check_not_passing = TRUE,
                                     check_as_cran = TRUE)
                            )
@@ -262,7 +259,7 @@ test_that("warning on bug, not as cran", {
                                                   package = "document"),
                                       "warn.R")
               expect_warning(
-                             document(file_name, check_package = TRUE, 
+                             document(file_name, check_package = TRUE,
                                       runit = TRUE,
                                       stop_on_check_not_passing = FALSE,
                                       check_as_cran = TRUE)
@@ -276,7 +273,7 @@ test_that("warning on bug, as cran", {
                                                   package = "document"),
                                       "warn.R")
               expect_warning(
-                             document(file_name, check_package = TRUE, 
+                             document(file_name, check_package = TRUE,
                                       runit = TRUE,
                                       stop_on_check_not_passing = FALSE,
                                       check_as_cran = FALSE)

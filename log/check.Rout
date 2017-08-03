@@ -58,7 +58,7 @@ InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [72s/101s]
+  Running ‘testthat.R’ [71s/98s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK

@@ -124,7 +124,7 @@ ${LOG_DIR}/covr.Rout: ${R_FILES} ${TESTS_FILES}
 .PHONY: cleanr
 cleanr: ${LOG_DIR}/cleanr.Rout 
 ${LOG_DIR}/cleanr.Rout: ${R_FILES}
-	${Rscript} --vanilla -e 'print(cleanr::check_directory("R/",  max_num_arguments = 11, check_return = FALSE))' > ${LOG_DIR}/cleanr.Rout 2>&1 
+	${Rscript} --vanilla -e 'print(cleanr::check_directory("R/",  max_num_arguments = 12, check_return = FALSE))' > ${LOG_DIR}/cleanr.Rout 2>&1 
 
 .PHONY: lintr
 lintr: ${LOG_DIR}/lintr.Rout 
