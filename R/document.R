@@ -153,7 +153,6 @@ document <- function(file_name,
         #
         # We could ignore this, but checking the log on the existance of
         # warnings to stop_on_check_not_passing does not work then. So:
-                message(paste(.libPaths(), collapse = "\n"))
         libpath <- .libPaths()[length(.libPaths())]
         tmp <- callr::rcmd_safe("check", cmdargs = check_args, 
                                 libpath = libpath)
@@ -162,9 +161,12 @@ document <- function(file_name,
             if (isTRUE(stop_on_check_not_passing)) {
                 message(paste(check_log, collapse = "\n"))
                 i = grep("WARNING|ERROR|NOTE", check_log)
-                i = unlist(lapply(i, function(x) return(seq(from = x, length.out = 7))))
+                i = unlist(lapply(i, function(x) return(seq(from = x, 
+                                                            length.out = 7))))
                 i <- i[i <= length(check_log)]
                 rule <- "###"
+                message(paste(c(rule, check_log[length(check_log)], expectation), collapse = "\n"))
+                message(paste(c(rule, .libPaths()), collapse = "\n"))
                 message(paste(c(rule, check_log[i], rule), collapse  ="\n"))
                 throw("R CMD check failed, read the above log and fix.")
             } else {

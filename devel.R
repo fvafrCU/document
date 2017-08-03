@@ -65,8 +65,13 @@ stop_on_check_not_passing = TRUE; clean = FALSE;
         i = unlist(lapply(i, function(x) return(seq(from = x, length.out = 7))))
         i <- i[i <= length(check_log)]
         rule <- "================="
-        message(paste(rule, check_log[i], rule, collapse  ="\n"))
+        message(paste(c(rule, check_log[i], rule), collapse  ="\n"))
         vapply(i, function(x) return(seq(from = x, length.out = 3)), numeric())
 
+
+                rule <- "###"
+                message(paste(c(rule, check_log[length(check_log)], expectation), collapse = "\n"))
+                message(paste(c(rule, .libPaths()), collapse = "\n"))
+                message(paste(c(rule, check_log[i], rule), collapse  ="\n"))
 
 res <- document(file_name, check_package = TRUE, runit = TRUE)
