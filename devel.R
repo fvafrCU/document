@@ -1,50 +1,72 @@
 devtools::load_all()
-path <- system.file("tests", "files", "minimal.R", package = "document")
-document::man(x = path, topic = "foo")
-options(useFancyQuotes = FALSE)
-document(file_name = system.file("tests", "files", "simple.R", package = "document"), check_package = FALSE, runit = TRUE)
-x = document(file_name = system.file("tests", "files", "simple.R", package = "document"), check_package = TRUE, runit = TRUE)
-y = document(file_name = system.file("tests", "files", "warn.R", package = "document"), check_package = TRUE, runit = TRUE)
-z = document(file_name = system.file("tests", "files", "err.R", package = "document"), check_package = TRUE, runit = TRUE)
-man("a_first_function")
+file_name  <- file.path(system.file("tests",
+                                    "files",
+                                    package = "document"),
+                        "warn.R")
+working_directory = NULL;
+output_directory = tempdir();
+dependencies = NULL; sanitize_Rd = TRUE; runit = FALSE;
+check_package = TRUE; check_as_cran = check_package; 
+stop_on_check_not_passing = TRUE; clean = FALSE;
 
-b = fake_package(file_name = system.file("tests", "files", "simple.R", package = "document"))
-f = fake_package(file_name = system.file("tests", "files", "minimal.R", package = "document"))
-list.files(file.path(f, "man"), full.names = TRUE)
-document(file_name = system.file("tests", "files", "minimal.R", package = "document"), check_package = FALSE)
- document::display_Rd(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
+    if (is.null(working_directory))
+        working_directory <- file.path(tempdir(),
+                                       paste0("document_",
+                                              basename(tempfile(pattern = ""))))
+    checkmate::assertFile(file_name, access = "r")
+    checkmate::assertDirectory(output_directory, access = "r")
+    checkmate::qassert(check_package, "B1")
+    checkmate::qassert(working_directory, "S1")
+    dir.create(working_directory, showWarnings = FALSE, recursive = TRUE)
+    if (isTRUE(clean)) on.exit({
+        unlink(working_directory, recursive = TRUE)
+        options("document_package_directory" = NULL)
+    })
+    package_directory <- fake_package(file_name,
+                                      working_directory = working_directory,
+                                      dependencies = dependencies)
+    status <- write_the_docs(package_directory = package_directory,
+                             file_name = file_name,
+                             output_directory = output_directory,
+                             dependencies = dependencies,
+                             sanitize_Rd = sanitize_Rd, runit = runit)
+        # Get rid of one of R CMD checks' NOTEs
+        file.remove(file.path(package_directory, "Read-and-delete-me"))
+        clean_description(package_directory)
+        # Use devtools::build to build in the package_directory.
+        tgz <- devtools::build(package_directory, quiet = TRUE)
+        # devtools::check's return value is crap, so use R CMD check via callr.
+        check_args  <- c(paste0("--output=", working_directory), tgz)
+        if (isTRUE(check_as_cran)) {
+            check_args <- c("--as-cran", check_args) 
+            # "checking CRAN incoming feasibility" will cause a NOTE
+            expectation <- "Status: 1 NOTE"
+        } else {
+            expectation <- "Status: OK"
+        }
+        # When running the tests via R CMD check, libPath()'s first element is a
+        # path to a temporary library. callr::rcmd_safe() seems to only read the
+        # first element of its libpath argument, and then R CMD check warns:
+        #
+        # > * checking Rd cross-references ... WARNING
+        # > Error in find.package(package, lib.loc) : 
+        # >   there is no package called ‘MASS’
+        # > Calls: <Anonymous> -> lapply -> FUN -> find.package
+        # > Execution halted
+        #
+        # We could ignore this, but checking the log on the existance of
+        # warnings to stop_on_check_not_passing does not work then. So:
+                message(paste(.libPaths(), collapse = "\n"))
+        libpath <- .libPaths()[length(.libPaths())]
+        tmp <- callr::rcmd_safe("check", cmdargs = check_args, 
+                                libpath = libpath)
+        check_log <- unlist(strsplit(tmp[["stdout"]], split = "\n"))
+        i = grep("WARNING|ERROR|NOTE", check_log)
+        i = unlist(lapply(i, function(x) return(seq(from = x, length.out = 7))))
+        i <- i[i <= length(check_log)]
+        rule <- "================="
+        message(paste(rule, check_log[i], rule, collapse  ="\n"))
+        vapply(i, function(x) return(seq(from = x, length.out = 3)), numeric())
 
-devtools::load_all()
-document::man(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
-man(list.files(file.path(get_dpd(), "man"), full.names = TRUE)[2])
 
-
-
-res <- document(file_name = system.file("tests", "files", "minimal.R", 
-                                        package = "document"), 
-                check_package = TRUE)
-
-# View R CMD check results.
-cat(res[["check_result"]][["stdout"]], sep = "\n")
-cat(res[["check_result"]][["stderr"]], sep = "\n")
-
-# Copy docmentation to current working directory.
-# This writes to your disk. So it's disabled. 
-# Remove or comment out the next line to enable.
-if (FALSE) 
-    file.copy(res[["pdf_path"]], getwd())
-
-library(profvis)
-profvis({
-res <- document(file_name = system.file("tests", "files", "minimal.R", 
-                                        package = "document"), 
-                check_package = TRUE)
-})
-
-working_directory = "/tmp"
-package_directory = "."
-tgz <- "document_1.2.1.9000.tar.gz"
-    tmp <- callr::rcmd_safe("check",
-                        c(paste0("--output=", working_directory), tgz))
-
-d <- document("R/document.R", stop_on_check_not_passing = FALSE)
+res <- document(file_name, check_package = TRUE, runit = TRUE)

@@ -161,6 +161,11 @@ document <- function(file_name,
         if (check_log[length(check_log)] != expectation) {
             if (isTRUE(stop_on_check_not_passing)) {
                 message(paste(check_log, collapse = "\n"))
+                i = grep("WARNING|ERROR|NOTE", check_log)
+                i = unlist(lapply(i, function(x) return(seq(from = x, length.out = 7))))
+                i <- i[i <= length(check_log)]
+                rule <- "###"
+                message(paste(c(rule, check_log[i], rule), collapse  ="\n"))
                 throw("R CMD check failed, read the above log and fix.")
             } else {
                 warn("R CMD check failed, read the log and fix.")
