@@ -153,14 +153,14 @@ document <- function(file_name,
         #
         # We could ignore this, but checking the log on the existance of
         # warnings to stop_on_check_not_passing does not work then. So:
+                message(paste(.libPaths(), collapse = "\n"))
         libpath <- .libPaths()[length(.libPaths())]
         tmp <- callr::rcmd_safe("check", cmdargs = check_args, 
                                 libpath = libpath)
         check_log <- unlist(strsplit(tmp[["stdout"]], split = "\n"))
         if (check_log[length(check_log)] != expectation) {
             if (isTRUE(stop_on_check_not_passing)) {
-#                message(paste(check_log, collapse = "\n"))
-                message(paste("XXX: ", file_name, collapse = "\n"))
+                message(paste(check_log, collapse = "\n"))
                 throw("R CMD check failed, read the above log and fix.")
             } else {
                 warn("R CMD check failed, read the log and fix.")
