@@ -58,7 +58,8 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @return The return value of \command{R CMD check} ran through
 #' \code{callr::rcmd_safe()}.
 #' @export
-check_package <- function(package_directory, working_directory, check_as_cran = TRUE,
+check_package <- function(package_directory, working_directory,
+                          check_as_cran = TRUE,
                           stop_on_check_not_passing = TRUE, debug = TRUE) {
         # Get rid of one of R CMD checks' NOTEs
         file.remove(file.path(package_directory, "Read-and-delete-me"))
@@ -81,7 +82,7 @@ check_package <- function(package_directory, working_directory, check_as_cran = 
             expectation <- "Status: OK"
         }
         # When running the tests via R CMD check, libPath()'s first element is a
-        # package_directory to a temporary library. callr::rcmd_safe() seems to only read the
+        # path to a temporary library. callr::rcmd_safe() seems to only read the
         # first element of its libpath argument, and then R CMD check warns:
         #
         # > * checking Rd cross-references ... WARNING
