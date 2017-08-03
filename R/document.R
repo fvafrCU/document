@@ -54,7 +54,7 @@ document <- function(file_name,
                      dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
                      check_package = TRUE, check_as_cran = check_package,
                      stop_on_check_not_passing = TRUE, clean = FALSE,
-                     debug = FALSE, ...) {
+                     debug = TRUE, ...) {
     if (is.null(working_directory))
         working_directory <- file.path(tempdir(),
                                        paste0("document_",
@@ -80,6 +80,7 @@ document <- function(file_name,
         check <- check_package(path = package_directory,
                                working_directory = working_directory,
                                as_cran = check_as_cran,
+                               debug = debug,
                                throw_on_check_not_passing =
                                    stop_on_check_not_passing)
         status[["check_result"]] <- check

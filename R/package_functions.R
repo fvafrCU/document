@@ -53,26 +53,22 @@ fake_package <- function(file_name, working_directory = NULL,
 
 #' Run \command{R CMD check} on a Package Directory
 #'
-#' @param path The path to the package directory.
-#' @param working_directory A working directory. Keep the default.
-#' @param as_cran Use the \command{--as-cran} flag?
-#' @param throw_on_check_not_passing Stop if \command{R CMD check} does not
-#' pass?
+#' @inheritParams fake_package
 #' @return The return value of \command{R CMD check} ran through
 #' \code{callr::rcmd_safe()}.
 #' @export
-check_package <- function(path, working_directory, as_cran,
-                          throw_on_check_not_passing = TRUE) {
+check_package <- function(package_directory, working_directory, check_as_cran = TRUE,
+                          throw_on_check_not_passing = TRUE, debug = TRUE) {
         # Get rid of one of R CMD checks' NOTEs
-        file.remove(file.path(path, "Read-and-delete-me"))
-        clean_description(path)
+        file.remove(file.path(package_directory, "Read-and-delete-me"))
+        clean_description(package_directory)
         # Use devtools::build to build in the package_directory.
-        tgz <- devtools::build(path, quiet = TRUE)
+        tgz <- devtools::build(package_directory, quiet = TRUE)
         # devtools::check's return value is crap, so use R CMD check via callr.
         check_args  <- c(paste0("--output=", working_directory), tgz)
         if (isTRUE(as_cran)) {
             check_args <- c("--as-cran", check_args)
-            is_probably_cran <- grepl("travis", path)
+            is_probably_cran <- grepl("travis", package_directory)
             if (! is_probably_cran) {
                 # "checking CRAN incoming feasibility" will cause a NOTE
                 expectation <- "Status: 1 NOTE"
@@ -84,7 +80,7 @@ check_package <- function(path, working_directory, as_cran,
             expectation <- "Status: OK"
         }
         # When running the tests via R CMD check, libPath()'s first element is a
-        # path to a temporary library. callr::rcmd_safe() seems to only read the
+        # package_directory to a temporary library. callr::rcmd_safe() seems to only read the
         # first element of its libpath argument, and then R CMD check warns:
         #
         # > * checking Rd cross-references ... WARNING
@@ -114,7 +110,7 @@ check_package <- function(path, working_directory, as_cran,
                            .libPaths(), check_log[i], "Sys.info:",
                            as.character(Sys.info()[c("nodename",
                                                      "version")]),
-                           paste("Path:", path), rule)
+                           paste("Path:", package_directory), rule)
                     message(paste(m, collapse = "\n"))
                 }
                 throw("R CMD check failed, read the above log and fix.")
