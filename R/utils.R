@@ -27,6 +27,7 @@ sort_unlocale <- function(char) {
 #'
 # TODO: nasty hardcoding
 #' @note We also set Version to 1.0.0.
+#' @inheritParams write_the_docs
 #' @param package_directory Path to the directory.
 #' @return value of \code{\link{writeLines}}.
 clean_description <- function(package_directory) {
@@ -46,7 +47,7 @@ clean_description <- function(package_directory) {
 #' for example, the checkmate package), you can add the whole package as a
 #' dependency.
 #'
-#' @param package_directory Path to the directory.
+#' @inheritParams write_the_docs
 #' @param dependencies the package names the temporary package will depend on.
 #' @return value of \code{\link{writeLines}}.
 add_dependencies_to_description <- function(package_directory,

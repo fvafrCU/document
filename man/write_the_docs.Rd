@@ -12,7 +12,7 @@ write_the_docs(package_directory, file_name = package_directory,
 \arguments{
 \item{package_directory}{The directory containing the package's source.}
 
-\item{file_name}{The name of the file where to write the documentation into. 
+\item{file_name}{The name of the file where to write the documentation into.
 See \strong{Details}.}
 
 \item{output_directory}{The directory to put the documentation into. You
@@ -41,8 +41,8 @@ What does it?
 \details{
 \code{file_name} will usually be provided by \code{\link{document}} as the
 R code file's name. This may, differing from a (temporary) package's name,
-contain underscores. If you use the functions directly: stick with the 
-default, in which case the internally 
+contain underscores. If you use the functions directly: stick with the
+default, in which case the internally
 the  \code{\link[base]{basename}} of your \code{package_directory} will be
 used. This should be a good guess.
 }

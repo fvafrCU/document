@@ -7,7 +7,7 @@
 add_dependencies_to_description(package_directory, dependencies = NULL)
 }
 \arguments{
-\item{package_directory}{Path to the directory.}
+\item{package_directory}{The directory containing the package's source.}
 
 \item{dependencies}{the package names the temporary package will depend on.}
 }

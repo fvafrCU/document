@@ -4,18 +4,20 @@
 \alias{check_package}
 \title{Run \command{R CMD check} on a Package Directory}
 \usage{
-check_package(path, working_directory, as_cran,
-  throw_on_check_not_passing = TRUE)
+check_package(package_directory, working_directory, check_as_cran = TRUE,
+  stop_on_check_not_passing = TRUE, debug = TRUE)
 }
 \arguments{
-\item{path}{The path to the package directory.}
+\item{package_directory}{The directory containing the package's source.}
 
 \item{working_directory}{A working directory. Keep the default.}
 
-\item{as_cran}{Use the \command{--as-cran} flag?}
+\item{check_as_cran}{Use the \command{--as-cran} flag with
+\command{R CMD check}?}
 
-\item{throw_on_check_not_passing}{Stop if \command{R CMD check} does not
-pass?}
+\item{stop_on_check_not_passing}{Stop if \command{R CMD check} does not pass?}
+
+\item{debug}{For internal use only: Summarize errors for \command{travis}?}
 }
 \value{
 The return value of \command{R CMD check} ran through

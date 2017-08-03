@@ -77,11 +77,11 @@ document <- function(file_name,
                              dependencies = dependencies,
                              sanitize_Rd = sanitize_Rd, runit = runit)
     if (check_package) {
-        check <- check_package(path = package_directory,
+        check <- check_package(package_directory = package_directory,
                                working_directory = working_directory,
-                               as_cran = check_as_cran,
+                               check_as_cran = check_as_cran,
                                debug = debug,
-                               throw_on_check_not_passing =
+                               stop_on_check_not_passing =
                                    stop_on_check_not_passing)
         status[["check_result"]] <- check
     }

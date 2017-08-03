@@ -7,7 +7,7 @@
 document(file_name, working_directory = NULL, output_directory = tempdir(),
   dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
   check_package = TRUE, check_as_cran = check_package,
-  stop_on_check_not_passing = TRUE, clean = FALSE, debug = FALSE, ...)
+  stop_on_check_not_passing = TRUE, clean = FALSE, debug = TRUE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}
@@ -29,7 +29,7 @@ Do not bother, this is for Unit testing only.}
 \item{check_package}{Run \command{R CMD check} the sources? See
 \bold{Note} below.}
 
-\item{check_as_cran}{Use the \command{--as-cran} flag with 
+\item{check_as_cran}{Use the \command{--as-cran} flag with
 \command{R CMD check}?}
 
 \item{stop_on_check_not_passing}{Stop if \command{R CMD check} does not pass?}
@@ -59,7 +59,7 @@ code/documentation mismatches (it behaves pretty much like
 No build system can check whether your documentation is useful, but
 \command{R CMD check}
 checks if it is formally matching your code. This check is the basic
-idea behind \pkg{document}. The possibility to disable the 
+idea behind \pkg{document}. The possibility to disable the
 \command{R CMD check} is
 there to disable CPU consuming checks while testing the package. Stick with
 the default!

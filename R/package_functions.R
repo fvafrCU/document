@@ -53,12 +53,13 @@ fake_package <- function(file_name, working_directory = NULL,
 
 #' Run \command{R CMD check} on a Package Directory
 #'
-#' @inheritParams fake_package
+#' @inheritParams write_the_docs
+#' @inheritParams document
 #' @return The return value of \command{R CMD check} ran through
 #' \code{callr::rcmd_safe()}.
 #' @export
 check_package <- function(package_directory, working_directory, check_as_cran = TRUE,
-                          throw_on_check_not_passing = TRUE, debug = TRUE) {
+                          stop_on_check_not_passing = TRUE, debug = TRUE) {
         # Get rid of one of R CMD checks' NOTEs
         file.remove(file.path(package_directory, "Read-and-delete-me"))
         clean_description(package_directory)
@@ -66,7 +67,7 @@ check_package <- function(package_directory, working_directory, check_as_cran = 
         tgz <- devtools::build(package_directory, quiet = TRUE)
         # devtools::check's return value is crap, so use R CMD check via callr.
         check_args  <- c(paste0("--output=", working_directory), tgz)
-        if (isTRUE(as_cran)) {
+        if (isTRUE(check_as_cran)) {
             check_args <- c("--as-cran", check_args)
             is_probably_cran <- grepl("travis", package_directory)
             if (! is_probably_cran) {
@@ -90,13 +91,13 @@ check_package <- function(package_directory, working_directory, check_as_cran = 
         # > Execution halted
         #
         # We could ignore this, but checking the log on the existance of
-        # warnings to throw_on_check_not_passing does not work then. So:
+        # warnings to stop_on_check_not_passing does not work then. So:
         libpath <- .libPaths()[length(.libPaths())]
         res <- callr::rcmd_safe("check", cmdargs = check_args,
                                 libpath = libpath)
         check_log <- unlist(strsplit(res[["stdout"]], split = "\n"))
         if (check_log[length(check_log)] != expectation) {
-            if (isTRUE(throw_on_check_not_passing)) {
+            if (isTRUE(stop_on_check_not_passing)) {
                 message(paste(check_log, collapse = "\n"))
                 if (isTRUE(debug)) {
                     i <- grep("WARNING|ERROR|NOTE", check_log)
