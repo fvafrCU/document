@@ -17,3 +17,4 @@ The following object is masked from ‘package:devtools’:
     lint
 
 Loading required package: hunspell
+Loading required package: cleanr
