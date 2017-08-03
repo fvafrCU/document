@@ -136,8 +136,14 @@ document <- function(file_name,
         check_args  <- c(paste0("--output=", working_directory), tgz)
         if (isTRUE(check_as_cran)) {
             check_args <- c("--as-cran", check_args) 
-            # "checking CRAN incoming feasibility" will cause a NOTE
-            expectation <- "Status: 1 NOTE"
+            is_probably_cran <- grepl("travis", file_name)
+            if (! is_probably_cran) {
+                # "checking CRAN incoming feasibility" will cause a NOTE
+                expectation <- "Status: 1 NOTE"
+            } else {
+                # but not on travis ...
+                expectation <- "Status: OK"
+            }
         } else {
             expectation <- "Status: OK"
         }
