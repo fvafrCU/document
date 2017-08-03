@@ -22,7 +22,7 @@ all: install utils
 # a loose collection of helpful stuff while developing
 
 .PHONY: devtools
-devtools: cran_comments.md use_dev_version dependencies_forced vignettes codetags tag
+devtools: cran-comments.md use_dev_version dependencies_forced vignettes codetags tag
 
 .PHONY: tag
 tag: ${LOG_DIR}/git_tag.Rout 
