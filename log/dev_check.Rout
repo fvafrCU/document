@@ -11,10 +11,10 @@ Building document -------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
-* checking for LF line-endings in source and make files
+* checking for LF line-endings in source and make files and shell scripts
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
 * building ‘document_1.2.1.9000.tar.gz’
@@ -26,7 +26,7 @@ _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking document -------------------------------------------------------------
   --as-cran --timings --no-tests --no-manual 
 
-* using R Under development (unstable) (2017-05-04 r72654)
+* using R Under development (unstable) (2017-08-03 r73028)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
@@ -50,10 +50,7 @@ Version contains large components (1.2.1.9000)
 * checking package directory ... OK
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
-* checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Could not fetch https://travis-ci.org/fvafrCU/document.svg?branch=master
-InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
+* checking top-level files ... OK
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -76,20 +73,7 @@ InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'document'
-  ‘output_directory’
-
-Undocumented arguments in documentation object 'write_the_docs'
-  ‘output_directory’
-Documented arguments not in \usage in documentation object 'write_the_docs':
-  ‘autput_directory’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
+* checking Rd \usage sections ... OK
 * checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
@@ -103,33 +87,13 @@ Extensions’ manual.
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 2 WARNINGs, 1 NOTE
+Status: 1 NOTE
 See
 for details.
 
 
 R CMD check results
-0 errors | 2 warnings | 1 note 
-checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Could not fetch https://travis-ci.org/fvafrCU/document.svg?branch=master
-InvalidProxyEnvironmentVariable "https_proxy" "https://10.127.255.17:8080"
-
-checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'document'
-  ‘output_directory’
-
-Undocumented arguments in documentation object 'write_the_docs'
-  ‘output_directory’
-Documented arguments not in \usage in documentation object 'write_the_docs':
-  ‘autput_directory’
-
-Functions with \usage entries need to have the appropriate \alias
-entries, and all their arguments documented.
-The \usage entries must correspond to syntactically valid R code.
-See chapter ‘Writing R documentation files’ in the ‘Writing R
-Extensions’ manual.
-
+0 errors | 0 warnings | 1 note 
 checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 

@@ -1,1 +1,18 @@
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
+Version contains large components (1.2.1.9000)
+
+DONE
+
+Status: 1 NOTE
+See
+for details.
+
+
+R CMD check results
+0 errors | 0 warnings | 1 note 
+checking CRAN incoming feasibility ... NOTE
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+Version contains large components (1.2.1.9000)
