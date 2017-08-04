@@ -1,14 +1,16 @@
 Dear CRAN Team,
-this is a patch for package document. I have fixed one function's return value
-and added a RStudio workaround to the man() function.
+this is a resubmission of package document. As requested by a couple of users,
+it now by default throws an exception should R CMD check give any errors, 
+warnings or notes.
+Please upload to CRAN.
 Best, Dominik
 
-# Package  document 1.2.1
+# Package  document 2.0.0
 ## Test  environments  
-- R Under development (unstable) (2017-07-07 r72896)
+- R Under development (unstable) (2017-08-03 r73028)
   Platform: x86_64-pc-linux-gnu (64-bit)
-  Running under: Debian GNU/Linux 8 (jessie) 
-- R version 3.4.0 (2017-04-21)
+  Running under: Devuan GNU/Linux 1 (jessie) 
+- R version 3.4.1 (2017-06-30)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Ubuntu precise (12.04.5 LTS) 
 - win-builder (devel) 
