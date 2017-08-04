@@ -1,17 +1,17 @@
-# document 1.2.1.9000
+# document 2.0.0
 
-* document() throws an error if the temporary package does not pass R CMD
+* document() now throws an error if the temporary package does not pass R CMD
   check without errors, warnings or notes. 
-  - add argument 'stop\_on\_check\_not\_passing'. Set to FALSE to issue a
+  - Added argument 'stop\_on\_check\_not\_passing'. Set to FALSE to issue a
     warning() instead of throwing an error.
-  - add argument 'check_as_cran' to use the --as-cran flag with R CMD check,
+  - Added argument 'check\_as\_cran' to use the --as-cran flag with R CMD check,
     document() then assumes a single NOTE (on the CRAN incoming feasibility) to
     be okay.
 
 # document 1.2.1
 
 * Check for RStudio in man().
-* Fix return status of write_the_docs().
+* Fix return status of write\_the\_docs().
 
 # document 1.2.0
 

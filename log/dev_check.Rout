@@ -11,13 +11,13 @@ Building document -------------------------------------------------------------
 * installing the package to build vignettes
 * creating vignettes ... OK
 Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’
+    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
   ignored as vignettes have been rebuilt.
   Run R CMD build with --no-build-vignettes to prevent rebuilding.
 * checking for LF line-endings in source and make files and shell scripts
 * checking for empty or unneeded directories
 Removed empty directory ‘document/log’
-* building ‘document_1.2.1.9000.tar.gz’
+* building ‘document_2.0.0.tar.gz’
 
 Setting env vars --------------------------------------------------------------
 _R_CHECK_CRAN_INCOMING_USE_ASPELL_: TRUE
@@ -31,12 +31,10 @@ Checking document -------------------------------------------------------------
 * using session charset: UTF-8
 * using options ‘--no-tests --no-manual --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘1.2.1.9000’
+* this is package ‘document’ version ‘2.0.0’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... NOTE
+* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-Version contains large components (1.2.1.9000)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -87,14 +85,8 @@ Version contains large components (1.2.1.9000)
 * checking re-building of vignette outputs ... OK
 * DONE
 
-Status: 1 NOTE
-See
-for details.
-
+Status: OK
 
 R CMD check results
-0 errors | 0 warnings | 1 note 
-checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+0 errors | 0 warnings | 0 notes
 
-Version contains large components (1.2.1.9000)
