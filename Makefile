@@ -40,7 +40,7 @@ build_win:
 
 .PHONY: release
 release: build_win
-	echo "Run \n \t${Rscript} interacitvely and do 'devtools::release(check = FALSE)'"
+	echo "Run \n \t${R} interacitvely and do 'devtools::release(check = FALSE)'"
 
 .PHONY: vignettes
 vignettes:
