@@ -38,7 +38,8 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
         } else {
             r_interface <- normalizePath(Sys.which("R"))
         }
-        stop("Doesn't work with RStudio, use ", r_interface, " instead.")
+        warning("If man doesn't work with RStudio, use ", r_interface, 
+                " instead.")
     }
     usage <- usage()
     if (file.exists(x)) {
@@ -146,11 +147,15 @@ is_Rd_file <- function(x) {
 #' @return The return value of removing the temporary file.
 #' @param rd_file The path to the Rd file to be displayed.
 display_Rd <- function(rd_file) {
-    rd_out <- callr::rcmd_safe("Rdconv",
-                     c("--type=txt", rd_file))[["stdout"]]
-    rd_txt <- tempfile()
-    writeLines(rd_out, con = rd_txt)
-    file.show(rd_txt)
-    status <- file.remove(rd_txt)
+    if (.Platform$GUI == "RStudio") {
+        status <- rstudioapi::previewRd(rd_file)
+    } else {
+        rd_out <- callr::rcmd_safe("Rdconv",
+                                   c("--type=txt", rd_file))[["stdout"]]
+        rd_txt <- tempfile()
+        writeLines(rd_out, con = rd_txt)
+        file.show(rd_txt)
+        status <- file.remove(rd_txt)
+    }
     return(status)
 }
