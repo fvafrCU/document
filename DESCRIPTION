@@ -17,7 +17,8 @@ Imports:
     roxygen2,
     callr,
     devtools,
-    checkmate
+    checkmate,
+    rstudioapi
 Suggests:
     knitr,
     rmarkdown,
