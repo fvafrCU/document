@@ -38,7 +38,7 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
         } else {
             r_interface <- normalizePath(Sys.which("R"))
         }
-        warning("If man doesn't work with RStudio, use ", r_interface, 
+        message("If `man` doesn't work with RStudio, use ", r_interface, 
                 " instead.")
     }
     usage <- usage()
