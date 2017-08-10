@@ -1,3 +1,7 @@
+# document 2.0.0.9000
+
+man() now works with RStudio.
+
 # document 2.0.0
 
 * document() now throws an error if the temporary package does not pass R CMD
