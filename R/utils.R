@@ -19,13 +19,13 @@ sort_unlocale <- function(char) {
     }
     return(char[order(char0)])
 }
-
+# TODO:
 #' Change License in the DESCRIPTION File to "GPL"
 #'
 #' \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
-#' that throws a warning in \command{R CMD check}. Fix that.
+#' that throws a warning in \command{R CMD check}. Fix that. And export it.
 #'
-# TODO: nasty hardcoding
+# FIXME: USE devtools' read/write_dcf to handle multiline entries!
 #' @note We also set Version to 1.0.0.
 #' @inheritParams write_the_docs
 #' @param package_directory Path to the directory.
