@@ -29,19 +29,18 @@ the file to be assumed to be an R documentation file.
 Invisibly the status of \code{\link{display_Rd}}.
 }
 \description{
-Display a \code{\link[utils]{help}}-like page from an existing R 
+Display a \code{\link[utils]{help}}-like page from an existing R
 documentation (*.Rd) file, a topic from a temporary package with the
 \code{option("document_package_directory")} set or a topic from an R code
 file containing \pkg{roxygen2} documentation.
 }
 \examples{
 \donttest{
-document(file_name = system.file("tests", "files", "minimal.R", 
+document(file_name = system.file("tests", "files", "minimal.R",
          package = "document"), check_package = FALSE)
 man("foo")
 # this equivalent to
-path <- system.file("tests", "files", "minimal.R", package = "document") 
+path <- system.file("tests", "files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")
 }
 }
-

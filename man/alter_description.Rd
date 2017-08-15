@@ -21,4 +21,3 @@ value of \code{\link{write.dcf}}.
 \description{
 Substitutes and/or adds fields in a DESCRIPTION file.
 }
-

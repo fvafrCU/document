@@ -12,4 +12,3 @@ get_dpd()
 \description{
 Just a wrapper to \code{\link[base]{getOption}("document_package_directory")}
 }
-

@@ -18,4 +18,3 @@ The sorted character vector.
 (\pkg{RUnit})
 check relies on sorting, we need to avoid the locale.
 }
-

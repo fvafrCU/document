@@ -26,4 +26,3 @@ The return value of \command{R CMD check} ran through
 \description{
 Run \command{R CMD check} on a Package Directory
 }
-

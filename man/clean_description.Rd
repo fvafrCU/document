@@ -23,4 +23,3 @@ clean_description(path = file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 setdiff(new, old)
 }
-

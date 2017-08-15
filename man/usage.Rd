@@ -38,4 +38,3 @@ bar <- function(x) {
 }
 bar()
 }
-
