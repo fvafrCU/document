@@ -47,7 +47,7 @@ fake_package <- function(file_name, working_directory = NULL,
     dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir =
                                                            package_directory))
     if (! is.null(dependencies))
-        alter_description(path = package_directory, 
+        alter_description(path = package_directory,
                           addition = list(Depends = dependencies))
     return(package_directory)
 }

@@ -1,6 +1,6 @@
 #' Display a Help Page From a File's Documentation
 #'
-#' Display a \code{\link[utils]{help}}-like page from an existing R 
+#' Display a \code{\link[utils]{help}}-like page from an existing R
 #' documentation (*.Rd) file, a topic from a temporary package with the
 #' \code{option("document_package_directory")} set or a topic from an R code
 #' file containing \pkg{roxygen2} documentation.
@@ -24,23 +24,14 @@
 #' @export
 #' @examples
 #' \donttest{
-#' document(file_name = system.file("tests", "files", "minimal.R", 
+#' document(file_name = system.file("tests", "files", "minimal.R",
 #'          package = "document"), check_package = FALSE)
 #' man("foo")
 #' # this equivalent to
-#' path <- system.file("tests", "files", "minimal.R", package = "document") 
+#' path <- system.file("tests", "files", "minimal.R", package = "document")
 #' document::man(x = path, topic = "foo")
 #' }
 man <- function(x, topic = NA, force_Rd = FALSE) {
-    if (.Platform$GUI == "RStudio") {
-        if (.Platform$OS.type == "windows") {
-            r_interface <- normalizePath(Sys.which("Rgui"))
-        } else {
-            r_interface <- normalizePath(Sys.which("R"))
-        }
-        message("If `man` doesn't work with RStudio, use ", r_interface, 
-                " instead.")
-    }
     usage <- usage()
     if (file.exists(x)) {
         if (is_Rd_file(x) || ! identical(FALSE, force_Rd)) {
@@ -73,7 +64,7 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
 }
 
 #' Return the Usage of a Function From Within the Function
-#' 
+#'
 #' Get a usage template for a function from within the function if you encounter
 #' misguided usage, you can display the template.
 #'
@@ -84,7 +75,7 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
 #' want to obtain the usage for.
 #' Use the \code{<-} assignment operator with the default, see \bold{examples}
 #' below.
-#' @param usage Give this functions usage (as a usage example \ldots) and exit? 
+#' @param usage Give this functions usage (as a usage example \ldots) and exit?
 #' @return A character string giving the Usage as \code{\link{help}} would do.
 #' @export
 #' @examples
