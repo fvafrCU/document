@@ -19,48 +19,51 @@ sort_unlocale <- function(char) {
     }
     return(char[order(char0)])
 }
-# TODO:
-#' Change License in the DESCRIPTION File to "GPL"
+
+#' Alter Contents of a DESCRIPTION File
 #'
-#' \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
-#' that throws a warning in \command{R CMD check}. Fix that. And export it.
+#' Substitutes and/or adds fields in a DESCRIPTION file.
 #'
-# FIXME: USE devtools' read/write_dcf to handle multiline entries!
-#' @note We also set Version to 1.0.0.
-#' @inheritParams write_the_docs
-#' @param package_directory Path to the directory.
-#' @return value of \code{\link{writeLines}}.
-clean_description <- function(package_directory) {
-    description_file <- file.path(package_directory, "DESCRIPTION")
-    description <-  readLines(description_file)
-    description <-  sub("(Version: ).*", "\\11.0.0", description)
-    description <-  sub("(License: ).*", "\\1GPL", description)
-    description <-  sub("(Title: ).*", "\\1Fake a Title", description)
-    description <-  sub("(Description: .*)", "\\1\\.", description)
-    status <- writeLines(description, con = description_file)
-    return(invisible(status))
+#' @param path Path to the DESCRIPTION file or the directory containing it.
+#' @param substitution A list of named character vector giving the pairs for
+#' substitution. 
+#' @param addition A list of named character vector giving the pairs for
+#' addition 
+#' @return value of \code{\link{write.dcf}}.
+#' @export
+alter_description <- function(path, substitution = NULL, addition = NULL) {
+    status  <- 0
+    if (is.list(substitution)) substitution <- unlist(substitution)
+    if (is.list(addition)) addition <- unlist(addition)
+    if (basename(path) != "DESCRIPTION") path <- file.path(path, "DESCRIPTION")
+    d <- read.dcf(path)
+    for (x in names(substitution)) {
+        d[1, x] <- substitution[[x]]
+    }
+    if (! is.null(addition)) d <- cbind(d, as.matrix(t(addition)))
+    status <- write.dcf(d, path)
+    return(status)
 }
 
-#' Add a Dependency to the DESCRIPTION File
+#' Make a Default DESCRIPTION File Pass \command{R CMD check}
 #'
-#' If the functions in a package depend on other functions (from,
-#' for example, the checkmate package), you can add the whole package as a
-#' dependency.
-#'
-#' @inheritParams write_the_docs
-#' @param dependencies the package names the temporary package will depend on.
-#' @return value of \code{\link{writeLines}}.
-add_dependencies_to_description <- function(package_directory,
-                                            dependencies = NULL) {
-    # TODO: dependencies should be a named list possibly containing dependencies
-    # and imports and then alter the DESCRIPTION's lines accordingly
-    description_file <- file.path(package_directory, "DESCRIPTION")
-    description <-  readLines(description_file)
-    if (! is.null(dependencies))
-        description <- c(description, paste0("Depends: ",
-                                             paste(dependencies,
-                                                   collapse = ", ")))
-    status <- writeLines(description, con = description_file)
+#' \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
+#' that throws a warning in \command{R CMD check}. Fix that. 
+#' @inheritParams alter_description
+#' @return value of \code{\link{alter_description}}.
+#' @export
+#' @examples
+#' utils::package.skeleton(path = tempdir())
+#' old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
+#' clean_description(path = file.path(tempdir(), "anRpackage", "DESCRIPTION"))
+#' new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
+#' setdiff(new, old)
+clean_description <- function(path) {
+    s <- list(Version = "1.0.0",
+              License = "GPL",
+              Title = "A FAke Title",
+              Description = "This is just a fake package description.")
+    status <- alter_description(path = path, substitution = s)
     return(invisible(status))
 }
 

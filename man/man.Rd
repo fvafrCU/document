@@ -44,3 +44,4 @@ path <- system.file("tests", "files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")
 }
 }
+

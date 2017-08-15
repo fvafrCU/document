@@ -46,3 +46,4 @@ default, in which case the internally
 the  \code{\link[base]{basename}} of your \code{package_directory} will be
 used. This should be a good guess.
 }
+

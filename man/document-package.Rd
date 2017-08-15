@@ -56,7 +56,6 @@ This package is basically a wrapper to
 
 This package writes to disk, so \strong{never} run as superuser.
 }
-
 \seealso{
 \pkg{docstring}
 (\url{https://cran.r-project.org/package=docstring}) also creates temporary
@@ -66,3 +65,4 @@ style \command{docstring}-like comments it then parses into \pkg{roxygen2}.
 And it does not write to file so far.
 }
 \keyword{package}
+

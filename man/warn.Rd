@@ -26,3 +26,4 @@ We use this condition as a warning dedicated to \pkg{document}.
 tryCatch(document:::warn("Hello error!"), error = function(e) return(e))
 }
 \keyword{internal}
+

@@ -27,3 +27,4 @@ We use this condition as an error dedicated to \pkg{document}.
 tryCatch(document:::throw("Hello error!"), error = function(e) return(e))
 }
 \keyword{internal}
+
