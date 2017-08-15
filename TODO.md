@@ -1,4 +1,2 @@
-- improve coverage
-- fix man() to run with RStudio
 - improve vignette
 - consider using withr
