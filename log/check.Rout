@@ -1,15 +1,15 @@
-* using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-08-03 r73028)
+* using log directory ‘/home/nik/git/cyclops/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2017-08-15 r73096)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘1.2.1.9000’
+* this is package ‘document’ version ‘2.0.0.9000’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 
-Version contains large components (1.2.1.9000)
+Version contains large components (2.0.0.9000)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -53,12 +53,13 @@ Version contains large components (1.2.1.9000)
 * checking files in ‘vignettes’ ... OK
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
-     user system elapsed
-man 4.196  0.584   7.193
+           user system elapsed
+man      16.100  2.336  19.921
+document 13.724  1.132  16.311
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’
-  Running ‘testthat.R’ [108s/139s]
+  Running ‘runit.R’ [16s/17s]
+  Running ‘testthat.R’ [441s/532s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
