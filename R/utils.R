@@ -31,7 +31,7 @@ sort_unlocale <- function(char) {
 #' addition 
 #' @return value of \code{\link{write.dcf}}.
 #' @export
-alter_description <- function(path, substitution = NULL, addition = NULL) {
+alter_description_file <- function(path, substitution = NULL, addition = NULL) {
     status  <- 0
     if (is.list(substitution)) substitution <- unlist(substitution)
     if (is.list(addition)) addition <- unlist(addition)
@@ -49,8 +49,8 @@ alter_description <- function(path, substitution = NULL, addition = NULL) {
 #'
 #' \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
 #' that throws a warning in \command{R CMD check}. Fix that. 
-#' @inheritParams alter_description
-#' @return value of \code{\link{alter_description}}.
+#' @inheritParams alter_description_file
+#' @return value of \code{\link{alter_description_file}}.
 #' @export
 #' @examples
 #' utils::package.skeleton(path = tempdir())
@@ -58,12 +58,12 @@ alter_description <- function(path, substitution = NULL, addition = NULL) {
 #' clean_description(path = file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 #' new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 #' setdiff(new, old)
-clean_description <- function(path) {
+clean_description_file <- function(path) {
     s <- list(Version = "1.0.0",
               License = "GPL",
               Title = "A FAke Title",
               Description = "This is just a fake package description.")
-    status <- alter_description(path = path, substitution = s)
+    status <- alter_description_file(path = path, substitution = s)
     return(invisible(status))
 }
 

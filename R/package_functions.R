@@ -47,8 +47,8 @@ fake_package <- function(file_name, working_directory = NULL,
     dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir =
                                                            package_directory))
     if (! is.null(dependencies))
-        alter_description(path = package_directory,
-                          addition = list(Depends = dependencies))
+        alter_description_file(path = package_directory,
+                               addition = list(Depends = dependencies))
     return(package_directory)
 }
 
@@ -64,7 +64,7 @@ check_package <- function(package_directory, working_directory,
                           stop_on_check_not_passing = TRUE, debug = TRUE) {
         # Get rid of one of R CMD checks' NOTEs
         file.remove(file.path(package_directory, "Read-and-delete-me"))
-        clean_description(package_directory)
+        clean_description_file(package_directory)
         # Use devtools::build to build in the package_directory.
         tgz <- devtools::build(package_directory, quiet = TRUE)
         # devtools::check's return value is crap, so use R CMD check via callr.

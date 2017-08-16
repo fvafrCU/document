@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-08-04, 00:12:17
+date: 2017-08-16, 13:01:28
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -57,8 +57,9 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 ```
 
 ```{r, echo = FALSE, results = "hide", message = FALSE}
-d <- document::document(file_name = path, 
-                        output_directory = file.path(rprojroot::find_root(rprojroot::is_r_package), 
+project_root <- rprojroot::find_root(rprojroot::is_r_package)
+d <- document::document(file_name = path,
+                        output_directory = file.path(project_root,
                                                      "inst", "tests", "files"),
                         check_package = FALSE)
 file.remove(unlist(d[c("txt_path", "pdf_path")]))
@@ -74,8 +75,8 @@ By default, ```document``` checks the temporary package it creates from your cod
 The corresponding call would be:
 
 ```{r, eval = FALSE}
-res <- document(file_name = system.file("tests", "files", "minimal.R", 
-                                        package = "document"), 
+res <- document(file_name = system.file("tests", "files", "minimal.R",
+                                        package = "document"),
                 check_package = TRUE)
 ```
 After that you could display the check results with:
@@ -100,8 +101,9 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 ```
 
 ```{r, echo = FALSE}
-# owing to Dason Kurkiewicz <dasonk@gmail.com>, https://github.com/Dasonk/docstring
-options(help_type="text")
+# owing to Dason Kurkiewicz <dasonk@gmail.com>, 
+# https://github.com/Dasonk/docstring
+options(help_type = "text")
 
 # A pager that outputs to the console
 console_pager <- function(x, ...){
@@ -111,8 +113,9 @@ console_pager <- function(x, ...){
     # messed up rendering in the created html vignette
     # So remove that before outputting.
     input <- gsub("_", "", input)
-    cat(paste(input,collapse="\n"), "\n")}
-options(pager=console_pager)
+    cat(paste(input, collapse = "\n"), "\n")
+}
+options(pager = console_pager)
 ```
 # Displaying Temporary Help Files
 You can display the help page for one of the documented functions using
