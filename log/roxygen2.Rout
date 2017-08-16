@@ -23,10 +23,6 @@ Loading required package: callr
 Loading required package: devtools
 Loading required package: checkmate
 Loading required package: rstudioapi
-Writing NAMESPACE
-Writing alter_description_file.Rd
 Writing clean_description_file.Rd
-Deleting alter_description.Rd
-Deleting clean_description.Rd
 > 
 > 

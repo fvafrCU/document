@@ -55,7 +55,8 @@ alter_description_file <- function(path, substitution = NULL, addition = NULL) {
 #' @examples
 #' utils::package.skeleton(path = tempdir())
 #' old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
-#' clean_description(path = file.path(tempdir(), "anRpackage", "DESCRIPTION"))
+#' clean_description_file(path = file.path(tempdir(), "anRpackage", 
+#'                                         "DESCRIPTION"))
 #' new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 #' setdiff(new, old)
 clean_description_file <- function(path) {

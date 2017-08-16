@@ -19,7 +19,8 @@ that throws a warning in \command{R CMD check}. Fix that.
 \examples{
 utils::package.skeleton(path = tempdir())
 old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
-clean_description(path = file.path(tempdir(), "anRpackage", "DESCRIPTION"))
+clean_description_file(path = file.path(tempdir(), "anRpackage", 
+                                        "DESCRIPTION"))
 new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 setdiff(new, old)
 }
