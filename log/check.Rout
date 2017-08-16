@@ -1,5 +1,5 @@
-* using log directory ‘/home/nik/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-08-15 r73096)
+* using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
+* using R Under development (unstable) (2017-08-03 r73028)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
@@ -51,18 +51,14 @@ Version contains large components (2.0.0.9000)
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-           user system elapsed
-man      16.100  2.336  19.921
-document 13.724  1.132  16.311
+* checking examples ... OK
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
-  Running ‘runit.R’ [16s/17s]
-  Running ‘testthat.R’ [441s/532s]
+  Running ‘runit.R’
+  Running ‘testthat.R’ [102s/134s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 NOTEs
+Status: 1 NOTE
