@@ -1,10 +1,10 @@
 # document 2.0.0.9000
 
 * man() now works with RStudio.
-* add and export alter\_description(). 
+* add and export alter\_description\_file(). 
   This serves as a replacement for the internal
   add\_depenedencies\_to\_description(), and straightens the internal
-  clean\_descprition() which used [write|read]Lines() instead of
+  clean\_descprition\_file() which used [write|read]Lines() instead of
   [write|read].dcf().
 
 # document 2.0.0
