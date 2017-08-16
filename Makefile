@@ -130,7 +130,6 @@ ${LOG_DIR}/cleanr.Rout: ${R_FILES}
 .PHONY: lintr
 lintr: ${LOG_DIR}/lintr.Rout 
 ${LOG_DIR}/lintr.Rout: ${R_FILES}
-	rm inst/doc/*.R || true
 	${Rscript} --vanilla utils/lintr.R > ${LOG_DIR}/lintr.Rout 2>&1 
 
 .PHONY: testthat
