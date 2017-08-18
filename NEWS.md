@@ -1,26 +1,26 @@
-# document 2.0.0.9000
+# document 2.1.0
 
-* man() now works with RStudio.
-* add and export alter\_description\_file(). 
-  This serves as a replacement for the internal
-  add\_depenedencies\_to\_description(), and straightens the internal
-  clean\_descprition\_file() which used [write|read]Lines() instead of
-  [write|read].dcf().
+* Fix *man()* to now work with RStudio.
+* Add and export a new function *alter\_description\_file()*.
+  It serves as a replacement for the internal
+  *add\_depenedencies\_to\_description()*, and straightens the former internal
+  *clean\_descprition()* which used [*write|read]Lines()* instead of
+  [*write|read].dcf()* and is now exported as *clean\_descprition\_file()*.
 
 # document 2.0.0
 
-* document() now throws an error if the temporary package does not pass R CMD
+* *document()* now throws an error if the temporary package does not pass R CMD
   check without errors, warnings or notes. 
   - Added argument 'stop\_on\_check\_not\_passing'. Set to FALSE to issue a
-    warning() instead of throwing an error.
+    *warning()* instead of throwing an error.
   - Added argument 'check\_as\_cran' to use the --as-cran flag with R CMD check,
-    document() then assumes a single NOTE (on the CRAN incoming feasibility) to
-    be okay.
+    *document()* then assumes a single NOTE (on the CRAN incoming feasibility) 
+    to be okay.
 
 # document 1.2.1
 
-* Check for RStudio in man().
-* Fix return status of write\_the\_docs().
+* Check for RStudio in *man()*.
+* Fix return status of *write\_the\_docs()*.
 
 # document 1.2.0
 
