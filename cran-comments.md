@@ -11,9 +11,9 @@ this is a resubmission of package document. I have added the following changes:
 Please upload to CRAN.
 Best, Dominik
 
-# Package document2.1.0
+# Package document 2.1.0
 ## Test  environments 
--R Under development (unstable) (2017-08-03 r73028)
+-R Under development (unstable) (2017-08-17 r73106)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Devuan GNU/Linux 1 (jessie)
 -R version 3.4.1 (2017-06-30)

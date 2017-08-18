@@ -23,7 +23,7 @@ provide_cran_comments <- function(comments_file = "cran-comments.md",
     comments <- c("Dear CRAN Team,\n", "this is a resubmission of package ", 
           pkg$package, ". I have added the following changes:\n", get_news(),
           "Please upload to CRAN.\n", "Best, Dominik\n")
-    comments <- c(comments, c("\n# Package ", pkg$package, pkg$version, 
+    comments <- c(comments, c("\n# Package ", pkg$package," ", pkg$version, 
                       "\n## Test  environments ", "\n",
            "-", paste(here[here != ""], collapse = "\n  "), "\n", 
            "-", paste(travis[travis != ""], collapse = "\n  "), "\n", 
