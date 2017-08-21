@@ -28,7 +28,7 @@ devtools: cran-comments.md use_dev_version dependencies_forced vignettes codetag
 tag: ${LOG_DIR}/git_tag.Rout 
 .PHONY: ${LOG_DIR}/git_tag.Rout 
 ${LOG_DIR}/git_tag.Rout: 
-	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()' > ${LOG_DIR}/git_tag.Rout 
+	${R} --vanilla -e 'source(file.path("utils", "git_tag.R")); git_tag()'
 
 .PHONY: codetags
 codetags: ${LOG_DIR}/check_codetags.Rout 
