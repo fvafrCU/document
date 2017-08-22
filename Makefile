@@ -88,7 +88,7 @@ ${LOG_DIR}/check.Rout: ${PKGNAME}_${PKGVERS}.tar.gz
 
 .PHONY: build
 build: ${PKGNAME}_${PKGVERS}.tar.gz
-${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTE_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout ${LOG_DIR}/spell.Rout  ${LOG_DIR}/news.Rout ${LOG_DIR}/dependencies.Rout
+${PKGNAME}_${PKGVERS}.tar.gz: ${R_FILES} ${MAN_FILES} ${TESTS_FILES} ${VIGNETTES_FILES} NEWS.md README.md DESCRIPTION LICENSE ${LOG_DIR}/roxygen2.Rout ${LOG_DIR}/spell.Rout  ${LOG_DIR}/news.Rout ${LOG_DIR}/dependencies.Rout
 	${R} --vanilla CMD build ../${PKGSRC}
 
 ${LOG_DIR}/news.Rout: DESCRIPTION NEWS.md
@@ -129,7 +129,7 @@ ${LOG_DIR}/cleanr.Rout: ${R_FILES}
 
 .PHONY: lintr
 lintr: ${LOG_DIR}/lintr.Rout 
-${LOG_DIR}/lintr.Rout: ${R_FILES}
+${LOG_DIR}/lintr.Rout: ${R_FILES} ${VIGNETTES_FILES}
 	${Rscript} --vanilla utils/lintr.R > ${LOG_DIR}/lintr.Rout 2>&1 
 
 .PHONY: testthat
