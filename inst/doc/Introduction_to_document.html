@@ -69,7 +69,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Introduction to <em>document</em></h1>
 <h4 class="author"><em>Andreas Dominik Cullmann</em></h4>
-<h4 class="date"><em>2017-08-16, 13:01:28</em></h4>
+<h4 class="date"><em>2017-08-22, 12:39:24</em></h4>
 
 
 
@@ -172,12 +172,12 @@ Examples:
 <div id="checking-the-code-with-r-cmd-check" class="section level3">
 <h3>Checking the code with R CMD check</h3>
 <p>By default, <code>document</code> checks the temporary package it creates from your code file using <strong>R CMD check</strong>. The corresponding call would be:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span><span class="kw">document</span>(<span class="dt">file_name =</span> <span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal.R&quot;</span>,
-                                        <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>),
-                <span class="dt">check_package =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>res &lt;- document(file_name = system.file(&quot;tests&quot;, &quot;files&quot;, &quot;minimal.R&quot;,
+                                        package = &quot;document&quot;),
+                check_package = TRUE)</code></pre>
 <p>After that you could display the check results with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(res[[<span class="st">&quot;check_result&quot;</span>]][[<span class="st">&quot;stdout&quot;</span>]], <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)
-<span class="kw">cat</span>(res[[<span class="st">&quot;check_result&quot;</span>]][[<span class="st">&quot;stderr&quot;</span>]], <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
+<pre><code>cat(res[[&quot;check_result&quot;]][[&quot;stdout&quot;]], sep = &quot;\n&quot;)
+cat(res[[&quot;check_result&quot;]][[&quot;stderr&quot;]], sep = &quot;\n&quot;)</code></pre>
 </div>
 </div>
 <div id="a-simple-example" class="section level2">
@@ -301,29 +301,28 @@ Examples:
 <p>You can display the help page for one of the documented functions using</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;tests&quot;</span>, <span class="st">&quot;files&quot;</span>, <span class="st">&quot;minimal.R&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;document&quot;</span>)
 document::<span class="kw">man</span>(<span class="dt">x =</span> path, <span class="dt">topic =</span> <span class="st">&quot;foo&quot;</span>)</code></pre></div>
-<pre><code>Nothing Good For
+<pre><code>_N_o_t_h_i_n_g _G_o_o_d _F_o_r
 
-Description:
+_D_e_s_c_r_i_p_t_i_o_n:
 
      Just prints &quot;foo!&quot;.
 
-Usage:
+_U_s_a_g_e:
 
      foo(x)
      
-Arguments:
+_A_r_g_u_m_e_n_t_s:
 
        x: Not needed.
 
-Author(s):
+_A_u_t_h_o_r(_s):
 
      Your Name &lt;you@somewhe.re&gt;
 
-Examples:
+_E_x_a_m_p_l_e_s:
 
      foo(x = 2)
-     
- </code></pre>
+     </code></pre>
 </div>
 
 

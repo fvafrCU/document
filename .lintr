@@ -1,5 +1,4 @@
 linters: with_defaults()
-exclusions: list("inst/doc/Introduction_to_document.R")
 exclude: "# Exclude Linting"
 exclude_start: "# Begin Exclude Linting"
 exclude_end: "# End Exclude Linting"
