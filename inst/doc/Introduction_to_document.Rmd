@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-08-16, 12:59:46
+date: 2017-08-16, 13:01:28
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -57,7 +57,7 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 ```
 
 ```{r, echo = FALSE, results = "hide", message = FALSE}
-project_root <- rprojroot::find_root(rprojroot::is_r_package) 
+project_root <- rprojroot::find_root(rprojroot::is_r_package)
 d <- document::document(file_name = path,
                         output_directory = file.path(project_root,
                                                      "inst", "tests", "files"),

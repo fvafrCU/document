@@ -45,7 +45,7 @@ release: build_win
 
 .PHONY: vignettes
 vignettes:
-	${Rscript} --vanilla -e 'devtools::build_vignettes()'
+	${Rscript} --vanilla -e 'devtools::build_vignettes(); lapply(tools::pkgVignettes(dir = ".")[["docs"]], function(x) knitr::purl(x, output = file.path(".", "inst", "doc", sub("\\.Rmd$$", ".R", basename(x))), documentation = 0))'
 
 cran-comments.md: ${LOG_DIR}/dev_check.Rout
 	${Rscript} --vanilla -e 'source("./utils/cran_comments.R"); provide_cran_comments(check_log = "log/dev_check.Rout")' > ${LOG_DIR}/cran_comments.Rout 2>&1 
