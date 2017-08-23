@@ -1,9 +1,9 @@
                  filename      functions line value
-267          R/document.R write_the_docs  139     0
-272          R/document.R write_the_docs  142     0
+268          R/document.R write_the_docs  139     0
+273          R/document.R write_the_docs  142     0
 23          R/internals.R          throw   23     0
-271               R/man.R     display_Rd  142     0
-183 R/package_functions.R  check_package   80     0
+272               R/man.R     display_Rd  142     0
+184 R/package_functions.R  check_package   80     0
 document Coverage: 98.39%
 R/internals.R: 93.75%
 R/document.R: 97.47%

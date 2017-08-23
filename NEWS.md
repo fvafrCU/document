@@ -1,3 +1,8 @@
+# document 2.1.0.9000
+
+* *alter\_descprition\_file()* now keeps whitespace, enabling to pass newline
+  characters, for example for the Authors@R field.
+
 # document 2.1.0
 
 * Fix *man()* to now work with RStudio.
