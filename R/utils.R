@@ -28,7 +28,9 @@ sort_unlocale <- function(char) {
 #' @param substitution A list of named character vector giving the pairs for
 #' substitution. 
 #' @param addition A list of named character vector giving the pairs for
-#' addition 
+#' addition.
+#' @note Adding NULL elements (Title = NULL, for example) to substitution
+#' doesn't delete or overwrite the entry in the DESCRIPTION file. 
 #' @return value of \code{\link{write.dcf}}.
 #' @export
 alter_description_file <- function(path, substitution = NULL, addition = NULL) {
@@ -41,7 +43,9 @@ alter_description_file <- function(path, substitution = NULL, addition = NULL) {
         d[1, x] <- substitution[[x]]
     }
     if (! is.null(addition)) d <- cbind(d, as.matrix(t(addition)))
-    status <- write.dcf(d, path)
+    status <- write.dcf(d, path,
+                        keep.white = c(names(substitution), names(addition)))
+
     return(status)
 }
 
