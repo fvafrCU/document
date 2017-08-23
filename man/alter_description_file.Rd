@@ -13,11 +13,15 @@ alter_description_file(path, substitution = NULL, addition = NULL)
 substitution.}
 
 \item{addition}{A list of named character vector giving the pairs for
-addition}
+addition.}
 }
 \value{
 value of \code{\link{write.dcf}}.
 }
 \description{
 Substitutes and/or adds fields in a DESCRIPTION file.
+}
+\note{
+Adding NULL elements (Title = NULL, for example) to substitution
+does not delete or overwrite the entry in the DESCRIPTION file.
 }

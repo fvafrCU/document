@@ -4,10 +4,14 @@
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘2.1.0’
+* this is package ‘document’ version ‘2.1.0.9000’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
+* checking CRAN incoming feasibility ... NOTE
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+Version contains large components (2.1.0.9000)
+
+Days since last update: 5
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -53,10 +57,10 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [103s/131s]
+  Running ‘testthat.R’ [104s/147s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: OK
+Status: 1 NOTE

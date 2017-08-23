@@ -30,7 +30,7 @@ sort_unlocale <- function(char) {
 #' @param addition A list of named character vector giving the pairs for
 #' addition.
 #' @note Adding NULL elements (Title = NULL, for example) to substitution
-#' doesn't delete or overwrite the entry in the DESCRIPTION file. 
+#' does not delete or overwrite the entry in the DESCRIPTION file. 
 #' @return value of \code{\link{write.dcf}}.
 #' @export
 alter_description_file <- function(path, substitution = NULL, addition = NULL) {
