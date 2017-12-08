@@ -1,5 +1,8 @@
 # document 2.1.0.9000
 
+* *alter\_descprition\_file()* deprecated, please use CRAN package `desc`
+  by Gabor Csardi instead. Internally, *alter\_descprition\_file()*, it just 
+  lingers as it was exported in version 2.1.0.
 * *alter\_descprition\_file()* now keeps whitespace, enabling to pass newline
   characters, for example for the Authors@R field.
 

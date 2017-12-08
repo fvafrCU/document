@@ -19,7 +19,8 @@ Imports:
     callr,
     devtools,
     checkmate,
-    rstudioapi
+    rstudioapi,
+    desc
 Suggests:
     knitr,
     rmarkdown,

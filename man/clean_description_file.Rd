@@ -10,13 +10,14 @@ clean_description_file(path)
 \item{path}{Path to the DESCRIPTION file or the directory containing it.}
 }
 \value{
-value of \code{\link{alter_description_file}}.
+Invisibly NULL.
 }
 \description{
 \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
 that throws a warning in \command{R CMD check}. Fix that.
 }
 \examples{
+if (! exists("dummy")) assign("dummy", "dumb")
 utils::package.skeleton(path = tempdir())
 old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 clean_description_file(path = file.path(tempdir(), "anRpackage", 

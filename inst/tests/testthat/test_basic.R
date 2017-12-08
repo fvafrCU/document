@@ -218,8 +218,9 @@ test_that("add deps", {
               f <- fake_package(file_name = path, working_directory = NULL,
                                 dependencies = "utils")
               lines <- readLines(file.path(f, "DESCRIPTION"))
-              current <- grep("^Depends:", lines, value = TRUE)
-              reference <- "Depends: utils"
+              index <- grep("^Depends:", lines)
+              current <- lines[c(index, index + 1)]
+              reference <- c("Depends: ", "    utils")
               expect_equal(current, reference)
 }
 )

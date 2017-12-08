@@ -24,16 +24,19 @@ sort_unlocale <- function(char) {
 #'
 #' Substitutes and/or adds fields in a DESCRIPTION file.
 #'
-#' @param path Path to the DESCRIPTION file or the directory containing it.
+#' @inheritParams clean_description_file
 #' @param substitution A list of named character vector giving the pairs for
 #' substitution. 
 #' @param addition A list of named character vector giving the pairs for
 #' addition.
 #' @note Adding NULL elements (Title = NULL, for example) to substitution
-#' does not delete or overwrite the entry in the DESCRIPTION file. 
+#' does not delete or overwrite the entry in the DESCRIPTION file. \cr
+#' alter_description_file() is deprecated, please use CRAN package \pkg{desc}.
 #' @return value of \code{\link{write.dcf}}.
 #' @export
 alter_description_file <- function(path, substitution = NULL, addition = NULL) {
+    warning("alter_description_file() is deprecated, ",
+            "please use CRAN package `desc`!")
     status  <- 0
     if (is.list(substitution)) substitution <- unlist(substitution)
     if (is.list(addition)) addition <- unlist(addition)
@@ -53,10 +56,11 @@ alter_description_file <- function(path, substitution = NULL, addition = NULL) {
 #'
 #' \code{utils::\link[utils]{package.skeleton}} leaves us with a DESCRIPTION 
 #' that throws a warning in \command{R CMD check}. Fix that. 
-#' @inheritParams alter_description_file
-#' @return value of \code{\link{alter_description_file}}.
+#' @param path Path to the DESCRIPTION file or the directory containing it.
+#' @return Invisibly NULL.
 #' @export
 #' @examples
+#' if (! exists("dummy")) assign("dummy", "dumb")
 #' utils::package.skeleton(path = tempdir())
 #' old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 #' clean_description_file(path = file.path(tempdir(), "anRpackage", 
@@ -64,12 +68,13 @@ alter_description_file <- function(path, substitution = NULL, addition = NULL) {
 #' new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 #' setdiff(new, old)
 clean_description_file <- function(path) {
-    s <- list(Version = "1.0.0",
-              License = "GPL",
-              Title = "A FAke Title",
-              Description = "This is just a fake package description.")
-    status <- alter_description_file(path = path, substitution = s)
-    return(invisible(status))
+    d <- desc::description$new(path)
+    d$set(Version = "2.0.0",
+          License = "GPL",
+          Title = "A FAke Title",
+          Description = "This is just a fake package description.")
+    d$write()
+    return(invisible(NULL))
 }
 
 #' Clean a String Created From a Run Through \pkg{RUnit}

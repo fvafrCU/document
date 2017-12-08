@@ -46,9 +46,13 @@ fake_package <- function(file_name, working_directory = NULL,
     #% create documentation from roxygen comments for the package
     dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir =
                                                            package_directory))
-    if (! is.null(dependencies))
-        alter_description_file(path = package_directory,
-                               addition = list(Depends = dependencies))
+    if (! is.null(dependencies)) {
+        dependency_data <- data.frame(type = "Depends", package = dependencies, 
+                                      version = "*")
+        d <- desc::description$new(package_directory)
+        d$set_deps(dependency_data)
+        d$write()
+    }
     return(package_directory)
 }
 
