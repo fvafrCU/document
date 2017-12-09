@@ -20,13 +20,6 @@ LOG_DIR = log
 .PHONY: all
 all: $(LOG_DIR)/install.Rout
 
-# miscell
-.PHONY: $(LOG_DIR)/info.Rout
-$(LOG_DIR)/info.Rout: Makefile $(LOG_DIR)
-	$(Rscript) --vanilla -e 'deps <- unlist(strsplit("$(DEPS)", split = " ")); for (dep in deps) if (! require(dep, character.only = TRUE)) install.packages(dep, repos = "https://cran.uni-muenster.de/"); sessionInfo()' >  $(LOG_DIR)/info.Rout 2>&1 
-
-
-
 # devel stuff
 .PHONY: devel
 devel: vignettes build_win release use_dev_version tag_release
@@ -41,10 +34,10 @@ use_dev_version:
 
 .PHONY: release
 release: 
-	echo "devtools::release(check = FALSE)" > ./rel.R
-	echo "source('./rel.R')" > ./.Rprofile
-	R
-	rm ./rel.R ./.Rprofile
+	echo "library('utils'); devtools::release(check = FALSE)" > /tmp/rel.R
+	echo "source('/tmp/rel.R')" > ./.Rprofile
+	$(R)
+	rm /tmp/rel.R ./.Rprofile
 
 .PHONY: build_win
 build_win:
@@ -92,7 +85,7 @@ $(LOG_DIR):
 .PHONY: dependencies
 dependencies: $(LOG_DIR)/dependencies.Rout
 $(LOG_DIR)/dependencies.Rout: Makefile $(LOG_DIR)
-	$(Rscript) -e 'deps <- unlist(strsplit("$(DEPS)", split = " ")); for (dep in deps) if (! require(dep, character.only = TRUE)) install.packages(dep, repos = "https://cran.uni-muenster.de/")' > $(LOG_DIR)/dependencies.Rout 2>&1 
+	$(Rscript) --vanilla -e 'deps <- unlist(strsplit("$(DEPS)", split = " ")); for (dep in deps) if (! require(dep, character.only = TRUE)) install.packages(dep, repos = "https://cran.uni-muenster.de/")' > $(LOG_DIR)/dependencies.Rout 2>&1 
 
 # utils
 utils: clean remove viz

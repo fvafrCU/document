@@ -21,3 +21,4 @@ devtools.R
 devel.R
 Makefile
 ^.lintr$
+^.Rprofile$
