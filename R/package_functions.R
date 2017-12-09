@@ -47,7 +47,7 @@ fake_package <- function(file_name, working_directory = NULL,
     dev_null <- utils::capture.output(roxygen2::roxygenize(package.dir =
                                                            package_directory))
     if (! is.null(dependencies)) {
-        dependency_data <- data.frame(type = "Depends", package = dependencies, 
+        dependency_data <- data.frame(type = "Depends", package = dependencies,
                                       version = "*")
         d <- desc::description$new(package_directory)
         d$set_deps(dependency_data)

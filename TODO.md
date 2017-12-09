@@ -1,3 +1,1 @@
-- use package desc!
 - improve vignette
-- consider using withr

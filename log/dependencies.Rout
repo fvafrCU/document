@@ -1,13 +1,12 @@
-Loading required package: callr
-Loading required package: rprojroot
+=========================
+= Bitte haben Sie Spass. =
+=========================
+
+Loading required package: cleanr
 Loading required package: covr
 Loading required package: methods
-Loading required package: knitr
 Loading required package: devtools
-Loading required package: rmarkdown
-Loading required package: RUnit
-Loading required package: checkmate
-Loading required package: roxygen2
+Loading required package: knitr
 Loading required package: lintr
 
 Attaching package: ‘lintr’
@@ -16,5 +15,12 @@ The following object is masked from ‘package:devtools’:
 
     lint
 
-Loading required package: hunspell
-Loading required package: cleanr
+Loading required package: packager
+
+Attaching package: ‘packager’
+
+The following object is masked from ‘package:devtools’:
+
+    create
+
+Loading required package: roxygen2
