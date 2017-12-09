@@ -9,3 +9,4 @@ tmp_*
 *.png
 log/use_dev_version.Rout
 vignettes/.build.timestamp
+.Rprofile
