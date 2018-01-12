@@ -48,7 +48,7 @@ get_lines_between_tags <- function(file_name, keep_tagged_lines = TRUE,
             if (begin_line_indices[1] > end_line_indices[1])
                 begin_line_indices  <- c(1, begin_line_indices)
         if (to_last_line)
-            if (end_line_indices[length(end_line_indices)] < 
+            if (end_line_indices[length(end_line_indices)] <
                 begin_line_indices[length(begin_line_indices)])
                 end_line_indices  <- c(end_line_indices, length(R_code_lines))
     } else {
