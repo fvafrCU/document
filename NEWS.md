@@ -1,3 +1,8 @@
+# document 2.2.1
+
+* Fixed internal file parsing.
+* Exported function get\_lines\_between\_tags().
+
 # document 2.2.0
 
 * Marked *alter\_descprition\_file()* as deprecated, please use CRAN package 
