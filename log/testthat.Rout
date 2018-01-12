@@ -2,72 +2,102 @@ Loading document
 Loading required package: testthat
 Testing document
 files: First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/RtmpBrst8L/document_ea552499b31/mini.mal/DESCRIPTION
-* using log directory ‘/tmp/RtmpBrst8L/document_ea552499b31/mini.mal.Rcheck’
-* using R Under development (unstable) (2017-10-01 r73423)
-* using platform: x86_64-pc-linux-gnu (64-bit)
-* using session charset: UTF-8
-* using option ‘--as-cran’
-* checking for file ‘mini.mal/DESCRIPTION’ ... OK
-* checking extension type ... Package
-* this is package ‘mini.mal’ version ‘2.0.0’
-* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
-Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-* checking package namespace information ... OK
-* checking package dependencies ... OK
-* checking if this is a source package ... OK
-* checking if there is a namespace ... OK
-* checking for executable files ... OK
-* checking for hidden files and directories ... OK
-* checking for portable file names ... OK
-* checking for sufficient/correct file permissions ... OK
-* checking whether package ‘mini.mal’ can be installed ... OK
-* checking installed package size ... OK
-* checking package directory ... OK
-* checking DESCRIPTION meta-information ... OK
-* checking top-level files ... OK
-* checking for left-over files ... OK
-* checking index information ... OK
-* checking package subdirectories ... OK
-* checking R files for non-ASCII characters ... OK
-* checking R files for syntax errors ... OK
-* checking whether the package can be loaded ... OK
-* checking whether the package can be loaded with stated dependencies ... OK
-* checking whether the package can be unloaded cleanly ... OK
-* checking whether the namespace can be loaded with stated dependencies ... OK
-* checking whether the namespace can be unloaded cleanly ... OK
-* checking loading without being on the library search path ... OK
-* checking use of S3 registration ... OK
-* checking dependencies in R code ... OK
-* checking S3 generic/method consistency ... OK
-* checking replacement functions ... OK
-* checking foreign function calls ... OK
-* checking R code for possible problems ... OK
-* checking Rd files ... OK
-* checking Rd metadata ... OK
-* checking Rd line widths ... OK
-* checking Rd cross-references ... OK
-* checking for missing documentation entries ... OK
-* checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... OK
-* checking Rd contents ... OK
-* checking for unstated dependencies in examples ... OK
-* checking examples ... OK
-* checking PDF version of manual ... OK
-* DONE
-Status: OK
-###
-Got: Status: OK
-Expected: Status: 1 NOTE
-/home/nik/svn/R/r-devel/build/library
-Sys.info:
-fvafrdebianCU
-#1 SMP Debian 4.9.65-3 (2017-12-03)
-Path: /tmp/RtmpBrst8L/document_ea552499b31/mini.mal
-###
-Error in check_package(package_directory = package_directory, working_directory = working_directory,  : 
-  R CMD check failed, read the above log and fix.
-Calls: <Anonymous> ... source_file -> eval -> eval -> document -> check_package -> throw
+Updating roxygen version in /tmp/RtmpNBhHOX/document_77af5c2c5799/mini.mal/DESCRIPTION
+..
+expected files: ..
+man: _a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This really is just an example, the function prints
+     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
+
+_U_s_a_g_e:
+
+     a_first_function(df)
+     
+_A_r_g_u_m_e_n_t_s:
+
+      df: Name of a data.frame to ... do whatever needs to be done.
+
+_V_a_l_u_e:
+
+     NULL. This is no good.
+
+_A_u_t_h_o_r(_s):
+
+     Dominik Cullmann <adc-r@arcor.de>
+
+_E_x_a_m_p_l_e_s:
+
+     data(iris, package = "datasets")
+     a_first_function(iris)
+     
+
+
+..._a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This really is just an example, the function prints
+     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
+
+_U_s_a_g_e:
+
+     a_first_function(df)
+     
+_A_r_g_u_m_e_n_t_s:
+
+      df: Name of a data.frame to ... do whatever needs to be done.
+
+_V_a_l_u_e:
+
+     NULL. This is no good.
+
+_A_u_t_h_o_r(_s):
+
+     Dominik Cullmann <adc-r@arcor.de>
+
+_E_x_a_m_p_l_e_s:
+
+     data(iris, package = "datasets")
+     a_first_function(iris)
+     
+
+
+._a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This really is just an example, the function prints
+     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
+
+_U_s_a_g_e:
+
+     a_first_function(df)
+     
+_A_r_g_u_m_e_n_t_s:
+
+      df: Name of a data.frame to ... do whatever needs to be done.
+
+_V_a_l_u_e:
+
+     NULL. This is no good.
+
+_A_u_t_h_o_r(_s):
+
+     Dominik Cullmann <adc-r@arcor.de>
+
+_E_x_a_m_p_l_e_s:
+
+     data(iris, package = "datasets")
+     a_first_function(iris)
+     
+
+
+.
+file parsing: .........
+utils: ...
+checking the package: ....
 
 DONE ===========================================================================
-Execution halted

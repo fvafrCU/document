@@ -1,10 +1,10 @@
 * using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2017-11-07 r73685)
+* using R Under development (unstable) (2018-01-12 r74112)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘2.2.0’
+* this is package ‘document’ version ‘2.2.1’
 * package encoding: UTF-8
 * checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
@@ -16,6 +16,12 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
+* checking serialized R objects in the sources ... WARNING
+Found file(s) with version 3 serialization:
+  ‘build/vignette.rds’
+Such files are only readable in R >= 3.5.0.
+Recreate them with R < 3.5.0 or save(version = 2) or saveRDS(version =
+2) as appropriate
 * checking whether package ‘document’ can be installed ... OK
 * checking installed package size ... OK
 * checking package directory ... OK
@@ -49,14 +55,17 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... OK
+* checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+     user system elapsed
+man 3.756   0.64   5.221
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [102s/131s]
+  Running ‘testthat.R’ [109s/138s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: OK
+Status: 1 WARNING, 1 NOTE
