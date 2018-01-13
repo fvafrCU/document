@@ -18,4 +18,4 @@ Best, Andreas Dominik
 - win-builder (devel)
 
 ## R CMD check results
-0 errors | 1 warning  | 1 note 
+0 errors | 0 warnings | 0 notes

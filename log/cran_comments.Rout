@@ -1,12 +1,2 @@
-checking serialized R objects in the sources ... WARNING
-Found file(s) with version 3 serialization:
-  ‘build/vignette.rds’
-Such files are only readable in R >= 3.5.0.
-Recreate them with R < 3.5.0 or save(version = 2) or saveRDS(version =
-2) as appropriate
 
-checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-     user system elapsed
-man 3.756   0.64   5.221
-displaying logs for fvafrCU/document#132.1
+displaying logs for fvafrCU/document#133.1
