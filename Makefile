@@ -37,7 +37,7 @@ use_dev_version:
 release: 
 	echo "library('utils'); devtools::release(check = FALSE)" > /tmp/rel.R
 	echo "source('/tmp/rel.R')" > ./.Rprofile
-	$(R)
+	$(Rbuild)
 	rm /tmp/rel.R ./.Rprofile
 
 .PHONY: build_win
