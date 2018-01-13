@@ -1,19 +1,15 @@
 Dear CRAN Team,
 this is a resubmission of package 'document'. I have added the following changes:
 
-* Marked *alter\_descprition\_file()* as deprecated, please use CRAN package 
-  `desc` by Gabor Csardi instead.  
-  Internally, *alter\_descprition\_file()* is not used any longer. 
-  It just lingers as it was exported in version 2.1.0.
-* *alter\_descprition\_file()* now keeps whitespace, making it possible to pass 
-  newline characters, for example for the Authors@R field.
+* Fixed internal file parsing.
+* Exported function get\_lines\_between\_tags().
 
 Please upload to CRAN.
-Best, Dominik
+Best, Andreas Dominik
 
-# Package document 2.2.0
+# Package document 2.2.1
 ## Test  environments 
-- R Under development (unstable) (2017-11-07 r73685)
+- R Under development (unstable) (2018-01-12 r74112)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Devuan GNU/Linux 1 (jessie)
 - R version 3.4.2 (2017-01-27)

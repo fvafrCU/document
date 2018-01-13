@@ -2,7 +2,7 @@ Loading document
 Loading required package: testthat
 Testing document
 files: First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/Rtmpa7hTcD/document_21ee43bd08b0/mini.mal/DESCRIPTION
+Updating roxygen version in /tmp/RtmpjZytgp/document_11fb7eecafd/mini.mal/DESCRIPTION
 ..
 expected files: ..
 man: _a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
