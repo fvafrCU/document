@@ -1,8 +1,9 @@
 # Force posix:
 .POSIX:
 
-R = R # -devel
-Rscript = Rscript # -devel
+R = R-devel
+Rscript = Rscript-devel
+Rbuild = R-release
 
 PKGNAME = $(shell sed -n "s/Package: *\([^ ]*\)/\1/p" DESCRIPTION)
 PKGVERS = $(shell sed -n "s/Version: *\([^ ]*\)/\1/p" DESCRIPTION)
@@ -71,7 +72,7 @@ $(PKGNAME)_$(PKGVERS).tar.gz: NEWS.md README.md DESCRIPTION LICENSE \
 	$(LOG_DIR)/check_codetags.Rout $(LOG_DIR)/news.Rout $(LOG_DIR)/runit.Rout \
 	$(LOG_DIR)/testthat.Rout $(LOG_DIR)/covr.Rout $(LOG_DIR)/cleanr.Rout \
 	$(LOG_DIR)/lintr.Rout $(LOG_DIR)/cyclocomp.Rout 
-	$(R) --vanilla CMD build $(PKGSRC)
+	$(Rbuild) --vanilla CMD build $(PKGSRC)
 
 README.md: README.Rmd R/$(PKGNAME)-package.R
 	$(Rscript) --vanilla -e 'knitr::knit("README.Rmd")'
