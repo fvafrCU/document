@@ -86,7 +86,7 @@ check_package <- function(package_directory, working_directory,
         libpath <- .libPaths()[length(.libPaths())]
         res <- rcmdcheck::rcmdcheck(path = package_directory,
                                     libpath = libpath,
-                                    args = "--as-cran")
+                                    args = check_args)
         has_errors <- as.logical(length(res[["errors"]]))
         has_warnings <- as.logical(length(res[["warnings"]]))
         has_notes <- as.logical(length(res[["notes"]]))
