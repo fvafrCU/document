@@ -50,6 +50,10 @@ test_that("simple", {
                                       "simple.R")
               res <- document(file_name, check_package = TRUE, runit = TRUE)
               current <- checks(res[["check_result"]])
+              expect_true(! any(current[c("errors", "warnings")]))
+              res <- document(file_name, check_package = TRUE, runit = TRUE,
+                              check_as_cran = FALSE)
+              current <- checks(res[["check_result"]])
               expect_true(! any(current))
 }
 )
