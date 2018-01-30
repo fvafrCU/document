@@ -1,3 +1,8 @@
+# document 2.3.0
+
+* Added a fix to make the evaluation of whether or not/how we pass R CMD check 
+  more stable by using rcmdcheck internally.
+
 # document 2.2.1
 
 * Fixed internal file parsing.

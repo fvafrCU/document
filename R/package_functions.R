@@ -65,27 +65,12 @@ fake_package <- function(file_name, working_directory = NULL,
 #' @export
 check_package <- function(package_directory, working_directory,
                           check_as_cran = TRUE,
-                          stop_on_check_not_passing = TRUE, debug = TRUE) {
+                          stop_on_check_not_passing = FALSE, debug = TRUE) {
         # Get rid of one of R CMD checks' NOTEs
         file.remove(file.path(package_directory, "Read-and-delete-me"))
         clean_description_file(package_directory)
-        # Use devtools::build to build in the package_directory.
-        tgz <- devtools::build(package_directory, quiet = TRUE)
-        # devtools::check's return value is crap, so use R CMD check via callr.
-        check_args  <- c(paste0("--output=", working_directory), tgz)
-        if (isTRUE(check_as_cran)) {
-            check_args <- c("--as-cran", check_args)
-            is_probably_cran <- any(grepl("travis", .libPaths()))
-            if (! is_probably_cran) {
-                # "checking CRAN incoming feasibility" will cause a NOTE
-                expectation <- "Status: 1 NOTE"
-            } else {
-                # but not on travis ...
-                expectation <- "Status: OK"
-            }
-        } else {
-            expectation <- "Status: OK"
-        }
+        check_args  <- NULL
+        if (isTRUE(check_as_cran)) check_args <- c("--as-cran", check_args)
         # When running the tests via R CMD check, libPath()'s first element is a
         # path to a temporary library. callr::rcmd_safe() seems to only read the
         # first element of its libpath argument, and then R CMD check warns:
@@ -99,21 +84,25 @@ check_package <- function(package_directory, working_directory,
         # We could ignore this, but checking the log on the existance of
         # warnings to stop_on_check_not_passing does not work then. So:
         libpath <- .libPaths()[length(.libPaths())]
-        res <- callr::rcmd_safe("check", cmdargs = check_args,
-                                libpath = libpath)
-        check_log <- unlist(strsplit(res[["stdout"]], split = "\n"))
-        if (check_log[length(check_log)] != expectation) {
-            if (isTRUE(stop_on_check_not_passing)) {
-                message(paste(check_log, collapse = "\n"))
+        res <- rcmdcheck::rcmdcheck(path = package_directory, 
+                                    libpath = libpath,
+                                    args = "--as-cran")
+        has_errors <- as.logical(length(res[["errors"]]))
+        has_warnings <- as.logical(length(res[["warnings"]]))
+        has_notes <- as.logical(length(res[["notes"]]))
+        if (isTRUE(stop_on_check_not_passing)) {
+            if (has_errors || has_warnings) {
+                check_log <- res[["output"]][["stdout"]]
+                message(paste(check_log, collpase = "\n"))
                 if (isTRUE(debug)) {
                     i <- grep("WARNING|ERROR|NOTE", check_log)
                     i <- unlist(lapply(i,
-                                      function(x) return(seq(from = x,
-                                                             length.out = 7))))
+                                       function(x) return(seq(from = x,
+                                                              length.out = 7)))
+                    )
                     i <- i[i <= length(check_log)]
                     rule <- "###"
                     m <- c(rule, paste("Got:", check_log[length(check_log)]),
-                           paste("Expected:", expectation),
                            .libPaths(), check_log[i], "Sys.info:",
                            as.character(Sys.info()[c("nodename",
                                                      "version")]),
@@ -122,7 +111,18 @@ check_package <- function(package_directory, working_directory,
                 }
                 throw("R CMD check failed, read the above log and fix.")
             } else {
+                if (has_notes) {
+                    warn("R CMD check had NOTES, read the log an fix.")
+
+                }
+            }
+        } else {
+            if (has_errors || has_warnings) {
                 warn("R CMD check failed, read the log and fix.")
+            } else {
+                if (has_notes) {
+                    warn("R CMD check had NOTES, read the log an fix.")
+                }
             }
         }
         return(res)

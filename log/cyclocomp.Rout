@@ -8,4 +8,5 @@
 ** installing vignettes
 ** testing if installed package can be loaded
 * DONE (document)
-<error in packager::check_cyclomatic_complexity(): Exceeding maximum cyclomatic complexity of 10 for get_lines_between_tags by 8.>
+<error in packager::check_cyclomatic_complexity(): Exceeding maximum cyclomatic complexity of 10 for get_lines_between_tags by 8.
+Exceeding maximum cyclomatic complexity of 10 for check_package by 2.>

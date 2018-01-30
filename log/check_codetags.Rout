@@ -1,4 +1,2 @@
-[1] "./document.Rcheck/00_pkg_src/document/R/utils.R:     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to"
-[2] "./R/utils.R:     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to"                                    
-[3] "./utils/checks.R:     return(grep_directory(path = path, exclude = exclude, pattern =  \"XXX:|FIXME:|TODO:\"))"                  
-There were 50 or more warnings (use warnings() to see the first 50)
+[1] "./R/utils.R:     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to"                  
+[2] "./utils/checks.R:     return(grep_directory(path = path, exclude = exclude, pattern =  \"XXX:|FIXME:|TODO:\"))"

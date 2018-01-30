@@ -6,7 +6,7 @@
 \usage{
 document(file_name, working_directory = NULL, output_directory = tempdir(),
   dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
-  check_package = TRUE, check_as_cran = check_package,
+  check_package = TRUE, check_as_cran = FALSE,
   stop_on_check_not_passing = TRUE, clean = FALSE, debug = TRUE, ...)
 }
 \arguments{

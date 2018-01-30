@@ -1,9 +1,12 @@
                  filename              functions line value
-276          R/document.R         write_the_docs  139     0
-281          R/document.R         write_the_docs  142     0
+282          R/document.R         write_the_docs  139     0
+287          R/document.R         write_the_docs  142     0
 23          R/internals.R                  throw   23     0
-280               R/man.R             display_Rd  142     0
-196 R/package_functions.R          check_package   84     0
+286               R/man.R             display_Rd  142     0
+241 R/package_functions.R          check_package  115     0
+257 R/package_functions.R          check_package  123     0
+260 R/package_functions.R          check_package  124     0
+263 R/package_functions.R          check_package  125     0
 48              R/utils.R alter_description_file   38     0
 52              R/utils.R alter_description_file   39     0
 56              R/utils.R alter_description_file   40     0
@@ -17,10 +20,10 @@
 96              R/utils.R alter_description_file   49     0
 100             R/utils.R alter_description_file   50     0
 107             R/utils.R alter_description_file   52     0
-document Coverage: 94.36%
+document Coverage: 93.54%
 R/utils.R: 63.89%
-R/internals.R: 93.75%
+R/internals.R: 95.00%
+R/package_functions.R: 95.06%
 R/document.R: 97.47%
 R/man.R: 98.33%
-R/package_functions.R: 98.73%
 R/file_parsing.R: 100.00%

@@ -1,0 +1,24 @@
+inst/tests/testthat/test_basic.R:144:1: style: Trailing blank lines are superfluous.
+
+^
+inst/tests/testthat/test_basic.R:144:1: style: Trailing blank lines are superfluous.
+
+^
+inst/tests/testthat/test_check.R:65:1: style: Trailing blank lines are superfluous.
+
+^
+inst/tests/testthat/test_check.R:65:1: style: Trailing blank lines are superfluous.
+
+^
+inst/tests/testthat/test_parse.R:94:1: style: Trailing blank lines are superfluous.
+
+^
+inst/tests/testthat/test_parse.R:94:1: style: Trailing blank lines are superfluous.
+
+^
+R/internals.R:64:69: style: Trailing whitespace is superfluous.
+    res <- sapply(rcmdcheck_value[c("errors", "warnings", "notes")], 
+                                                                    ^
+R/package_functions.R:87:62: style: Trailing whitespace is superfluous.
+        res <- rcmdcheck::rcmdcheck(path = package_directory, 
+                                                             ^
