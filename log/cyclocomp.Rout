@@ -1,3 +1,68 @@
+Installing 2 packages: Rcpp, xml2
+trying URL 'http://cloud.r-project.org/src/contrib/Rcpp_0.12.15.tar.gz'
+Content type 'application/x-gzip' length 3762481 bytes (3.6 MB)
+==================================================
+downloaded 3.6 MB
+
+trying URL 'http://cloud.r-project.org/src/contrib/xml2_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 251614 bytes (245 KB)
+==================================================
+downloaded 245 KB
+
+* installing *source* package ‘Rcpp’ ...
+** package ‘Rcpp’ successfully unpacked and MD5 sums checked
+** libs
+make[1]: Entering directory '/tmp/RtmpmZi5rO/R.INSTALL1b6a4608a23c/Rcpp/src'
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Date.cpp -o Date.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Module.cpp -o Module.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c Rcpp_init.cpp -o Rcpp_init.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c api.cpp -o api.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c attributes.cpp -o attributes.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include/  -I/usr/local/include   -fpic  -g -O2  -c barrier.cpp -o barrier.o
+g++ -shared -L/usr/local/lib -o Rcpp.so Date.o Module.o Rcpp_init.o api.o attributes.o barrier.o
+make[1]: Leaving directory '/tmp/RtmpmZi5rO/R.INSTALL1b6a4608a23c/Rcpp/src'
+installing to /tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (Rcpp)
+* installing *source* package ‘xml2’ ...
+** package ‘xml2’ successfully unpacked and MD5 sums checked
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/usr/include/libxml2
+Using PKG_LIBS=-lxml2
+** libs
+make[1]: Entering directory '/tmp/Rtmptfxdhy/R.INSTALL1bea69272313/xml2/src'
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c RcppExports.cpp -o RcppExports.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c connection.cpp -o connection.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_doc.cpp -o xml2_doc.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_init.cpp -o xml2_init.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_namespace.cpp -o xml2_namespace.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_node.cpp -o xml2_node.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_output.cpp -o xml2_output.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_schema.cpp -o xml2_schema.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_url.cpp -o xml2_url.o
+g++  -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG -I../inst/include -I/usr/include/libxml2 -I"/tmp/Rtmp5AXIqV/file15576bdc4b77/Rcpp/include" -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2  -c xml2_xpath.cpp -o xml2_xpath.o
+g++ -shared -L/usr/local/lib -o xml2.so RcppExports.o connection.o xml2_doc.o xml2_init.o xml2_namespace.o xml2_node.o xml2_output.o xml2_schema.o xml2_url.o xml2_xpath.o -lxml2
+make[1]: Leaving directory '/tmp/Rtmptfxdhy/R.INSTALL1bea69272313/xml2/src'
+installing to /tmp/Rtmp5AXIqV/file15576bdc4b77/xml2/libs
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (xml2)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp5AXIqV/downloaded_packages’
 * installing *source* package ‘document’ ...
 ** R
 ** inst

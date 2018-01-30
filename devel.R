@@ -16,9 +16,5 @@ package_directory <- fake_package(file_name, working_directory = working_directo
 check_as_cran = TRUE
 stop_on_check_not_passing = TRUE
 debug = TRUE
-check_log <- unlist(strsplit(res[["stdout"]], split = "\n"))
-roxygen2::roxygenize(package.dir = package_directory)
-res_rc <- rcmdcheck::rcmdcheck(path = package_directory, args = "--as-cran")
-res <- callr::rcmd_safe("check", cmdargs = check_args,
-                        libpath = libpath)
-
+res <- rcmdcheck::rcmdcheck(path = package_directory, args = "--as-cran")
+d <- document(file_name)
