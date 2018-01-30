@@ -62,4 +62,3 @@ test_that("warning on bug, as cran", {
                              )
 }
 )
-

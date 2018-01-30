@@ -91,4 +91,3 @@ test_that("no tagged lines, not_from", {
               expect_equal(current, NULL)
 }
 )
-

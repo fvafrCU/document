@@ -50,7 +50,7 @@ warn <- function(message_string, system_call = sys.call(-1), ...) {
 #' Are There Errors, Warnings or Notes From \code{\link{rcmdcheck}}?
 #'
 #' \code{\link{rcmdcheck}} returns a list containing characters that give
-#' errors, warnings and notes. 
+#' errors, warnings and notes.
 #'
 #' Use \code{! any(checks(x)))} to ensure there were no errors, warnings or
 #' notes in \code{x}.
@@ -61,7 +61,7 @@ warn <- function(message_string, system_call = sys.call(-1), ...) {
 #' @keywords internal
 checks <- function(rcmdcheck_value) {
     convert <- function (x) as.logical(length(x))
-    res <- sapply(rcmdcheck_value[c("errors", "warnings", "notes")], 
+    res <- sapply(rcmdcheck_value[c("errors", "warnings", "notes")],
                   convert)
     return(res)
 }

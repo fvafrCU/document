@@ -84,7 +84,7 @@ check_package <- function(package_directory, working_directory,
         # We could ignore this, but checking the log on the existance of
         # warnings to stop_on_check_not_passing does not work then. So:
         libpath <- .libPaths()[length(.libPaths())]
-        res <- rcmdcheck::rcmdcheck(path = package_directory, 
+        res <- rcmdcheck::rcmdcheck(path = package_directory,
                                     libpath = libpath,
                                     args = "--as-cran")
         has_errors <- as.logical(length(res[["errors"]]))
