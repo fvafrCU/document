@@ -11,7 +11,7 @@ test_that("error on bug, not as cran", {
               file_name  <- file.path(system.file("tests",
                                                   "files",
                                                   package = "document"),
-                                      "warn.R")
+                                      "produce_warning.R")
               expect_error(
                            document(file_name, check_package = TRUE,
                                     runit = TRUE,
@@ -25,7 +25,7 @@ test_that("error on bug, as cran", {
               file_name  <- file.path(system.file("tests",
                                                   "files",
                                                   package = "document"),
-                                      "warn.R")
+                                      "produce_warning.R")
               expect_error(
                            document(file_name, check_package = TRUE,
                                     runit = TRUE,
@@ -39,7 +39,7 @@ test_that("warning on bug, not as cran", {
               file_name  <- file.path(system.file("tests",
                                                   "files",
                                                   package = "document"),
-                                      "warn.R")
+                                      "produce_warning.R")
               expect_warning(
                              document(file_name, check_package = TRUE,
                                       runit = TRUE,
@@ -53,7 +53,7 @@ test_that("warning on bug, as cran", {
               file_name  <- file.path(system.file("tests",
                                                   "files",
                                                   package = "document"),
-                                      "warn.R")
+                                      "produce_warning.R")
               expect_warning(
                              document(file_name, check_package = TRUE,
                                       runit = TRUE,
