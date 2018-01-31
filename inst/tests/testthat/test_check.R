@@ -18,7 +18,7 @@ test_that("error on bug, not as cran", {
                                                   "files",
                                                   package = "document"),
                                       "produce_warning.R")
-              if (! probably_winbuilder()
+              if (! probably_winbuilder())
                   expect_error(
                                document(file_name, check_package = TRUE,
                                         runit = TRUE,
@@ -33,7 +33,7 @@ test_that("error on bug, as cran", {
                                                   "files",
                                                   package = "document"),
                                       "produce_warning.R")
-              if (! probably_winbuilder()
+              if (! probably_winbuilder())
                   expect_error(
                                document(file_name, check_package = TRUE,
                                         runit = TRUE,
@@ -48,7 +48,7 @@ test_that("warning on bug, not as cran", {
                                                   "files",
                                                   package = "document"),
                                       "produce_warning.R")
-              if (! probably_winbuilder()
+              if (! probably_winbuilder())
                   expect_warning(
                                  document(file_name, check_package = TRUE,
                                           runit = TRUE,
@@ -63,7 +63,7 @@ test_that("warning on bug, as cran", {
                                                   "files",
                                                   package = "document"),
                                       "produce_warning.R")
-              if (! probably_winbuilder()
+              if (! probably_winbuilder())
                   expect_warning(
                                  document(file_name, check_package = TRUE,
                                           runit = TRUE,
