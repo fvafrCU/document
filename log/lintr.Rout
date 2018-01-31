@@ -1,0 +1,1434 @@
+inst/tests/testthat/test_check.R:8:35: style: Opening curly braces should never go on their own line and should always be followed by a new line.
+probably_winbuilder <- function() { # See comments below
+                                  ^
+inst/tests/testthat/test_check.R:8:35: style: Opening curly braces should never go on their own line and should always be followed by a new line.
+probably_winbuilder <- function() { # See comments below
+                                  ^
+inst/tests/testthat/test_check.R:82:3: style: Commented code should be removed.
+# Platform: x86_64-pc-linux-gnu (64-bit)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:82:3: style: Commented code should be removed.
+# Platform: x86_64-pc-linux-gnu (64-bit)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:89:2: style: Commented code should be removed.
+## R Under development (unstable) (2018-01-30 r74185) -- "Unsuffered Consequences"
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:89:2: style: Commented code should be removed.
+## R Under development (unstable) (2018-01-30 r74185) -- "Unsuffered Consequences"
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:91:2: style: Commented code should be removed.
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:91:2: style: Commented code should be removed.
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:95:2: style: Commented code should be removed.
+## Type 'license()' or 'licence()' for distribution details.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:95:2: style: Commented code should be removed.
+## Type 'license()' or 'licence()' for distribution details.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:98:2: style: Commented code should be removed.
+## Type 'contributors()' for more information and
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:98:2: style: Commented code should be removed.
+## Type 'contributors()' for more information and
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:99:2: style: Commented code should be removed.
+## 'citation()' on how to cite R or R packages in publications.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:99:2: style: Commented code should be removed.
+## 'citation()' on how to cite R or R packages in publications.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:101:2: style: Commented code should be removed.
+## Type 'demo()' for some demos, 'help()' for on-line help, or
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:101:2: style: Commented code should be removed.
+## Type 'demo()' for some demos, 'help()' for on-line help, or
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:102:2: style: Commented code should be removed.
+## 'help.start()' for an HTML browser interface to help.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:102:2: style: Commented code should be removed.
+## 'help.start()' for an HTML browser interface to help.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:103:2: style: Commented code should be removed.
+## Type 'q()' to quit R.
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:103:2: style: Commented code should be removed.
+## Type 'q()' to quit R.
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:105:2: style: Commented code should be removed.
+## > library("testthat")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:105:2: style: Commented code should be removed.
+## > library("testthat")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:106:2: style: Commented code should be removed.
+## > library("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:106:2: style: Commented code should be removed.
+## > library("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:107:2: style: Commented code should be removed.
+## > test_check("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:107:2: style: Commented code should be removed.
+## > test_check("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:108:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:108:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:109:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file908855ba4f61/mini.mal.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:109:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file908855ba4f61/mini.mal.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:110:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:110:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:111:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:111:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:112:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:112:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:113:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:113:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:114:2: style: Commented code should be removed.
+## v  checking for file 'mini.mal/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:114:2: style: Commented code should be removed.
+## v  checking for file 'mini.mal/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:115:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:115:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:116:2: style: Commented code should be removed.
+## -  this is package 'mini.mal' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:116:2: style: Commented code should be removed.
+## -  this is package 'mini.mal' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:118:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:118:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:122:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:122:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:131:2: style: Commented code should be removed.
+## -  checking whether package 'mini.mal' can be installed ... [2s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:131:2: style: Commented code should be removed.
+## -  checking whether package 'mini.mal' can be installed ... [2s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:134:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:134:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:135:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:135:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:136:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:136:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:139:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:139:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:149:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:149:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:152:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:152:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:156:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:156:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:158:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:158:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:162:2: style: Commented code should be removed.
+## -  checking examples ... [0s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:162:2: style: Commented code should be removed.
+## -  checking examples ... [0s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:166:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:166:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:168:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file908855ba4f61/mini.mal.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:168:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file908855ba4f61/mini.mal.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:172:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:172:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:173:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90882b02244/simple.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:173:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90882b02244/simple.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:174:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:174:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:175:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:175:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:176:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:176:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:177:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:177:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:178:2: style: Commented code should be removed.
+## v  checking for file 'simple/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:178:2: style: Commented code should be removed.
+## v  checking for file 'simple/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:179:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:179:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:180:2: style: Commented code should be removed.
+## -  this is package 'simple' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:180:2: style: Commented code should be removed.
+## -  this is package 'simple' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:182:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:182:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:186:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:186:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:195:2: style: Commented code should be removed.
+## -  checking whether package 'simple' can be installed ... [2s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:195:2: style: Commented code should be removed.
+## -  checking whether package 'simple' can be installed ... [2s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:198:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:198:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:199:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:199:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:200:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:200:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:203:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:203:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:213:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:213:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:216:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:216:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:220:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:220:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:222:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:222:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:226:2: style: Commented code should be removed.
+## -  checking examples ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:226:2: style: Commented code should be removed.
+## -  checking examples ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:229:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:229:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:232:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90882b02244/simple.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:232:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90882b02244/simple.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:236:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:236:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:237:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90882b10c05/simple.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:237:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90882b10c05/simple.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:238:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:238:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:239:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:239:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:240:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:240:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:241:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:241:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:242:2: style: Commented code should be removed.
+## v  checking for file 'simple/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:242:2: style: Commented code should be removed.
+## v  checking for file 'simple/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:243:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:243:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:244:2: style: Commented code should be removed.
+## -  this is package 'simple' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:244:2: style: Commented code should be removed.
+## -  this is package 'simple' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:246:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:246:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:250:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:250:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:259:2: style: Commented code should be removed.
+## -  checking whether package 'simple' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:259:2: style: Commented code should be removed.
+## -  checking whether package 'simple' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:262:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:262:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:263:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:263:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:264:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:264:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:267:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:267:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:277:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:277:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:280:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:280:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:284:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:284:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:286:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:286:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:290:2: style: Commented code should be removed.
+## -  checking examples ... [0s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:290:2: style: Commented code should be removed.
+## -  checking examples ... [0s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:294:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:294:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:296:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90882b10c05/simple.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:296:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90882b10c05/simple.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:300:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:300:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:301:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file9088684a54da/simple.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:301:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file9088684a54da/simple.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:302:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:302:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:303:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:303:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:304:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:304:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:305:2: style: Commented code should be removed.
+## v  checking for file 'simple/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:305:2: style: Commented code should be removed.
+## v  checking for file 'simple/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:306:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:306:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:307:2: style: Commented code should be removed.
+## -  this is package 'simple' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:307:2: style: Commented code should be removed.
+## -  this is package 'simple' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:309:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:309:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:313:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:313:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:322:2: style: Commented code should be removed.
+## -  checking whether package 'simple' can be installed ... [2s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:322:2: style: Commented code should be removed.
+## -  checking whether package 'simple' can be installed ... [2s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:325:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:325:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:326:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:326:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:327:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:327:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:330:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:330:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:340:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:340:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:343:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:343:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:347:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:347:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:349:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:349:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:353:2: style: Commented code should be removed.
+## -  checking examples ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:353:2: style: Commented code should be removed.
+## -  checking examples ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:357:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:357:2: style: Commented code should be removed.
+## -- 0 errors v | 0 warnings v | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:359:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file9088684a54da/simple.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:359:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file9088684a54da/simple.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:373:2: style: Commented code should be removed.
+##      'utils::head()' and 'utils::str()' of the given 'data.frame'.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:373:2: style: Commented code should be removed.
+##      'utils::head()' and 'utils::str()' of the given 'data.frame'.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:381:2: style: Commented code should be removed.
+##      a_first_function(df)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:381:2: style: Commented code should be removed.
+##      a_first_function(df)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:401:2: style: Commented code should be removed.
+## _A_u_t_h_o_r(_s):
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:401:2: style: Commented code should be removed.
+## _A_u_t_h_o_r(_s):
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:405:2: style: Commented code should be removed.
+##      Dominik Cullmann <adc-r@arcor.de>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:405:2: style: Commented code should be removed.
+##      Dominik Cullmann <adc-r@arcor.de>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:413:2: style: Commented code should be removed.
+##      data(iris, package = "datasets")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:413:2: style: Commented code should be removed.
+##      data(iris, package = "datasets")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:415:2: style: Commented code should be removed.
+##      a_first_function(iris)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:415:2: style: Commented code should be removed.
+##      a_first_function(iris)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:430:2: style: Commented code should be removed.
+##      'utils::head()' and 'utils::str()' of the given 'data.frame'.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:430:2: style: Commented code should be removed.
+##      'utils::head()' and 'utils::str()' of the given 'data.frame'.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:438:2: style: Commented code should be removed.
+##      a_first_function(df)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:438:2: style: Commented code should be removed.
+##      a_first_function(df)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:458:2: style: Commented code should be removed.
+## _A_u_t_h_o_r(_s):
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:458:2: style: Commented code should be removed.
+## _A_u_t_h_o_r(_s):
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:462:2: style: Commented code should be removed.
+##      Dominik Cullmann <adc-r@arcor.de>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:462:2: style: Commented code should be removed.
+##      Dominik Cullmann <adc-r@arcor.de>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:470:2: style: Commented code should be removed.
+##      data(iris, package = "datasets")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:470:2: style: Commented code should be removed.
+##      data(iris, package = "datasets")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:472:2: style: Commented code should be removed.
+##      a_first_function(iris)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:472:2: style: Commented code should be removed.
+##      a_first_function(iris)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:487:2: style: Commented code should be removed.
+##      'utils::head()' and 'utils::str()' of the given 'data.frame'.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:487:2: style: Commented code should be removed.
+##      'utils::head()' and 'utils::str()' of the given 'data.frame'.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:495:2: style: Commented code should be removed.
+##      a_first_function(df)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:495:2: style: Commented code should be removed.
+##      a_first_function(df)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:515:2: style: Commented code should be removed.
+## _A_u_t_h_o_r(_s):
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:515:2: style: Commented code should be removed.
+## _A_u_t_h_o_r(_s):
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:519:2: style: Commented code should be removed.
+##      Dominik Cullmann <adc-r@arcor.de>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:519:2: style: Commented code should be removed.
+##      Dominik Cullmann <adc-r@arcor.de>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:527:2: style: Commented code should be removed.
+##      data(iris, package = "datasets")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:527:2: style: Commented code should be removed.
+##      data(iris, package = "datasets")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:529:2: style: Commented code should be removed.
+##      a_first_function(iris)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:529:2: style: Commented code should be removed.
+##      a_first_function(iris)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:534:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:534:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:535:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90887ab07498/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:535:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90887ab07498/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:536:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:536:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:537:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:537:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:538:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:538:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:539:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:539:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:540:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:540:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:541:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:541:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:543:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:543:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:547:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:547:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:556:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:556:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:559:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:559:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:560:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:560:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:561:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:561:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:564:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:564:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:574:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:574:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:577:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:577:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:581:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:581:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:583:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:583:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:597:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:597:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:600:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:600:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:603:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90887ab07498/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:603:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90887ab07498/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:607:2: style: Commented code should be removed.
+## -- 1. Failure: error on bug, not as cran (@test_check.R#15)  -------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:607:2: style: Commented code should be removed.
+## -- 1. Failure: error on bug, not as cran (@test_check.R#15)  -------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:608:2: style: Commented code should be removed.
+## `document(...)` did not throw an error.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:608:2: style: Commented code should be removed.
+## `document(...)` did not throw an error.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:610:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:610:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:611:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90884d74248a/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:611:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90884d74248a/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:612:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:612:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:613:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:613:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:614:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:614:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:615:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:615:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:616:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:616:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:617:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:617:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:618:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:618:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:620:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:620:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:624:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:624:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:633:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:633:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:636:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:636:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:637:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:637:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:638:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:638:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:641:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:641:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:651:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:651:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:654:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:654:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:658:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:658:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:660:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:660:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:674:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:674:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:677:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:677:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:680:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90884d74248a/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:680:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90884d74248a/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:684:2: style: Commented code should be removed.
+## -- 2. Failure: error on bug, as cran (@test_check.R#29)  -----------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:684:2: style: Commented code should be removed.
+## -- 2. Failure: error on bug, as cran (@test_check.R#29)  -----------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:685:2: style: Commented code should be removed.
+## `document(...)` did not throw an error.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:685:2: style: Commented code should be removed.
+## `document(...)` did not throw an error.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:687:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:687:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:688:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file908813493d7/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:688:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file908813493d7/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:689:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:689:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:690:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:690:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:691:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:691:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:692:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:692:2: style: Commented code should be removed.
+## -  using option '--as-cran'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:693:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:693:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:694:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:694:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:695:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:695:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:697:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:697:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:701:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:701:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:710:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:710:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:713:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:713:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:714:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:714:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:715:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:715:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:718:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:718:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:728:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:728:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:731:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:731:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:735:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:735:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:737:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:737:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:751:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:751:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:755:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:755:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:757:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file908813493d7/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:757:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file908813493d7/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:761:2: style: Commented code should be removed.
+## -- 3. Failure: warning on bug, not as cran (@test_check.R#43)  -----------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:761:2: style: Commented code should be removed.
+## -- 3. Failure: warning on bug, not as cran (@test_check.R#43)  -----------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:762:2: style: Commented code should be removed.
+## `document(...)` did not produce any warnings.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:762:2: style: Commented code should be removed.
+## `document(...)` did not produce any warnings.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:764:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:764:2: style: Commented code should be removed.
+## --------------------------------------------------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:765:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90885a583918/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:765:2: style: Commented code should be removed.
+## -  using log directory 'D:/temp/Rtmpqm0CMW/file90885a583918/produce.warning.Rcheck'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:766:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:766:2: style: Commented code should be removed.
+## -  using R Under development (unstable) (2018-01-30 r74185)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:767:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:767:2: style: Commented code should be removed.
+## -  using platform: x86_64-w64-mingw32 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:768:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:768:2: style: Commented code should be removed.
+## -  using session charset: ISO8859-1
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:769:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:769:2: style: Commented code should be removed.
+## v  checking for file 'produce.warning/DESCRIPTION'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:770:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:770:2: style: Commented code should be removed.
+## -  checking extension type ... Package
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:771:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:771:2: style: Commented code should be removed.
+## -  this is package 'produce.warning' version '2.0.0'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:773:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:773:2: style: Commented code should be removed.
+##    Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:777:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:777:2: style: Commented code should be removed.
+##    Possibly mis-spelled words in DESCRIPTION:
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:786:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:786:2: style: Commented code should be removed.
+## -  checking whether package 'produce.warning' can be installed ... [1s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:789:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:789:2: style: Commented code should be removed.
+## v  checking DESCRIPTION meta-information
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:790:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:790:2: style: Commented code should be removed.
+## v  checking top-level files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:791:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:791:2: style: Commented code should be removed.
+## v  checking for left-over files
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:794:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:794:2: style: Commented code should be removed.
+## v  checking R files for non-ASCII characters
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:804:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:804:2: style: Commented code should be removed.
+## v  checking S3 generic/method consistency
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:807:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:807:2: style: Commented code should be removed.
+## -  checking R code for possible problems ... [3s] OK
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:811:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:811:2: style: Commented code should be removed.
+## v  checking Rd cross-references
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:813:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:813:2: style: Commented code should be removed.
+## v  checking for code/documentation mismatches
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:827:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:827:2: style: Commented code should be removed.
+## -  checking examples ... NONE
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:831:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:831:2: style: Commented code should be removed.
+## -- 0 errors v | 1 warning x | 1 note x
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:833:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90885a583918/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:833:2: style: Commented code should be removed.
+##      'D:/temp/Rtmpqm0CMW/file90885a583918/produce.warning.Rcheck/00check.log'
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:837:2: style: Commented code should be removed.
+## -- 4. Failure: warning on bug, as cran (@test_check.R#57)  ---------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:837:2: style: Commented code should be removed.
+## -- 4. Failure: warning on bug, as cran (@test_check.R#57)  ---------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:838:2: style: Commented code should be removed.
+## `document(...)` did not produce any warnings.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:838:2: style: Commented code should be removed.
+## `document(...)` did not produce any warnings.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:840:2: style: Commented code should be removed.
+## == testthat results  ===========================================================
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:840:2: style: Commented code should be removed.
+## == testthat results  ===========================================================
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:853:2: style: Commented code should be removed.
+## R Under development (unstable) (2018-01-30 r74185) -- "Unsuffered Consequences"
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:853:2: style: Commented code should be removed.
+## R Under development (unstable) (2018-01-30 r74185) -- "Unsuffered Consequences"
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:855:2: style: Commented code should be removed.
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:855:2: style: Commented code should be removed.
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:859:2: style: Commented code should be removed.
+## Type 'license()' or 'licence()' for distribution details.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:859:2: style: Commented code should be removed.
+## Type 'license()' or 'licence()' for distribution details.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:862:2: style: Commented code should be removed.
+## Type 'contributors()' for more information and
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:862:2: style: Commented code should be removed.
+## Type 'contributors()' for more information and
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:863:2: style: Commented code should be removed.
+## 'citation()' on how to cite R or R packages in publications.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:863:2: style: Commented code should be removed.
+## 'citation()' on how to cite R or R packages in publications.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:865:2: style: Commented code should be removed.
+## Type 'demo()' for some demos, 'help()' for on-line help, or
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:865:2: style: Commented code should be removed.
+## Type 'demo()' for some demos, 'help()' for on-line help, or
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:866:2: style: Commented code should be removed.
+## 'help.start()' for an HTML browser interface to help.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:866:2: style: Commented code should be removed.
+## 'help.start()' for an HTML browser interface to help.
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:867:2: style: Commented code should be removed.
+## Type 'q()' to quit R.
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:867:2: style: Commented code should be removed.
+## Type 'q()' to quit R.
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:869:2: style: Commented code should be removed.
+## > library("testthat")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:869:2: style: Commented code should be removed.
+## > library("testthat")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:870:2: style: Commented code should be removed.
+## > library("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:870:2: style: Commented code should be removed.
+## > library("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:871:2: style: Commented code should be removed.
+## > test_check("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:871:2: style: Commented code should be removed.
+## > test_check("document")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:872:2: style: Commented code should be removed.
+## -- 1. Error: (unknown) (@test_basic.R#13)  -------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:872:2: style: Commented code should be removed.
+## -- 1. Error: (unknown) (@test_basic.R#13)  -------------------------------------
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:874:2: style: Commented code should be removed.
+## 1: document(file_name, check_package = TRUE, runit = TRUE) at testthat/test_basic.R:13
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:874:2: style: Commented code should be removed.
+## 1: document(file_name, check_package = TRUE, runit = TRUE) at testthat/test_basic.R:13
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:875:2: style: Commented code should be removed.
+## 2: check_package(package_directory = package_directory, working_directory = working_directory, 
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:875:2: style: Commented code should be removed.
+## 2: check_package(package_directory = package_directory, working_directory = working_directory, 
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:876:2: style: Commented code should be removed.
+##        check_as_cran = check_as_cran, debug = debug, stop_on_check_not_passing = stop_on_check_not_passing)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:876:2: style: Commented code should be removed.
+##        check_as_cran = check_as_cran, debug = debug, stop_on_check_not_passing = stop_on_check_not_passing)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:877:2: style: Commented code should be removed.
+## 3: throw("R CMD check failed, read the above log and fix.")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:877:2: style: Commented code should be removed.
+## 3: throw("R CMD check failed, read the above log and fix.")
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:879:2: style: Commented code should be removed.
+## == testthat results  ===========================================================
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:879:2: style: Commented code should be removed.
+## == testthat results  ===========================================================
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+inst/tests/testthat/test_check.R:885:1: style: Trailing blank lines are superfluous.
+
+^
+inst/tests/testthat/test_check.R:885:1: style: Trailing blank lines are superfluous.
+
+^
