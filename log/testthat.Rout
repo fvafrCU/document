@@ -3,7 +3,7 @@ Loading required package: testthat
 Testing document
 ✔ | OK F W S | Context
 ⠏ |  0       | files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file543154e49016/mini.mal.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a6e6cc7ce/mini.mal.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
@@ -61,17 +61,17 @@ N  checking CRAN incoming feasibility
    
 ── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    See
-     ‘/tmp/Rtmpwc6RO3/file543154e49016/mini.mal.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a6e6cc7ce/mini.mal.Rcheck/00check.log’
    for details.
    
    
-⠋ |  0   1   | files⠙ |  1   1   | files⠹ |  2   1   | files✔ |  2   1   | files [47.2 s]
+⠋ |  0   1   | files⠙ |  1   1   | files⠹ |  2   1   | files✔ |  2   1   | files [26.6 s]
 ────────────────────────────────────────────────────────────────────────────────
 test_basic.R:14: warning: (unknown)
 R CMD check had NOTES, read the log an fix.
 ────────────────────────────────────────────────────────────────────────────────
 ⠏ |  0       | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file54315557beb0/simple.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a39415a03/simple.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
@@ -129,12 +129,12 @@ N  checking CRAN incoming feasibility
    
 ── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    See
-     ‘/tmp/Rtmpwc6RO3/file54315557beb0/simple.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a39415a03/simple.Rcheck/00check.log’
    for details.
    
    
 ⠋ |  0   1   | expected files⠙ |  1   1   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file543141252ef0/simple.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a74ce9fdd/simple.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
@@ -192,12 +192,12 @@ N  checking CRAN incoming feasibility
    
 ── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    See
-     ‘/tmp/Rtmpwc6RO3/file543141252ef0/simple.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a74ce9fdd/simple.Rcheck/00check.log’
    for details.
    
    
 ⠹ |  1   2   | expected files⠸ |  2   2   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file5431582b8f7f/simple.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178af65c4d9/simple.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
@@ -248,7 +248,7 @@ N  checking CRAN incoming feasibility
 ── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
    
    
-⠼ |  3   2   | expected files✔ |  3   2   | expected files [78.5 s]
+⠼ |  3   2   | expected files✔ |  3   2   | expected files [59.5 s]
 ────────────────────────────────────────────────────────────────────────────────
 test_basic.R:39: warning: clean
 R CMD check had NOTES, read the log an fix.
@@ -346,16 +346,16 @@ _E_x_a_m_p_l_e_s:
      
 
 
-⠼ |  5       | man✔ |  5       | man [4.5 s]
+⠼ |  5       | man✔ |  5       | man [4.6 s]
 ⠏ |  0       | utils⠋ |  1       | utils⠙ |  2       | utils⠹ |  3       | utils✔ |  3       | utils [0.1 s]
 ⠏ |  0       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file54312079d605/warn.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a38a5d26b/produce.warning.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
-✔  checking for file ‘warn/DESCRIPTION’
+✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
-─  this is package ‘warn’ version ‘2.0.0’
+─  this is package ‘produce.warning’ version ‘2.0.0’
 ✔  checking package namespace information
 ✔  checking package dependencies
 ✔  checking if this is a source package
@@ -364,7 +364,7 @@ _E_x_a_m_p_l_e_s:
 ✔  checking for hidden files and directories
 ✔  checking for portable file names
 ✔  checking for sufficient/correct file permissions
-✔  checking whether package ‘warn’ can be installed
+✔  checking whether package ‘produce.warning’ can be installed
 ✔  checking installed package size
 ✔  checking package directory
 ✔  checking DESCRIPTION meta-information
@@ -410,27 +410,23 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/Rtmpwc6RO3/file54312079d605/warn.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a38a5d26b/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠋ |  1       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file54312209eb84/warn.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a686dd4d9/produce.warning.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
-✔  checking for file ‘warn/DESCRIPTION’
+✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
-─  this is package ‘warn’ version ‘2.0.0’
-E  checking CRAN incoming feasibility
+─  this is package ‘produce.warning’ version ‘2.0.0’
+N  checking CRAN incoming feasibility
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
    
    New submission
-   
-   Conflicting package names (submitted: warn, existing: WARN [https://CRAN.R-project.org])
-   
-   Conflicting package names (submitted: warn, existing: WARN [CRAN archive])
 ✔  checking package namespace information
 ✔  checking package dependencies
 ✔  checking if this is a source package
@@ -440,7 +436,7 @@ E  checking CRAN incoming feasibility
 ✔  checking for portable file names
 ✔  checking for sufficient/correct file permissions
 ✔  checking serialized R objects in the sources
-✔  checking whether package ‘warn’ can be installed
+✔  checking whether package ‘produce.warning’ can be installed
 ✔  checking installed package size
 ✔  checking package directory
 ✔  checking DESCRIPTION meta-information
@@ -485,28 +481,25 @@ W  checking Rd \usage sections
 ✔  checking PDF version of manual
 
    
-── 1 error ✖ | 1 warning ✖ | 0 notes ✔
+── 0 errors ✔ | 1 warning ✖ | 1 note ✖
    See
-     ‘/tmp/Rtmpwc6RO3/file54312209eb84/warn.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a686dd4d9/produce.warning.Rcheck/00check.log’
    for details.
+   
    
 ⠙ |  2       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file5431718bf183/warn.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a4a8ec403/produce.warning.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
-✔  checking for file ‘warn/DESCRIPTION’
+✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
-─  this is package ‘warn’ version ‘2.0.0’
-E  checking CRAN incoming feasibility
+─  this is package ‘produce.warning’ version ‘2.0.0’
+N  checking CRAN incoming feasibility
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
    
    New submission
-   
-   Conflicting package names (submitted: warn, existing: WARN [https://CRAN.R-project.org])
-   
-   Conflicting package names (submitted: warn, existing: WARN [CRAN archive])
 ✔  checking package namespace information
 ✔  checking package dependencies
 ✔  checking if this is a source package
@@ -516,7 +509,7 @@ E  checking CRAN incoming feasibility
 ✔  checking for portable file names
 ✔  checking for sufficient/correct file permissions
 ✔  checking serialized R objects in the sources
-✔  checking whether package ‘warn’ can be installed
+✔  checking whether package ‘produce.warning’ can be installed
 ✔  checking installed package size
 ✔  checking package directory
 ✔  checking DESCRIPTION meta-information
@@ -560,20 +553,21 @@ W  checking Rd \usage sections
 ─  checking examples ... NONE
 ✔  checking PDF version of manual
 
+── 0 errors ✔ | 1 warning ✖ | 1 note ✖
    
-── 1 error ✖ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/Rtmpwc6RO3/file5431718bf183/warn.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a4a8ec403/produce.warning.Rcheck/00check.log’
    for details.
    
+   
 ⠹ |  3       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/Rtmpwc6RO3/file543189c5275/warn.Rcheck’
+─  using log directory ‘/tmp/RtmpMneGRi/file178a10d69e6/produce.warning.Rcheck’
 ─  using R Under development (unstable) (2018-01-12 r74112)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
-✔  checking for file ‘warn/DESCRIPTION’
+✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
-─  this is package ‘warn’ version ‘2.0.0’
+─  this is package ‘produce.warning’ version ‘2.0.0’
 ✔  checking package namespace information
 ✔  checking package dependencies
 ✔  checking if this is a source package
@@ -582,7 +576,7 @@ W  checking Rd \usage sections
 ✔  checking for hidden files and directories
 ✔  checking for portable file names
 ✔  checking for sufficient/correct file permissions
-✔  checking whether package ‘warn’ can be installed
+✔  checking whether package ‘produce.warning’ can be installed
 ✔  checking installed package size
 ✔  checking package directory
 ✔  checking DESCRIPTION meta-information
@@ -628,15 +622,15 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/Rtmpwc6RO3/file543189c5275/warn.Rcheck/00check.log’
+     ‘/tmp/RtmpMneGRi/file178a10d69e6/produce.warning.Rcheck/00check.log’
    for details.
    
    
-⠸ |  4       | checking the package✔ |  4       | checking the package [69.8 s]
+⠸ |  4       | checking the package✔ |  4       | checking the package [90.9 s]
 ⠏ |  0       | file parsing⠋ |  1       | file parsing⠙ |  2       | file parsing⠹ |  3       | file parsing⠸ |  4       | file parsing⠼ |  5       | file parsing⠴ |  6       | file parsing⠦ |  7       | file parsing⠧ |  8       | file parsing⠇ |  9       | file parsing✔ |  9       | file parsing
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 200.4 s
+Duration: 182.2 s
 
 OK:       26
 Failed:   0
