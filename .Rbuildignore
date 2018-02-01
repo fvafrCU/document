@@ -22,3 +22,5 @@ devel.R
 Makefile
 ^.lintr$
 ^.Rprofile$
+^\.log\.Rout$
+^log$

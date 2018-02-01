@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2017-08-22, 12:39:24
+date: 2018-02-01, 20:48:35
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -81,8 +81,8 @@ res <- document(file_name = system.file("tests", "files", "minimal.R",
 ```
 After that you could display the check results with:
 ```
-cat(res[["check_result"]][["stdout"]], sep = "\n")
-cat(res[["check_result"]][["stderr"]], sep = "\n")
+cat(res[["check_result"]][["output"]][["stdout"]], sep = "\n")
+cat(res[["check_result"]][["output"]][["stderr"]], sep = "\n")
 ```
 
 ## A Simple Example
