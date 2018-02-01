@@ -24,22 +24,33 @@ all: cran-comments.md
 
 # devel stuff
 .PHONY: devel
-devel: vignettes build_win release use_dev_version tag_release
+devel: vignettes build_win release use_dev_version tag_release release force_release rhub
 
 .PHONY: tag_release
 tag_release:
 	$(R) --vanilla -e 'packager::git_tag()'
 
-.PHONY: use_dev_version
-use_dev_version:
-	$(Rscript) --vanilla -e 'devtools::use_dev_version()'
+.PHONY: force_release
+force_release:  
+	$(R_release) -e "packager::release(force = TRUE)"
 
 .PHONY: release
 release: 
+	echo "try(packager::release(force = FALSE)); quit(save = \"no\")" > /tmp/rel.R
+	echo "source('/tmp/rel.R')" > ./.Rprofile
+	$(R_release)
+	rm /tmp/rel.R ./.Rprofile
+
+.PHONY: dev_release
+dev_release: 
 	echo "library('utils'); devtools::release(check = FALSE)" > /tmp/rel.R
 	echo "source('/tmp/rel.R')" > ./.Rprofile
 	$(R_release)
 	rm /tmp/rel.R ./.Rprofile
+
+.PHONY: rhub
+rhub:
+	$(Rscript_release) --vanilla -e 'rhub::check(path = ".", platform = "windows-x86_64-release")'
 
 .PHONY: build_win
 build_win:
@@ -48,6 +59,10 @@ build_win:
 .PHONY: vignettes
 vignettes: $(R_FILES) $(MAN_FILES) $(VIGNETTES_FILES)
 	$(Rscript) --vanilla -e 'devtools::build_vignettes(); lapply(tools::pkgVignettes(dir = ".")[["docs"]], function(x) knitr::purl(x, output = file.path(".", "inst", "doc", sub("\\.Rmd$$", ".R", basename(x))), documentation = 0))'
+
+.PHONY: use_dev_version
+use_dev_version:
+	$(Rscript) --vanilla -e 'devtools::use_dev_version()'
 
 # install
 cran-comments.md:  $(LOG_DIR)/install.Rout
