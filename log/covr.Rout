@@ -19,10 +19,10 @@
 96              R/utils.R alter_description_file   49     0
 100             R/utils.R alter_description_file   50     0
 107             R/utils.R alter_description_file   52     0
-document Coverage: 93.85%
+document Coverage: 93.98%
 R/utils.R: 63.89%
 R/internals.R: 95.00%
 R/package_functions.R: 96.30%
-R/document.R: 97.47%
+R/document.R: 97.67%
 R/man.R: 98.33%
 R/file_parsing.R: 100.00%

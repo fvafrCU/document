@@ -21,9 +21,9 @@ Type 'q()' to quit R.
 Loading required package: roxygen2
 Loading required package: callr
 Loading required package: rcmdcheck
-Loading required package: devtools
 Loading required package: checkmate
 Loading required package: rstudioapi
 Loading required package: desc
+Loading required package: withr
 > 
 > 

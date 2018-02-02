@@ -1,1 +1,2 @@
 - improve vignette
+- get rid of empty .Rd2pdfxxx-dirs in testing. They might get created by devtools::load_all()

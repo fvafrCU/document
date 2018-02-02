@@ -2,10 +2,10 @@ Loading required package: document
 
 
 Executing test function test_txt  ... First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/Rtmp6MXBii/document_6519dd3c3b8/simple/DESCRIPTION
+Updating roxygen version in /tmp/RtmpZIImcb/document_297321225f43/simple/DESCRIPTION
  done successfully.
 
-RUNIT TEST PROTOCOL -- Thu Feb  1 21:05:49 2018 
+RUNIT TEST PROTOCOL -- Fri Feb  2 20:25:24 2018 
 *********************************************** 
 Number of test functions: 1 
 Number of errors: 0 
@@ -26,4 +26,4 @@ Involved directory:
 /home/qwer/svn/R/r-devel/build/library/document/tests/runit 
 --------------------------- 
 Test file: /home/qwer/svn/R/r-devel/build/library/document/tests/runit/expected_files.r 
-test_txt: (1 checks) ... OK (3.23 seconds)
+test_txt: (1 checks) ... OK (4.1 seconds)
