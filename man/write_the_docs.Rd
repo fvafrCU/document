@@ -2,8 +2,7 @@
 % Please edit documentation in R/document.R
 \name{write_the_docs}
 \alias{write_the_docs}
-\title{Read R Documentation Files from a Package's Source, Convert and Write Them
-to Disk}
+\title{Write Documentation to Disk}
 \usage{
 write_the_docs(package_directory, file_name = package_directory,
   output_directory = tempdir(), dependencies = NULL, sanitize_Rd = TRUE,
@@ -36,13 +35,14 @@ A list containing
 }
 }
 \description{
-What does it?
+Read R documentation files from a package's source, convert and write them
+to disk.
 }
 \details{
 \code{file_name} will usually be provided by \code{\link{document}} as the
 R code file's name. This may, differing from a (temporary) package's name,
 contain underscores. If you use the functions directly: stick with the
-default, in which case the internally
+default, in which case internally
 the  \code{\link[base]{basename}} of your \code{package_directory} will be
 used. This should be a good guess.
 }

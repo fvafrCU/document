@@ -18,13 +18,14 @@ Imports:
     roxygen2,
     callr,
     rcmdcheck,
-    devtools,
     checkmate,
     rstudioapi,
-    desc
+    desc,
+    withr
 Suggests:
     knitr,
     rmarkdown,
+    devtools,
     RUnit,
     testthat,
     datasets,

@@ -90,15 +90,15 @@ document <- function(file_name,
     return(status)
 }
 
-#' Read R Documentation Files from a Package's Source, Convert and Write Them
-#' to Disk
+#' Write Documentation to Disk
 #'
-#' What does it?
+#' Read R documentation files from a package's source, convert and write them
+#' to disk.
 #'
 #' \code{file_name} will usually be provided by \code{\link{document}} as the
 #' R code file's name. This may, differing from a (temporary) package's name,
 #' contain underscores. If you use the functions directly: stick with the
-#' default, in which case the internally
+#' default, in which case internally
 #' the  \code{\link[base]{basename}} of your \code{package_directory} will be
 #' used. This should be a good guess.
 #' @inheritParams fake_package
@@ -145,11 +145,12 @@ write_the_docs <- function(package_directory, file_name = package_directory,
     }
     if (! dir.exists(output_directory)) dir.create(output_directory)
     options("document_package_directory" = package_directory)
-    call_pdf <- callr::rcmd_safe("Rd2pdf",
-                                 c("--no-preview --internals --force",
-                                   paste0("--title=", pdf_title),
-                                   paste0("--output=", pdf_path),
-                                   man_directory))
+    call_pdf <- withr::with_dir(tempdir(), callr::rcmd_safe("Rd2pdf",
+                                                            c("--no-preview --internals --force",
+                                                              paste0("--title=", pdf_title),
+                                                              paste0("--output=", pdf_path),
+                                                              man_directory))
+    )
     if (! as.logical(call_pdf[["status"]])) status[["pdf_path"]]  <- pdf_path
     files  <- sort_unlocale(list.files(man_directory, full.names = TRUE))
     # using R CMD Rdconv on the system instead of tools::Rd2... since
