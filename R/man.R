@@ -65,7 +65,8 @@ man <- function(x, topic = NA, force_Rd = FALSE) {
 
 #' Return the Usage of a Function From Within the Function
 #'
-#' Get a usage template for a function from within the function if you encounter
+#' Get a usage template for a function from within the function. If you
+#' encounter
 #' misguided usage, you can display the template.
 #'
 #' @param n A negative integer giving the number of from to frames/environments
@@ -106,9 +107,10 @@ usage <- function(n = -1, usage = FALSE) {
 #'
 #' @note The check might produce false negatives (erroneously assuming the file
 #' is not an R documentation file).
+#' @param x The path to the file to be checked.
 #' @return TRUE if the file is probably an R documentation file, FALSE
 #' otherwise.
-#' @param x The path to the file to be checked.
+#' @keywords internal
 is_Rd_file <- function(x) {
     has_ext <-  grepl("\\.Rd$", x)
     lines <- readLines(x)
@@ -135,8 +137,9 @@ is_Rd_file <- function(x) {
 #' Using \code{\link{cat}} on the text would not allow for using different
 #' pagers.
 #'
-#' @return The return value of removing the temporary file.
 #' @param rd_file The path to the Rd file to be displayed.
+#' @return The return value of removing the temporary file.
+#' @keywords internal
 display_Rd <- function(rd_file) {
     if (.Platform$GUI == "RStudio") {
         status <- rstudioapi::previewRd(rd_file)

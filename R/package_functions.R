@@ -8,9 +8,9 @@
 #' @param working_directory A working directory. Keep the default.
 #' @param ... Arguments passed to \code{\link{get_lines_between_tags}}.
 #' @return A string containing the path to the faked package.
-#' @export
+#' @keywords internal
 #' @examples
-#' fake_package(file_name = system.file("tests", "files", "simple.R",
+#' document:::fake_package(file_name = system.file("tests", "files", "simple.R",
 #'          package = "document"))
 fake_package <- function(file_name, working_directory = NULL,
                          dependencies = NULL, ...) {
@@ -58,11 +58,13 @@ fake_package <- function(file_name, working_directory = NULL,
 
 #' Run \command{R CMD check} on a Package Directory
 #'
+#' This is a wrapper to \code{\link[rcmdcheck:rcmdcheck]{rcmdcheck::rcmdcheck}},
+#' signaling notes, warnings and errors.
 #' @inheritParams write_the_docs
 #' @inheritParams document
-#' @return The return value of \command{R CMD check} ran through
-#' \code{callr::rcmd_safe()}.
-#' @export
+#' @keywords internal
+#' @return The return value of
+#' \code{\link[rcmdcheck:rcmdcheck]{rcmdcheck::rcmdcheck}}.
 check_package <- function(package_directory, working_directory,
                           check_as_cran = TRUE,
                           stop_on_check_not_passing = FALSE, debug = TRUE) {

@@ -22,3 +22,4 @@ give different encodings.
 I don't know why, but they do. And this is a rather lousy fix. See the code
 for details.
 }
+\keyword{internal}

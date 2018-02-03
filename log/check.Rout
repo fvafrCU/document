@@ -54,7 +54,7 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [117s/145s]
+  Running ‘testthat.R’ [120s/189s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK

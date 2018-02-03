@@ -5,6 +5,15 @@
   This causes the `check_result`-item of the list returned by document() to 
   change: it is now the return value of rcmdcheck::rcmdcheck() instead of the
   return value of callr::rcmd\_safe("check", ...).
+* The (internal) functions 
+  - *is\_Rd\_file*
+  - *display\_Rd*
+  - *fake\_package*
+  - *check\_package*
+  - *sort\_unlocale*
+  - *alter\_description\_file*
+  - *Rd\_txt\_RUnit*
+  are not exported any longer.
 
 # document 2.2.1
 

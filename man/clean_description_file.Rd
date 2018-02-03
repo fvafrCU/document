@@ -20,8 +20,9 @@ that throws a warning in \command{R CMD check}. Fix that.
 if (! exists("dummy")) assign("dummy", "dumb")
 utils::package.skeleton(path = tempdir())
 old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
-clean_description_file(path = file.path(tempdir(), "anRpackage", 
+document:::clean_description_file(path = file.path(tempdir(), "anRpackage", 
                                         "DESCRIPTION"))
 new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 setdiff(new, old)
 }
+\keyword{internal}

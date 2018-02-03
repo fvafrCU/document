@@ -1,28 +1,28 @@
                  filename              functions line value
-283          R/document.R         write_the_docs  141     0
-289          R/document.R         write_the_docs  144     0
+282          R/document.R         write_the_docs  141     0
+286          R/document.R         write_the_docs  144     0
 23          R/internals.R                  throw   23     0
-284               R/man.R             display_Rd  142     0
-257 R/package_functions.R          check_package  123     0
-259 R/package_functions.R          check_package  124     0
-261 R/package_functions.R          check_package  125     0
-48              R/utils.R alter_description_file   38     0
-52              R/utils.R alter_description_file   39     0
-56              R/utils.R alter_description_file   40     0
-61              R/utils.R alter_description_file   41     0
-66              R/utils.R alter_description_file   42     0
-70              R/utils.R alter_description_file   43     0
-74              R/utils.R alter_description_file   44     0
-79              R/utils.R alter_description_file   45     0
-84              R/utils.R alter_description_file   46     0
-92              R/utils.R alter_description_file   48     0
-96              R/utils.R alter_description_file   49     0
-100             R/utils.R alter_description_file   50     0
-107             R/utils.R alter_description_file   52     0
-document Coverage: 93.98%
+287               R/man.R             display_Rd  145     0
+257 R/package_functions.R          check_package  125     0
+260 R/package_functions.R          check_package  126     0
+263 R/package_functions.R          check_package  127     0
+54              R/utils.R alter_description_file   40     0
+59              R/utils.R alter_description_file   41     0
+64              R/utils.R alter_description_file   42     0
+68              R/utils.R alter_description_file   43     0
+72              R/utils.R alter_description_file   44     0
+77              R/utils.R alter_description_file   45     0
+82              R/utils.R alter_description_file   46     0
+86              R/utils.R alter_description_file   47     0
+91              R/utils.R alter_description_file   48     0
+98              R/utils.R alter_description_file   50     0
+102             R/utils.R alter_description_file   51     0
+106             R/utils.R alter_description_file   52     0
+113             R/utils.R alter_description_file   54     0
+document Coverage: 93.87%
 R/utils.R: 63.89%
 R/internals.R: 95.00%
 R/package_functions.R: 96.30%
-R/document.R: 97.67%
+R/document.R: 97.50%
 R/man.R: 98.33%
 R/file_parsing.R: 100.00%

@@ -21,7 +21,8 @@ below.}
 A character string giving the Usage as \code{\link{help}} would do.
 }
 \description{
-Get a usage template for a function from within the function if you encounter
+Get a usage template for a function from within the function. If you
+encounter
 misguided usage, you can display the template.
 }
 \examples{

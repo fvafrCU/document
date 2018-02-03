@@ -7,6 +7,7 @@
 #'
 #' @param char The character vector to sort.
 #' @return The sorted character vector.
+#' @keywords internal
 sort_unlocale <- function(char) {
     char0 <- char
     for (letter in letters) {
@@ -31,9 +32,10 @@ sort_unlocale <- function(char) {
 #' addition.
 #' @note Adding NULL elements (Title = NULL, for example) to substitution
 #' does not delete or overwrite the entry in the DESCRIPTION file. \cr
-#' alter_description_file() is deprecated, please use CRAN package \pkg{desc}.
+#' \emph{alter_description_file() is deprecated, please use CRAN package
+#' \pkg{desc}}.
 #' @return value of \code{\link{write.dcf}}.
-#' @export
+#' @keywords internal
 alter_description_file <- function(path, substitution = NULL, addition = NULL) {
     warning("alter_description_file() is deprecated, ",
             "please use CRAN package `desc`!")
@@ -58,12 +60,12 @@ alter_description_file <- function(path, substitution = NULL, addition = NULL) {
 #' that throws a warning in \command{R CMD check}. Fix that. 
 #' @param path Path to the DESCRIPTION file or the directory containing it.
 #' @return Invisibly NULL.
-#' @export
+#' @keywords internal
 #' @examples
 #' if (! exists("dummy")) assign("dummy", "dumb")
 #' utils::package.skeleton(path = tempdir())
 #' old <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
-#' clean_description_file(path = file.path(tempdir(), "anRpackage", 
+#' document:::clean_description_file(path = file.path(tempdir(), "anRpackage", 
 #'                                         "DESCRIPTION"))
 #' new <- readLines(file.path(tempdir(), "anRpackage", "DESCRIPTION"))
 #' setdiff(new, old)
@@ -90,6 +92,7 @@ clean_description_file <- function(path) {
 #'
 #' @param txt A character vector.
 #' @return The sanitized character vector.
+#' @keywords internal
 Rd_txt_RUnit <- function(txt) {
     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to
     # ascii again, but

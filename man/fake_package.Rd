@@ -24,6 +24,7 @@ To build documentation for a single code file, we need a temporary package.
 Of course the code file should contain \pkg{roxygen2} comments.
 }
 \examples{
-fake_package(file_name = system.file("tests", "files", "simple.R",
+document:::fake_package(file_name = system.file("tests", "files", "simple.R",
          package = "document"))
 }
+\keyword{internal}

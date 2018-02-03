@@ -14,7 +14,7 @@
 #' \item view the documentation in your interactive R session
 #' }
 #' You will probably be looking for \code{\link{document}} and 
-#' \code{\link{man}}, the remaining functions documented here are mainly 
+#' \code{\link{man}}, the remaining functions are mainly 
 #' for internal use.
 #'
 #' R is a programming language that supports and checks documentation for

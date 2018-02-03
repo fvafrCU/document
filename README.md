@@ -40,7 +40,7 @@ help("document-package", package = "document")
 #        4. view the documentation in your interactive R session
 # 
 #      You will probably be looking for 'document' and 'man', the
-#      remaining functions documented here are mainly for internal use.
+#      remaining functions are mainly for internal use.
 # 
 # Details:
 # 

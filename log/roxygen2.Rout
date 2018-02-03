@@ -25,5 +25,6 @@ Loading required package: checkmate
 Loading required package: rstudioapi
 Loading required package: desc
 Loading required package: withr
+Writing check_package.Rd
 > 
 > 

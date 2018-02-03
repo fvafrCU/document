@@ -24,5 +24,7 @@ Substitutes and/or adds fields in a DESCRIPTION file.
 \note{
 Adding NULL elements (Title = NULL, for example) to substitution
 does not delete or overwrite the entry in the DESCRIPTION file. \cr
-alter_description_file() is deprecated, please use CRAN package \pkg{desc}.
+\emph{alter_description_file() is deprecated, please use CRAN package
+\pkg{desc}}.
 }
+\keyword{internal}

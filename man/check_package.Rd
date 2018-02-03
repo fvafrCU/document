@@ -20,9 +20,11 @@ check_package(package_directory, working_directory, check_as_cran = TRUE,
 \item{debug}{For internal use only: Summarize errors for \command{travis}?}
 }
 \value{
-The return value of \command{R CMD check} ran through
-\code{callr::rcmd_safe()}.
+The return value of
+\code{\link[rcmdcheck:rcmdcheck]{rcmdcheck::rcmdcheck}}.
 }
 \description{
-Run \command{R CMD check} on a Package Directory
+This is a wrapper to \code{\link[rcmdcheck:rcmdcheck]{rcmdcheck::rcmdcheck}},
+signaling notes, warnings and errors.
 }
+\keyword{internal}

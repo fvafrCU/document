@@ -1,4 +1,3 @@
-
 #' Document (Chunks of) an R Code File
 #'
 #' @inheritParams fake_package
@@ -117,6 +116,7 @@ document <- function(file_name,
 #'     \item{txt_path}{The path to the text file produced.}
 #'     \item{html_path}{The path to the html file produced.}
 #' }
+#' @keywords internal
 write_the_docs <- function(package_directory, file_name = package_directory,
                            output_directory = tempdir(),
                            dependencies = NULL, sanitize_Rd = TRUE,
