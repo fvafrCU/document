@@ -33,7 +33,7 @@
 #' @export
 #' @examples
 #' \donttest{
-#' res <- document(file_name = system.file("tests", "files", "minimal.R",
+#' res <- document(file_name = system.file("files", "minimal.R",
 #'                                         package = "document"),
 #'                 check_package = FALSE) # this is for the sake of CRAN cpu
 #'                 # time only. _Always_ stick with the default!

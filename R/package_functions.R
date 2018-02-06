@@ -10,7 +10,7 @@
 #' @return A string containing the path to the faked package.
 #' @keywords internal
 #' @examples
-#' document:::fake_package(file_name = system.file("tests", "files", "simple.R",
+#' document:::fake_package(file_name = system.file("files", "simple.R",
 #'          package = "document"))
 fake_package <- function(file_name, working_directory = NULL,
                          dependencies = NULL, ...) {

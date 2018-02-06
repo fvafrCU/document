@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2018-02-06, 13:33:34
+date: 2018-02-06, 14:02:19
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -38,7 +38,7 @@ stick with the default. This is what this package is about!
 
 Suppose you have a script
 ```{r, comment = ""}
-path <- system.file("tests", "files", "minimal.R", package = "document")
+path <- system.file("files", "minimal.R", package = "document")
 cat(readLines(path), sep = "\n")
 ```
 Then
@@ -60,7 +60,7 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 project_root <- rprojroot::find_root(rprojroot::is_r_package)
 d <- document::document(file_name = path,
                         output_directory = file.path(project_root,
-                                                     "inst", "tests", "files"),
+                                                     "inst", "files"),
                         check_package = FALSE)
 file.remove(unlist(d[c("txt_path", "pdf_path")]))
 ```
@@ -75,7 +75,7 @@ By default, ```document``` checks the temporary package it creates from your cod
 The corresponding call would be:
 
 ```
-res <- document(file_name = system.file("tests", "files", "minimal.R",
+res <- document(file_name = system.file("files", "minimal.R",
                                         package = "document"),
                 check_package = TRUE)
 ```
@@ -89,7 +89,7 @@ cat(res[["check_result"]][["output"]][["stderr"]], sep = "\n")
 Suppose you have a script
 
 ```{r, comment = ""}
-path <- system.file("tests", "files", "simple.R", package = "document")
+path <- system.file("files", "simple.R", package = "document")
 cat(readLines(path), sep = "\n")
 ```
 Then you can write documentation using:
@@ -113,6 +113,6 @@ options(pager = pager_function)
 ```
 You can display the help page for one of the documented functions using
 ```{r, comment = "", message = FALSE, warning = FALSE}
-path <- system.file("tests", "files", "minimal.R", package = "document")
+path <- system.file("files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")
 ```

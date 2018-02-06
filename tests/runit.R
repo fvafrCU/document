@@ -6,7 +6,7 @@ is_failure <- function(result) {
     fail <- as.logical(sum_of_exceptions)
     return(fail)
 }
-unit_dir <- system.file("tests", "runit", package = "document")
+unit_dir <- system.file("runit", package = "document")
 package_suite <- RUnit::defineTestSuite("document_unit_test",
                                         dirs = unit_dir,
                                         testFileRegexp = "^.*\\.r",

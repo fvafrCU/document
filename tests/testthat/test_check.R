@@ -17,8 +17,7 @@ glbt <- document:::get_lines_between_tags
 context("checking the package")
 test_that("error on bug, not as cran", {
               options(useFancyQuotes = FALSE)
-              file_name  <- file.path(system.file("tests",
-                                                  "files",
+              file_name  <- file.path(system.file("files",
                                                   package = "document"),
                                       "produce_warning.R")
               if (! probably_winbuilder())
@@ -32,8 +31,7 @@ test_that("error on bug, not as cran", {
 )
 test_that("error on bug, as cran", {
               options(useFancyQuotes = FALSE)
-              file_name  <- file.path(system.file("tests",
-                                                  "files",
+              file_name  <- file.path(system.file("files",
                                                   package = "document"),
                                       "produce_warning.R")
               if (! probably_winbuilder())
@@ -47,8 +45,7 @@ test_that("error on bug, as cran", {
 )
 test_that("warning on bug, not as cran", {
               options(useFancyQuotes = FALSE)
-              file_name  <- file.path(system.file("tests",
-                                                  "files",
+              file_name  <- file.path(system.file("files",
                                                   package = "document"),
                                       "produce_warning.R")
               if (! probably_winbuilder())
@@ -62,8 +59,7 @@ test_that("warning on bug, not as cran", {
 )
 test_that("warning on bug, as cran", {
               options(useFancyQuotes = FALSE)
-              file_name  <- file.path(system.file("tests",
-                                                  "files",
+              file_name  <- file.path(system.file("files",
                                                   package = "document"),
                                       "produce_warning.R")
               if (! probably_winbuilder())

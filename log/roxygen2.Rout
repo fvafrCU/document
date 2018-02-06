@@ -1,5 +1,5 @@
 
-R Under development (unstable) (2018-01-12 r74112) -- "Unsuffered Consequences"
+R Under development (unstable) (2018-01-30 r74185) -- "Unsuffered Consequences"
 Copyright (C) 2018 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -25,6 +25,8 @@ Loading required package: checkmate
 Loading required package: rstudioapi
 Loading required package: desc
 Loading required package: withr
-Writing check_package.Rd
+Writing document.Rd
+Writing man.Rd
+Writing fake_package.Rd
 > 
 > 

@@ -1,14 +1,14 @@
-path <- system.file("tests", "files", "minimal.R", package = "document")
+path <- system.file("files", "minimal.R", package = "document")
 cat(readLines(path), sep = "\n")
 d <- document::document(file_name = path, check_package = FALSE)
 cat(readLines(d[["txt_path"]]), sep = "\n")
 project_root <- rprojroot::find_root(rprojroot::is_r_package)
 d <- document::document(file_name = path,
                         output_directory = file.path(project_root,
-                                                     "inst", "tests", "files"),
+                                                     "inst", "files"),
                         check_package = FALSE)
 file.remove(unlist(d[c("txt_path", "pdf_path")]))
-path <- system.file("tests", "files", "simple.R", package = "document")
+path <- system.file("files", "simple.R", package = "document")
 cat(readLines(path), sep = "\n")
 d <- document::document(file_name = path, check_package = FALSE)
 cat(readLines(d[["txt_path"]]), sep = "\n")
@@ -20,5 +20,5 @@ pager_function <- function(x, ...) return(cat(paste(readLines(x),
                                                     collapse = "\n"),
                                               sep = "\n"))
 options(pager = pager_function)
-path <- system.file("tests", "files", "minimal.R", package = "document")
+path <- system.file("files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")
