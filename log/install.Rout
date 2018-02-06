@@ -1,8 +1,8 @@
-* installing to library ‘/home/nik/svn/R/r-devel/build/library’
+* installing to library ‘/home/qwer/svn/R/r-devel/build/library’
 * installing *source* package ‘document’ ...
 ** R
 ** inst
-** byte-compile and prepare package for lazy loading
+** preparing package for lazy loading
 ** help
 *** installing help indices
 ** building package indices
