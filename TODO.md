@@ -1,3 +1,4 @@
+- Don't forget to tag commit 4991f945e3378b5df9fe66271a97da9b6e29d037 as 3.0.0, once package is on CRAN
 - improve vignette
 - make it pass testing on current windows (winbuilder, rhub)!
 - get rid of empty .Rd2pdfxxx-dirs in testing. They might get created by devtools::load_all()
