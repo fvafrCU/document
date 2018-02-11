@@ -7,8 +7,7 @@ if (interactive()) {
 
 probably_winbuilder <- function() {
     # See file fixme_test_check.txt
-    r <- identical(R.Version()[["nickname"]],  "Unsuffered Consequences") &&
-        identical(.Platform[["OS.type"]], "windows")
+    r <- identical(.Platform[["OS.type"]], "windows")
     return(r)
 }
 
