@@ -1,5 +1,5 @@
 * using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2018-01-12 r74112)
+* using R Under development (unstable) (2018-02-09 r74240)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
@@ -56,11 +56,11 @@ TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got aler
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
      user system elapsed
-man 3.736  0.636   5.001
+man 3.888  0.816   6.073
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [122s/155s]
+  Running ‘testthat.R’ [132s/180s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK

@@ -3,8 +3,8 @@ Loading required package: testthat
 Testing document
 ✔ | OK F W S | Context
 ⠏ |  0       | files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file267928585895/mini.mal.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d62f0998d/mini.mal.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
@@ -61,18 +61,18 @@ N  checking CRAN incoming feasibility
 ── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    
    See
-     ‘/tmp/RtmpHoIujn/file267928585895/mini.mal.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d62f0998d/mini.mal.Rcheck/00check.log’
    for details.
    
    
-⠋ |  0   1   | files⠙ |  1   1   | files⠹ |  2   1   | files✔ |  2   1   | files [35.5 s]
+⠋ |  0   1   | files⠙ |  1   1   | files⠹ |  2   1   | files✔ |  2   1   | files [28.4 s]
 ────────────────────────────────────────────────────────────────────────────────
 test_basic.R:13: warning: (unknown)
 R CMD check had NOTES, read the log an fix.
 ────────────────────────────────────────────────────────────────────────────────
 ⠏ |  0       | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file26794718d713/simple.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d16d0b518/simple.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
@@ -129,13 +129,13 @@ N  checking CRAN incoming feasibility
    
 ── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    See
-     ‘/tmp/RtmpHoIujn/file26794718d713/simple.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d16d0b518/simple.Rcheck/00check.log’
    for details.
    
    
 ⠋ |  0   1   | expected files⠙ |  1   1   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file2679369c964/simple.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d1706638/simple.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
@@ -189,16 +189,16 @@ N  checking CRAN incoming feasibility
 ✔  checking examples
 ✔  checking PDF version of manual
 
-── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    
+── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    See
-     ‘/tmp/RtmpHoIujn/file2679369c964/simple.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d1706638/simple.Rcheck/00check.log’
    for details.
    
    
 ⠹ |  1   2   | expected files⠸ |  2   2   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file26796f7202f3/simple.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d36ab485/simple.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ✔  checking for file ‘simple/DESCRIPTION’
@@ -245,10 +245,10 @@ N  checking CRAN incoming feasibility
 ✔  checking examples
 ✔  checking PDF version of manual
 
+   
 ── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
    
-   
-⠼ |  3   2   | expected files✔ |  3   2   | expected files [61.1 s]
+⠼ |  3   2   | expected files✔ |  3   2   | expected files [73.9 s]
 ────────────────────────────────────────────────────────────────────────────────
 test_basic.R:36: warning: clean
 R CMD check had NOTES, read the log an fix.
@@ -346,11 +346,11 @@ _E_x_a_m_p_l_e_s:
      
 
 
-⠼ |  5       | man✔ |  5       | man [8.9 s]
+⠼ |  5       | man✔ |  5       | man [11.0 s]
 ⠏ |  0       | utils⠋ |  1       | utils⠙ |  2       | utils⠹ |  3       | utils✔ |  3       | utils [0.2 s]
 ⠏ |  0       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file26797249766b/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d4a774587/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ✔  checking for file ‘produce.warning/DESCRIPTION’
@@ -410,13 +410,13 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/RtmpHoIujn/file26797249766b/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d4a774587/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠋ |  1       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file26792ddd0c6e/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d3c3c9813/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
@@ -483,13 +483,13 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 1 note ✖
    See
-     ‘/tmp/RtmpHoIujn/file26792ddd0c6e/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d3c3c9813/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠙ |  2       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file26794414fd77/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d13cd105d/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
@@ -556,13 +556,13 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 1 note ✖
    See
-     ‘/tmp/RtmpHoIujn/file26794414fd77/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d13cd105d/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠹ |  3       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpHoIujn/file2679d385764/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-01-12 r74112)
+─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d46192310/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-02-09 r74240)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ✔  checking for file ‘produce.warning/DESCRIPTION’
@@ -622,15 +622,15 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/RtmpHoIujn/file2679d385764/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpaQWiIl/file5b4d46192310/produce.warning.Rcheck/00check.log’
    for details.
    
    
-⠸ |  4       | checking the package✔ |  4       | checking the package [63.4 s]
+⠸ |  4       | checking the package✔ |  4       | checking the package [77.4 s]
 ⠏ |  0       | file parsing⠋ |  1       | file parsing⠙ |  2       | file parsing⠹ |  3       | file parsing⠸ |  4       | file parsing⠼ |  5       | file parsing⠴ |  6       | file parsing⠦ |  7       | file parsing⠧ |  8       | file parsing⠇ |  9       | file parsing✔ |  9       | file parsing
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 169.5 s
+Duration: 191.0 s
 
 OK:       26
 Failed:   0
