@@ -1,0 +1,189 @@
+
+R Under development (unstable) (2018-02-08 r74238) -- "Unsuffered Consequences"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "document"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> base::assign(".ExTimings", "document-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('document')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("document")
+> ### * document
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: document
+> ### Title: Document (Chunks of) an R Code File
+> ### Aliases: document
+> 
+> ### ** Examples
+> 
+> file_name  <- system.file("files", "produce_warning.R", package = "document")
+> working_directory <- NULL
+> if (is.null(working_directory))
++     working_directory <- file.path(tempdir(),
++                                    paste0("document_",
++                                           basename(tempfile(pattern = ""))))
+> package_directory <- document:::fake_package(file_name, working_directory = working_directory)
+First time using roxygen2. Upgrading automatically...
+Updating roxygen version in D:\temp\RtmpclirPb\document_126f459b34880\produce.warning/DESCRIPTION
+> r <- rcmdcheck::rcmdcheck(path = package_directory, args = "--as-cran")
+--------------------------------------------------------------------------------
+-  using log directory 'D:/temp/RtmpclirPb/file126f41a022d8/produce.warning.Rcheck'
+-  using R Under development (unstable) (2018-02-08 r74238)
+-  using platform: x86_64-w64-mingw32 (64-bit)
+-  using session charset: ISO8859-1
+-  using option '--as-cran'
+v  checking for file 'produce.warning/DESCRIPTION'
+-  checking extension type ... Package
+-  this is package 'produce.warning' version '1.0'
+N  checking CRAN incoming feasibility
+   Maintainer: 'Who to complain to <yourfault@somewhere.net>'
+   
+   New submission
+   
+   Non-FOSS package license (What license is it under?)
+   
+   The Title field should be in title case, current version then in title case:
+   'What the package does (short line)'
+   'What the Package Does (Short Line)'
+v  checking package namespace information
+v  checking package dependencies
+v  checking if this is a source package
+v  checking if there is a namespace
+v  checking for hidden files and directories
+v  checking for portable file names
+v  checking serialized R objects in the sources
+-  checking whether package 'produce.warning' can be installed ... [1s] OK
+v  checking installed package size
+v  checking package directory
+N  checking DESCRIPTION meta-information
+   Malformed Description field: should contain one or more complete sentences.
+   Non-standard license specification:
+     What license is it under?
+   Standardizable: FALSE
+v  checking top-level files
+v  checking for left-over files
+v  checking index information
+v  checking package subdirectories
+v  checking R files for non-ASCII characters
+v  checking R files for syntax errors
+v  checking whether the package can be loaded
+v  checking whether the package can be loaded with stated dependencies
+v  checking whether the package can be unloaded cleanly
+v  checking whether the namespace can be loaded with stated dependencies
+v  checking whether the namespace can be unloaded cleanly
+v  checking loading without being on the library search path
+v  checking use of S3 registration
+v  checking dependencies in R code
+v  checking S3 generic/method consistency
+v  checking replacement functions
+v  checking foreign function calls
+-  checking R code for possible problems ... [3s] OK
+v  checking Rd files
+v  checking Rd metadata
+v  checking Rd line widths
+W  checking Rd cross-references
+   Error in find.package(package, lib.loc) : 
+     there is no package called 'MASS'
+   Calls: <Anonymous> -> lapply -> FUN -> find.package
+   Execution halted
+v  checking for missing documentation entries
+v  checking for code/documentation mismatches
+W  checking Rd \usage sections
+   Undocumented arguments in documentation object 'foo'
+     'x'
+   Documented arguments not in \usage in documentation object 'foo':
+     'y'
+   
+   Functions with \usage entries need to have the appropriate \alias
+   entries, and all their arguments documented.
+   The \usage entries must correspond to syntactically valid R code.
+   See chapter 'Writing R documentation files' in the 'Writing R
+   Extensions' manual.
+v  checking Rd contents
+v  checking for unstated dependencies in examples
+-  checking examples ... NONE
+v  checking PDF version of manual
+
+   
+-- 0 errors v | 2 warnings x | 2 notes x
+   See
+     'D:/temp/RtmpclirPb/file126f41a022d8/produce.warning.Rcheck/00check.log'
+   for details.
+   
+   
+> print(str(r))
+List of 8
+ $ output  :List of 5
+  ..$ status : int 0
+  ..$ stdout : chr "* using log directory 'D:/temp/RtmpclirPb/file126f41a022d8/produce.warning.Rcheck'\r\n* using R Under developme"| __truncated__
+  ..$ stderr : chr "\r\nSee\r\n  'D:/temp/RtmpclirPb/file126f41a022d8/produce.warning.Rcheck/00check.log'\r\nfor details.\r\n\r\n\r\n"
+  ..$ timeout: logi FALSE
+  ..$ command: chr [1:4] "D:/RCompile/recent/R/bin/x64/Rcmd.exe" "check" "produce.warning_1.0.tar.gz" "--as-cran"
+ $ errors  : chr(0) 
+ $ warnings: chr(0) 
+ $ notes   : chr(0) 
+ $ package : chr "produce.warning"
+ $ version : chr "1.0"
+ $ rversion: chr(0) 
+ $ platform: chr "x86_64-w64-mingw32"
+ - attr(*, "class")= chr "rcmdcheck"
+NULL
+> print(r$warnings)
+character(0)
+> print(unlist(citation("rcmdcheck"))["note"])
+                     note 
+"R package version 1.2.1" 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("document", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.78 0.17 29.47 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
