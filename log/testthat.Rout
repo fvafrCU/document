@@ -3,19 +3,36 @@ Loading required package: testthat
 Testing document
 ✔ | OK F W S | Context
 ⠏ |  0       | files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d62f0998d/mini.mal.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a542c4ceea/mini.mal.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
 ✔  checking for file ‘mini.mal/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘mini.mal’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
+   Warning in url(sprintf("%s/src/contrib/PACKAGES.gz", u), "rb") :
+     URL 'https://CRAN.R-project.org/src/contrib/PACKAGES.gz': status was 'SSL connect error'
+   NB: need Internet access to use CRAN incoming checks
+─  checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -58,32 +75,41 @@ N  checking CRAN incoming feasibility
 ✔  checking examples
 ✔  checking PDF version of manual
 
-── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
-   
-   See
-     ‘/tmp/RtmpaQWiIl/file5b4d62f0998d/mini.mal.Rcheck/00check.log’
-   for details.
+── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
    
    
-⠋ |  0   1   | files⠙ |  1   1   | files⠹ |  2   1   | files✔ |  2   1   | files [28.4 s]
-────────────────────────────────────────────────────────────────────────────────
-test_basic.R:13: warning: (unknown)
-R CMD check had NOTES, read the log an fix.
-────────────────────────────────────────────────────────────────────────────────
+⠋ |  1       | files⠙ |  2       | files✔ |  2       | files [22.0 s]
 ⠏ |  0       | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d16d0b518/simple.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a54b6b7e06/simple.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
 ✔  checking for file ‘simple/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘simple’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
+   Warning in url(sprintf("%s/src/contrib/PACKAGES.gz", u), "rb") :
+     URL 'https://CRAN.R-project.org/src/contrib/PACKAGES.gz': status was 'SSL connect error'
+   NB: need Internet access to use CRAN incoming checks
+─  checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -126,27 +152,40 @@ N  checking CRAN incoming feasibility
 ✔  checking examples
 ✔  checking PDF version of manual
 
-   
-── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
-   See
-     ‘/tmp/RtmpaQWiIl/file5b4d16d0b518/simple.Rcheck/00check.log’
-   for details.
+── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
    
    
-⠋ |  0   1   | expected files⠙ |  1   1   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d1706638/simple.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+⠋ |  1       | expected files────────────────────────────────────────────────────────────────────────────────
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a545babb34d/simple.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
 ✔  checking for file ‘simple/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘simple’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
+   Warning in url(sprintf("%s/src/contrib/PACKAGES.gz", u), "rb") :
+     URL 'https://CRAN.R-project.org/src/contrib/PACKAGES.gz': status was 'SSL connect error'
+   NB: need Internet access to use CRAN incoming checks
+─  checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -189,22 +228,26 @@ N  checking CRAN incoming feasibility
 ✔  checking examples
 ✔  checking PDF version of manual
 
-   
-── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
-   See
-     ‘/tmp/RtmpaQWiIl/file5b4d1706638/simple.Rcheck/00check.log’
-   for details.
+── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
    
    
-⠹ |  1   2   | expected files⠸ |  2   2   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d36ab485/simple.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+⠙ |  2       | expected files────────────────────────────────────────────────────────────────────────────────
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a546a8f43a6/simple.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ✔  checking for file ‘simple/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘simple’ version ‘2.0.0’
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -248,14 +291,7 @@ N  checking CRAN incoming feasibility
    
 ── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
    
-⠼ |  3   2   | expected files✔ |  3   2   | expected files [73.9 s]
-────────────────────────────────────────────────────────────────────────────────
-test_basic.R:36: warning: clean
-R CMD check had NOTES, read the log an fix.
-
-test_basic.R:47: warning: simple
-R CMD check had NOTES, read the log an fix.
-────────────────────────────────────────────────────────────────────────────────
+⠹ |  3       | expected files✔ |  3       | expected files [35.6 s]
 ⠏ |  0       | man_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
 
 _D_e_s_c_r_i_p_t_i_o_n:
@@ -346,17 +382,25 @@ _E_x_a_m_p_l_e_s:
      
 
 
-⠼ |  5       | man✔ |  5       | man [11.0 s]
-⠏ |  0       | utils⠋ |  1       | utils⠙ |  2       | utils⠹ |  3       | utils✔ |  3       | utils [0.2 s]
+⠼ |  5       | man✔ |  5       | man [6.7 s]
+⠏ |  0       | utils⠋ |  1       | utils⠙ |  2       | utils⠹ |  3       | utils✔ |  3       | utils
 ⠏ |  0       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d4a774587/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a543841f52f/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘produce.warning’ version ‘2.0.0’
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -407,27 +451,44 @@ W  checking Rd \usage sections
 ─  checking examples ... NONE
 ✔  checking PDF version of manual
 
-   
 ── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
+   
    See
-     ‘/tmp/RtmpaQWiIl/file5b4d4a774587/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpJvm8iu/file2a543841f52f/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠋ |  1       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d3c3c9813/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a547063dddc/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
 ✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘produce.warning’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
+   Warning in url(sprintf("%s/src/contrib/PACKAGES.gz", u), "rb") :
+     URL 'https://CRAN.R-project.org/src/contrib/PACKAGES.gz': status was 'SSL connect error'
+   NB: need Internet access to use CRAN incoming checks
+─  checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -481,26 +542,43 @@ W  checking Rd \usage sections
 ✔  checking PDF version of manual
 
    
-── 0 errors ✔ | 1 warning ✖ | 1 note ✖
+── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/RtmpaQWiIl/file5b4d3c3c9813/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpJvm8iu/file2a547063dddc/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠙ |  2       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d13cd105d/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a541d5b641d/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ─  using option ‘--as-cran’
 ✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘produce.warning’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
+   Warning in url(sprintf("%s/src/contrib/PACKAGES.gz", u), "rb") :
+     URL 'https://CRAN.R-project.org/src/contrib/PACKAGES.gz': status was 'SSL connect error'
+   NB: need Internet access to use CRAN incoming checks
+─  checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
    Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -554,21 +632,29 @@ W  checking Rd \usage sections
 ✔  checking PDF version of manual
 
    
-── 0 errors ✔ | 1 warning ✖ | 1 note ✖
+── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/RtmpaQWiIl/file5b4d13cd105d/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpJvm8iu/file2a541d5b641d/produce.warning.Rcheck/00check.log’
    for details.
    
    
 ⠹ |  3       | checking the package────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpaQWiIl/file5b4d46192310/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-02-09 r74240)
+─  using log directory ‘/tmp/RtmpJvm8iu/file2a5431c48aca/produce.warning.Rcheck’
+─  using R Under development (unstable) (2018-01-30 r74185)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
 ✔  checking for file ‘produce.warning/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘produce.warning’ version ‘2.0.0’
 ✔  checking package namespace information
+   Warning: unable to access index for repository https://CRAN.R-project.org/src/contrib:
+     cannot open URL 'https://CRAN.R-project.org/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/bioc/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/bioc/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/annotation/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/annotation/src/contrib/PACKAGES'
+   Warning: unable to access index for repository https://bioconductor.org/packages/3.7/data/experiment/src/contrib:
+     cannot open URL 'https://bioconductor.org/packages/3.7/data/experiment/src/contrib/PACKAGES'
 ✔  checking package dependencies
 ✔  checking if this is a source package
 ✔  checking if there is a namespace
@@ -622,17 +708,17 @@ W  checking Rd \usage sections
    
 ── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
    See
-     ‘/tmp/RtmpaQWiIl/file5b4d46192310/produce.warning.Rcheck/00check.log’
+     ‘/tmp/RtmpJvm8iu/file2a5431c48aca/produce.warning.Rcheck/00check.log’
    for details.
    
    
-⠸ |  4       | checking the package✔ |  4       | checking the package [77.4 s]
+⠸ |  4       | checking the package✔ |  4       | checking the package [40.3 s]
 ⠏ |  0       | file parsing⠋ |  1       | file parsing⠙ |  2       | file parsing⠹ |  3       | file parsing⠸ |  4       | file parsing⠼ |  5       | file parsing⠴ |  6       | file parsing⠦ |  7       | file parsing⠧ |  8       | file parsing⠇ |  9       | file parsing✔ |  9       | file parsing
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 191.0 s
+Duration: 104.9 s
 
 OK:       26
 Failed:   0
-Warnings: 3
+Warnings: 0
 Skipped:  0

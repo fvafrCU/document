@@ -1,3 +1,3 @@
-<cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/qwer/git/cyclops/fvafrcu/document/R/document.R  document  found 12 arguments, max_num_arguments was 5
-/home/qwer/git/cyclops/fvafrcu/document/R/document.R  write_the_docs  found 6 arguments, max_num_arguments was 5
-R/   /home/qwer/git/cyclops/fvafrcu/document/R/file_parsing.R  get_lines_between_tags  found 6 arguments, max_num_arguments was 5>
+<cleanr in cleanr::check_directory("R/", check_return = FALSE): R/   /home/nik/git/cs/fvafrcu/document/R/document.R  document  found 12 arguments, max_num_arguments was 5
+/home/nik/git/cs/fvafrcu/document/R/document.R  write_the_docs  found 6 arguments, max_num_arguments was 5
+R/   /home/nik/git/cs/fvafrcu/document/R/file_parsing.R  get_lines_between_tags  found 6 arguments, max_num_arguments was 5>

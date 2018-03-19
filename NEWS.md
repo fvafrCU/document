@@ -1,3 +1,7 @@
+# document 3.0.1
+
+* Fixed output path for pdf files.
+
 # document 3.0.0
 
 * Added a fix to make the evaluation of whether or not/how we pass R CMD check 
