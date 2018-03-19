@@ -16,9 +16,11 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 # https://github.com/Dasonk/docstring
 # This is only needed for the vignette, you can skip the setting of the option
 # in regular use.
-pager_function <- function(x, ...) return(cat(paste(readLines(x),
-                                                    collapse = "\n"),
-                                              sep = "\n"))
+pager_function <- function(x, ...) {
+    x <- readLines(x)
+    x <- gsub("_", "", x)
+    cat(paste(x, collapse="\n"), "\n")
+}
 options(pager = pager_function)
 path <- system.file("files", "minimal.R", package = "document")
 document::man(x = path, topic = "foo")

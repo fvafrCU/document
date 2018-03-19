@@ -1,7 +1,7 @@
 ---
 title: "Introduction to *document*"
 author: "Andreas Dominik Cullmann"
-date: 2018-02-06, 14:02:19
+date: 2018-03-19, 08:45:39
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to document}
@@ -106,9 +106,11 @@ cat(readLines(d[["txt_path"]]), sep = "\n")
 # https://github.com/Dasonk/docstring
 # This is only needed for the vignette, you can skip the setting of the option
 # in regular use.
-pager_function <- function(x, ...) return(cat(paste(readLines(x),
-                                                    collapse = "\n"),
-                                              sep = "\n"))
+pager_function <- function(x, ...) {
+    x <- readLines(x)
+    x <- gsub("_", "", x)
+    cat(paste(x, collapse="\n"), "\n")
+}
 options(pager = pager_function)
 ```
 You can display the help page for one of the documented functions using

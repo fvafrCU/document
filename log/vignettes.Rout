@@ -1,0 +1,20 @@
+Building document vignettes
+First time using roxygen2. Upgrading automatically...
+Updating roxygen version in /tmp/RtmpFlwgmn/document_3a2e7d64d8fe/minimal/DESCRIPTION
+First time using roxygen2. Upgrading automatically...
+Updating roxygen version in /tmp/RtmpFlwgmn/document_3a2e1244eb95/minimal/DESCRIPTION
+First time using roxygen2. Upgrading automatically...
+Updating roxygen version in /tmp/RtmpFlwgmn/document_3a2e61598d4f/simple/DESCRIPTION
+First time using roxygen2. Upgrading automatically...
+Updating roxygen version in /tmp/RtmpFlwgmn/document_3a2e5e044c7e/minimal/DESCRIPTION
+Moving Introduction_to_document.html, Introduction_to_document.R to inst/doc/
+Copying Introduction_to_document.Rmd to inst/doc/
+
+
+processing file: /home/qwer/git/cyclops/fvafrcu/document/vignettes/Introduction_to_document.Rmd
+  |                                                                         |                                                                 |   0%  |                                                                         |....                                                             |   6%  |                                                                         |........                                                         |  12%  |                                                                         |...........                                                      |  18%  |                                                                         |...............                                                  |  24%  |                                                                         |...................                                              |  29%  |                                                                         |.......................                                          |  35%  |                                                                         |...........................                                      |  41%  |                                                                         |...............................                                  |  47%  |                                                                         |..................................                               |  53%  |                                                                         |......................................                           |  59%  |                                                                         |..........................................                       |  65%  |                                                                         |..............................................                   |  71%  |                                                                         |..................................................               |  76%  |                                                                         |......................................................           |  82%  |                                                                         |.........................................................        |  88%  |                                                                         |.............................................................    |  94%  |                                                                         |.................................................................| 100%
+output file: ./inst/doc/Introduction_to_document.R
+
+[[1]]
+[1] "./inst/doc/Introduction_to_document.R"
+
