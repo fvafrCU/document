@@ -11,8 +11,10 @@ Best, Andreas Dominik
 - R Under development (unstable) (2018-03-19 r74426)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Devuan GNU/Linux 1 (jessie)
-- log/travis_log.txt
+- R version 3.4.4 (2017-01-27)
+  Platform: x86_64-pc-linux-gnu (64-bit)
+  Running under: Ubuntu 14.04.5 LTS
 - win-builder (devel)
 
 ## R CMD check results
-0 errors | 1 warning  | 1 note 
+Status: OK
