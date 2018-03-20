@@ -1,5 +1,5 @@
 * using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2018-02-09 r74240)
+* using R Under development (unstable) (2018-03-19 r74426)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
@@ -16,7 +16,7 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking for sufficient/correct file permissions ... OK
-* checking serialized R objects in the sources ... OK
+* checking serialization versions ... OK
 * checking whether package ‘document’ can be installed ... OK
 * checking installed package size ... OK
 * checking package directory ... OK
@@ -53,14 +53,17 @@ TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got aler
 * checking for unstated dependencies in examples ... OK
 * checking installed files from ‘inst/doc’ ... OK
 * checking files in ‘vignettes’ ... OK
-* checking examples ... OK
+* checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+     user system elapsed
+man 4.112  0.764   6.455
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [116s/146s]
+  Running ‘testthat.R’ [142s/222s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 WARNING
+Status: 1 WARNING, 1 NOTE

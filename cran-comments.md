@@ -8,11 +8,11 @@ Best, Andreas Dominik
 
 # Package document 3.0.1
 ## Test  environments 
-- R Under development (unstable) (2018-02-09 r74240)
+- R Under development (unstable) (2018-03-19 r74426)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Devuan GNU/Linux 1 (jessie)
 - log/travis_log.txt
 - win-builder (devel)
 
 ## R CMD check results
-0 errors | 1 warning  | 0 notes
+0 errors | 1 warning  | 1 note 

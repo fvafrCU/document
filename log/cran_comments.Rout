@@ -2,3 +2,8 @@ checking top-level files ... WARNING
 Conversion of ‘README.md’ failed:
 pandoc: Failed to retrieve https://www.r-pkg.org/badges/version/document
 TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got alert : [(AlertLevel_Fatal,HandshakeFailure)]",True,HandshakeFailure)))
+
+checking examples ... NOTE
+Examples with CPU or elapsed time > 5s
+     user system elapsed
+man 4.112  0.764   6.455
