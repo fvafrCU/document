@@ -2,3 +2,5 @@
 - improve vignette
 - make it pass testing on current windows (winbuilder, rhub)!
 - get rid of empty .Rd2pdfxxx-dirs in testing. They might get created by devtools::load_all()
+- Tag commit f22262a5fd8608ae1c42f62c48e43ca31bae8f6e as 3.0.1, once package is on CRAN using
+	git tag -a 3.0.1 f22262a5fd8608ae1c42f62c48e43ca31bae8f6e -m'CRAN release'
