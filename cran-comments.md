@@ -8,13 +8,13 @@ Best, Andreas Dominik
 
 # Package document 3.0.1
 ## Test  environments 
-- R Under development (unstable) (2018-03-19 r74426)
-  Platform: x86_64-pc-linux-gnu (64-bit)
-  Running under: Devuan GNU/Linux 1 (jessie)
-- R version 3.4.4 (2017-01-27)
+- R Under development (unstable) (2018-07-01 r74950)
+    Platform: x86_64-pc-linux-gnu (64-bit)
+    Running under: Devuan GNU/Linux ascii
+    0 errors | 2 warnings | 1 note 
+- travis-ci.org
+  R version 3.4.4 (2017-01-27)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Ubuntu 14.04.5 LTS
+  Status: OK
 - win-builder (devel)
-
-## R CMD check results
-Status: OK

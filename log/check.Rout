@@ -1,13 +1,15 @@
 * using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2018-03-19 r74426)
+* using R Under development (unstable) (2018-07-01 r74950)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
 * this is package ‘document’ version ‘3.0.1’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
+* checking CRAN incoming feasibility ... WARNING
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+Insufficient package version (submitted: 3.0.1, existing: 3.0.1)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -24,8 +26,8 @@ Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... WARNING
 Conversion of ‘README.md’ failed:
-pandoc: Failed to retrieve https://www.r-pkg.org/badges/version/document
-TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got alert : [(AlertLevel_Fatal,HandshakeFailure)]",True,HandshakeFailure)))
+pandoc: Could not fetch https://www.r-pkg.org/badges/version/document
+TlsExceptionHostPort (HandshakeFailed (Error_Misc "user error (unexpected type received. expecting handshake and got: Alert [(AlertLevel_Fatal,HandshakeFailure)])")) "www.r-pkg.org" 443
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -56,14 +58,14 @@ TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got aler
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
      user system elapsed
-man 4.112  0.764   6.455
+man 4.304  0.728   5.575
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [142s/222s]
+  Running ‘testthat.R’ [134s/165s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 WARNING, 1 NOTE
+Status: 2 WARNINGs, 1 NOTE

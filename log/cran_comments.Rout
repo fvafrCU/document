@@ -1,9 +1,17 @@
+checking CRAN incoming feasibility ... WARNING
+Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
+
+Insufficient package version (submitted: 3.0.1, existing: 3.0.1)
+
 checking top-level files ... WARNING
 Conversion of ‘README.md’ failed:
-pandoc: Failed to retrieve https://www.r-pkg.org/badges/version/document
-TlsException (HandshakeFailed (Error_Protocol ("expecting server hello, got alert : [(AlertLevel_Fatal,HandshakeFailure)]",True,HandshakeFailure)))
+pandoc: Could not fetch https://www.r-pkg.org/badges/version/document
+TlsExceptionHostPort (HandshakeFailed (Error_Misc "user error (unexpected type received. expecting handshake and got: Alert [(AlertLevel_Fatal,HandshakeFailure)])")) "www.r-pkg.org" 443
 
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
      user system elapsed
-man 4.112  0.764   6.455
+man 4.304  0.728   5.575
+Warning message:
+In get_gitlab_info(path = path, private_token = private_token) :
+  You need a private token to access gitlab.
