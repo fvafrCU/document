@@ -1,7 +1,7 @@
 Installing document
-'/home/qwer/svn/R/R-3.4.3/bin/R' --no-site-file --no-environ --no-save  \
-  --no-restore --quiet CMD INSTALL '/home/qwer/git/cyclops/fvafrcu/document'  \
-  --library='/home/qwer/svn/R/R-3.4.3/library' --install-tests 
+'/usr/lib/R/bin/R' --no-site-file --no-environ --no-save --no-restore --quiet  \
+  CMD INSTALL '/home/qwer/git/cyclops/fvafrcu/document'  \
+  --library='/home/qwer/R/x86_64-pc-linux-gnu-library/3.3' --install-tests 
 
 * installing *source* package ‘document’ ...
 ** R

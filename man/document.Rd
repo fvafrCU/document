@@ -4,11 +4,12 @@
 \alias{document}
 \title{Document (Chunks of) an R Code File}
 \usage{
-document(file_name, working_directory = NULL, output_directory = tempdir(),
-  dependencies = NULL, sanitize_Rd = TRUE, runit = FALSE,
-  check_package = TRUE, check_as_cran = check_package,
-  stop_on_check_not_passing = check_package, clean = FALSE, debug = TRUE,
-  ...)
+document(file_name, working_directory = NULL,
+  output_directory = tempdir(), dependencies = NULL,
+  sanitize_Rd = TRUE, runit = FALSE, check_package = TRUE,
+  check_as_cran = check_package,
+  stop_on_check_not_passing = check_package, clean = FALSE,
+  debug = TRUE, ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}

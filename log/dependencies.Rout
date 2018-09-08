@@ -16,7 +16,7 @@ Attaching package: ‘packager’
 
 The following objects are masked from ‘package:devtools’:
 
-    create, release
+    create, release, use_dev_version
 
 Loading required package: rhub
 

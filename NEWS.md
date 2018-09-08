@@ -1,6 +1,6 @@
-# document 3.0.1
+# document 3.0.2
 
-* Fixed output path for pdf files.
+* Patched failing "CRAN Package Check Results for Package document".
 
 # document 3.0.0
 

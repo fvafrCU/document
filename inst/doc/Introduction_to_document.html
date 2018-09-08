@@ -125,6 +125,7 @@ bar &lt;- function() {
 }</code></pre>
 <p>Then</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span>document::<span class="kw">document</span>(<span class="dt">file_name =</span> path, <span class="dt">check_package =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## Warning: roxygen2 requires Encoding: UTF-8</code></pre>
 <p>creates a Portable Document Format <a href="https://en.wikipedia.org/wiki/Portable_Document_Format">(pdf)</a> file, an Hypertext Markup Language <a href="https://en.wikipedia.org/wiki/HTML">(html)</a> file and a <a href="https://en.wikipedia.org/wiki/Plain_text">plain text</a> file. The plain text reads</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readLines</span>(d[[<span class="st">&quot;txt_path&quot;</span>]]), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
 <pre><code>Uhh
@@ -168,6 +169,7 @@ Examples:
 
      foo(x = 2)
      </code></pre>
+<pre><code>## Warning: roxygen2 requires Encoding: UTF-8</code></pre>
 <p>You can view a copy of the html file <a href="http://htmlpreview.github.io/?https://github.com/fvafrCU/document/blob/master/inst/tests/files/minimal.html">here</a>. The pdf file resembles a package’s documentation pdf file.</p>
 <div id="checking-the-code-with-r-cmd-check" class="section level3">
 <h3>Checking the code with R CMD check</h3>
@@ -243,6 +245,7 @@ a_first_function(iris)
 #% Back Matter</code></pre>
 <p>Then you can write documentation using:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span>document::<span class="kw">document</span>(<span class="dt">file_name =</span> path, <span class="dt">check_package =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## Warning: roxygen2 requires Encoding: UTF-8</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readLines</span>(d[[<span class="st">&quot;txt_path&quot;</span>]]), <span class="dt">sep =</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</code></pre></div>
 <pre><code>_File_ simple.R
 

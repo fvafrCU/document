@@ -4,7 +4,8 @@
 \alias{fake_package}
 \title{Fake a Package From a Single Code File}
 \usage{
-fake_package(file_name, working_directory = NULL, dependencies = NULL, ...)
+fake_package(file_name, working_directory = NULL, dependencies = NULL,
+  ...)
 }
 \arguments{
 \item{file_name}{The name of the R code file to be documented.}

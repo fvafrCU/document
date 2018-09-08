@@ -1,15 +1,13 @@
 * using log directory ‘/home/qwer/git/cyclops/fvafrcu/document/document.Rcheck’
-* using R Under development (unstable) (2018-07-01 r74950)
+* using R Under development (unstable) (2018-09-07 r75253)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
 * using options ‘--run-donttest --as-cran’
 * checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘3.0.1’
+* this is package ‘document’ version ‘3.0.2’
 * package encoding: UTF-8
-* checking CRAN incoming feasibility ... WARNING
+* checking CRAN incoming feasibility ... Note_to_CRAN_maintainers
 Maintainer: ‘Andreas Dominik Cullmann <adc-r@arcor.de>’
-
-Insufficient package version (submitted: 3.0.1, existing: 3.0.1)
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -22,6 +20,7 @@ Insufficient package version (submitted: 3.0.1, existing: 3.0.1)
 * checking whether package ‘document’ can be installed ... OK
 * checking installed package size ... OK
 * checking package directory ... OK
+* checking for future file timestanps ... OK
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... WARNING
@@ -58,14 +57,14 @@ TlsExceptionHostPort (HandshakeFailed (Error_Misc "user error (unexpected type r
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
      user system elapsed
-man 4.304  0.728   5.575
+man 4.764  0.848   6.164
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [134s/165s]
+  Running ‘testthat.R’ [136s/274s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK
 * checking PDF version of manual ... OK
 * DONE
-Status: 2 WARNINGs, 1 NOTE
+Status: 1 WARNING, 1 NOTE

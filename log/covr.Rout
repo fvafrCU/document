@@ -1,7 +1,7 @@
                  filename              functions line value
-282          R/document.R         write_the_docs  141     0
-286          R/document.R         write_the_docs  144     0
-290          R/document.R         write_the_docs  146     0
+293          R/document.R         write_the_docs  141     0
+297          R/document.R         write_the_docs  144     0
+301          R/document.R         write_the_docs  146     0
 74       R/file_parsing.R get_lines_between_tags   44     0
 111      R/file_parsing.R get_lines_between_tags   53     0
 118      R/file_parsing.R get_lines_between_tags   55     0
@@ -13,6 +13,13 @@
 141      R/file_parsing.R get_lines_between_tags   63     0
 148      R/file_parsing.R get_lines_between_tags   65     0
 153      R/file_parsing.R get_lines_between_tags   67     0
+6           R/internals.R                  throw   16     0
+9           R/internals.R                  throw   17     0
+11          R/internals.R                  throw   18     0
+14          R/internals.R                  throw   19     0
+16          R/internals.R                  throw   20     0
+19          R/internals.R                  throw   21     0
+21          R/internals.R                  throw   22     0
 23          R/internals.R                  throw   23     0
 44                R/man.R                    man   36     0
 47                R/man.R                    man   37     0
@@ -40,58 +47,59 @@
 129               R/man.R                    man   59     0
 132               R/man.R                    man   60     0
 138               R/man.R                    man   62     0
-206               R/man.R                  usage   96     0
-208               R/man.R                  usage   97     0
-254               R/man.R             is_Rd_file  123     0
-256               R/man.R             is_Rd_file  124     0
-258               R/man.R             is_Rd_file  125     0
-261               R/man.R             is_Rd_file  126     0
-264               R/man.R             is_Rd_file  127     0
-285               R/man.R             display_Rd  144     0
-287               R/man.R             display_Rd  145     0
-289               R/man.R             display_Rd  146     0
-291               R/man.R             display_Rd  147     0
-293               R/man.R             display_Rd  148     0
-295               R/man.R             display_Rd  149     0
-297               R/man.R             display_Rd  150     0
-299               R/man.R             display_Rd  151     0
-301               R/man.R             display_Rd  152     0
-303               R/man.R             display_Rd  153     0
+218               R/man.R                  usage   96     0
+220               R/man.R                  usage   97     0
+266               R/man.R             is_Rd_file  123     0
+268               R/man.R             is_Rd_file  124     0
+270               R/man.R             is_Rd_file  125     0
+273               R/man.R             is_Rd_file  126     0
+276               R/man.R             is_Rd_file  127     0
+296               R/man.R             display_Rd  144     0
+298               R/man.R             display_Rd  145     0
+300               R/man.R             display_Rd  146     0
+302               R/man.R             display_Rd  147     0
+304               R/man.R             display_Rd  148     0
+306               R/man.R             display_Rd  149     0
+308               R/man.R             display_Rd  150     0
+310               R/man.R             display_Rd  151     0
+312               R/man.R             display_Rd  152     0
+314               R/man.R             display_Rd  153     0
 173 R/package_functions.R          check_package   75     0
-204 R/package_functions.R          check_package   95     0
-205 R/package_functions.R          check_package   96     0
-207 R/package_functions.R          check_package   97     0
-209 R/package_functions.R          check_package   98     0
-211 R/package_functions.R          check_package   99     0
-213 R/package_functions.R          check_package  100     0
-215 R/package_functions.R          check_package  101     0
-217 R/package_functions.R          check_package  102     0
-218 R/package_functions.R          check_package  103     0
-219 R/package_functions.R          check_package  104     0
-220 R/package_functions.R          check_package  105     0
-222 R/package_functions.R          check_package  106     0
-224 R/package_functions.R          check_package  107     0
-226 R/package_functions.R          check_package  108     0
-228 R/package_functions.R          check_package  109     0
-230 R/package_functions.R          check_package  110     0
-232 R/package_functions.R          check_package  111     0
-234 R/package_functions.R          check_package  112     0
-235 R/package_functions.R          check_package  113     0
-236 R/package_functions.R          check_package  114     0
-237 R/package_functions.R          check_package  115     0
-239 R/package_functions.R          check_package  116     0
-241 R/package_functions.R          check_package  117     0
-245 R/package_functions.R          check_package  119     0
-247 R/package_functions.R          check_package  120     0
-249 R/package_functions.R          check_package  121     0
-251 R/package_functions.R          check_package  122     0
-253 R/package_functions.R          check_package  123     0
-255 R/package_functions.R          check_package  124     0
-257 R/package_functions.R          check_package  125     0
-260 R/package_functions.R          check_package  126     0
-263 R/package_functions.R          check_package  127     0
-266 R/package_functions.R          check_package  128     0
-269 R/package_functions.R          check_package  129     0
+195 R/package_functions.R          check_package   82     0
+215 R/package_functions.R          check_package   94     0
+216 R/package_functions.R          check_package   95     0
+217 R/package_functions.R          check_package   96     0
+219 R/package_functions.R          check_package   97     0
+221 R/package_functions.R          check_package   98     0
+223 R/package_functions.R          check_package   99     0
+225 R/package_functions.R          check_package  100     0
+227 R/package_functions.R          check_package  101     0
+229 R/package_functions.R          check_package  102     0
+230 R/package_functions.R          check_package  103     0
+231 R/package_functions.R          check_package  104     0
+232 R/package_functions.R          check_package  105     0
+234 R/package_functions.R          check_package  106     0
+236 R/package_functions.R          check_package  107     0
+238 R/package_functions.R          check_package  108     0
+240 R/package_functions.R          check_package  109     0
+242 R/package_functions.R          check_package  110     0
+244 R/package_functions.R          check_package  111     0
+246 R/package_functions.R          check_package  112     0
+247 R/package_functions.R          check_package  113     0
+248 R/package_functions.R          check_package  114     0
+249 R/package_functions.R          check_package  115     0
+251 R/package_functions.R          check_package  116     0
+255 R/package_functions.R          check_package  118     0
+257 R/package_functions.R          check_package  119     0
+259 R/package_functions.R          check_package  120     0
+261 R/package_functions.R          check_package  121     0
+263 R/package_functions.R          check_package  122     0
+265 R/package_functions.R          check_package  123     0
+267 R/package_functions.R          check_package  124     0
+269 R/package_functions.R          check_package  125     0
+272 R/package_functions.R          check_package  126     0
+275 R/package_functions.R          check_package  127     0
+278 R/package_functions.R          check_package  128     0
 54              R/utils.R alter_description_file   40     0
 59              R/utils.R alter_description_file   41     0
 64              R/utils.R alter_description_file   42     0
@@ -105,10 +113,10 @@
 102             R/utils.R alter_description_file   51     0
 106             R/utils.R alter_description_file   52     0
 113             R/utils.R alter_description_file   54     0
-document Coverage: 66.88%
+document Coverage: 64.38%
 R/man.R: 27.12%
-R/package_functions.R: 56.25%
+R/package_functions.R: 55.00%
+R/internals.R: 60.00%
 R/utils.R: 63.89%
 R/file_parsing.R: 77.55%
-R/internals.R: 95.00%
 R/document.R: 96.05%

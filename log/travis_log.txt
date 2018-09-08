@@ -1,1212 +1,0 @@
-travis_fold:start:worker_info[0K[33;1mWorker information[0m
-hostname: 0d1e543a-7067-480c-ac00-9098a0433948@1.i-097db1f-production-2-worker-org-ec2.travisci.net
-version: v3.6.0 https://github.com/travis-ci/worker/tree/170b2a0bb43234479fd1911ba9e4dbcc36dadfad
-instance: 4c7d64b travisci/ci-garnet:packer-1512502276-986baf0 (via amqp)
-startup: 562.11447ms
-travis_fold:end:worker_info[0Kmode of ‘/usr/local/clang-5.0.0/bin’ changed from 0777 (rwxrwxrwx) to 0775 (rwxrwxr-x)
-travis_fold:start:system_info[0K[33;1mBuild system information[0m
-Build language: r
-Build group: stable
-Build dist: trusty
-Build id: 355779660
-Job id: 355779662
-Runtime kernel version: 4.14.12-041412-generic
-travis-build version: cc810a942
-[34m[1mBuild image provisioning date and time[0m
-Tue Dec  5 20:11:19 UTC 2017
-[34m[1mOperating System Details[0m
-Distributor ID:	Ubuntu
-Description:	Ubuntu 14.04.5 LTS
-Release:	14.04
-Codename:	trusty
-[34m[1mCookbooks Version[0m
-7c2c6a6 https://github.com/travis-ci/travis-cookbooks/tree/7c2c6a6
-[34m[1mgit version[0m
-git version 2.15.1
-[34m[1mbash version[0m
-GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
-[34m[1mgcc version[0m
-gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
-Copyright (C) 2013 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-
-[34m[1mdocker version[0m
-Client:
- Version:      17.09.0-ce
- API version:  1.32
- Go version:   go1.8.3
- Git commit:   afdb6d4
- Built:        Tue Sep 26 22:39:28 2017
- OS/Arch:      linux/amd64
-[34m[1mclang version[0m
-clang version 5.0.0 (tags/RELEASE_500/final)
-Target: x86_64-unknown-linux-gnu
-Thread model: posix
-InstalledDir: /usr/local/clang-5.0.0/bin
-[34m[1mjq version[0m
-jq-1.5
-[34m[1mbats version[0m
-Bats 0.4.0
-[34m[1mshellcheck version[0m
-0.4.6
-[34m[1mshfmt version[0m
-v2.0.0
-[34m[1mccache version[0m
-ccache version 3.1.9
-
-Copyright (C) 2002-2007 Andrew Tridgell
-Copyright (C) 2009-2011 Joel Rosdahl
-
-This program is free software; you can redistribute it and/or modify it under
-the terms of the GNU General Public License as published by the Free Software
-Foundation; either version 3 of the License, or (at your option) any later
-version.
-[34m[1mcmake version[0m
-cmake version 3.9.2
-
-CMake suite maintained and supported by Kitware (kitware.com/cmake).
-[34m[1mheroku version[0m
-heroku-cli/6.14.39-addc925 (linux-x64) node-v9.2.0
-[34m[1mimagemagick version[0m
-Version: ImageMagick 6.7.7-10 2017-07-31 Q16 http://www.imagemagick.org
-[34m[1mmd5deep version[0m
-4.2
-[34m[1mmercurial version[0m
-Mercurial Distributed SCM (version 4.2.2)
-(see https://mercurial-scm.org for more information)
-
-Copyright (C) 2005-2017 Matt Mackall and others
-This is free software; see the source for copying conditions. There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-[34m[1mmysql version[0m
-mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
-[34m[1mopenssl version[0m
-OpenSSL 1.0.1f 6 Jan 2014
-[34m[1mpacker version[0m
-Packer v1.0.2
-
-Your version of Packer is out of date! The latest version
-is 1.1.2. You can update by downloading from www.packer.io
-[34m[1mpostgresql client version[0m
-psql (PostgreSQL) 9.6.6
-[34m[1mragel version[0m
-Ragel State Machine Compiler version 6.8 Feb 2013
-Copyright (c) 2001-2009 by Adrian Thurston
-[34m[1msubversion version[0m
-svn, version 1.8.8 (r1568071)
-   compiled Aug 10 2017, 17:20:39 on x86_64-pc-linux-gnu
-
-Copyright (C) 2013 The Apache Software Foundation.
-This software consists of contributions made by many people;
-see the NOTICE file for more information.
-Subversion is open source software, see http://subversion.apache.org/
-
-The following repository access (RA) modules are available:
-
-* ra_svn : Module for accessing a repository using the svn network protocol.
-  - with Cyrus SASL authentication
-  - handles 'svn' scheme
-* ra_local : Module for accessing a repository on local disk.
-  - handles 'file' scheme
-* ra_serf : Module for accessing a repository via WebDAV protocol using serf.
-  - using serf 1.3.3
-  - handles 'http' scheme
-  - handles 'https' scheme
-
-[34m[1msudo version[0m
-Sudo version 1.8.9p5
-Configure options: --prefix=/usr -v --with-all-insults --with-pam --with-fqdn --with-logging=syslog --with-logfac=authpriv --with-env-editor --with-editor=/usr/bin/editor --with-timeout=15 --with-password-timeout=0 --with-passprompt=[sudo] password for %p:  --without-lecture --with-tty-tickets --disable-root-mailer --enable-admin-flag --with-sendmail=/usr/sbin/sendmail --with-timedir=/var/lib/sudo --mandir=/usr/share/man --libexecdir=/usr/lib/sudo --with-sssd --with-sssd-lib=/usr/lib/x86_64-linux-gnu --with-selinux
-Sudoers policy plugin version 1.8.9p5
-Sudoers file grammar version 43
-
-Sudoers path: /etc/sudoers
-Authentication methods: 'pam'
-Syslog facility if syslog is being used for logging: authpriv
-Syslog priority to use when user authenticates successfully: notice
-Syslog priority to use when user authenticates unsuccessfully: alert
-Send mail if the user is not in sudoers
-Use a separate timestamp for each user/tty combo
-Lecture user the first time they run sudo
-Root may run sudo
-Allow some information gathering to give useful error messages
-Require fully-qualified hostnames in the sudoers file
-Visudo will honor the EDITOR environment variable
-Set the LOGNAME and USER environment variables
-Length at which to wrap log file lines (0 for no wrap): 80
-Authentication timestamp timeout: 15.0 minutes
-Password prompt timeout: 0.0 minutes
-Number of tries to enter a password: 3
-Umask to use or 0777 to use user's: 022
-Path to mail program: /usr/sbin/sendmail
-Flags for mail program: -t
-Address to send mail to: root
-Subject line for mail messages: *** SECURITY information for %h ***
-Incorrect password message: Sorry, try again.
-Path to authentication timestamp dir: /var/lib/sudo
-Default password prompt: [sudo] password for %p: 
-Default user to run commands as: root
-Value to override user's $PATH with: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
-Path to the editor for use by visudo: /usr/bin/editor
-When to require a password for 'list' pseudocommand: any
-When to require a password for 'verify' pseudocommand: all
-File descriptors >= 3 will be closed before executing a command
-Environment variables to check for sanity:
-	TZ
-	TERM
-	LINGUAS
-	LC_*
-	LANGUAGE
-	LANG
-	COLORTERM
-Environment variables to remove:
-	RUBYOPT
-	RUBYLIB
-	PYTHONUSERBASE
-	PYTHONINSPECT
-	PYTHONPATH
-	PYTHONHOME
-	TMPPREFIX
-	ZDOTDIR
-	READNULLCMD
-	NULLCMD
-	FPATH
-	PERL5DB
-	PERL5OPT
-	PERL5LIB
-	PERLLIB
-	PERLIO_DEBUG 
-	JAVA_TOOL_OPTIONS
-	SHELLOPTS
-	GLOBIGNORE
-	PS4
-	BASH_ENV
-	ENV
-	TERMCAP
-	TERMPATH
-	TERMINFO_DIRS
-	TERMINFO
-	_RLD*
-	LD_*
-	PATH_LOCALE
-	NLSPATH
-	HOSTALIASES
-	RES_OPTIONS
-	LOCALDOMAIN
-	CDPATH
-	IFS
-Environment variables to preserve:
-	JAVA_HOME
-	TRAVIS
-	CI
-	DEBIAN_FRONTEND
-	XAUTHORIZATION
-	XAUTHORITY
-	PS2
-	PS1
-	PATH
-	LS_COLORS
-	KRB5CCNAME
-	HOSTNAME
-	HOME
-	DISPLAY
-	COLORS
-Locale to use while parsing sudoers: C
-Directory in which to store input/output logs: /var/log/sudo-io
-File in which to store the input/output log: %{seq}
-Add an entry to the utmp/utmpx file when allocating a pty
-PAM service name to use
-PAM service name to use for login shells
-Create a new PAM session for the command to run in
-Maximum I/O log sequence number: 0
-
-Local IP address and netmask pairs:
-	172.17.0.2/255.255.0.0
-
-Sudoers I/O plugin version 1.8.9p5
-[34m[1mgzip version[0m
-gzip 1.6
-Copyright (C) 2007, 2010, 2011 Free Software Foundation, Inc.
-Copyright (C) 1993 Jean-loup Gailly.
-This is free software.  You may redistribute copies of it under the terms of
-the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
-There is NO WARRANTY, to the extent permitted by law.
-
-Written by Jean-loup Gailly.
-[34m[1mzip version[0m
-Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
-This is Zip 3.0 (July 5th 2008), by Info-ZIP.
-Currently maintained by E. Gordon.  Please send bug reports to
-the authors using the web page at www.info-zip.org; see README for details.
-
-Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip,
-as of above date; see http://www.info-zip.org/ for other sites.
-
-Compiled with gcc 4.8.2 for Unix (Linux ELF) on Oct 21 2013.
-
-Zip special compilation options:
-	USE_EF_UT_TIME       (store Universal Time)
-	BZIP2_SUPPORT        (bzip2 library version 1.0.6, 6-Sept-2010)
-	    bzip2 code and library copyright (c) Julian R Seward
-	    (See the bzip2 license for terms of use)
-	SYMLINK_SUPPORT      (symbolic links supported)
-	LARGE_FILE_SUPPORT   (can read and write large files on file system)
-	ZIP64_SUPPORT        (use Zip64 to store large files in archives)
-	UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
-	STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
-	UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
-	[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
-
-Encryption notice:
-	The encryption code of this program is not copyrighted and is
-	put in the public domain.  It was originally written in Europe
-	and, to the best of our knowledge, can be freely distributed
-	in both source and object forms from any country, including
-	the USA under License Exception TSU of the U.S. Export
-	Administration Regulations (section 740.13(e)) of 6 June 2002.
-
-Zip environment options:
-             ZIP:  [none]
-          ZIPOPT:  [none]
-[34m[1mvim version[0m
-VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov 24 2016 16:43:18)
-Included patches: 1-52
-Extra patches: 8.0.0056
-Modified by pkg-vim-maintainers@lists.alioth.debian.org
-Compiled by buildd@
-Huge version without GUI.  Features included (+) or not (-):
-+acl             +farsi           +mouse_netterm   +syntax
-+arabic          +file_in_path    +mouse_sgr       +tag_binary
-+autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
--balloon_eval    +float           +mouse_urxvt     -tag_any_white
--browse          +folding         +mouse_xterm     -tcl
-++builtin_terms  -footer          +multi_byte      +terminfo
-+byte_offset     +fork()          +multi_lang      +termresponse
-+cindent         +gettext         -mzscheme        +textobjects
--clientserver    -hangul_input    +netbeans_intg   +title
--clipboard       +iconv           +path_extra      -toolbar
-+cmdline_compl   +insert_expand   -perl            +user_commands
-+cmdline_hist    +jumplist        +persistent_undo +vertsplit
-+cmdline_info    +keymap          +postscript      +virtualedit
-+comments        +langmap         +printer         +visual
-+conceal         +libcall         +profile         +visualextra
-+cryptv          +linebreak       +python          +viminfo
-+cscope          +lispindent      -python3         +vreplace
-+cursorbind      +listcmds        +quickfix        +wildignore
-+cursorshape     +localmap        +reltime         +wildmenu
-+dialog_con      -lua             +rightleft       +windows
-+diff            +menu            -ruby            +writebackup
-+digraphs        +mksession       +scrollbind      -X11
--dnd             +modify_fname    +signs           -xfontset
--ebcdic          +mouse           +smartindent     -xim
-+emacs_tags      -mouseshape      -sniff           -xsmp
-+eval            +mouse_dec       +startuptime     -xterm_clipboard
-+ex_extra        +mouse_gpm       +statusline      -xterm_save
-+extra_search    -mouse_jsbterm   -sun_workshop    -xpm
-   system vimrc file: "$VIM/vimrc"
-     user vimrc file: "$HOME/.vimrc"
- 2nd user vimrc file: "~/.vim/vimrc"
-      user exrc file: "$HOME/.exrc"
-  fall-back for $VIM: "/usr/share/vim"
-Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
-Linking: gcc   -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed -o vim        -lm -ltinfo -lnsl  -lselinux  -lacl -lattr -lgpm -ldl    -L/usr/lib/python2.7/config-x86_64-linux-gnu -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions      
-[34m[1miptables version[0m
-iptables v1.4.21
-[34m[1mcurl version[0m
-curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
-[34m[1mwget version[0m
-GNU Wget 1.15 built on linux-gnu.
-[34m[1mrsync version[0m
-rsync  version 3.1.0  protocol version 31
-[34m[1mgimme version[0m
-v1.2.0
-[34m[1mnvm version[0m
-0.33.6
-[34m[1mperlbrew version[0m
-/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.80
-[34m[1mphpenv version[0m
-rbenv 1.1.1-25-g6aa70b6
-[34m[1mrvm version[0m
-rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
-[34m[1mdefault ruby version[0m
-ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
-[34m[1mCouchDB version[0m
-couchdb 1.6.1
-[34m[1mElasticSearch version[0m
-5.5.0
-[34m[1mInstalled Firefox version[0m
-firefox 56.0.2
-[34m[1mMongoDB version[0m
-MongoDB 3.4.10
-[34m[1mPhantomJS version[0m
-2.1.1
-[34m[1mPre-installed PostgreSQL versions[0m
-9.2.24
-9.3.20
-9.4.15
-9.5.10
-9.6.6
-[34m[1mRabbitMQ Version[0m
-3.6.14
-[34m[1mRedis version[0m
-redis-server 4.0.6
-[34m[1mriak version[0m
-2.2.3
-[34m[1mPre-installed Go versions[0m
-1.7.4
-[34m[1mant version[0m
-Apache Ant(TM) version 1.9.3 compiled on April 8 2014
-[34m[1mmvn version[0m
-Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T07:58:13Z)
-Maven home: /usr/local/maven-3.5.2
-Java version: 1.8.0_151, vendor: Oracle Corporation
-Java home: /usr/lib/jvm/java-8-oracle/jre
-Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "4.4.0-101-generic", arch: "amd64", family: "unix"
-[34m[1mgradle version[0m
-
-------------------------------------------------------------
-Gradle 4.0.1
-------------------------------------------------------------
-
-Build time:   2017-07-07 14:02:41 UTC
-Revision:     38e5dc0f772daecca1d2681885d3d85414eb6826
-
-Groovy:       2.4.11
-Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
-JVM:          1.8.0_151 (Oracle Corporation 25.151-b12)
-OS:           Linux 4.4.0-101-generic amd64
-
-[34m[1mlein version[0m
-Leiningen 2.8.1 on Java 1.8.0_151 Java HotSpot(TM) 64-Bit Server VM
-[34m[1mPre-installed Node.js versions[0m
-v4.8.6
-v6.12.0
-v6.12.1
-v8.9
-v8.9.1
-[34m[1mphpenv versions[0m
-  system
-  5.6
-* 5.6.32 (set by /home/travis/.phpenv/version)
-  7.0
-  7.0.25
-  7.1
-  7.1.11
-  hhvm
-  hhvm-stable
-[34m[1mcomposer --version[0m
-Composer version 1.5.2 2017-09-11 16:59:25
-[34m[1mPre-installed Ruby versions[0m
-ruby-2.2.7
-ruby-2.3.4
-ruby-2.4.1
-travis_fold:end:system_info[0K
-removed ‘/etc/apt/sources.list.d/basho_riak.list’
-[32;1mNetwork availability confirmed.[0m
-127.0.0.1	localhost
-::1	 ip6-localhost ip6-loopback
-fe00::0	ip6-localnet
-ff00::0	ip6-mcastprefix
-ff02::1	ip6-allnodes
-ff02::2	ip6-allrouters
-172.17.0.5	travis-job-fvafrcu-document-355779662.travisci.net travis-job-fvafrcu-document-355779662
-W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
-[32;1mR for Travis-CI is not officially supported, but is community maintained.[0m
-Please file any issues at https://github.com/travis-ci/travis-ci/issues
-and mention @craigcitro and @jimhester in the issue
-travis_fold:start:R-install[0K[33;1mInstalling R[0m
-travis_time:start:0562bc84[0K$ sudo add-apt-repository "deb http://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)/"
-
-travis_time:end:0562bc84:start=1521541193778220207,finish=1521541194269643818,duration=491423611[0Ktravis_time:start:218a11fa[0K$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-Executing: /tmp/tmp.GSw4KQnnDo/gpg.1.sh --keyserver
-keyserver.ubuntu.com
---recv-keys
-E084DAB9
-gpg: requesting key E084DAB9 from hkp server keyserver.ubuntu.com
-gpg: key E084DAB9: public key "Michael Rutter <marutter@gmail.com>" imported
-gpg: Total number processed: 1
-gpg:               imported: 1  (RSA: 1)
-
-travis_time:end:218a11fa:start=1521541194275339751,finish=1521541195157496083,duration=882156332[0Ktravis_time:start:05cf8490[0K$ sudo add-apt-repository -y "ppa:marutter/rrutter"
-gpg: keyring `/tmp/tmpuixto2et/secring.gpg' created
-gpg: keyring `/tmp/tmpuixto2et/pubring.gpg' created
-gpg: requesting key B04C661B from hkp server keyserver.ubuntu.com
-gpg: /tmp/tmpuixto2et/trustdb.gpg: trustdb created
-gpg: key B04C661B: public key "Launchpad PPA for marutter" imported
-gpg: Total number processed: 1
-gpg:               imported: 1  (RSA: 1)
-OK
-
-travis_time:end:05cf8490:start=1521541195164069166,finish=1521541196631414632,duration=1467345466[0Ktravis_time:start:12e8b26f[0K$ sudo add-apt-repository -y "ppa:marutter/c2d4u"
-gpg: keyring `/tmp/tmpseyck_qm/secring.gpg' created
-gpg: keyring `/tmp/tmpseyck_qm/pubring.gpg' created
-gpg: requesting key B04C661B from hkp server keyserver.ubuntu.com
-gpg: /tmp/tmpseyck_qm/trustdb.gpg: trustdb created
-gpg: key B04C661B: public key "Launchpad PPA for marutter" imported
-gpg: Total number processed: 1
-gpg:               imported: 1  (RSA: 1)
-OK
-
-travis_time:end:12e8b26f:start=1521541196636913678,finish=1521541198079450846,duration=1442537168[0Ktravis_time:start:32916e43[0K$ sudo apt-get update -qq
-W: http://ppa.launchpad.net/couchdb/stable/ubuntu/dists/trusty/Release.gpg: Signature by key 15866BAFD9BCC4F3C1E0DFC7D69548E1C17EAB57 uses weak digest algorithm (SHA1)
-
-travis_time:end:32916e43:start=1521541198084940884,finish=1521541208745519379,duration=10660578495[0Ktravis_time:start:11b0935d[0K$ sudo apt-get install -y --no-install-recommends build-essential gcc g++ libblas-dev liblapack-dev libncurses5-dev libreadline-dev libjpeg-dev libpng-dev zlib1g-dev libbz2-dev liblzma-dev cdbs qpdf texinfo libmagick++-dev libssh2-1-dev gfortran
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 33%Reading package lists... 33%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 68%Reading package lists... 68%Reading package lists... 69%Reading package lists... 69%Reading package lists... 69%Reading package lists... 69%Reading package lists... 77%Reading package lists... 77%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-Note, selecting 'libpng12-dev' instead of 'libpng-dev'
-build-essential is already the newest version (11.6ubuntu6).
-g++ is already the newest version (4:4.8.2-1ubuntu6).
-g++ set to manually installed.
-gcc is already the newest version (4:4.8.2-1ubuntu6).
-libbz2-dev is already the newest version (1.0.6-5).
-libjpeg-dev is already the newest version (8c-2ubuntu8).
-liblzma-dev is already the newest version (5.1.1alpha+20120614-2ubuntu2).
-liblzma-dev set to manually installed.
-libncurses5-dev is already the newest version (5.9+20140118-1ubuntu1).
-libreadline-dev is already the newest version (6.3-4ubuntu2).
-zlib1g-dev is already the newest version (1:1.2.8.dfsg-1ubuntu1).
-libpng12-dev is already the newest version (1.2.50-1ubuntu2.14.04.2).
-The following additional packages will be installed:
-  cpp-4.8 debhelper dh-apparmor dh-translations g++-4.8 gcc-4.8 gcc-4.8-base
-  gfortran-4.8 intltool intltool-debian libasan0 libatomic1 libblas3
-  libencode-locale-perl libfile-listing-perl libgcc-4.8-dev
-  libgfortran-4.8-dev libgfortran3 libgomp1 libhtml-parser-perl
-  libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-date-perl
-  libhttp-message-perl libhttp-negotiate-perl libintl-perl libio-html-perl
-  libio-socket-ssl-perl libitm1 liblapack3 liblwp-mediatypes-perl
-  liblwp-protocol-https-perl libmagick++5 libnet-http-perl libnet-ssleay-perl
-  libqpdf13 libquadmath0 libssh2-1 libstdc++-4.8-dev libstdc++6
-  libtext-unidecode-perl libtsan0 liburi-perl libwww-perl
-  libwww-robotrules-perl libxml-libxml-perl libxml-namespacesupport-perl
-  libxml-parser-perl libxml-sax-base-perl libxml-sax-perl po-debconf
-  python-scour
-Suggested packages:
-  devscripts gcc-4.8-locales dh-make apparmor-easyprof g++-4.8-multilib
-  gcc-4.8-doc libstdc++6-4.8-dbg gcc-4.8-multilib libgcc1-dbg libgomp1-dbg
-  libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg libquadmath0-dbg
-  gfortran-multilib gfortran-doc gfortran-4.8-multilib gfortran-4.8-doc
-  libgfortran3-dbg libdata-dump-perl libintl-xs-perl libcrypt-ssleay-perl
-  libstdc++-4.8-doc libauthen-ntlm-perl libmail-box-perl python-rsvg
-  python-cairo texlive-base texlive-latex-base texlive-generic-recommended
-  texinfo-doc-nonfree
-Recommended packages:
-  libhtml-format-perl libio-socket-inet6-perl | libio-socket-ip-perl
-  libhtml-form-perl libhttp-daemon-perl libmailtools-perl
-  libxml-sax-expat-perl libmail-sendmail-perl
-The following NEW packages will be installed:
-  cdbs debhelper dh-apparmor dh-translations gfortran gfortran-4.8 intltool
-  intltool-debian libblas-dev libblas3 libencode-locale-perl
-  libfile-listing-perl libgfortran-4.8-dev libgfortran3 libhtml-parser-perl
-  libhtml-tagset-perl libhtml-tree-perl libhttp-cookies-perl libhttp-date-perl
-  libhttp-message-perl libhttp-negotiate-perl libintl-perl libio-html-perl
-  libio-socket-ssl-perl liblapack-dev liblapack3 liblwp-mediatypes-perl
-  liblwp-protocol-https-perl libmagick++-dev libmagick++5 libnet-http-perl
-  libnet-ssleay-perl libqpdf13 libssh2-1 libssh2-1-dev libtext-unidecode-perl
-  liburi-perl libwww-perl libwww-robotrules-perl libxml-libxml-perl
-  libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl
-  libxml-sax-perl po-debconf python-scour qpdf texinfo
-The following packages will be upgraded:
-  cpp-4.8 g++-4.8 gcc-4.8 gcc-4.8-base libasan0 libatomic1 libgcc-4.8-dev
-  libgomp1 libitm1 libquadmath0 libstdc++-4.8-dev libstdc++6 libtsan0
-13 upgraded, 48 newly installed, 0 to remove and 141 not upgraded.
-Need to get 45.8 MB of archives.
-After this operation, 58.0 MB of additional disk space will be used.
-0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libatomic1 amd64 4.8.4-2ubuntu1~14.04.4 [8,630 B]
-0% [1 libatomic1 0 B/8,630 B 0%]                                0% [Working]            Get:2 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libitm1 amd64 4.8.4-2ubuntu1~14.04.4 [28.6 kB]
-0% [2 libitm1 5,511 B/28.6 kB 19%]                                  1% [Working]            Get:3 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libgomp1 amd64 4.8.4-2ubuntu1~14.04.4 [23.1 kB]
-1% [3 libgomp1 1,240 B/23.1 kB 5%]                                  1% [Working]            Get:4 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libasan0 amd64 4.8.4-2ubuntu1~14.04.4 [63.1 kB]
-1% [4 libasan0 0 B/63.1 kB 0%]                              2% [Working]            Get:5 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libtsan0 amd64 4.8.4-2ubuntu1~14.04.4 [94.8 kB]
-2% [5 libtsan0 2,781 B/94.8 kB 3%]                                  2% [Working]            Get:6 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libquadmath0 amd64 4.8.4-2ubuntu1~14.04.4 [126 kB]
-2% [6 libquadmath0 0 B/126 kB 0%]                                 3% [Working]            Get:7 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 g++-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [18.0 MB]
-3% [7 g++-4.8 1,599 B/18.0 MB 0%]25% [7 g++-4.8 12.6 MB/18.0 MB 70%]                                   34% [Working]             Get:8 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 gcc-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [5,040 kB]
-34% [8 gcc-4.8 65.5 kB/5,040 kB 1%]                                   43% [Working]             Get:9 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 cpp-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [4,452 kB]
-43% [9 cpp-4.8 0 B/4,452 kB 0%]                               52% [Working]             Get:10 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libstdc++-4.8-dev amd64 4.8.4-2ubuntu1~14.04.4 [1,051 kB]
-52% [10 libstdc++-4.8-dev 14.5 kB/1,051 kB 1%]                                              54% [Working]             Get:11 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libgcc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.4 [1,688 kB]
-54% [11 libgcc-4.8-dev 65.5 kB/1,688 kB 4%]                                           57% [Working]             Get:12 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 gcc-4.8-base amd64 4.8.4-2ubuntu1~14.04.4 [16.7 kB]
-57% [12 gcc-4.8-base 6,566 B/16.7 kB 39%]                                         57% [Working]             Get:13 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libstdc++6 amd64 4.8.4-2ubuntu1~14.04.4 [260 kB]
-57% [13 libstdc++6 10.4 kB/260 kB 4%]                                     58% [Working]             Get:14 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libgfortran3 amd64 4.8.4-2ubuntu1~14.04.4 [248 kB]
-58% [14 libgfortran3 12.6 kB/248 kB 5%]                                       59% [Working]             Get:15 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libmagick++5 amd64 8:6.7.7.10-6ubuntu3.9 [102 kB]
-59% [15 libmagick++5 26.0 kB/102 kB 25%]                                        59% [Working]             Get:16 http://archive.ubuntu.com/ubuntu trusty/main amd64 libqpdf13 amd64 5.1.1-1 [295 kB]
-59% [16 libqpdf13 20.5 kB/295 kB 7%]                                    60% [Working]             Get:17 http://archive.ubuntu.com/ubuntu trusty-updates/universe amd64 libssh2-1 amd64 1.4.3-2ubuntu0.1 [66.4 kB]
-60% [17 libssh2-1 21.3 kB/66.4 kB 32%]                                      61% [Working]             Get:18 http://archive.ubuntu.com/ubuntu trusty/main amd64 intltool-debian all 0.35.0+20060710.1 [31.6 kB]
-61% [18 intltool-debian 20.2 kB/31.6 kB 64%]                                            61% [Working]             Get:19 http://archive.ubuntu.com/ubuntu trusty/main amd64 po-debconf all 1.0.16+nmu2ubuntu1 [210 kB]
-61% [19 po-debconf 0 B/210 kB 0%]                                 62% [Working]             Get:20 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 dh-apparmor all 2.10.95-0ubuntu2.6~14.04.3 [11.6 kB]
-62% [20 dh-apparmor 11.6 kB/11.6 kB 100%]                                         62% [Working]             Get:21 http://archive.ubuntu.com/ubuntu trusty/main amd64 debhelper all 9.20131227ubuntu1 [604 kB]
-62% [21 debhelper 28.3 kB/604 kB 5%]                                    64% [Working]             Get:22 http://archive.ubuntu.com/ubuntu trusty/main amd64 liburi-perl all 1.60-1 [89.6 kB]
-64% [22 liburi-perl 65.5 kB/89.6 kB 73%]                                        64% [Working]             Get:23 http://archive.ubuntu.com/ubuntu trusty/main amd64 libencode-locale-perl all 1.03-1 [12.4 kB]
-64% [23 libencode-locale-perl 12.4 kB/12.4 kB 100%]                                                   64% [Working]             Get:24 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhttp-date-perl all 6.02-1 [10.4 kB]
-64% [24 libhttp-date-perl 10.4 kB/10.4 kB 100%]                                               65% [Working]             Get:25 http://archive.ubuntu.com/ubuntu trusty/main amd64 libfile-listing-perl all 6.04-1 [9,774 B]
-65% [25 libfile-listing-perl 0 B/9,774 B 0%]                                            65% [Working]             Get:26 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhtml-tagset-perl all 3.20-2 [13.5 kB]
-65% [26 libhtml-tagset-perl 13.5 kB/13.5 kB 100%]                                                 65% [Working]             Get:27 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhtml-parser-perl amd64 3.71-1build1 [98.2 kB]
-65% [27 libhtml-parser-perl 7,413 B/98.2 kB 8%]                                               66% [Working]             Get:28 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhtml-tree-perl all 5.03-1 [215 kB]
-66% [28 libhtml-tree-perl 40.0 kB/215 kB 19%]                                             67% [Working]             Get:29 http://archive.ubuntu.com/ubuntu trusty/main amd64 libio-html-perl all 1.00-1 [15.7 kB]
-67% [29 libio-html-perl 15.7 kB/15.7 kB 100%]                                             67% [Working]             Get:30 http://archive.ubuntu.com/ubuntu trusty/main amd64 liblwp-mediatypes-perl all 6.02-1 [21.7 kB]
-67% [30 liblwp-mediatypes-perl 5,422 B/21.7 kB 25%]                                                   67% [Working]             Get:31 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhttp-message-perl all 6.06-1 [78.7 kB]
-67% [31 libhttp-message-perl 12.3 kB/78.7 kB 16%]                                                 68% [Working]             Get:32 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhttp-cookies-perl all 6.00-2 [23.3 kB]
-68% [32 libhttp-cookies-perl 23.3 kB/23.3 kB 100%]                                                  68% [Working]             Get:33 http://archive.ubuntu.com/ubuntu trusty/main amd64 libhttp-negotiate-perl all 6.00-2 [13.4 kB]
-68% [33 libhttp-negotiate-perl 11.9 kB/13.4 kB 89%]                                                   69% [Working]             Get:34 http://archive.ubuntu.com/ubuntu trusty/main amd64 libnet-ssleay-perl amd64 1.58-1 [243 kB]
-69% [34 libnet-ssleay-perl 57.3 kB/243 kB 24%]                                              69% [Working]             Get:35 http://archive.ubuntu.com/ubuntu trusty/main amd64 libio-socket-ssl-perl all 1.965-1ubuntu1 [73.7 kB]
-69% [35 libio-socket-ssl-perl 17.3 kB/73.7 kB 23%]                                                  70% [Working]             Get:36 http://archive.ubuntu.com/ubuntu trusty/main amd64 libnet-http-perl all 6.06-1 [24.2 kB]
-70% [36 libnet-http-perl 0 B/24.2 kB 0%]                                        70% [Working]             Get:37 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 liblwp-protocol-https-perl all 6.04-2ubuntu0.1 [7,644 B]
-70% [37 liblwp-protocol-https-perl 7,644 B/7,644 B 100%]                                                        70% [Working]             Get:38 http://archive.ubuntu.com/ubuntu trusty/main amd64 libwww-robotrules-perl all 6.01-1 [14.1 kB]
-70% [38 libwww-robotrules-perl 14.1 kB/14.1 kB 100%]                                                    71% [Working]             Get:39 http://archive.ubuntu.com/ubuntu trusty/main amd64 libwww-perl all 6.05-2 [146 kB]
-71% [39 libwww-perl 27.6 kB/146 kB 19%]                                       71% [Working]             Get:40 http://archive.ubuntu.com/ubuntu trusty/main amd64 libxml-parser-perl amd64 2.41-1build3 [294 kB]
-71% [40 libxml-parser-perl 0 B/294 kB 0%]                                         72% [Working]             Get:41 http://archive.ubuntu.com/ubuntu trusty/main amd64 intltool all 0.50.2-2 [52.0 kB]
-72% [41 intltool 12.3 kB/52.0 kB 24%]                                     73% [Working]             Get:42 http://archive.ubuntu.com/ubuntu trusty/main amd64 dh-translations all 121 [21.6 kB]
-73% [42 dh-translations 0 B/21.6 kB 0%]                                       73% [Working]             Get:43 http://archive.ubuntu.com/ubuntu trusty/main amd64 python-scour all 0.26-3build1 [40.5 kB]
-73% [43 python-scour 36.9 kB/40.5 kB 91%]                                         73% [Working]             Get:44 http://archive.ubuntu.com/ubuntu trusty/main amd64 cdbs all 0.4.122ubuntu2 [42.1 kB]
-73% [44 cdbs 0 B/42.1 kB 0%]                            74% [Working]             Get:45 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libgfortran-4.8-dev amd64 4.8.4-2ubuntu1~14.04.4 [268 kB]
-74% [45 libgfortran-4.8-dev 19.3 kB/268 kB 7%]                                              75% [Working]             Get:46 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 gfortran-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [4,733 kB]
-75% [46 gfortran-4.8 12.8 kB/4,733 kB 0%]                                         83% [Working]             Get:47 http://archive.ubuntu.com/ubuntu trusty/main amd64 gfortran amd64 4:4.8.2-1ubuntu6 [1,252 B]
-             Get:48 http://archive.ubuntu.com/ubuntu trusty/main amd64 libblas3 amd64 1.2.20110419-7 [215 kB]
-84% [48 libblas3 61.6 kB/215 kB 29%]                                    84% [Working]             Get:49 http://archive.ubuntu.com/ubuntu trusty/main amd64 libblas-dev amd64 1.2.20110419-7 [240 kB]
-84% [49 libblas-dev 43.4 kB/240 kB 18%]                                       85% [Working]             Get:50 http://archive.ubuntu.com/ubuntu trusty/main amd64 libintl-perl all 1.23-1build1 [1,204 kB]
-85% [50 libintl-perl 0 B/1,204 kB 0%]                                     87% [Working]             Get:51 http://archive.ubuntu.com/ubuntu trusty/main amd64 liblapack3 amd64 3.5.0-2ubuntu1 [1,730 kB]
-87% [51 liblapack3 41.2 kB/1,730 kB 2%]                                       91% [Working]             Get:52 http://archive.ubuntu.com/ubuntu trusty/main amd64 liblapack-dev amd64 3.5.0-2ubuntu1 [1,740 kB]
-91% [52 liblapack-dev 14.9 kB/1,740 kB 1%]                                          94% [Working]             Get:53 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libmagick++-dev amd64 8:6.7.7.10-6ubuntu3.9 [130 kB]
-94% [53 libmagick++-dev 10.4 kB/130 kB 8%]                                          95% [Working]             Get:54 http://archive.ubuntu.com/ubuntu trusty-updates/universe amd64 libssh2-1-dev amd64 1.4.3-2ubuntu0.1 [229 kB]
-95% [54 libssh2-1-dev 4,720 B/229 kB 2%]                                        95% [Working]             Get:55 http://archive.ubuntu.com/ubuntu trusty/main amd64 libtext-unidecode-perl all 0.04-2 [115 kB]
-95% [55 libtext-unidecode-perl 8,557 B/115 kB 7%]                                                 96% [Working]             Get:56 http://archive.ubuntu.com/ubuntu trusty/main amd64 libxml-namespacesupport-perl all 1.11-1 [13.2 kB]
-96% [56 libxml-namespacesupport-perl 13.2 kB/13.2 kB 100%]                                                          96% [Working]             Get:57 http://archive.ubuntu.com/ubuntu trusty/main amd64 libxml-sax-base-perl all 1.07-1 [21.5 kB]
-96% [57 libxml-sax-base-perl 9,917 B/21.5 kB 46%]                                                 97% [Waiting for headers]                         Get:58 http://archive.ubuntu.com/ubuntu trusty/main amd64 libxml-sax-perl all 0.99+dfsg-2ubuntu1 [64.6 kB]
-97% [58 libxml-sax-perl 12.7 kB/64.6 kB 20%]                                            97% [Working]             Get:59 http://archive.ubuntu.com/ubuntu trusty-updates/main amd64 libxml-libxml-perl amd64 2.0108+dfsg-1ubuntu0.2 [336 kB]
-97% [59 libxml-libxml-perl 13.0 kB/336 kB 4%]                                             98% [Waiting for headers]                         Get:60 http://archive.ubuntu.com/ubuntu trusty/main amd64 qpdf amd64 5.1.1-1 [207 kB]
-98% [60 qpdf 2,302 B/207 kB 1%]                               99% [Waiting for headers]                         Get:61 http://archive.ubuntu.com/ubuntu trusty/main amd64 texinfo amd64 5.2.0.dfsg.1-2 [561 kB]
-99% [61 texinfo 39.2 kB/561 kB 7%]                                  100% [Working]              Fetched 45.8 MB in 2s (19.1 MB/s)
-Extracting templates from packages: 49%Extracting templates from packages: 98%Extracting templates from packages: 100%
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 72205 files and directories currently installed.)
-Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libatomic1:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libitm1:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libgomp1:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libasan0:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libtsan0_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libtsan0:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Preparing to unpack .../gcc-4.8-base_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Processing triggers for ccache (3.1.9-1) ...
-Updating symlinks in /usr/lib/ccache ...
-Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
-Setting up gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 72205 files and directories currently installed.)
-Preparing to unpack .../libstdc++6_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
-Setting up libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
-Selecting previously unselected package libgfortran3:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 72205 files and directories currently installed.)
-Preparing to unpack .../libgfortran3_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libgfortran3:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Selecting previously unselected package libmagick++5:amd64.
-Preparing to unpack .../libmagick++5_8%3a6.7.7.10-6ubuntu3.9_amd64.deb ...
-Unpacking libmagick++5:amd64 (8:6.7.7.10-6ubuntu3.9) ...
-Selecting previously unselected package libqpdf13:amd64.
-Preparing to unpack .../libqpdf13_5.1.1-1_amd64.deb ...
-Unpacking libqpdf13:amd64 (5.1.1-1) ...
-Selecting previously unselected package libssh2-1:amd64.
-Preparing to unpack .../libssh2-1_1.4.3-2ubuntu0.1_amd64.deb ...
-Unpacking libssh2-1:amd64 (1.4.3-2ubuntu0.1) ...
-Selecting previously unselected package intltool-debian.
-Preparing to unpack .../intltool-debian_0.35.0+20060710.1_all.deb ...
-Unpacking intltool-debian (0.35.0+20060710.1) ...
-Selecting previously unselected package po-debconf.
-Preparing to unpack .../po-debconf_1.0.16+nmu2ubuntu1_all.deb ...
-Unpacking po-debconf (1.0.16+nmu2ubuntu1) ...
-Selecting previously unselected package dh-apparmor.
-Preparing to unpack .../dh-apparmor_2.10.95-0ubuntu2.6~14.04.3_all.deb ...
-Unpacking dh-apparmor (2.10.95-0ubuntu2.6~14.04.3) ...
-Selecting previously unselected package debhelper.
-Preparing to unpack .../debhelper_9.20131227ubuntu1_all.deb ...
-Unpacking debhelper (9.20131227ubuntu1) ...
-Selecting previously unselected package liburi-perl.
-Preparing to unpack .../liburi-perl_1.60-1_all.deb ...
-Unpacking liburi-perl (1.60-1) ...
-Selecting previously unselected package libencode-locale-perl.
-Preparing to unpack .../libencode-locale-perl_1.03-1_all.deb ...
-Unpacking libencode-locale-perl (1.03-1) ...
-Selecting previously unselected package libhttp-date-perl.
-Preparing to unpack .../libhttp-date-perl_6.02-1_all.deb ...
-Unpacking libhttp-date-perl (6.02-1) ...
-Selecting previously unselected package libfile-listing-perl.
-Preparing to unpack .../libfile-listing-perl_6.04-1_all.deb ...
-Unpacking libfile-listing-perl (6.04-1) ...
-Selecting previously unselected package libhtml-tagset-perl.
-Preparing to unpack .../libhtml-tagset-perl_3.20-2_all.deb ...
-Unpacking libhtml-tagset-perl (3.20-2) ...
-Selecting previously unselected package libhtml-parser-perl.
-Preparing to unpack .../libhtml-parser-perl_3.71-1build1_amd64.deb ...
-Unpacking libhtml-parser-perl (3.71-1build1) ...
-Selecting previously unselected package libhtml-tree-perl.
-Preparing to unpack .../libhtml-tree-perl_5.03-1_all.deb ...
-Unpacking libhtml-tree-perl (5.03-1) ...
-Selecting previously unselected package libio-html-perl.
-Preparing to unpack .../libio-html-perl_1.00-1_all.deb ...
-Unpacking libio-html-perl (1.00-1) ...
-Selecting previously unselected package liblwp-mediatypes-perl.
-Preparing to unpack .../liblwp-mediatypes-perl_6.02-1_all.deb ...
-Unpacking liblwp-mediatypes-perl (6.02-1) ...
-Selecting previously unselected package libhttp-message-perl.
-Preparing to unpack .../libhttp-message-perl_6.06-1_all.deb ...
-Unpacking libhttp-message-perl (6.06-1) ...
-Selecting previously unselected package libhttp-cookies-perl.
-Preparing to unpack .../libhttp-cookies-perl_6.00-2_all.deb ...
-Unpacking libhttp-cookies-perl (6.00-2) ...
-Selecting previously unselected package libhttp-negotiate-perl.
-Preparing to unpack .../libhttp-negotiate-perl_6.00-2_all.deb ...
-Unpacking libhttp-negotiate-perl (6.00-2) ...
-Selecting previously unselected package libnet-ssleay-perl.
-Preparing to unpack .../libnet-ssleay-perl_1.58-1_amd64.deb ...
-Unpacking libnet-ssleay-perl (1.58-1) ...
-Selecting previously unselected package libio-socket-ssl-perl.
-Preparing to unpack .../libio-socket-ssl-perl_1.965-1ubuntu1_all.deb ...
-Unpacking libio-socket-ssl-perl (1.965-1ubuntu1) ...
-Selecting previously unselected package libnet-http-perl.
-Preparing to unpack .../libnet-http-perl_6.06-1_all.deb ...
-Unpacking libnet-http-perl (6.06-1) ...
-Selecting previously unselected package liblwp-protocol-https-perl.
-Preparing to unpack .../liblwp-protocol-https-perl_6.04-2ubuntu0.1_all.deb ...
-Unpacking liblwp-protocol-https-perl (6.04-2ubuntu0.1) ...
-Selecting previously unselected package libwww-robotrules-perl.
-Preparing to unpack .../libwww-robotrules-perl_6.01-1_all.deb ...
-Unpacking libwww-robotrules-perl (6.01-1) ...
-Selecting previously unselected package libwww-perl.
-Preparing to unpack .../libwww-perl_6.05-2_all.deb ...
-Unpacking libwww-perl (6.05-2) ...
-Selecting previously unselected package libxml-parser-perl.
-Preparing to unpack .../libxml-parser-perl_2.41-1build3_amd64.deb ...
-Unpacking libxml-parser-perl (2.41-1build3) ...
-Selecting previously unselected package intltool.
-Preparing to unpack .../intltool_0.50.2-2_all.deb ...
-Unpacking intltool (0.50.2-2) ...
-Selecting previously unselected package dh-translations.
-Preparing to unpack .../dh-translations_121_all.deb ...
-Unpacking dh-translations (121) ...
-Selecting previously unselected package python-scour.
-Preparing to unpack .../python-scour_0.26-3build1_all.deb ...
-Unpacking python-scour (0.26-3build1) ...
-Selecting previously unselected package cdbs.
-Preparing to unpack .../cdbs_0.4.122ubuntu2_all.deb ...
-Unpacking cdbs (0.4.122ubuntu2) ...
-Selecting previously unselected package libgfortran-4.8-dev:amd64.
-Preparing to unpack .../libgfortran-4.8-dev_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking libgfortran-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Selecting previously unselected package gfortran-4.8.
-Preparing to unpack .../gfortran-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
-Unpacking gfortran-4.8 (4.8.4-2ubuntu1~14.04.4) ...
-Selecting previously unselected package gfortran.
-Preparing to unpack .../gfortran_4%3a4.8.2-1ubuntu6_amd64.deb ...
-Unpacking gfortran (4:4.8.2-1ubuntu6) ...
-Selecting previously unselected package libblas3.
-Preparing to unpack .../libblas3_1.2.20110419-7_amd64.deb ...
-Unpacking libblas3 (1.2.20110419-7) ...
-Selecting previously unselected package libblas-dev.
-Preparing to unpack .../libblas-dev_1.2.20110419-7_amd64.deb ...
-Unpacking libblas-dev (1.2.20110419-7) ...
-Selecting previously unselected package libintl-perl.
-Preparing to unpack .../libintl-perl_1.23-1build1_all.deb ...
-Unpacking libintl-perl (1.23-1build1) ...
-Selecting previously unselected package liblapack3.
-Preparing to unpack .../liblapack3_3.5.0-2ubuntu1_amd64.deb ...
-Unpacking liblapack3 (3.5.0-2ubuntu1) ...
-Selecting previously unselected package liblapack-dev.
-Preparing to unpack .../liblapack-dev_3.5.0-2ubuntu1_amd64.deb ...
-Unpacking liblapack-dev (3.5.0-2ubuntu1) ...
-Selecting previously unselected package libmagick++-dev.
-Preparing to unpack .../libmagick++-dev_8%3a6.7.7.10-6ubuntu3.9_amd64.deb ...
-Unpacking libmagick++-dev (8:6.7.7.10-6ubuntu3.9) ...
-Selecting previously unselected package libssh2-1-dev:amd64.
-Preparing to unpack .../libssh2-1-dev_1.4.3-2ubuntu0.1_amd64.deb ...
-Unpacking libssh2-1-dev:amd64 (1.4.3-2ubuntu0.1) ...
-Selecting previously unselected package libtext-unidecode-perl.
-Preparing to unpack .../libtext-unidecode-perl_0.04-2_all.deb ...
-Unpacking libtext-unidecode-perl (0.04-2) ...
-Selecting previously unselected package libxml-namespacesupport-perl.
-Preparing to unpack .../libxml-namespacesupport-perl_1.11-1_all.deb ...
-Unpacking libxml-namespacesupport-perl (1.11-1) ...
-Selecting previously unselected package libxml-sax-base-perl.
-Preparing to unpack .../libxml-sax-base-perl_1.07-1_all.deb ...
-Unpacking libxml-sax-base-perl (1.07-1) ...
-Selecting previously unselected package libxml-sax-perl.
-Preparing to unpack .../libxml-sax-perl_0.99+dfsg-2ubuntu1_all.deb ...
-Unpacking libxml-sax-perl (0.99+dfsg-2ubuntu1) ...
-Selecting previously unselected package libxml-libxml-perl.
-Preparing to unpack .../libxml-libxml-perl_2.0108+dfsg-1ubuntu0.2_amd64.deb ...
-Unpacking libxml-libxml-perl (2.0108+dfsg-1ubuntu0.2) ...
-Selecting previously unselected package qpdf.
-Preparing to unpack .../qpdf_5.1.1-1_amd64.deb ...
-Unpacking qpdf (5.1.1-1) ...
-Selecting previously unselected package texinfo.
-Preparing to unpack .../texinfo_5.2.0.dfsg.1-2_amd64.deb ...
-Unpacking texinfo (5.2.0.dfsg.1-2) ...
-Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
-Processing triggers for ccache (3.1.9-1) ...
-Updating symlinks in /usr/lib/ccache ...
-Setting up libatomic1:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libitm1:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libgomp1:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libasan0:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libtsan0:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up g++-4.8 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libgfortran3:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up libmagick++5:amd64 (8:6.7.7.10-6ubuntu3.9) ...
-Setting up libqpdf13:amd64 (5.1.1-1) ...
-Setting up libssh2-1:amd64 (1.4.3-2ubuntu0.1) ...
-Setting up intltool-debian (0.35.0+20060710.1) ...
-Setting up po-debconf (1.0.16+nmu2ubuntu1) ...
-Setting up dh-apparmor (2.10.95-0ubuntu2.6~14.04.3) ...
-Setting up debhelper (9.20131227ubuntu1) ...
-Setting up liburi-perl (1.60-1) ...
-Setting up libencode-locale-perl (1.03-1) ...
-Setting up libhttp-date-perl (6.02-1) ...
-Setting up libfile-listing-perl (6.04-1) ...
-Setting up libhtml-tagset-perl (3.20-2) ...
-Setting up libhtml-parser-perl (3.71-1build1) ...
-Setting up libhtml-tree-perl (5.03-1) ...
-Setting up libio-html-perl (1.00-1) ...
-Setting up liblwp-mediatypes-perl (6.02-1) ...
-Setting up libhttp-message-perl (6.06-1) ...
-Setting up libhttp-cookies-perl (6.00-2) ...
-Setting up libhttp-negotiate-perl (6.00-2) ...
-Setting up libnet-ssleay-perl (1.58-1) ...
-Setting up libio-socket-ssl-perl (1.965-1ubuntu1) ...
-Setting up libnet-http-perl (6.06-1) ...
-Setting up libwww-robotrules-perl (6.01-1) ...
-Setting up python-scour (0.26-3build1) ...
-Setting up libgfortran-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up gfortran-4.8 (4.8.4-2ubuntu1~14.04.4) ...
-Setting up gfortran (4:4.8.2-1ubuntu6) ...
-update-alternatives: using /usr/bin/gfortran to provide /usr/bin/f95 (f95) in auto mode
-Setting up libblas3 (1.2.20110419-7) ...
-update-alternatives: using /usr/lib/libblas/libblas.so.3 to provide /usr/lib/libblas.so.3 (libblas.so.3) in auto mode
-Setting up libblas-dev (1.2.20110419-7) ...
-update-alternatives: using /usr/lib/libblas/libblas.so to provide /usr/lib/libblas.so (libblas.so) in auto mode
-Setting up libintl-perl (1.23-1build1) ...
-Setting up liblapack3 (3.5.0-2ubuntu1) ...
-update-alternatives: using /usr/lib/lapack/liblapack.so.3 to provide /usr/lib/liblapack.so.3 (liblapack.so.3) in auto mode
-Setting up liblapack-dev (3.5.0-2ubuntu1) ...
-update-alternatives: using /usr/lib/lapack/liblapack.so to provide /usr/lib/liblapack.so (liblapack.so) in auto mode
-Setting up libmagick++-dev (8:6.7.7.10-6ubuntu3.9) ...
-Setting up libssh2-1-dev:amd64 (1.4.3-2ubuntu0.1) ...
-Setting up libtext-unidecode-perl (0.04-2) ...
-Setting up libxml-namespacesupport-perl (1.11-1) ...
-Setting up libxml-sax-base-perl (1.07-1) ...
-Setting up libxml-sax-perl (0.99+dfsg-2ubuntu1) ...
-update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::PurePerl with priority 10...
-update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
-
-Creating config file /etc/perl/XML/SAX/ParserDetails.ini with new version
-Setting up libxml-libxml-perl (2.0108+dfsg-1ubuntu0.2) ...
-update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX::Parser with priority 50...
-update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX with priority 50...
-update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
-Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
-Setting up qpdf (5.1.1-1) ...
-Setting up texinfo (5.2.0.dfsg.1-2) ...
-Setting up liblwp-protocol-https-perl (6.04-2ubuntu0.1) ...
-Setting up libwww-perl (6.05-2) ...
-Setting up libxml-parser-perl (2.41-1build3) ...
-Setting up intltool (0.50.2-2) ...
-Setting up dh-translations (121) ...
-Setting up cdbs (0.4.122ubuntu2) ...
-Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
-
-travis_time:end:11b0935d:start=1521541208751177254,finish=1521541251772112843,duration=43020935589[0Ktravis_time:start:005fbd1e[0K$ curl -fLo /tmp/R-3.4.4-$(lsb_release -cs).xz https://s3.amazonaws.com/rstudio-travis/R-3.4.4-$(lsb_release -cs).xz
-
-travis_time:end:005fbd1e:start=1521541251778808241,finish=1521541252458890887,duration=680082646[0Ktravis_time:start:081596b5[0K$ tar xJf /tmp/R-3.4.4-$(lsb_release -cs).xz -C ~
-
-travis_time:end:081596b5:start=1521541252465214766,finish=1521541256160489313,duration=3695274547[0K$ rm /tmp/R-3.4.4-$(lsb_release -cs).xz
-travis_time:start:00864ae4[0K$ sudo mkdir -p /usr/local/lib/R/site-library $R_LIBS_USER
-
-travis_time:end:00864ae4:start=1521541256221542616,finish=1521541256234791487,duration=13248871[0Ktravis_time:start:13897d1d[0K$ sudo chmod 2777 /usr/local/lib/R /usr/local/lib/R/site-library $R_LIBS_USER
-
-travis_time:end:13897d1d:start=1521541256241052404,finish=1521541256252060715,duration=11008311[0Ktravis_time:start:07eda4f8[0K$ echo 'options(repos = c(CRAN = "http://cloud.r-project.org"))' > ~/.Rprofile.site
-
-travis_time:end:07eda4f8:start=1521541256258442351,finish=1521541256263749224,duration=5306873[0Ktravis_time:start:06481cf9[0K$ curl -fLo /tmp/texlive.tar.gz https://github.com/jimhester/ubuntu-bin/releases/download/latest/texlive.tar.gz
-
-travis_time:end:06481cf9:start=1521541256270129131,finish=1521541257342782850,duration=1072653719[0Ktravis_time:start:0192f000[0K$ tar xzf /tmp/texlive.tar.gz -C ~
-
-travis_time:end:0192f000:start=1521541257349167172,finish=1521541259668161004,duration=2318993832[0K$ export PATH=/$HOME/texlive/bin/x86_64-linux:$PATH
-travis_time:start:285da3d6[0K$ tlmgr update --self
-tlmgr: package repository http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/tlnet (verified)
-tlmgr: saving backups to /home/travis/texlive/tlpkg/backups
-[1/1, ??:??/??:??] update: texlive.infra [203k] (44424 -> 46470) ... done
-running mktexlsr ...
-done running mktexlsr.
-tlmgr: package log updated: /home/travis/texlive/texmf-var/web2c/tlmgr.log
-
-travis_time:end:285da3d6:start=1521541259674993637,finish=1521541264908005740,duration=5233012103[0Ktravis_time:start:1aa6fcde[0K$ curl -fLo /tmp/pandoc-1.15.2-1-amd64.deb https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb
-
-travis_time:end:1aa6fcde:start=1521541264914476353,finish=1521541265440719185,duration=526242832[0Ktravis_time:start:14620ff2[0K$ sudo dpkg -i /tmp/pandoc-1.15.2-1-amd64.deb
-Selecting previously unselected package pandoc.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 74410 files and directories currently installed.)
-Preparing to unpack /tmp/pandoc-1.15.2-1-amd64.deb ...
-Unpacking pandoc (1.15.2-1) ...
-Setting up pandoc (1.15.2-1) ...
-Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
-
-travis_time:end:14620ff2:start=1521541265447528809,finish=1521541266551980760,duration=1104451951[0Ktravis_time:start:222ce1ba[0K$ sudo apt-get install -f
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 1%Reading package lists... 33%Reading package lists... 33%Reading package lists... 64%Reading package lists... 64%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 68%Reading package lists... 76%Reading package lists... 76%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 99%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-0 upgraded, 0 newly installed, 0 to remove and 141 not upgraded.
-
-travis_time:end:222ce1ba:start=1521541266558391862,finish=1521541271553497886,duration=4995106024[0K$ rm /tmp/pandoc-1.15.2-1-amd64.deb
-travis_fold:end:R-install[0Ktravis_fold:start:git.checkout[0Ktravis_time:start:2c1750a8[0K$ git clone --depth=50 --branch=master https://github.com/fvafrCU/document.git fvafrCU/document
-Cloning into 'fvafrCU/document'...
-remote: Counting objects: 576, done.[K
-remote: Compressing objects:   0% (1/254)   [Kremote: Compressing objects:   1% (3/254)   [Kremote: Compressing objects:   2% (6/254)   [Kremote: Compressing objects:   3% (8/254)   [Kremote: Compressing objects:   4% (11/254)   [Kremote: Compressing objects:   5% (13/254)   [Kremote: Compressing objects:   6% (16/254)   [Kremote: Compressing objects:   7% (18/254)   [Kremote: Compressing objects:   8% (21/254)   [Kremote: Compressing objects:   9% (23/254)   [Kremote: Compressing objects:  10% (26/254)   [Kremote: Compressing objects:  11% (28/254)   [Kremote: Compressing objects:  12% (31/254)   [Kremote: Compressing objects:  13% (34/254)   [Kremote: Compressing objects:  14% (36/254)   [Kremote: Compressing objects:  15% (39/254)   [Kremote: Compressing objects:  16% (41/254)   [Kremote: Compressing objects:  17% (44/254)   [Kremote: Compressing objects:  18% (46/254)   [Kremote: Compressing objects:  19% (49/254)   [Kremote: Compressing objects:  20% (51/254)   [Kremote: Compressing objects:  21% (54/254)   [Kremote: Compressing objects:  22% (56/254)   [Kremote: Compressing objects:  23% (59/254)   [Kremote: Compressing objects:  24% (61/254)   [Kremote: Compressing objects:  25% (64/254)   [Kremote: Compressing objects:  26% (67/254)   [Kremote: Compressing objects:  27% (69/254)   [Kremote: Compressing objects:  28% (72/254)   [Kremote: Compressing objects:  29% (74/254)   [Kremote: Compressing objects:  30% (77/254)   [Kremote: Compressing objects:  31% (79/254)   [Kremote: Compressing objects:  32% (82/254)   [Kremote: Compressing objects:  33% (84/254)   [Kremote: Compressing objects:  34% (87/254)   [Kremote: Compressing objects:  35% (89/254)   [Kremote: Compressing objects:  36% (92/254)   [Kremote: Compressing objects:  37% (94/254)   [Kremote: Compressing objects:  38% (97/254)   [Kremote: Compressing objects:  39% (100/254)   [Kremote: Compressing objects:  40% (102/254)   [Kremote: Compressing objects:  41% (105/254)   [Kremote: Compressing objects:  42% (107/254)   [Kremote: Compressing objects:  43% (110/254)   [Kremote: Compressing objects:  44% (112/254)   [Kremote: Compressing objects:  45% (115/254)   [Kremote: Compressing objects:  46% (117/254)   [Kremote: Compressing objects:  47% (120/254)   [Kremote: Compressing objects:  48% (122/254)   [Kremote: Compressing objects:  49% (125/254)   [Kremote: Compressing objects:  50% (127/254)   [Kremote: Compressing objects:  51% (130/254)   [Kremote: Compressing objects:  52% (133/254)   [Kremote: Compressing objects:  53% (135/254)   [Kremote: Compressing objects:  54% (138/254)   [Kremote: Compressing objects:  55% (140/254)   [Kremote: Compressing objects:  56% (143/254)   [Kremote: Compressing objects:  57% (145/254)   [Kremote: Compressing objects:  58% (148/254)   [Kremote: Compressing objects:  59% (150/254)   [Kremote: Compressing objects:  60% (153/254)   [Kremote: Compressing objects:  61% (155/254)   [Kremote: Compressing objects:  62% (158/254)   [Kremote: Compressing objects:  63% (161/254)   [Kremote: Compressing objects:  64% (163/254)   [Kremote: Compressing objects:  65% (166/254)   [Kremote: Compressing objects:  66% (168/254)   [Kremote: Compressing objects:  67% (171/254)   [Kremote: Compressing objects:  68% (173/254)   [Kremote: Compressing objects:  69% (176/254)   [Kremote: Compressing objects:  70% (178/254)   [Kremote: Compressing objects:  71% (181/254)   [Kremote: Compressing objects:  72% (183/254)   [Kremote: Compressing objects:  73% (186/254)   [Kremote: Compressing objects:  74% (188/254)   [Kremote: Compressing objects:  75% (191/254)   [Kremote: Compressing objects:  76% (194/254)   [Kremote: Compressing objects:  77% (196/254)   [Kremote: Compressing objects:  78% (199/254)   [Kremote: Compressing objects:  79% (201/254)   [Kremote: Compressing objects:  80% (204/254)   [Kremote: Compressing objects:  81% (206/254)   [Kremote: Compressing objects:  82% (209/254)   [Kremote: Compressing objects:  83% (211/254)   [Kremote: Compressing objects:  84% (214/254)   [Kremote: Compressing objects:  85% (216/254)   [Kremote: Compressing objects:  86% (219/254)   [Kremote: Compressing objects:  87% (221/254)   [Kremote: Compressing objects:  88% (224/254)   [Kremote: Compressing objects:  89% (227/254)   [Kremote: Compressing objects:  90% (229/254)   [Kremote: Compressing objects:  91% (232/254)   [Kremote: Compressing objects:  92% (234/254)   [Kremote: Compressing objects:  93% (237/254)   [Kremote: Compressing objects:  94% (239/254)   [Kremote: Compressing objects:  95% (242/254)   [Kremote: Compressing objects:  96% (244/254)   [Kremote: Compressing objects:  97% (247/254)   [Kremote: Compressing objects:  98% (249/254)   [Kremote: Compressing objects:  99% (252/254)   [Kremote: Compressing objects: 100% (254/254)   [Kremote: Compressing objects: 100% (254/254), done.[K
-Receiving objects:   0% (1/576)   Receiving objects:   1% (6/576)   Receiving objects:   2% (12/576)   Receiving objects:   3% (18/576)   Receiving objects:   4% (24/576)   Receiving objects:   5% (29/576)   Receiving objects:   6% (35/576)   Receiving objects:   7% (41/576)   Receiving objects:   8% (47/576)   Receiving objects:   9% (52/576)   Receiving objects:  10% (58/576)   Receiving objects:  11% (64/576)   Receiving objects:  12% (70/576)   Receiving objects:  13% (75/576)   Receiving objects:  14% (81/576)   Receiving objects:  15% (87/576)   Receiving objects:  16% (93/576)   Receiving objects:  17% (98/576)   Receiving objects:  18% (104/576)   Receiving objects:  19% (110/576)   Receiving objects:  20% (116/576)   Receiving objects:  21% (121/576)   Receiving objects:  22% (127/576)   Receiving objects:  23% (133/576)   Receiving objects:  24% (139/576)   Receiving objects:  25% (144/576)   Receiving objects:  26% (150/576)   Receiving objects:  27% (156/576)   Receiving objects:  28% (162/576)   Receiving objects:  29% (168/576)   Receiving objects:  30% (173/576)   Receiving objects:  31% (179/576)   Receiving objects:  32% (185/576)   Receiving objects:  33% (191/576)   Receiving objects:  34% (196/576)   Receiving objects:  35% (202/576)   Receiving objects:  36% (208/576)   Receiving objects:  37% (214/576)   Receiving objects:  38% (219/576)   Receiving objects:  39% (225/576)   Receiving objects:  40% (231/576)   Receiving objects:  41% (237/576)   Receiving objects:  42% (242/576)   Receiving objects:  43% (248/576)   Receiving objects:  44% (254/576)   Receiving objects:  45% (260/576)   Receiving objects:  46% (265/576)   Receiving objects:  47% (271/576)   Receiving objects:  48% (277/576)   Receiving objects:  49% (283/576)   Receiving objects:  50% (288/576)   Receiving objects:  51% (294/576)   Receiving objects:  52% (300/576)   Receiving objects:  53% (306/576)   Receiving objects:  54% (312/576)   Receiving objects:  55% (317/576)   Receiving objects:  56% (323/576)   Receiving objects:  57% (329/576)   Receiving objects:  58% (335/576)   Receiving objects:  59% (340/576)   Receiving objects:  60% (346/576)   Receiving objects:  61% (352/576)   Receiving objects:  62% (358/576)   Receiving objects:  63% (363/576)   Receiving objects:  64% (369/576)   Receiving objects:  65% (375/576)   Receiving objects:  66% (381/576)   Receiving objects:  67% (386/576)   Receiving objects:  68% (392/576)   Receiving objects:  69% (398/576)   Receiving objects:  70% (404/576)   Receiving objects:  71% (409/576)   Receiving objects:  72% (415/576)   Receiving objects:  73% (421/576)   Receiving objects:  74% (427/576)   Receiving objects:  75% (432/576)   Receiving objects:  76% (438/576)   Receiving objects:  77% (444/576)   Receiving objects:  78% (450/576)   Receiving objects:  79% (456/576)   Receiving objects:  80% (461/576)   Receiving objects:  81% (467/576)   Receiving objects:  82% (473/576)   Receiving objects:  83% (479/576)   Receiving objects:  84% (484/576)   Receiving objects:  85% (490/576)   Receiving objects:  86% (496/576)   Receiving objects:  87% (502/576)   Receiving objects:  88% (507/576)   Receiving objects:  89% (513/576)   Receiving objects:  90% (519/576)   Receiving objects:  91% (525/576)   remote: Total 576 (delta 354), reused 474 (delta 301), pack-reused 0[K
-Receiving objects:  92% (530/576)   Receiving objects:  93% (536/576)   Receiving objects:  94% (542/576)   Receiving objects:  95% (548/576)   Receiving objects:  96% (553/576)   Receiving objects:  97% (559/576)   Receiving objects:  98% (565/576)   Receiving objects:  99% (571/576)   Receiving objects: 100% (576/576)   Receiving objects: 100% (576/576), 145.21 KiB | 8.54 MiB/s, done.
-Resolving deltas:   0% (0/354)   Resolving deltas:  15% (55/354)   Resolving deltas:  16% (59/354)   Resolving deltas:  17% (62/354)   Resolving deltas:  18% (64/354)   Resolving deltas:  21% (76/354)   Resolving deltas:  23% (84/354)   Resolving deltas:  24% (86/354)   Resolving deltas:  28% (101/354)   Resolving deltas:  31% (110/354)   Resolving deltas:  32% (115/354)   Resolving deltas:  33% (117/354)   Resolving deltas:  35% (126/354)   Resolving deltas:  37% (134/354)   Resolving deltas:  38% (136/354)   Resolving deltas:  40% (144/354)   Resolving deltas:  42% (152/354)   Resolving deltas:  43% (154/354)   Resolving deltas:  44% (156/354)   Resolving deltas:  46% (166/354)   Resolving deltas:  48% (170/354)   Resolving deltas:  49% (174/354)   Resolving deltas:  50% (179/354)   Resolving deltas:  51% (182/354)   Resolving deltas:  53% (190/354)   Resolving deltas:  55% (196/354)   Resolving deltas:  58% (206/354)   Resolving deltas:  64% (228/354)   Resolving deltas:  65% (231/354)   Resolving deltas:  66% (237/354)   Resolving deltas:  67% (240/354)   Resolving deltas:  70% (250/354)   Resolving deltas:  72% (256/354)   Resolving deltas:  76% (271/354)   Resolving deltas:  81% (289/354)   Resolving deltas:  82% (291/354)   Resolving deltas:  83% (295/354)   Resolving deltas:  84% (298/354)   Resolving deltas:  85% (301/354)   Resolving deltas:  86% (306/354)   Resolving deltas:  87% (308/354)   Resolving deltas:  88% (312/354)   Resolving deltas:  89% (316/354)   Resolving deltas:  90% (320/354)   Resolving deltas:  93% (330/354)   Resolving deltas:  94% (334/354)   Resolving deltas:  96% (340/354)   Resolving deltas:  97% (344/354)   Resolving deltas:  98% (347/354)   Resolving deltas: 100% (354/354)   Resolving deltas: 100% (354/354), done.
-
-travis_time:end:2c1750a8:start=1521541271565993004,finish=1521541272047218099,duration=481225095[0K$ cd fvafrCU/document
-$ git checkout -qf 91007a17f0070c12f02ec385a7ee89f1888daf7f
-travis_fold:end:git.checkout[0Ktravis_fold:start:cache.1[0KSetting up build cache
-$ export CASHER_DIR=$HOME/.casher
-travis_time:start:2c59543a[0K$ Installing caching utilities
-
-travis_time:end:2c59543a:start=1521541282570178817,finish=1521541282606608891,duration=36430074[0Ktravis_time:start:01f1294a[0K
-travis_time:end:01f1294a:start=1521541282614116995,finish=1521541282619408274,duration=5291279[0Ktravis_time:start:0069e592[0K[32;1mattempting to download cache archive[0m
-[32;1mfetching master/cache-linux-trusty-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855--R-3.4.4.tgz[0m
-[32;1mfound cache[0m
-
-travis_time:end:0069e592:start=1521541282625772065,finish=1521541288535744984,duration=5909972919[0Ktravis_fold:end:cache.1[0Ktravis_fold:start:package[0K[33;1mSetting up package cache[0m
-travis_time:start:1d7dd75c[0K
-travis_time:end:1d7dd75c:start=1521541288543292840,finish=1521541288549181726,duration=5888886[0Ktravis_time:start:0cc1716e[0K[32;1madding /home/travis/R/Library to cache[0m
-[32;1mcreating directory /home/travis/R/Library[0m
-
-travis_time:end:0cc1716e:start=1521541288556143331,finish=1521541291026390171,duration=2470246840[0Ktravis_fold:end:package[0Ktravis_fold:start:R-session-info[0K[33;1mR session information[0m
-$ Rscript -e 'sessionInfo()'
-R version 3.4.4 (2017-01-27)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 14.04.5 LTS
-
-Matrix products: default
-BLAS: /home/travis/R-bin/lib/R/lib/libRblas.so
-LAPACK: /home/travis/R-bin/lib/R/lib/libRlapack.so
-
-locale:
- [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
- [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
- [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  base     
-
-loaded via a namespace (and not attached):
-[1] compiler_3.4.4
-travis_fold:end:R-session-info[0Ktravis_fold:start:R-dependencies[0K[33;1mInstalling package dependencies[0m
-Installing R packages: testthat
-travis_time:start:0cbb47f0[0K$ Rscript -e 'install.packages(c("testthat"));if (!all(c("testthat") %in% installed.packages())) { q(status = 1, save = "no")}'
-Installing package into ‘/home/travis/R/Library’
-(as ‘lib’ is unspecified)
-trying URL 'http://cloud.r-project.org/src/contrib/testthat_2.0.0.tar.gz'
-Content type 'application/x-gzip' length 217190 bytes (212 KB)
-==================================================
-downloaded 212 KB
-
-* installing *source* package ‘testthat’ ...
-** package ‘testthat’ successfully unpacked and MD5 sums checked
-** libs
-gcc -std=gnu99 -I/home/travis/R-bin/lib/R/include -DNDEBUG -I../inst/include -DCOMPILING_TESTTHAT  -I/home/travis/R-bin/include   -fpic  -g -O2  -c init.c -o init.o
-gcc -std=gnu99 -I/home/travis/R-bin/lib/R/include -DNDEBUG -I../inst/include -DCOMPILING_TESTTHAT  -I/home/travis/R-bin/include   -fpic  -g -O2  -c reassign.c -o reassign.o
-g++  -I/home/travis/R-bin/lib/R/include -DNDEBUG -I../inst/include -DCOMPILING_TESTTHAT  -I/home/travis/R-bin/include   -fpic  -g -O2  -c test-catch.cpp -o test-catch.o
-g++  -I/home/travis/R-bin/lib/R/include -DNDEBUG -I../inst/include -DCOMPILING_TESTTHAT  -I/home/travis/R-bin/include   -fpic  -g -O2  -c test-example.cpp -o test-example.o
-g++  -I/home/travis/R-bin/lib/R/include -DNDEBUG -I../inst/include -DCOMPILING_TESTTHAT  -I/home/travis/R-bin/include   -fpic  -g -O2  -c test-runner.cpp -o test-runner.o
-g++ -shared -L/home/travis/R-bin/lib/R/lib -L/home/travis/R-bin/lib -o testthat.so init.o reassign.o test-catch.o test-example.o test-runner.o -L/home/travis/R-bin/lib/R/lib -lR
-installing to /home/travis/R/Library/testthat/libs
-** R
-** inst
-** preparing package for lazy loading
-** help
-*** installing help indices
-*** copying figures
-** building package indices
-** installing vignettes
-** testing if installed package can be loaded
-* DONE (testthat)
-
-The downloaded source packages are in
-	‘/tmp/Rtmph7xaa8/downloaded_packages’
-
-travis_time:end:0cbb47f0:start=1521541291152169203,finish=1521541306393620629,duration=15241451426[0KInstalling R packages: devtools
-travis_time:start:05d46a67[0K$ Rscript -e 'install.packages(c("devtools"));if (!all(c("devtools") %in% installed.packages())) { q(status = 1, save = "no")}'
-Installing package into ‘/home/travis/R/Library’
-(as ‘lib’ is unspecified)
-trying URL 'http://cloud.r-project.org/src/contrib/devtools_1.13.5.tar.gz'
-Content type 'application/x-gzip' length 486555 bytes (475 KB)
-==================================================
-downloaded 475 KB
-
-* installing *source* package ‘devtools’ ...
-** package ‘devtools’ successfully unpacked and MD5 sums checked
-** R
-** inst
-** preparing package for lazy loading
-** help
-*** installing help indices
-** building package indices
-** installing vignettes
-** testing if installed package can be loaded
-* DONE (devtools)
-
-The downloaded source packages are in
-	‘/tmp/RtmptGgrpS/downloaded_packages’
-
-travis_time:end:05d46a67:start=1521541306399840379,finish=1521541309643917255,duration=3244076876[0KInstalling R packages from GitHub: jimhester/covr
-travis_time:start:0a203249[0K$ Rscript -e 'devtools::install_github(c("jimhester/covr"), build_vignettes = FALSE)'
-Using bundled GitHub PAT. Please add your own PAT to the env var `GITHUB_PAT`
-Skipping install of 'covr' from a github remote, the SHA1 (05bf8116) has not changed since last install.
-  Use `force = TRUE` to force installation
-
-travis_time:end:0a203249:start=1521541309650336149,finish=1521541310594342724,duration=944006575[0Ktravis_time:start:1303f850[0K$ Rscript -e 'deps <- devtools::dev_package_deps(dependencies = NA);devtools::install_deps(dependencies = TRUE);if (!all(deps$package %in% installed.packages())) { message("missing: ", paste(setdiff(deps$package, installed.packages()), collapse=", ")); q(status = 1, save = "no")}'
-
-travis_time:end:1303f850:start=1521541310600841546,finish=1521541315235236897,duration=4634395351[0Ktravis_fold:end:R-dependencies[0Ktravis_fold:start:R-installed-versions[0K[33;1mInstalled package versions[0m
-travis_time:start:13f57770[0K$ Rscript -e 'devtools::session_info(installed.packages()[, "Package"])'
-Session info ------------------------------------------------------------------
- setting  value                       
- version  R version 3.4.4 (2017-01-27)
- system   x86_64, linux-gnu           
- ui       X11                         
- language (EN)                        
- collate  en_US.UTF-8                 
- tz       UTC                         
- date     2018-03-20                  
-
-Packages ----------------------------------------------------------------------
- package    * version    date       source                         
- assertthat   0.2.0      2017-04-11 CRAN (R 3.4.4)                 
- backports    1.1.2      2017-12-13 cran (@1.1.2)                  
- base       * 3.4.4      2018-03-15 local                          
- base64enc    0.1-3      2015-07-28 cran (@0.1-3)                  
- boot         1.3-20     2017-08-06 CRAN (R 3.4.4)                 
- brew         1.0-6      2011-04-13 cran (@1.0-6)                  
- callr        2.0.2      2018-02-11 cran (@2.0.2)                  
- checkmate    1.8.5      2017-10-24 cran (@1.8.5)                  
- class        7.3-14     2015-08-30 CRAN (R 3.4.4)                 
- cli          1.0.0      2017-11-05 CRAN (R 3.4.4)                 
- clisymbols   1.2.0      2017-05-21 cran (@1.2.0)                  
- cluster      2.0.6      2017-03-10 CRAN (R 3.4.4)                 
- codetools    0.2-15     2016-10-05 CRAN (R 3.4.4)                 
- commonmark   1.4        2017-09-01 cran (@1.4)                    
- compiler     3.4.4      2018-03-15 local                          
- covr         3.0.1.9000 2018-03-19 Github (jimhester/covr@05bf811)
- crayon       1.3.4      2017-09-16 CRAN (R 3.4.4)                 
- curl         3.1        2017-12-12 CRAN (R 3.4.4)                 
- datasets   * 3.4.4      2018-03-15 local                          
- debugme      1.1.0      2017-10-22 cran (@1.1.0)                  
- desc         1.1.1      2017-08-03 cran (@1.1.1)                  
- devtools     1.13.5     2018-02-18 CRAN (R 3.4.4)                 
- digest       0.6.15     2018-01-28 CRAN (R 3.4.4)                 
- evaluate     0.10.1     2017-06-24 cran (@0.10.1)                 
- foreign      0.8-69     2017-06-22 CRAN (R 3.4.4)                 
- git2r        0.21.0     2018-01-04 CRAN (R 3.4.4)                 
- glue         1.2.0      2017-10-29 cran (@1.2.0)                  
- graphics   * 3.4.4      2018-03-15 local                          
- grDevices  * 3.4.4      2018-03-15 local                          
- grid         3.4.4      2018-03-15 local                          
- highr        0.6        2016-05-09 cran (@0.6)                    
- htmltools    0.3.6      2017-04-28 cran (@0.3.6)                  
- httr         1.3.1      2017-08-20 CRAN (R 3.4.4)                 
- jsonlite     1.5        2017-06-01 CRAN (R 3.4.4)                 
- KernSmooth   2.23-15    2015-06-29 CRAN (R 3.4.4)                 
- knitr        1.20       2018-02-20 cran (@1.20)                   
- lattice      0.20-35    2017-03-25 CRAN (R 3.4.4)                 
- lazyeval     0.2.1      2017-10-29 cran (@0.2.1)                  
- magrittr     1.5        2014-11-22 CRAN (R 3.4.4)                 
- markdown     0.8        2017-04-20 cran (@0.8)                    
- MASS         7.3-49     2018-02-23 CRAN (R 3.4.4)                 
- Matrix       1.2-12     2017-11-30 CRAN (R 3.4.4)                 
- memoise      1.1.0      2017-04-21 CRAN (R 3.4.4)                 
- methods      3.4.4      2018-03-15 local                          
- mgcv         1.8-23     2018-01-21 CRAN (R 3.4.4)                 
- mime         0.5        2016-07-07 CRAN (R 3.4.4)                 
- nlme         3.1-131.1  2018-02-16 CRAN (R 3.4.4)                 
- nnet         7.3-12     2016-02-02 CRAN (R 3.4.4)                 
- openssl      1.0.1      2018-03-03 CRAN (R 3.4.4)                 
- parallel     3.4.4      2018-03-15 local                          
- praise       1.0.0      2015-08-11 CRAN (R 3.4.4)                 
- R6           2.2.2      2017-06-17 CRAN (R 3.4.4)                 
- rcmdcheck    1.2.1      2016-09-28 cran (@1.2.1)                  
- Rcpp         0.12.16    2018-03-13 cran (@0.12.16)                
- rex          1.1.2      2017-10-19 cran (@1.1.2)                  
- rlang        0.2.0      2018-02-20 CRAN (R 3.4.4)                 
- rmarkdown    1.9        2018-03-01 cran (@1.9)                    
- roxygen2     6.0.1      2017-02-06 cran (@6.0.1)                  
- rpart        4.1-13     2018-02-23 CRAN (R 3.4.4)                 
- rprojroot    1.3-2      2018-01-03 cran (@1.3-2)                  
- rstudioapi   0.7        2017-09-07 CRAN (R 3.4.4)                 
- RUnit        0.4.31     2015-11-06 cran (@0.4.31)                 
- spatial      7.3-11     2015-08-30 CRAN (R 3.4.4)                 
- splines      3.4.4      2018-03-15 local                          
- stats      * 3.4.4      2018-03-15 local                          
- stats4       3.4.4      2018-03-15 local                          
- stringi      1.1.7      2018-03-12 cran (@1.1.7)                  
- stringr      1.3.0      2018-02-19 cran (@1.3.0)                  
- survival     2.41-3     2017-04-04 CRAN (R 3.4.4)                 
- tcltk        3.4.4      2018-03-15 local                          
- testthat     2.0.0      2017-12-13 CRAN (R 3.4.4)                 
- tools        3.4.4      2018-03-15 local                          
- utils      * 3.4.4      2018-03-15 local                          
- whisker      0.3-2      2013-04-28 CRAN (R 3.4.4)                 
- withr        2.1.2      2018-03-15 CRAN (R 3.4.4)                 
- xml2         1.2.0      2018-01-24 cran (@1.2.0)                  
- yaml         2.1.18     2018-03-08 cran (@2.1.18)                 
-
-travis_time:end:13f57770:start=1521541315241364543,finish=1521541316121381691,duration=880017148[0Ktravis_fold:end:R-installed-versions[0Ktravis_fold:start:R-build[0K[33;1mBuilding package[0m
-Building with: R CMD build 
-travis_time:start:0a5b417c[0K$ R CMD build  .
-* checking for file ‘./DESCRIPTION’ ... OK
-* preparing ‘document’:
-* checking DESCRIPTION meta-information ... OK
-* installing the package to build vignettes
-* creating vignettes ... OK
-Warning: ‘inst/doc’ files
-    ‘Introduction_to_document.Rmd’, ‘Introduction_to_document.html’,  ‘Introduction_to_document.R’
-  ignored as vignettes have been rebuilt.
-  Run R CMD build with --no-build-vignettes to prevent rebuilding.
-* checking for LF line-endings in source and make files and shell scripts
-* checking for empty or unneeded directories
-* building ‘document_3.0.1.tar.gz’
-
-
-travis_time:end:0a5b417c:start=1521541316130510200,finish=1521541329052244497,duration=12921734297[0Ktravis_fold:end:R-build[0Ktravis_fold:start:R-check[0K[33;1mChecking package[0m
-Checking with: R CMD check document_3.0.1.tar.gz --as-cran --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual
-travis_time:start:01fa2b0f[0K$ R CMD check "${PKG_TARBALL}" --as-cran --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual --no-manual; CHECK_RET=$?
-* using log directory ‘/home/travis/build/fvafrCU/document/document.Rcheck’
-* using R version 3.4.4 (2017-01-27)
-* using platform: x86_64-pc-linux-gnu (64-bit)
-* using session charset: UTF-8
-* using options ‘--no-manual --as-cran’
-* checking for file ‘document/DESCRIPTION’ ... OK
-* this is package ‘document’ version ‘3.0.1’
-* package encoding: UTF-8
-* checking package namespace information ... OK
-* checking package dependencies ... OK
-* checking if this is a source package ... OK
-* checking if there is a namespace ... OK
-* checking for executable files ... OK
-* checking for hidden files and directories ... OK
-* checking for portable file names ... OK
-* checking for sufficient/correct file permissions ... OK
-* checking whether package ‘document’ can be installed ... OK
-* checking installed package size ... OK
-* checking package directory ... OK
-* checking ‘build’ directory ... OK
-* checking DESCRIPTION meta-information ... OK
-* checking top-level files ... OK
-* checking for left-over files ... OK
-* checking index information ... OK
-* checking package subdirectories ... OK
-* checking R files for non-ASCII characters ... OK
-* checking R files for syntax errors ... OK
-* checking whether the package can be loaded ... OK
-* checking whether the package can be loaded with stated dependencies ... OK
-* checking whether the package can be unloaded cleanly ... OK
-* checking whether the namespace can be loaded with stated dependencies ... OK
-* checking whether the namespace can be unloaded cleanly ... OK
-* checking loading without being on the library search path ... OK
-* checking dependencies in R code ... OK
-* checking S3 generic/method consistency ... OK
-* checking replacement functions ... OK
-* checking foreign function calls ... OK
-* checking R code for possible problems ... OK
-* checking Rd files ... OK
-* checking Rd metadata ... OK
-* checking Rd line widths ... OK
-* checking Rd cross-references ... OK
-* checking for missing documentation entries ... OK
-* checking for code/documentation mismatches ... OK
-* checking Rd \usage sections ... OK
-* checking Rd contents ... OK
-* checking for unstated dependencies in examples ... OK
-* checking installed files from ‘inst/doc’ ... OK
-* checking files in ‘vignettes’ ... OK
-* checking examples ... OK
-** found \donttest examples: check also with --run-donttest
-* checking for unstated dependencies in ‘tests’ ... OK
-* checking tests ...
-  Running ‘runit.R’
-  Running ‘testthat.R’ [99s/116s]
- OK
-* checking for unstated dependencies in vignettes ... OK
-* checking package vignettes in ‘inst/doc’ ... OK
-* checking re-building of vignette outputs ... OK
-* DONE
-
-Status: OK
-
-
-travis_time:end:01fa2b0f:start=1521541329058634707,finish=1521541470220522744,duration=141161888037[0Ktravis_fold:end:R-check[0Ktravis_time:start:189097dc[0K
-
-travis_time:end:189097dc:start=1521541470228980500,finish=1521541470713855555,duration=484875055[0Ktravis_time:start:021342f9[0K
-travis_time:end:021342f9:start=1521541470720094912,finish=1521541470726540881,duration=6445969[0K
-[32;1mThe command "grep -q -R "WARNING" "${RCHECK_DIR}/00check.log"" exited with 0.[0m
-travis_fold:start:cache.2[0Kstore build cache
-travis_time:start:12375898[0K
-travis_time:end:12375898:start=1521541470733505561,finish=1521541470738983186,duration=5477625[0Ktravis_time:start:10e26a8d[0K[32;1mchange detected (content changed, file is created, or file is deleted):
-/home/travis/R/Library/devtools/DESCRIPTION
-/home/travis/R/Library/devtools/help/devtools.rdb
-/home/travis/R/Library/devtools/help/devtools.rdx
-/home/travis/R/Library/devtools/help/paths.rds
-/home/travis/R/Library/devtools/Meta/package.rds
-/home/travis/R/Library/testthat/DESCRIPTION
-/home/travis/R/Library/testthat/help/paths.rds
-/home/travis/R/Library/testthat/help/testthat.rdb
-/home/travis/R/Library/testthat/help/testthat.rdx
-/home/travis/R/Library/testthat/libs/testthat.so
-/home/travis/R/Library/testthat/Meta/package.rds
-
-[0m
-[32;1mchanges detected, packing new archive[0m
-[32;1muploading archive[0m
-
-travis_time:end:10e26a8d:start=1521541470745349006,finish=1521541475894207128,duration=5148858122[0Ktravis_fold:end:cache.2[0Ktravis_fold:start:after_success[0Ktravis_time:start:028c3614[0K$ Rscript -e 'covr::codecov(path = ".", function_exclusions = "\\.onLoad")'
-$uploaded
-[1] TRUE
-
-$meta
-$meta$status
-[1] 200
-
-
-$url
-[1] "https://codecov.io/github/fvafrCU/document/commit/91007a17f0070c12f02ec385a7ee89f1888daf7f"
-
-$id
-[1] "74b67abf-b9d8-48cc-a4fc-1d481622f822"
-
-$message
-[1] "Coverage reports upload successfully"
-
-$queued
-[1] TRUE
-
-
-travis_time:end:028c3614:start=1521541475901000440,finish=1521541600297708636,duration=124396708196[0Ktravis_fold:end:after_success[0K
-Done. Your build exited with 0.

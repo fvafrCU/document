@@ -28,7 +28,7 @@ devel: build_win release use_dev_version tag_release release force_release rhub
 
 .PHONY: tag_release
 tag_release:
-	$(R) --vanilla -e 'packager::git_tag()'
+	$(R) --vanilla -e 'packager::git_tag(message = " ")'
 
 .PHONY: force_release
 force_release:  
@@ -58,11 +58,11 @@ build_win:
 
 .PHONY: use_dev_version
 use_dev_version:
-	$(Rscript) --vanilla -e 'devtools::use_dev_version()'
+	$(Rscript) --vanilla -e 'packager::use_dev_version()'
 
 # install
 cran-comments.md:  $(LOG_DIR)/install.Rout
-	$(Rscript) --vanilla -e 'packager::provide_cran_comments(check_log = "log/check.Rout", travis_session_info = "log/travis_log.txt")' > $(LOG_DIR)/cran_comments.Rout 2>&1 
+	$(Rscript) --vanilla -e 'gitlab_token <- readLines(file.path("~", ".gitlab_private_token.txt"));packager::provide_cran_comments(check_log = "log/check.Rout", private_token = gitlab_token)'> $(LOG_DIR)/cran_comments.Rout 2>&1 
 
 .PHONY: install
 install: $(LOG_DIR)/install.Rout
@@ -83,13 +83,17 @@ $(PKGNAME)_$(PKGVERS).tar.gz: NEWS.md README.md DESCRIPTION LICENSE \
 	$(RUNIT_FILES) $(VIGNETTES_FILES) $(INST_FILES) $(LOG_DIR)/spell.Rout \
 	$(LOG_DIR)/check_codetags.Rout $(LOG_DIR)/news.Rout $(LOG_DIR)/runit.Rout \
 	$(LOG_DIR)/testthat.Rout $(LOG_DIR)/covr.Rout $(LOG_DIR)/cleanr.Rout \
-	$(LOG_DIR)/lintr.Rout $(LOG_DIR)/cyclocomp.Rout $(LOG_DIR)/vignettes.Rout
+	$(LOG_DIR)/lintr.Rout $(LOG_DIR)/cyclocomp.Rout $(LOG_DIR)/vignettes.Rout \
+	$(LOG_DIR)/usage.Rout 
 	$(R_release) --vanilla CMD build $(PKGSRC)
 
 .PHONY: vignettes
 vignettes: $(LOG_DIR)/vignettes.Rout
 $(LOG_DIR)/vignettes.Rout:	$(R_FILES) $(MAN_FILES) $(VIGNETTES_FILES)
 	$(Rscript) --vanilla -e 'devtools::build_vignettes(); lapply(tools::pkgVignettes(dir = ".")[["docs"]], function(x) knitr::purl(x, output = file.path(".", "inst", "doc", sub("\\.Rmd$$", ".R", basename(x))), documentation = 0))' > $(LOG_DIR)/vignettes.Rout 2>&1 
+
+index.hml: README.md
+	pandoc  README.md -o index.html
 
 README.md: README.Rmd R/$(PKGNAME)-package.R
 	$(Rscript) --vanilla -e 'knitr::knit("README.Rmd")'
@@ -131,6 +135,11 @@ $(LOG_DIR)/make.png: .log.Rout Makefile $(R_FILES) $(MAN_FILES) \
 	make -Bnd all devel utils| make2graph | dot -Tpng -o $(LOG_DIR)/make.png
 
 # checks
+.PHONY: usage
+usage: $(LOG_DIR)/usage.Rout 
+$(LOG_DIR)/usage.Rout: .log.Rout $(R_FILES) $(LOG_DIR)/dependencies.Rout
+	$(Rscript) --vanilla -e 'packager::check_usage(".")' > $(LOG_DIR)/usage.Rout 2>&1 
+
 .PHONY: cleanr
 cleanr: $(LOG_DIR)/cleanr.Rout 
 $(LOG_DIR)/cleanr.Rout: .log.Rout $(R_FILES) $(LOG_DIR)/dependencies.Rout
@@ -169,7 +178,7 @@ $(LOG_DIR)/check_codetags.Rout: .log.Rout $(LOG_DIR)/dependencies.Rout
 .PHONY: spell
 spell: $(LOG_DIR)/spell.Rout
 $(LOG_DIR)/spell.Rout: .log.Rout DESCRIPTION $(LOG_DIR)/roxygen2.Rout $(MAN_FILES) $(LOG_DIR)/dependencies.Rout
-	$(Rscript) --vanilla -e 'spell <- devtools::spell_check(); if (length(spell) > 0) {print(spell); warning("spell check failed")} ' > $(LOG_DIR)/spell.Rout 2>&1 
+	$(Rscript) --vanilla -e 'spell <- devtools::spell_check(ignore = c("devtools")); if (length(spell) > 0) {print(spell); warning("spell check failed")} ' > $(LOG_DIR)/spell.Rout 2>&1 
 
 .PHONY: cyclocomp
 cyclocomp: $(LOG_DIR)/cyclocomp.Rout
