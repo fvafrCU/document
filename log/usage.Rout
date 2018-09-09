@@ -1,0 +1,12 @@
+Loading document
+ [1] "alter_description_file: parameter ‘addition’ changed by assignment (/home/qwer/git/cyclops/fvafrcu/document/R/utils.R:44)"                   
+ [2] "alter_description_file: parameter ‘path’ changed by assignment (/home/qwer/git/cyclops/fvafrcu/document/R/utils.R:45)"                       
+ [3] "alter_description_file: parameter ‘substitution’ changed by assignment (/home/qwer/git/cyclops/fvafrcu/document/R/utils.R:43)"               
+ [4] "check_package: parameter ‘working_directory’ may not be used"                                                                                
+ [5] "document: parameter ‘working_directory’ changed by assignment (/home/qwer/git/cyclops/fvafrcu/document/R/document.R:59-62)"                  
+ [6] "fake_package: local variable ‘dev_null’ assigned but may not be used (/home/qwer/git/cyclops/fvafrcu/document/R/package_functions.R:47-48)"  
+ [7] "fake_package: parameter ‘working_directory’ changed by assignment (/home/qwer/git/cyclops/fvafrcu/document/R/package_functions.R:19-21)"     
+ [8] "is_Rd_file : <anonymous>: parameter ‘item’ may not be used"                                                                                  
+ [9] "man: local variable ‘usage’ used as function with no apparent local function definition (/home/qwer/git/cyclops/fvafrcu/document/R/man.R:35)"
+[10] "usage: parameter ‘usage’ changed by assignment (/home/qwer/git/cyclops/fvafrcu/document/R/man.R:96-97)"                                      
+[11] "write_the_docs: parameter ‘dependencies’ may not be used"                                                                                    
