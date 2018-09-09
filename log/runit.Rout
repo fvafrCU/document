@@ -2,13 +2,13 @@ Loading required package: document
 
 
 Executing test function test_txt  ... First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/RtmpomwlBl/document_117865f60312/simple/DESCRIPTION
+Updating roxygen version in /tmp/RtmpFvvcOp/document_24e43a4879fd/simple/DESCRIPTION
 Loading simple
  done successfully.
 
 Warning message:
 roxygen2 requires Encoding: UTF-8 
-RUNIT TEST PROTOCOL -- Sat Sep  8 11:55:44 2018 
+RUNIT TEST PROTOCOL -- Sun Sep  9 15:52:55 2018 
 *********************************************** 
 Number of test functions: 1 
 Number of errors: 0 
@@ -29,4 +29,4 @@ Involved directory:
 /home/qwer/svn/R/r-devel/build/library/document/runit 
 --------------------------- 
 Test file: /home/qwer/svn/R/r-devel/build/library/document/runit/expected_files.r 
-test_txt: (1 checks) ... OK (3.68 seconds)
+test_txt: (1 checks) ... OK (3.62 seconds)

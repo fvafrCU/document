@@ -1,15 +1,15 @@
 Building document vignettes
 First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/RtmpJOudSA/document_512a1299bf73/minimal/DESCRIPTION
+Updating roxygen version in /tmp/RtmpbdEYYH/document_13402adbfe9b/minimal/DESCRIPTION
 Loading minimal
 First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/RtmpJOudSA/document_512a34baad58/minimal/DESCRIPTION
+Updating roxygen version in /tmp/RtmpbdEYYH/document_13401faead53/minimal/DESCRIPTION
 Loading minimal
 First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/RtmpJOudSA/document_512a73c3bd40/simple/DESCRIPTION
+Updating roxygen version in /tmp/RtmpbdEYYH/document_134065eff79c/simple/DESCRIPTION
 Loading simple
 First time using roxygen2. Upgrading automatically...
-Updating roxygen version in /tmp/RtmpJOudSA/document_512a2d4b0aa2/minimal/DESCRIPTION
+Updating roxygen version in /tmp/RtmpbdEYYH/document_134029f8def1/minimal/DESCRIPTION
 Warning: roxygen2 requires Encoding: UTF-8
 Loading minimal
 Moving Introduction_to_document.html, Introduction_to_document.R to inst/doc/

@@ -12,7 +12,7 @@ downloaded 237 KB
 * installing *source* package ‘digest’ ...
 ** package ‘digest’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/RtmpOnCGt1/R.INSTALL2dd529bc44c/digest/src'
+make[1]: Entering directory '/tmp/Rtmp67ew4y/R.INSTALL128317ec80ea/digest/src'
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c aes.c -o aes.o
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c crc32.c -o crc32.o
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c digest.c -o digest.o
@@ -25,8 +25,8 @@ gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include  
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c sha256.c -o sha256.o
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c xxhash.c -o xxhash.o
 gcc -shared -L/usr/local/lib -o digest.so aes.o crc32.o digest.o init.o md5.o pmurhash.o raes.o sha1.o sha2.o sha256.o xxhash.o
-make[1]: Leaving directory '/tmp/RtmpOnCGt1/R.INSTALL2dd529bc44c/digest/src'
-installing to /tmp/RtmpNY4yiv/file792841b557bd/digest/libs
+make[1]: Leaving directory '/tmp/Rtmp67ew4y/R.INSTALL128317ec80ea/digest/src'
+installing to /tmp/Rtmp1y3VL1/filea31648afacd/digest/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -39,7 +39,7 @@ installing to /tmp/RtmpNY4yiv/file792841b557bd/digest/libs
 * installing *source* package ‘fansi’ ...
 ** package ‘fansi’ successfully unpacked and MD5 sums checked
 ** libs
-make[1]: Entering directory '/tmp/Rtmp6WguwS/R.INSTALL3204bea992f/fansi/src'
+make[1]: Entering directory '/tmp/RtmpJVz8ha/R.INSTALL12c635295736/fansi/src'
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c assumptions.c -o assumptions.o
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c has.c -o has.o
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c init.c -o init.o
@@ -57,8 +57,8 @@ gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include  
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c utils.c -o utils.o
 gcc -I"/home/qwer/svn/R/r-devel/build/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2  -c wrap.c -o wrap.o
 gcc -shared -L/usr/local/lib -o fansi.so assumptions.o has.o init.o nchar.o read.o rnchar.o state.o strip.o strsplit.o tabs.o tohtml.o unhandled.o unique.o utf8.o utils.o wrap.o
-make[1]: Leaving directory '/tmp/Rtmp6WguwS/R.INSTALL3204bea992f/fansi/src'
-installing to /tmp/RtmpNY4yiv/file792841b557bd/fansi/libs
+make[1]: Leaving directory '/tmp/RtmpJVz8ha/R.INSTALL12c635295736/fansi/src'
+installing to /tmp/Rtmp1y3VL1/filea31648afacd/fansi/libs
 ** R
 ** inst
 ** byte-compile and prepare package for lazy loading
@@ -70,7 +70,7 @@ installing to /tmp/RtmpNY4yiv/file792841b557bd/fansi/libs
 * DONE (fansi)
 
 The downloaded source packages are in
-	‘/tmp/RtmpNY4yiv/downloaded_packages’
+	‘/tmp/Rtmp1y3VL1/downloaded_packages’
 * installing *source* package ‘document’ ...
 ** R
 ** inst

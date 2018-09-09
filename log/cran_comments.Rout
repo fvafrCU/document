@@ -6,4 +6,4 @@ TlsExceptionHostPort (HandshakeFailed (Error_Misc "user error (unexpected type r
 checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
      user system elapsed
-man 4.764  0.848   6.164
+man 4.784  0.784   6.124
