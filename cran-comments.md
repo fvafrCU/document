@@ -1,8 +1,8 @@
 Dear CRAN Team,
-this is a resubmission of package 'document'. I have added the following changes:
+this is a resubmission of package 'document', version 3.0.2. I have added the following changes:
 
 * Patched failing "CRAN Package Check Results for Package document".
-* Skipping most tests (for CRAN).
+* Skipping most tests on CRAN.
 
 Please upload to CRAN.
 Best, Andreas Dominik
