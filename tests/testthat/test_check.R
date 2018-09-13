@@ -1,3 +1,4 @@
+if (isTRUE(Sys.getenv("NOT_CRAN"))) {
 library(testthat)
 if (interactive()) {
     devtools::load_all()
@@ -72,3 +73,4 @@ test_that("warning on bug, as cran", {
                                  )
 }
 )
+}

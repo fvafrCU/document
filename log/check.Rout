@@ -57,11 +57,11 @@ TlsExceptionHostPort (HandshakeFailed (Error_Misc "user error (unexpected type r
 * checking examples ... NOTE
 Examples with CPU or elapsed time > 5s
      user system elapsed
-man 4.784  0.784   6.124
+man 5.732  1.024   8.233
 * checking for unstated dependencies in ‘tests’ ... OK
 * checking tests ... OK
   Running ‘runit.R’
-  Running ‘testthat.R’ [134s/172s]
+  Running ‘testthat.R’ [47s/64s]
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in ‘inst/doc’ ... OK
 * checking re-building of vignette outputs ... OK

@@ -39,6 +39,7 @@ test_that("clean", {
               expect_equal(current, reference)
 }
 )
+if (isTRUE(Sys.getenv("NOT_CRAN"))) {
 test_that("simple", {
               options(useFancyQuotes = FALSE)
               file_name  <- file.path(system.file("files",
@@ -53,7 +54,6 @@ test_that("simple", {
               expect_true(!current)
 }
 )
-
 context("man")
 test_that("from R file", {
               options(pager = switch(.Platform[["OS.type"]],
@@ -141,3 +141,4 @@ test_that("add deps", {
               expect_equal(current, reference)
 }
 )
+}

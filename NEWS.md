@@ -1,6 +1,7 @@
 # document 3.0.2
 
 * Patched failing "CRAN Package Check Results for Package document".
+* Skipping most tests (for CRAN).
 
 # document 3.0.0
 

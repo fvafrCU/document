@@ -3,7 +3,7 @@ Loading required package: testthat
 Testing document
 ✔ | OK F W S | Context
 ⠏ |  0       | files⠋ |  0   1   | files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb66f5a188/mini.mal.Rcheck’
+─  using log directory ‘/tmp/RtmpEyATTV/file522f3027b58f/mini.mal.Rcheck’
 ─  using R Under development (unstable) (2018-09-07 r75253)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
@@ -11,71 +11,17 @@ Testing document
 ✔  checking for file ‘mini.mal/DESCRIPTION’
 ─  checking extension type ... Package
 ─  this is package ‘mini.mal’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
-   Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking serialization versions
-✔  checking whether package ‘mini.mal’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking for future file timestanps
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking use of S3 registration
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-✔  checking Rd \usage sections
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-✔  checking examples
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
-   See
-     ‘/tmp/RtmpLQSJsD/file26cb66f5a188/mini.mal.Rcheck/00check.log’
-   for details.
-   
-   
-⠙ |  0   2   | files⠹ |  1   2   | files⠸ |  2   2   | files✔ |  2   2   | files [24.6 s]
+   Warning in readRDS(con) :
+     URL 'https://CRAN.R-project.org/src/contrib/Meta/archive.rds': status was 'Transferred a partial file'
+   Error in readRDS(con) : cannot read from connection
+   Execution halted
+⠙ |  1   1   | files⠹ |  2   1   | files✔ |  2   1   | files [18.0 s]
 ────────────────────────────────────────────────────────────────────────────────
 test_basic.R:13: warning: (unknown)
 roxygen2 requires Encoding: UTF-8
-
-test_basic.R:13: warning: (unknown)
-R CMD check had NOTES, read the log an fix.
 ────────────────────────────────────────────────────────────────────────────────
 ⠏ |  0       | expected files⠋ |  0   1   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb258fbd02/simple.Rcheck’
+─  using log directory ‘/tmp/RtmpEyATTV/file522f5e4ea184/simple.Rcheck’
 ─  using R Under development (unstable) (2018-09-07 r75253)
 ─  using platform: x86_64-pc-linux-gnu (64-bit)
 ─  using session charset: UTF-8
@@ -134,538 +80,23 @@ N  checking CRAN incoming feasibility
    
 ── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
    See
-     ‘/tmp/RtmpLQSJsD/file26cb258fbd02/simple.Rcheck/00check.log’
+     ‘/tmp/RtmpEyATTV/file522f5e4ea184/simple.Rcheck/00check.log’
    for details.
    
    
-⠙ |  0   2   | expected files⠹ |  1   2   | expected files⠸ |  1   3   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb7b01845e/simple.Rcheck’
-─  using R Under development (unstable) (2018-09-07 r75253)
-─  using platform: x86_64-pc-linux-gnu (64-bit)
-─  using session charset: UTF-8
-─  using option ‘--as-cran’
-✔  checking for file ‘simple/DESCRIPTION’
-─  checking extension type ... Package
-─  this is package ‘simple’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
-   Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking serialization versions
-✔  checking whether package ‘simple’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking for future file timestanps
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking use of S3 registration
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-✔  checking Rd \usage sections
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-✔  checking examples
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 0 warnings ✔ | 1 note ✖
-   See
-     ‘/tmp/RtmpLQSJsD/file26cb7b01845e/simple.Rcheck/00check.log’
-   for details.
-   
-   
-⠼ |  1   4   | expected files⠴ |  2   4   | expected files⠦ |  2   5   | expected files────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb18a8a9ed/simple.Rcheck’
-─  using R Under development (unstable) (2018-09-07 r75253)
-─  using platform: x86_64-pc-linux-gnu (64-bit)
-─  using session charset: UTF-8
-✔  checking for file ‘simple/DESCRIPTION’
-─  checking extension type ... Package
-─  this is package ‘simple’ version ‘2.0.0’
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking whether package ‘simple’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-✔  checking Rd \usage sections
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-✔  checking examples
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
-   
-⠧ |  3   5   | expected files✔ |  3   5   | expected files [60.9 s]
+⠙ |  0   2   | expected files⠹ |  1   2   | expected files✔ |  1   2   | expected files [26.4 s]
 ────────────────────────────────────────────────────────────────────────────────
 test_basic.R:36: warning: clean
 roxygen2 requires Encoding: UTF-8
 
 test_basic.R:36: warning: clean
 R CMD check had NOTES, read the log an fix.
-
-test_basic.R:47: warning: simple
-roxygen2 requires Encoding: UTF-8
-
-test_basic.R:47: warning: simple
-R CMD check had NOTES, read the log an fix.
-
-test_basic.R:50: warning: simple
-roxygen2 requires Encoding: UTF-8
 ────────────────────────────────────────────────────────────────────────────────
-⠏ |  0       | man⠋ |  0   1   | man_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
-
-_D_e_s_c_r_i_p_t_i_o_n:
-
-     This really is just an example, the function prints
-     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
-
-_U_s_a_g_e:
-
-     a_first_function(df)
-     
-_A_r_g_u_m_e_n_t_s:
-
-      df: Name of a data.frame to ... do whatever needs to be done.
-
-_V_a_l_u_e:
-
-     NULL. This is no good.
-
-_A_u_t_h_o_r(_s):
-
-     Dominik Cullmann <adc-r@arcor.de>
-
-_E_x_a_m_p_l_e_s:
-
-     data(iris, package = "datasets")
-     a_first_function(iris)
-     
-
-
-⠙ |  1   1   | man⠹ |  2   1   | man⠸ |  3   1   | man⠼ |  3   2   | man_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
-
-_D_e_s_c_r_i_p_t_i_o_n:
-
-     This really is just an example, the function prints
-     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
-
-_U_s_a_g_e:
-
-     a_first_function(df)
-     
-_A_r_g_u_m_e_n_t_s:
-
-      df: Name of a data.frame to ... do whatever needs to be done.
-
-_V_a_l_u_e:
-
-     NULL. This is no good.
-
-_A_u_t_h_o_r(_s):
-
-     Dominik Cullmann <adc-r@arcor.de>
-
-_E_x_a_m_p_l_e_s:
-
-     data(iris, package = "datasets")
-     a_first_function(iris)
-     
-
-
-⠴ |  4   2   | man⠦ |  4   3   | man_a _f_i_r_s_t _f_u_n_c_t_i_o_n _e_x_a_m_p_l_e _X_X_X
-
-_D_e_s_c_r_i_p_t_i_o_n:
-
-     This really is just an example, the function prints
-     ‘utils::head()’ and ‘utils::str()’ of the given ‘data.frame’.
-
-_U_s_a_g_e:
-
-     a_first_function(df)
-     
-_A_r_g_u_m_e_n_t_s:
-
-      df: Name of a data.frame to ... do whatever needs to be done.
-
-_V_a_l_u_e:
-
-     NULL. This is no good.
-
-_A_u_t_h_o_r(_s):
-
-     Dominik Cullmann <adc-r@arcor.de>
-
-_E_x_a_m_p_l_e_s:
-
-     data(iris, package = "datasets")
-     a_first_function(iris)
-     
-
-
-⠧ |  5   3   | man✔ |  5   3   | man [9.5 s]
-────────────────────────────────────────────────────────────────────────────────
-test_basic.R:63: warning: from R file
-roxygen2 requires Encoding: UTF-8
-
-test_basic.R:95: warning: from Rd file
-roxygen2 requires Encoding: UTF-8
-
-test_basic.R:111: warning: from topic
-roxygen2 requires Encoding: UTF-8
-────────────────────────────────────────────────────────────────────────────────
-⠏ |  0       | utils⠋ |  1       | utils⠙ |  2       | utils⠹ |  2   1   | utils⠸ |  3   1   | utils✔ |  3   1   | utils [0.5 s]
-────────────────────────────────────────────────────────────────────────────────
-test_basic.R:135: warning: add deps
-roxygen2 requires Encoding: UTF-8
-────────────────────────────────────────────────────────────────────────────────
-⠏ |  0       | checking the package✔ |  0       | checking the package
-⠏ |  0       | not stopping on errors────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb7c40bf3e/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-09-07 r75253)
-─  using platform: x86_64-pc-linux-gnu (64-bit)
-─  using session charset: UTF-8
-─  using option ‘--as-cran’
-✔  checking for file ‘produce.warning/DESCRIPTION’
-─  checking extension type ... Package
-─  this is package ‘produce.warning’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
-   Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking serialization versions
-✔  checking whether package ‘produce.warning’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking for future file timestanps
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking use of S3 registration
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-W  checking Rd \usage sections
-   Undocumented arguments in documentation object 'foo'
-     ‘x’
-   Documented arguments not in \usage in documentation object 'foo':
-     ‘y’
-   
-   Functions with \usage entries need to have the appropriate \alias
-   entries, and all their arguments documented.
-   The \usage entries must correspond to syntactically valid R code.
-   See chapter ‘Writing R documentation files’ in the ‘Writing R
-   Extensions’ manual.
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-─  checking examples ... NONE
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 1 warning ✖ | 1 note ✖
-   See
-     ‘/tmp/RtmpLQSJsD/file26cb7c40bf3e/produce.warning.Rcheck/00check.log’
-   for details.
-   
-   
-⠋ |  1       | not stopping on errors────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb76b73cb8/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-09-07 r75253)
-─  using platform: x86_64-pc-linux-gnu (64-bit)
-─  using session charset: UTF-8
-✔  checking for file ‘produce.warning/DESCRIPTION’
-─  checking extension type ... Package
-─  this is package ‘produce.warning’ version ‘2.0.0’
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking whether package ‘produce.warning’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-W  checking Rd \usage sections
-   Undocumented arguments in documentation object 'foo'
-     ‘x’
-   Documented arguments not in \usage in documentation object 'foo':
-     ‘y’
-   
-   Functions with \usage entries need to have the appropriate \alias
-   entries, and all their arguments documented.
-   The \usage entries must correspond to syntactically valid R code.
-   See chapter ‘Writing R documentation files’ in the ‘Writing R
-   Extensions’ manual.
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-─  checking examples ... NONE
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
-   See
-     ‘/tmp/RtmpLQSJsD/file26cb76b73cb8/produce.warning.Rcheck/00check.log’
-   for details.
-   
-   
-⠙ |  2       | not stopping on errors✔ |  2       | not stopping on errors [34.9 s]
-⠏ |  0       | stopping on errors────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb4e1e6957/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-09-07 r75253)
-─  using platform: x86_64-pc-linux-gnu (64-bit)
-─  using session charset: UTF-8
-─  using option ‘--as-cran’
-✔  checking for file ‘produce.warning/DESCRIPTION’
-─  checking extension type ... Package
-─  this is package ‘produce.warning’ version ‘2.0.0’
-N  checking CRAN incoming feasibility
-   Maintainer: ‘Who to complain to <yourfault@somewhere.net>’
-   
-   New submission
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking serialization versions
-✔  checking whether package ‘produce.warning’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking for future file timestanps
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking use of S3 registration
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-W  checking Rd \usage sections
-   Undocumented arguments in documentation object 'foo'
-     ‘x’
-   Documented arguments not in \usage in documentation object 'foo':
-     ‘y’
-   
-   Functions with \usage entries need to have the appropriate \alias
-   entries, and all their arguments documented.
-   The \usage entries must correspond to syntactically valid R code.
-   See chapter ‘Writing R documentation files’ in the ‘Writing R
-   Extensions’ manual.
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-─  checking examples ... NONE
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 1 warning ✖ | 1 note ✖
-   See
-     ‘/tmp/RtmpLQSJsD/file26cb4e1e6957/produce.warning.Rcheck/00check.log’
-   for details.
-   
-   
-⠋ |  1       | stopping on errors────────────────────────────────────────────────────────────────────────────────
-─  using log directory ‘/tmp/RtmpLQSJsD/file26cb608f82ec/produce.warning.Rcheck’
-─  using R Under development (unstable) (2018-09-07 r75253)
-─  using platform: x86_64-pc-linux-gnu (64-bit)
-─  using session charset: UTF-8
-✔  checking for file ‘produce.warning/DESCRIPTION’
-─  checking extension type ... Package
-─  this is package ‘produce.warning’ version ‘2.0.0’
-✔  checking package namespace information
-✔  checking package dependencies
-✔  checking if this is a source package
-✔  checking if there is a namespace
-✔  checking for executable files
-✔  checking for hidden files and directories
-✔  checking for portable file names
-✔  checking for sufficient/correct file permissions
-✔  checking whether package ‘produce.warning’ can be installed
-✔  checking installed package size
-✔  checking package directory
-✔  checking DESCRIPTION meta-information
-✔  checking top-level files
-✔  checking for left-over files
-✔  checking index information
-✔  checking package subdirectories
-✔  checking R files for non-ASCII characters
-✔  checking R files for syntax errors
-✔  checking whether the package can be loaded
-✔  checking whether the package can be loaded with stated dependencies
-✔  checking whether the package can be unloaded cleanly
-✔  checking whether the namespace can be loaded with stated dependencies
-✔  checking whether the namespace can be unloaded cleanly
-✔  checking loading without being on the library search path
-✔  checking dependencies in R code
-✔  checking S3 generic/method consistency
-✔  checking replacement functions
-✔  checking foreign function calls
-✔  checking R code for possible problems
-✔  checking Rd files
-✔  checking Rd metadata
-✔  checking Rd line widths
-✔  checking Rd cross-references
-✔  checking for missing documentation entries
-✔  checking for code/documentation mismatches
-W  checking Rd \usage sections
-   Undocumented arguments in documentation object 'foo'
-     ‘x’
-   Documented arguments not in \usage in documentation object 'foo':
-     ‘y’
-   
-   Functions with \usage entries need to have the appropriate \alias
-   entries, and all their arguments documented.
-   The \usage entries must correspond to syntactically valid R code.
-   See chapter ‘Writing R documentation files’ in the ‘Writing R
-   Extensions’ manual.
-✔  checking Rd contents
-✔  checking for unstated dependencies in examples
-─  checking examples ... NONE
-✔  checking PDF version of manual
-
-   
-── 0 errors ✔ | 1 warning ✖ | 0 notes ✔
-   See
-     ‘/tmp/RtmpLQSJsD/file26cb608f82ec/produce.warning.Rcheck/00check.log’
-   for details.
-   
-   
-⠙ |  2       | stopping on errors✔ |  2       | stopping on errors [35.6 s]
-⠏ |  0       | file parsing⠋ |  1       | file parsing⠙ |  2       | file parsing⠹ |  3       | file parsing⠸ |  4       | file parsing⠼ |  5       | file parsing⠴ |  6       | file parsing⠦ |  7       | file parsing⠧ |  8       | file parsing⠇ |  9       | file parsing✔ |  9       | file parsing
 
 ══ Results ═════════════════════════════════════════════════════════════════════
-Duration: 166.2 s
+Duration: 44.5 s
 
-OK:       26
+OK:       3
 Failed:   0
-Warnings: 11
+Warnings: 3
 Skipped:  0

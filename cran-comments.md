@@ -2,6 +2,7 @@ Dear CRAN Team,
 this is a resubmission of package 'document'. I have added the following changes:
 
 * Patched failing "CRAN Package Check Results for Package document".
+* Skipping most tests (for CRAN).
 
 Please upload to CRAN.
 Best, Andreas Dominik
@@ -16,5 +17,5 @@ Best, Andreas Dominik
   R version 3.5.1 (2018-07-02)
   Platform: x86_64-pc-linux-gnu (64-bit)
   Running under: Debian GNU/Linux 9 (stretch)
-  Status: 1 NOTE
+  Status: OK
 - win-builder (devel)
