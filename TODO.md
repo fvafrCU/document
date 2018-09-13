@@ -20,3 +20,5 @@ condition <- has_errors || has_warnings || has_notes
    #' @return a named character vector
    #' @export
    Maybe this fixes the potential find.package-bug in check_package
+- Tag commit 19b47a69b095eca5dbffbe18487cb8f0b627522d as 3.0.2, once package is on CRAN using
+	git tag -a 3.0.2 19b47a69b095eca5dbffbe18487cb8f0b627522d -m 'CRAN release'
