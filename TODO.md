@@ -8,8 +8,15 @@ if (stop_on_check_not_passing %in% ("errors", "warnings", "notes")
 condition <- has_errors || has_warnings || has_notes 
 ....
 
-- improve vignette
-- make it pass testing on current windows (winbuilder, rhub)!
-- get rid of empty .Rd2pdfxxx-dirs in testing. They might get created by devtools::load_all()
-- Tag commit 97b962fa7e9b3cea8ba213da7201f816c731c413 as 3.0.2, once package is on CRAN using
-	git tag -a 3.0.2 97b962fa7e9b3cea8ba213da7201f816c731c413 -m 'CRAN release'
+- Think about devtools/R/R.r:
+   #' Devtools sets a number of environmental variables to ensure consistent
+   #' between the current R session and the new session, and to ensure that
+   #' everything behaves the same across systems. It also suppresses a common
+   #' warning on windows, and sets \code{NOT_CRAN} so you can tell that your
+   #' code is not running on CRAN. If \code{NOT_CRAN} has been set externally, it
+   #' is not overwritten.
+   #'
+   #' @keywords internal
+   #' @return a named character vector
+   #' @export
+   Maybe this fixes the potential find.package-bug in check_package
