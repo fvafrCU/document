@@ -1,3 +1,0 @@
-NO COPY: inst/doc/Introduction_to_document.R:22:26: style: Put spaces around all infix operators.
-    cat(paste(x, collapse="\n"), "\n")
-                        ~^~

@@ -1,1 +1,0 @@
-rcmdcheck's result on windows is not as advertised, see document-Ex_x64.Rout

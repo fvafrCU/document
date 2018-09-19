@@ -1,2 +1,0 @@
-[1] "./R/utils.R:     # TODO: this is dreadful, I'm converting non-ascii to byte and that back to"                  
-[2] "./utils/checks.R:     return(grep_directory(path = path, exclude = exclude, pattern =  \"XXX:|FIXME:|TODO:\"))"

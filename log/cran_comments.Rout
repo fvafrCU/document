@@ -1,9 +1,0 @@
-checking top-level files ... WARNING
-Conversion of ‘README.md’ failed:
-pandoc: Could not fetch https://www.r-pkg.org/badges/version/document
-TlsExceptionHostPort (HandshakeFailed (Error_Misc "user error (unexpected type received. expecting handshake and got: Alert [(AlertLevel_Fatal,HandshakeFailure)])")) "www.r-pkg.org" 443
-
-checking examples ... NOTE
-Examples with CPU or elapsed time > 5s
-     user system elapsed
-man 5.732  1.024   8.233
